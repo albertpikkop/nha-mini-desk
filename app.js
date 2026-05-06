@@ -25,8 +25,8 @@ const translations = {
       "form.caseLabel": "¿Qué tipo de trabajo es?",
       "form.outputLabel": "¿Qué quieres recibir?",
       "form.choiceHelp": "Primero elige el tipo de trabajo y el resultado que quieres. Luego carga un ejemplo o escribe tu propio caso abajo.",
-      "samples.selected": "Cargar ejemplo",
-      "samples.selectedHelp": "El botón cargará abajo un caso de ejemplo según el trabajo y resultado elegidos.",
+      "samples.selected": "Cargar este ejemplo",
+      "samples.selectedHelp": "Se cargará un caso de ejemplo según tu selección.",
       "samples.cx": "Cargar ejemplo de mensaje",
       "samples.consultoria": "Cargar ejemplo de consultoría",
       "samples.arrendamiento": "Cargar ejemplo legal",
@@ -143,15 +143,17 @@ const translations = {
         "Trabaja con cuidado y no asumas datos críticos.",
         "Usa lenguaje profesional y claro.",
         "Separa lo confirmado de lo supuesto.",
-        "Si falta información crítica, lista preguntas antes de redactar una versión final."
+        "Si falta información crítica, lista preguntas primero y después entrega una versión provisional usando solo hechos confirmados.",
+        "Mantén la respuesta práctica y concisa; no escribas un reporte largo si el formato no lo pide."
       ],
       nhaRules: [
         "Separa hechos confirmados de supuestos.",
         "Marca datos faltantes como [PENDIENTE].",
         "No inventes nombres, fechas, cifras, RFCs, artículos, cláusulas, fuentes ni datos legales.",
-        "Si falta información crítica, detente y lista preguntas.",
+        "Si falta información crítica, lista preguntas antes de cualquier conclusión.",
         "Incluye una sección de riesgos.",
-        "Incluye una sección de verificación humana."
+        "Incluye verificación humana solo si aporta valor; no agregues secciones extra si el formato solicitado ya cubre riesgos y preguntas.",
+        "No agregues secciones fuera del formato solicitado salvo que sean necesarias."
       ],
       formatRequested: "Formato solicitado"
     },
@@ -164,12 +166,12 @@ const translations = {
       general: ["Separa hechos, supuestos y pendientes.", "No inventes datos.", "Incluye preguntas de aclaración.", "Incluye riesgos de usar la salida sin revisión."]
     },
     formatGuidance: {
-      facts: "Entrega secciones: Hechos confirmados, Supuestos, Pendientes, Riesgos, Preguntas.",
-      summary: "Entrega un resumen ejecutivo breve, seguido de pendientes y riesgos.",
-      draft: "Solo redacta borrador si la información crítica está completa. Si falta información, primero lista preguntas.",
-      actionPlan: "Entrega acciones, responsable sugerido si está indicado, fecha si existe y pendientes.",
-      email: "Entrega asunto, cuerpo del email, tono recomendado y datos que faltan antes de enviar.",
-      risks: "Entrega riesgos priorizados, evidencia en el texto y acción de mitigación."
+      facts: "Entrega una lista práctica, no un reporte. Usa solo estas secciones: Hechos confirmados, Supuestos, Pendientes, Riesgos, Preguntas. Máximo 6 bullets por sección. Evita sub-secciones si no son necesarias.",
+      summary: "Entrega un resumen ejecutivo breve, seguido de pendientes y riesgos. Máximo 500 palabras.",
+      draft: "Solo redacta borrador si la información crítica está completa. Si falta información, primero lista preguntas y luego un borrador provisional marcado como tal.",
+      actionPlan: "Entrega un plan práctico, no un reporte de consultoría completo. Incluye acciones, responsable sugerido si está indicado, fecha si existe, pendientes y riesgos. Máximo 700 palabras.",
+      email: "Entrega asunto, cuerpo del email, tono recomendado y datos que faltan antes de enviar. Máximo 350 palabras.",
+      risks: "Entrega riesgos priorizados, evidencia en el texto y acción de mitigación. Máximo 8 riesgos."
     },
     samples: {
       cx: `Cliente molesto escribió por mensaje:
@@ -258,8 +260,8 @@ ${getShareUrl()}`
       "form.caseLabel": "What type of work is this?",
       "form.outputLabel": "What do you want to receive?",
       "form.choiceHelp": "Choose the work and the output you want. Then load a matching example or write your own case below.",
-      "samples.selected": "Load example",
-      "samples.selectedHelp": "The button will load a sample case below based on the work and output you chose.",
+      "samples.selected": "Load this example",
+      "samples.selectedHelp": "A sample case will load below based on your selection.",
       "samples.cx": "Load message example",
       "samples.consultoria": "Load consulting example",
       "samples.arrendamiento": "Load legal example",
@@ -365,8 +367,8 @@ ${getShareUrl()}`
       rawContext: "The information comes from the user's original text and may be incomplete, mixed, or written in a hurry.",
       pendingOn: "Mark any missing, uncertain, or unconfirmed information as [PENDING].",
       pendingOff: "List any missing, uncertain, or unconfirmed information in a Missing information section.",
-      expectations: ["Work carefully and do not assume critical details.", "Use clear professional language.", "Separate confirmed information from assumptions.", "If critical information is missing, list questions before drafting a final version."],
-      nhaRules: ["Separate confirmed facts from assumptions.", "Mark missing information as [PENDING].", "Do not invent names, dates, numbers, IDs, legal articles, clauses, sources, or legal facts.", "If critical information is missing, stop and list questions.", "Include a risks section.", "Include a human verification section."],
+      expectations: ["Work carefully and do not assume critical details.", "Use clear professional language.", "Separate confirmed information from assumptions.", "If critical information is missing, list questions first and then give a provisional output using confirmed facts only.", "Keep the answer practical and concise; do not write a long report unless the format asks for one."],
+      nhaRules: ["Separate confirmed facts from assumptions.", "Mark missing information as [PENDING].", "Do not invent names, dates, numbers, IDs, legal articles, clauses, sources, or legal facts.", "If critical information is missing, list questions before any conclusion.", "Include a risks section.", "Include human verification only when useful; do not add extra sections if the requested format already covers risks and questions.", "Do not add sections outside the requested format unless necessary."],
       formatRequested: "Requested format"
     },
     caseGuidance: {
@@ -378,12 +380,12 @@ ${getShareUrl()}`
       general: ["Separate facts, assumptions, and pending items.", "Do not invent data.", "Include clarification questions.", "Include risks of using the output without review."]
     },
     formatGuidance: {
-      facts: "Use sections: Confirmed facts, Assumptions, Pending items, Risks, Questions.",
-      summary: "Give a brief executive summary, followed by pending items and risks.",
-      draft: "Only draft if critical information is complete. If information is missing, list questions first.",
-      actionPlan: "Give actions, suggested owner if indicated, date if present, and pending items.",
-      email: "Give subject, email body, recommended tone, and missing details before sending.",
-      risks: "Give prioritized risks, evidence in the text, and mitigation action."
+      facts: "Give a practical list, not a report. Use only these sections: Confirmed facts, Assumptions, Pending items, Risks, Questions. Maximum 6 bullets per section. Avoid sub-sections unless necessary.",
+      summary: "Give a brief executive summary, followed by pending items and risks. Maximum 500 words.",
+      draft: "Only draft if critical information is complete. If information is missing, list questions first and then give a provisional draft marked as such.",
+      actionPlan: "Give a practical plan, not a full consulting report. Include actions, suggested owner if indicated, date if present, pending items, and risks. Maximum 700 words.",
+      email: "Give subject, email body, recommended tone, and missing details before sending. Maximum 350 words.",
+      risks: "Give prioritized risks, evidence in the text, and mitigation action. Maximum 8 risks."
     },
     samples: {
       cx: `An upset customer sent this message:
@@ -472,8 +474,8 @@ ${getShareUrl()}`
       "form.caseLabel": "किस तरह का काम है?",
       "form.outputLabel": "AI से क्या output चाहिए?",
       "form.choiceHelp": "काम और output चुनें. फिर matching example load करें या नीचे अपना case लिखें.",
-      "samples.selected": "Example load करें",
-      "samples.selectedHelp": "Button आपके चुने हुए काम और output के हिसाब से नीचे sample case load करेगा.",
+      "samples.selected": "यह example load करें",
+      "samples.selectedHelp": "आपकी selection के हिसाब से sample case नीचे load होगा.",
       "samples.cx": "Message example load करें",
       "samples.consultoria": "Consulting example load करें",
       "samples.arrendamiento": "Legal example load करें",
@@ -579,8 +581,8 @@ ${getShareUrl()}`
       rawContext: "Information user के original text से आई है और incomplete, mixed या hurry में लिखी हो सकती है.",
       pendingOn: "Missing, uncertain या unconfirmed information को [PENDING] mark करें.",
       pendingOff: "Missing, uncertain या unconfirmed information को Missing information section में list करें.",
-      expectations: ["Carefully काम करें और critical details assume न करें.", "Clear professional language use करें.", "Confirmed information और assumptions अलग करें.", "अगर critical information missing है, final version लिखने से पहले questions list करें."],
-      nhaRules: ["Confirmed facts और assumptions अलग करें.", "Missing information को [PENDING] mark करें.", "Names, dates, numbers, IDs, legal articles, clauses, sources या legal facts invent न करें.", "अगर critical information missing है, रुकें और questions list करें.", "Risks section include करें.", "Human verification section include करें."],
+      expectations: ["Carefully काम करें और critical details assume न करें.", "Clear professional language use करें.", "Confirmed information और assumptions अलग करें.", "अगर critical information missing है, पहले questions list करें और फिर सिर्फ confirmed facts से provisional output दें.", "Answer practical और concise रखें; format न मांगे तो long report न लिखें."],
+      nhaRules: ["Confirmed facts और assumptions अलग करें.", "Missing information को [PENDING] mark करें.", "Names, dates, numbers, IDs, legal articles, clauses, sources या legal facts invent न करें.", "Critical information missing हो तो conclusion से पहले questions list करें.", "Risks section include करें.", "Human verification सिर्फ तब include करें जब useful हो; requested format risks और questions cover करता है तो extra sections न जोड़ें.", "Requested format के बाहर sections न जोड़ें जब तक जरूरी न हो."],
       formatRequested: "Requested format"
     },
     caseGuidance: {
@@ -592,12 +594,12 @@ ${getShareUrl()}`
       general: ["Facts, assumptions और pending items अलग करें.", "Data invent न करें.", "Clarification questions include करें.", "Review के बिना output use करने के risks include करें."]
     },
     formatGuidance: {
-      facts: "Sections दें: Confirmed facts, Assumptions, Pending items, Risks, Questions.",
-      summary: "Brief executive summary दें, फिर pending items और risks.",
-      draft: "Critical information complete हो तो ही draft लिखें. Information missing हो तो पहले questions list करें.",
-      actionPlan: "Actions, suggested owner if indicated, date if present, और pending items दें.",
-      email: "Subject, email body, recommended tone, और send करने से पहले missing details दें.",
-      risks: "Prioritized risks, text में evidence, और mitigation action दें."
+      facts: "Practical list दें, report नहीं. सिर्फ ये sections use करें: Confirmed facts, Assumptions, Pending items, Risks, Questions. हर section में maximum 6 bullets. जरूरत न हो तो sub-sections avoid करें.",
+      summary: "Brief executive summary दें, फिर pending items और risks. Maximum 500 words.",
+      draft: "Critical information complete हो तो ही draft लिखें. Information missing हो तो पहले questions list करें और फिर provisional draft clearly mark करें.",
+      actionPlan: "Practical plan दें, full consulting report नहीं. Actions, suggested owner if indicated, date if present, pending items और risks include करें. Maximum 700 words.",
+      email: "Subject, email body, recommended tone, और send करने से पहले missing details दें. Maximum 350 words.",
+      risks: "Prioritized risks, text में evidence, और mitigation action दें. Maximum 8 risks."
     },
     samples: {
       cx: `एक नाराज customer ने message भेजा:
@@ -686,8 +688,8 @@ ${getShareUrl()}`
       "form.caseLabel": "ਕਿਸ type ਦਾ ਕੰਮ ਹੈ?",
       "form.outputLabel": "AI ਤੋਂ ਕੀ output ਚਾਹੀਦਾ ਹੈ?",
       "form.choiceHelp": "ਕੰਮ ਅਤੇ output ਚੁਣੋ. ਫਿਰ matching example load ਕਰੋ ਜਾਂ ਹੇਠਾਂ ਆਪਣਾ case ਲਿਖੋ.",
-      "samples.selected": "Example load ਕਰੋ",
-      "samples.selectedHelp": "Button ਤੁਹਾਡੇ ਚੁਣੇ ਕੰਮ ਅਤੇ output ਦੇ ਹਿਸਾਬ ਨਾਲ ਹੇਠਾਂ sample case load ਕਰੇਗਾ.",
+      "samples.selected": "ਇਹ example load ਕਰੋ",
+      "samples.selectedHelp": "ਤੁਹਾਡੀ selection ਦੇ ਹਿਸਾਬ ਨਾਲ sample case ਹੇਠਾਂ load ਹੋਵੇਗਾ.",
       "samples.cx": "Message example load ਕਰੋ",
       "samples.consultoria": "Consulting example load ਕਰੋ",
       "samples.arrendamiento": "Legal example load ਕਰੋ",
@@ -793,8 +795,8 @@ ${getShareUrl()}`
       rawContext: "Information user ਦੇ original text ਤੋਂ ਆਈ ਹੈ ਅਤੇ incomplete, mixed ਜਾਂ hurry ਵਿੱਚ ਲਿਖੀ ਹੋ ਸਕਦੀ ਹੈ.",
       pendingOn: "Missing, uncertain ਜਾਂ unconfirmed information ਨੂੰ [PENDING] mark ਕਰੋ.",
       pendingOff: "Missing, uncertain ਜਾਂ unconfirmed information ਨੂੰ Missing information section ਵਿੱਚ list ਕਰੋ.",
-      expectations: ["Carefully ਕੰਮ ਕਰੋ ਅਤੇ critical details assume ਨਾ ਕਰੋ.", "Clear professional language use ਕਰੋ.", "Confirmed information ਅਤੇ assumptions ਵੱਖ ਕਰੋ.", "ਜੇ critical information missing ਹੈ, final version ਲਿਖਣ ਤੋਂ ਪਹਿਲਾਂ questions list ਕਰੋ."],
-      nhaRules: ["Confirmed facts ਅਤੇ assumptions ਵੱਖ ਕਰੋ.", "Missing information ਨੂੰ [PENDING] mark ਕਰੋ.", "Names, dates, numbers, IDs, legal articles, clauses, sources ਜਾਂ legal facts invent ਨਾ ਕਰੋ.", "ਜੇ critical information missing ਹੈ, ਰੁਕੋ ਅਤੇ questions list ਕਰੋ.", "Risks section include ਕਰੋ.", "Human verification section include ਕਰੋ."],
+      expectations: ["Carefully ਕੰਮ ਕਰੋ ਅਤੇ critical details assume ਨਾ ਕਰੋ.", "Clear professional language use ਕਰੋ.", "Confirmed information ਅਤੇ assumptions ਵੱਖ ਕਰੋ.", "ਜੇ critical information missing ਹੈ, ਪਹਿਲਾਂ questions list ਕਰੋ ਅਤੇ ਫਿਰ ਸਿਰਫ confirmed facts ਨਾਲ provisional output ਦਿਓ.", "Answer practical ਅਤੇ concise ਰੱਖੋ; format ਨਾ ਮੰਗੇ ਤਾਂ long report ਨਾ ਲਿਖੋ."],
+      nhaRules: ["Confirmed facts ਅਤੇ assumptions ਵੱਖ ਕਰੋ.", "Missing information ਨੂੰ [PENDING] mark ਕਰੋ.", "Names, dates, numbers, IDs, legal articles, clauses, sources ਜਾਂ legal facts invent ਨਾ ਕਰੋ.", "Critical information missing ਹੋਵੇ ਤਾਂ conclusion ਤੋਂ ਪਹਿਲਾਂ questions list ਕਰੋ.", "Risks section include ਕਰੋ.", "Human verification ਸਿਰਫ ਤਦ include ਕਰੋ ਜਦ useful ਹੋਵੇ; requested format risks ਅਤੇ questions cover ਕਰਦਾ ਹੈ ਤਾਂ extra sections ਨਾ ਜੋੜੋ.", "Requested format ਤੋਂ ਬਾਹਰ sections ਨਾ ਜੋੜੋ ਜਦ ਤੱਕ ਜ਼ਰੂਰੀ ਨਾ ਹੋਵੇ."],
       formatRequested: "Requested format"
     },
     caseGuidance: {
@@ -806,12 +808,12 @@ ${getShareUrl()}`
       general: ["Facts, assumptions ਅਤੇ pending items ਵੱਖ ਕਰੋ.", "Data invent ਨਾ ਕਰੋ.", "Clarification questions include ਕਰੋ.", "Review ਤੋਂ ਬਿਨਾਂ output use ਕਰਨ ਦੇ risks include ਕਰੋ."]
     },
     formatGuidance: {
-      facts: "Sections ਦਿਓ: Confirmed facts, Assumptions, Pending items, Risks, Questions.",
-      summary: "Brief executive summary ਦਿਓ, ਫਿਰ pending items ਅਤੇ risks.",
-      draft: "Critical information complete ਹੋਵੇ ਤਾਂ ਹੀ draft ਲਿਖੋ. Information missing ਹੋਵੇ ਤਾਂ ਪਹਿਲਾਂ questions list ਕਰੋ.",
-      actionPlan: "Actions, suggested owner if indicated, date if present, ਅਤੇ pending items ਦਿਓ.",
-      email: "Subject, email body, recommended tone, ਅਤੇ send ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ missing details ਦਿਓ.",
-      risks: "Prioritized risks, text ਵਿੱਚ evidence, ਅਤੇ mitigation action ਦਿਓ."
+      facts: "Practical list ਦਿਓ, report ਨਹੀਂ. ਸਿਰਫ ਇਹ sections use ਕਰੋ: Confirmed facts, Assumptions, Pending items, Risks, Questions. ਹਰ section ਵਿੱਚ maximum 6 bullets. ਲੋੜ ਨਾ ਹੋਵੇ ਤਾਂ sub-sections avoid ਕਰੋ.",
+      summary: "Brief executive summary ਦਿਓ, ਫਿਰ pending items ਅਤੇ risks. Maximum 500 words.",
+      draft: "Critical information complete ਹੋਵੇ ਤਾਂ ਹੀ draft ਲਿਖੋ. Information missing ਹੋਵੇ ਤਾਂ ਪਹਿਲਾਂ questions list ਕਰੋ ਅਤੇ ਫਿਰ provisional draft clearly mark ਕਰੋ.",
+      actionPlan: "Practical plan ਦਿਓ, full consulting report ਨਹੀਂ. Actions, suggested owner if indicated, date if present, pending items ਅਤੇ risks include ਕਰੋ. Maximum 700 words.",
+      email: "Subject, email body, recommended tone, ਅਤੇ send ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ missing details ਦਿਓ. Maximum 350 words.",
+      risks: "Prioritized risks, text ਵਿੱਚ evidence, ਅਤੇ mitigation action ਦਿਓ. Maximum 8 risks."
     },
     samples: {
       cx: `ਇੱਕ angry customer ਨੇ message ਭੇਜਿਆ:
@@ -1115,25 +1117,16 @@ function getSelectedExamplePreviewText(selectedCase = caseType.value, selectedOu
   const caseLabel = languageData.cases[selectedCase];
   const outputLabel = languageData.outputs[selectedOutput];
   const messages = {
-    es: `Ejemplo preparado: ${caseLabel} -> ${outputLabel}`,
-    en: `Prepared example: ${caseLabel} -> ${outputLabel}`,
-    hi: `तैयार example: ${caseLabel} -> ${outputLabel}`,
-    pa: `ਤਿਆਰ example: ${caseLabel} -> ${outputLabel}`
+    es: `Ejemplo: ${caseLabel} -> ${outputLabel}`,
+    en: `Example: ${caseLabel} -> ${outputLabel}`,
+    hi: `Example: ${caseLabel} -> ${outputLabel}`,
+    pa: `Example: ${caseLabel} -> ${outputLabel}`
   };
   return messages[currentLanguage] || messages.es;
 }
 
-function getSelectedExampleButtonText(selectedCase = caseType.value, selectedOutput = outputFormat.value) {
-  const languageData = translations[currentLanguage];
-  const caseLabel = languageData.cases[selectedCase];
-  const outputLabel = languageData.outputs[selectedOutput];
-  const messages = {
-    es: `Cargar ejemplo: ${caseLabel} -> ${outputLabel}`,
-    en: `Load example: ${caseLabel} -> ${outputLabel}`,
-    hi: `Example load करें: ${caseLabel} -> ${outputLabel}`,
-    pa: `Example load ਕਰੋ: ${caseLabel} -> ${outputLabel}`
-  };
-  return messages[currentLanguage] || messages.es;
+function getSelectedExampleButtonText() {
+  return t("samples.selected");
 }
 
 function getSelectedOutcomeText(selectedCase, selectedOutput) {
@@ -1150,14 +1143,11 @@ function getSelectedOutcomeText(selectedCase, selectedOutput) {
 }
 
 function getSelectedExampleLoadedText(selectedCase, selectedOutput) {
-  const languageData = translations[currentLanguage];
-  const caseLabel = languageData.cases[selectedCase];
-  const outputLabel = languageData.outputs[selectedOutput];
   const messages = {
-    es: `Cargué un ejemplo de ${caseLabel} con salida de ${outputLabel}. Revísalo abajo y genera el prompt.`,
-    en: `Loaded a ${caseLabel} example with ${outputLabel} output. Review it below, then generate the prompt.`,
-    hi: `${caseLabel} example ${outputLabel} output के साथ load हो गया. नीचे review करें, फिर prompt generate करें.`,
-    pa: `${caseLabel} example ${outputLabel} output ਨਾਲ load ਹੋ ਗਿਆ. ਹੇਠਾਂ review ਕਰੋ, ਫਿਰ prompt generate ਕਰੋ.`
+    es: "Ejemplo cargado. Puedes editarlo abajo o generar el prompt.",
+    en: "Example loaded. Edit it below or generate the prompt.",
+    hi: "Example load हो गया. नीचे edit करें या prompt generate करें.",
+    pa: "Example load ਹੋ ਗਿਆ. ਹੇਠਾਂ edit ਕਰੋ ਜਾਂ prompt generate ਕਰੋ."
   };
   return messages[currentLanguage] || messages.es;
 }
