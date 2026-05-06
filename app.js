@@ -1326,6 +1326,27 @@ function setStatus(message, warning = false) {
   statusMessage.classList.toggle("warning", warning);
 }
 
+function shouldNudgeToOutput() {
+  return window.matchMedia("(max-width: 860px)").matches;
+}
+
+function getScrollBehavior() {
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
+}
+
+function nudgeToOutputPanel() {
+  const outputPanel = document.querySelector(".output-panel");
+  if (!outputPanel || !shouldNudgeToOutput()) return;
+
+  if (document.activeElement instanceof HTMLElement) {
+    document.activeElement.blur();
+  }
+
+  window.setTimeout(() => {
+    outputPanel.scrollIntoView({ behavior: getScrollBehavior(), block: "start" });
+  }, 90);
+}
+
 function loadSample(sampleName, generateImmediately = false) {
   const languageData = translations[currentLanguage];
   const settings = languageData.sampleSettings[sampleName];
@@ -1339,7 +1360,7 @@ function loadSample(sampleName, generateImmediately = false) {
     const prompt = buildPrompt();
     renderPromptOutput(prompt);
     setStatus(languageData.statuses.sampleReady);
-    document.querySelector(".workspace").scrollIntoView({ behavior: "smooth", block: "start" });
+    nudgeToOutputPanel();
     return;
   }
 
@@ -1369,6 +1390,7 @@ function setupToolPage() {
     if (!prompt) return;
     renderPromptOutput(prompt);
     setStatus(translations[currentLanguage].statuses.generated);
+    nudgeToOutputPanel();
   });
 
   document.querySelector("#tryExample").addEventListener("click", () => {
