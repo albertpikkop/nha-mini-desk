@@ -14,7 +14,7 @@ issues.
 
 ## Privacy boundary
 
-NHA Mini Desk is designed as a static browser tool:
+Prompt Claro / Clear Prompt Builder is designed as a static browser tool:
 
 - no backend
 - no login

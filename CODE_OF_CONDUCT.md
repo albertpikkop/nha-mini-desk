@@ -1,6 +1,6 @@
 # Code of Conduct
 
-NHA Mini Desk is meant to be a welcoming learning project.
+Prompt Claro / Clear Prompt Builder is meant to be a welcoming learning project.
 
 Please be respectful, constructive, and patient with contributors of different
 technical levels, languages, and backgrounds.

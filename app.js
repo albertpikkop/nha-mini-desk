@@ -5,11 +5,12 @@ const translations = {
   es: {
     name: "Español",
     htmlLang: "es",
-    title: "NHA Mini Desk | Brief claro para cualquier IA",
+    title: "Prompt Claro | Brief claro para cualquier IA",
     description: "Convierte una idea en bruto en un brief claro para ChatGPT, Gemini, Claude, Codex, Cursor o la IA que uses. Gratis, sin login y sin instalar nada.",
     ui: {
       "language.label": "Idioma",
       "hero.eyebrow": "Gratis · Sin login · Sin instalar nada",
+      "hero.title": "Prompt Claro",
       "hero.subtitle": "De idea cruda a brief listo para ChatGPT, Claude, Gemini, Codex o Cursor.",
       "hero.tryExample": "Probar en 20 segundos",
       "hero.privacy": "Lo que escribes no se guarda en una base de datos.",
@@ -60,11 +61,11 @@ const translations = {
       "footer.meta": "v0.1.3 · © 2026 Albert Punj · Lanzado 6 May 2026",
       "footer.license": "MIT License",
       "footer.info": "Cómo funciona y términos",
-      "info.eyebrow": "NHA Mini Desk",
+      "info.eyebrow": "Método NHA",
       "info.title": "Cómo funciona y términos",
       "info.subtitle": "Una explicación sencilla para que sepas qué hace y qué no hace.",
       "info.whatTitle": "Qué hace",
-      "info.whatOne": "NHA Mini Desk toma lo que quieres pedirle a la IA y lo convierte en un brief más claro para ChatGPT, Gemini, Claude, Codex, Cursor o la IA que uses.",
+      "info.whatOne": "Prompt Claro toma lo que quieres pedirle a la IA y lo convierte en un brief más claro para ChatGPT, Gemini, Claude, Codex, Cursor o la IA que uses.",
       "info.whatTwo": "No responde por la IA. No reemplaza tu criterio. Solo te ayuda a pedir mejor.",
       "info.howTitle": "Cómo se usa",
       "info.howOne": "Elige qué tipo de trabajo quieres hacer.",
@@ -87,7 +88,7 @@ const translations = {
       "info.termsTwo": "No uses esta herramienta para crear contenido ilegal, engañoso, dañino o para tomar decisiones importantes sin revisión humana.",
       "info.curiosityTitle": "Para personas curiosas",
       "info.curiosityOne": "El proyecto está hecho como una página simple de navegador. La idea es que más personas aprendan a usar IA con método, sin depender de herramientas complicadas.",
-      "footer.back": "Volver a NHA Mini Desk"
+      "footer.back": "Volver a Prompt Claro"
     },
     cases: {
       general: "General",
@@ -225,7 +226,7 @@ Urge tener una primera versión para revisión mañana.`
       consulting: { caseKey: "consulting", outputKey: "actionPlan", desiredOutcome: "Organiza esta información de llamada en diagnóstico, prioridades, preguntas pendientes y siguiente paso." },
       legal: { caseKey: "legal", outputKey: "facts", desiredOutcome: "Convierte esta información en hechos, pendientes, riesgos y preguntas para responder mejor." }
     },
-    shareText: () => `Amigos, prueben NHA Mini Desk.
+    shareText: () => `Amigos, prueben Prompt Claro.
 
 Convierte una idea en bruto en un brief claro para ChatGPT, Claude, Gemini, Codex, Cursor o la IA que uses.
 
@@ -240,11 +241,12 @@ ${getShareUrl()}`
   en: {
     name: "English",
     htmlLang: "en",
-    title: "NHA Mini Desk | Clear AI briefs from rough thoughts",
+    title: "Clear Prompt Builder | Clear AI briefs from rough thoughts",
     description: "Turn a rough idea into a clear brief for ChatGPT, Gemini, Claude, Codex, Cursor, or any AI tool. Free, no login, no app install.",
     ui: {
       "language.label": "Language",
       "hero.eyebrow": "Free · No login · No app install",
+      "hero.title": "Clear Prompt Builder",
       "hero.subtitle": "From rough idea to an AI-ready brief for ChatGPT, Claude, Gemini, Codex, or Cursor.",
       "hero.tryExample": "Try in 20 seconds",
       "hero.privacy": "What you write is not saved in a database.",
@@ -295,11 +297,11 @@ ${getShareUrl()}`
       "footer.meta": "v0.1.3 · © 2026 Albert Punj · Released 6 May 2026",
       "footer.license": "MIT License",
       "footer.info": "How it works and terms",
-      "info.eyebrow": "NHA Mini Desk",
+      "info.eyebrow": "NHA Method",
       "info.title": "How it works and terms",
       "info.subtitle": "A plain explanation of what the tool does and what it does not do.",
       "info.whatTitle": "What it does",
-      "info.whatOne": "NHA Mini Desk takes what you want the AI to do and turns it into a clearer brief for ChatGPT, Gemini, Claude, Codex, Cursor, or any AI you use.",
+      "info.whatOne": "Clear Prompt Builder takes what you want the AI to do and turns it into a clearer brief for ChatGPT, Gemini, Claude, Codex, Cursor, or any AI you use.",
       "info.whatTwo": "It does not answer for the AI. It does not replace your judgment. It only helps you ask better.",
       "info.howTitle": "How to use it",
       "info.howOne": "Choose the type of work you want to do.",
@@ -322,7 +324,7 @@ ${getShareUrl()}`
       "info.termsTwo": "Do not use this tool to create illegal, deceptive, harmful content or to make important decisions without human review.",
       "info.curiosityTitle": "For curious people",
       "info.curiosityOne": "The project is built as a simple browser page. The idea is to help more people use AI with method, without depending on complicated tools.",
-      "footer.back": "Back to NHA Mini Desk"
+      "footer.back": "Back to Clear Prompt Builder"
     },
     cases: {
       general: "General",
@@ -439,7 +441,7 @@ Need first version for review tomorrow.`
       consulting: { caseKey: "consulting", outputKey: "actionPlan", desiredOutcome: "Organize this call context into diagnosis, priorities, pending questions, and next step." },
       legal: { caseKey: "legal", outputKey: "facts", desiredOutcome: "Turn this information into facts, pending items, risks, and questions to respond better." }
     },
-    shareText: () => `Try NHA Mini Desk.
+    shareText: () => `Try Clear Prompt Builder.
 
 Write or paste what you want to ask AI and turn it into a clear prompt for ChatGPT, Gemini, Claude, or any AI you use.
 
@@ -454,11 +456,12 @@ ${getShareUrl()}`
   hi: {
     name: "हिंदी",
     htmlLang: "hi",
-    title: "NHA Mini Desk | अपनी बात को बेहतर prompt में बदलें",
-    description: "AI से जो करवाना है, जैसे दिमाग में है वैसे लिखें या paste करें. NHA Mini Desk उसे ChatGPT, Gemini, Claude या किसी भी AI के लिए clear prompt बना देता है. Free, no login, no app install.",
+    title: "Clear Prompt Builder | अपनी बात को बेहतर prompt में बदलें",
+    description: "AI से जो करवाना है, जैसे दिमाग में है वैसे लिखें या paste करें. Clear Prompt Builder उसे ChatGPT, Gemini, Claude या किसी भी AI के लिए clear prompt बना देता है. Free, no login, no app install.",
     ui: {
       "language.label": "भाषा",
       "hero.eyebrow": "Free - Login नहीं - App install नहीं",
+      "hero.title": "Clear Prompt Builder",
       "hero.subtitle": "Rough idea से ChatGPT, Claude, Gemini, Codex या Cursor के लिए AI-ready brief बनाएं.",
       "hero.tryExample": "20 सेकंड में try करें",
       "hero.privacy": "आप जो लिखते हैं, वह database में save नहीं होता.",
@@ -509,11 +512,11 @@ ${getShareUrl()}`
       "footer.meta": "v0.1.3 · © 2026 Albert Punj · Released 6 May 2026",
       "footer.license": "MIT License",
       "footer.info": "कैसे काम करता है और terms",
-      "info.eyebrow": "NHA Mini Desk",
+      "info.eyebrow": "NHA Method",
       "info.title": "कैसे काम करता है और terms",
       "info.subtitle": "Simple explanation: tool क्या करता है, और क्या नहीं करता.",
       "info.whatTitle": "यह क्या करता है",
-      "info.whatOne": "NHA Mini Desk AI से जो काम करवाना है उसे ChatGPT, Gemini, Claude या जिस AI को आप use करते हैं उसके लिए clear prompt में बदलता है.",
+      "info.whatOne": "Clear Prompt Builder AI से जो काम करवाना है उसे ChatGPT, Gemini, Claude या जिस AI को आप use करते हैं उसके लिए clear prompt में बदलता है.",
       "info.whatTwo": "यह AI की जगह जवाब नहीं देता. यह आपके judgment को replace नहीं करता. यह सिर्फ बेहतर पूछने में मदद करता है.",
       "info.howTitle": "Use कैसे करें",
       "info.howOne": "जिस तरह का काम करना है, उसे चुनें.",
@@ -536,7 +539,7 @@ ${getShareUrl()}`
       "info.termsTwo": "Illegal, deceptive, harmful content बनाने या human review के बिना important decisions लेने के लिए इस tool का use न करें.",
       "info.curiosityTitle": "Curious लोगों के लिए",
       "info.curiosityOne": "यह project एक simple browser page की तरह बना है. Idea है कि ज्यादा लोग complicated tools पर depend किए बिना method से AI use करना सीखें.",
-      "footer.back": "NHA Mini Desk पर वापस जाएं"
+      "footer.back": "Clear Prompt Builder पर वापस जाएं"
     },
     cases: {
       general: "General",
@@ -653,7 +656,7 @@ Tomorrow review के लिए first version चाहिए.`
       consulting: { caseKey: "consulting", outputKey: "actionPlan", desiredOutcome: "इस call context को diagnosis, priorities, pending questions और next step में organize करें." },
       legal: { caseKey: "legal", outputKey: "facts", desiredOutcome: "इस information को facts, pending items, risks और questions में बदलें ताकि बेहतर reply दिया जा सके." }
     },
-    shareText: () => `NHA Mini Desk try करें.
+    shareText: () => `Clear Prompt Builder try करें.
 
 आप AI से जो पूछना चाहते हैं उसे लिखें या paste करें और ChatGPT, Gemini, Claude या किसी भी AI के लिए clear prompt बनाएं.
 
@@ -668,11 +671,12 @@ ${getShareUrl()}`
   pa: {
     name: "ਪੰਜਾਬੀ",
     htmlLang: "pa",
-    title: "NHA Mini Desk | ਆਪਣੀ ਗੱਲ ਨੂੰ ਵਧੀਆ prompt ਬਣਾਓ",
-    description: "AI ਤੋਂ ਜੋ ਕਰਵਾਉਣਾ ਹੈ, ਜਿਵੇਂ ਮਨ ਵਿੱਚ ਹੈ ਉਹ ਲਿਖੋ ਜਾਂ paste ਕਰੋ. NHA Mini Desk ਇਸਨੂੰ ChatGPT, Gemini, Claude ਜਾਂ ਕਿਸੇ ਵੀ AI ਲਈ clear prompt ਬਣਾ ਦਿੰਦਾ ਹੈ. Free, no login, no app install.",
+    title: "Clear Prompt Builder | ਆਪਣੀ ਗੱਲ ਨੂੰ ਵਧੀਆ prompt ਬਣਾਓ",
+    description: "AI ਤੋਂ ਜੋ ਕਰਵਾਉਣਾ ਹੈ, ਜਿਵੇਂ ਮਨ ਵਿੱਚ ਹੈ ਉਹ ਲਿਖੋ ਜਾਂ paste ਕਰੋ. Clear Prompt Builder ਇਸਨੂੰ ChatGPT, Gemini, Claude ਜਾਂ ਕਿਸੇ ਵੀ AI ਲਈ clear prompt ਬਣਾ ਦਿੰਦਾ ਹੈ. Free, no login, no app install.",
     ui: {
       "language.label": "ਭਾਸ਼ਾ",
       "hero.eyebrow": "Free - Login ਨਹੀਂ - App install ਨਹੀਂ",
+      "hero.title": "Clear Prompt Builder",
       "hero.subtitle": "Rough idea ਤੋਂ ChatGPT, Claude, Gemini, Codex ਜਾਂ Cursor ਲਈ AI-ready brief ਬਣਾਓ.",
       "hero.tryExample": "20 seconds ਵਿੱਚ try ਕਰੋ",
       "hero.privacy": "ਤੁਸੀਂ ਜੋ ਲਿਖਦੇ ਹੋ, ਉਹ database ਵਿੱਚ save ਨਹੀਂ ਹੁੰਦਾ.",
@@ -723,11 +727,11 @@ ${getShareUrl()}`
       "footer.meta": "v0.1.3 · © 2026 Albert Punj · Released 6 May 2026",
       "footer.license": "MIT License",
       "footer.info": "ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ ਅਤੇ terms",
-      "info.eyebrow": "NHA Mini Desk",
+      "info.eyebrow": "NHA Method",
       "info.title": "ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ ਅਤੇ terms",
       "info.subtitle": "Simple explanation: tool ਕੀ ਕਰਦਾ ਹੈ, ਤੇ ਕੀ ਨਹੀਂ ਕਰਦਾ.",
       "info.whatTitle": "ਇਹ ਕੀ ਕਰਦਾ ਹੈ",
-      "info.whatOne": "NHA Mini Desk AI ਤੋਂ ਜੋ ਕੰਮ ਕਰਵਾਉਣਾ ਹੈ ਉਸਨੂੰ ChatGPT, Gemini, Claude ਜਾਂ ਜਿਸ AI ਨੂੰ ਤੁਸੀਂ use ਕਰਦੇ ਹੋ ਉਸ ਲਈ clear prompt ਵਿੱਚ ਬਦਲਦਾ ਹੈ.",
+      "info.whatOne": "Clear Prompt Builder AI ਤੋਂ ਜੋ ਕੰਮ ਕਰਵਾਉਣਾ ਹੈ ਉਸਨੂੰ ChatGPT, Gemini, Claude ਜਾਂ ਜਿਸ AI ਨੂੰ ਤੁਸੀਂ use ਕਰਦੇ ਹੋ ਉਸ ਲਈ clear prompt ਵਿੱਚ ਬਦਲਦਾ ਹੈ.",
       "info.whatTwo": "ਇਹ AI ਦੀ ਥਾਂ answer ਨਹੀਂ ਦਿੰਦਾ. ਇਹ ਤੁਹਾਡੇ judgment ਨੂੰ replace ਨਹੀਂ ਕਰਦਾ. ਇਹ ਸਿਰਫ better ask ਕਰਨ ਵਿੱਚ help ਕਰਦਾ ਹੈ.",
       "info.howTitle": "Use ਕਿਵੇਂ ਕਰਨਾ ਹੈ",
       "info.howOne": "ਜਿਸ type ਦਾ ਕੰਮ ਕਰਨਾ ਹੈ, ਉਹ ਚੁਣੋ.",
@@ -750,7 +754,7 @@ ${getShareUrl()}`
       "info.termsTwo": "Illegal, deceptive, harmful content ਬਣਾਉਣ ਜਾਂ human review ਤੋਂ ਬਿਨਾਂ important decisions ਲੈਣ ਲਈ ਇਸ tool ਦਾ use ਨਾ ਕਰੋ.",
       "info.curiosityTitle": "Curious ਲੋਕਾਂ ਲਈ",
       "info.curiosityOne": "ਇਹ project simple browser page ਵਾਂਗ ਬਣਿਆ ਹੈ. Idea ਹੈ ਕਿ ਹੋਰ ਲੋਕ complicated tools ਤੇ depend ਕੀਤੇ ਬਿਨਾਂ method ਨਾਲ AI use ਕਰਨਾ ਸਿੱਖਣ.",
-      "footer.back": "NHA Mini Desk ਤੇ ਵਾਪਸ ਜਾਓ"
+      "footer.back": "Clear Prompt Builder ਤੇ ਵਾਪਸ ਜਾਓ"
     },
     cases: {
       general: "General",
@@ -867,7 +871,7 @@ Tomorrow review ਲਈ first version ਚਾਹੀਦਾ ਹੈ.`
       consulting: { caseKey: "consulting", outputKey: "actionPlan", desiredOutcome: "ਇਸ call context ਨੂੰ diagnosis, priorities, pending questions ਅਤੇ next step ਵਿੱਚ organize ਕਰੋ." },
       legal: { caseKey: "legal", outputKey: "facts", desiredOutcome: "ਇਸ information ਨੂੰ facts, pending items, risks ਅਤੇ questions ਵਿੱਚ ਬਦਲੋ ਤਾਂ ਕਿ better reply ਦਿੱਤਾ ਜਾ ਸਕੇ." }
     },
-    shareText: () => `NHA Mini Desk try ਕਰੋ.
+    shareText: () => `Clear Prompt Builder try ਕਰੋ.
 
 ਤੁਸੀਂ AI ਤੋਂ ਜੋ ਪੁੱਛਣਾ ਚਾਹੁੰਦੇ ਹੋ ਉਹ ਲਿਖੋ ਜਾਂ paste ਕਰੋ ਅਤੇ ChatGPT, Gemini, Claude ਜਾਂ ਕਿਸੇ ਵੀ AI ਲਈ clear prompt ਬਣਾਓ.
 
@@ -1019,7 +1023,7 @@ function setLanguage(language, showChangeNotice = false) {
 
   document.documentElement.lang = languageData.htmlLang;
   document.title = document.querySelector(".info-page")
-    ? `${t("info.title")} | NHA Mini Desk`
+    ? `${t("info.title")} | ${t("hero.title")}`
     : languageData.title;
   const description = document.querySelector("meta[name='description']");
   if (description) description.setAttribute("content", languageData.description);

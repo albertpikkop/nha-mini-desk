@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for helping improve NHA Mini Desk.
+Thank you for helping improve Prompt Claro / Clear Prompt Builder.
 
 This project is intentionally simple. Please keep it understandable for
 students, non-technical users, and people who are still learning how to work

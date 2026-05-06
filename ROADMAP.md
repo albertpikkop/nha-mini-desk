@@ -1,6 +1,6 @@
 # Roadmap
 
-NHA Mini Desk starts small on purpose.
+Prompt Claro / Clear Prompt Builder starts small on purpose.
 
 ## v0.1
 

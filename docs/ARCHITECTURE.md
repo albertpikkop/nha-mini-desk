@@ -1,6 +1,6 @@
 # Architecture
 
-NHA Mini Desk is a static browser app.
+Prompt Claro / Clear Prompt Builder is a static browser app.
 
 ## Runtime
 

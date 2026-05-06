@@ -1,6 +1,6 @@
-# NHA Mini Desk
+# Prompt Claro / Clear Prompt Builder
 
-NHA Mini Desk is an open-source browser tool that turns a rough ask, message,
+Prompt Claro, also available as Clear Prompt Builder in English, is an open-source browser tool that turns a rough ask, message,
 case, or client context into structured AI prompts for ChatGPT, Gemini, Claude,
 or any AI tool.
 

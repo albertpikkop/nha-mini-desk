@@ -1,4 +1,4 @@
-# NHA Mini Desk
+# Prompt Claro / Clear Prompt Builder
 
 > Turn messy thoughts into clear, structured, verifiable AI prompts.
 
@@ -7,7 +7,7 @@
 [![No Backend](https://img.shields.io/badge/backend-none-lightgrey.svg)](#privacy)
 [![Browser Only](https://img.shields.io/badge/runs-in_browser-brightgreen.svg)](#quick-start)
 
-NHA Mini Desk is a small open-source browser tool for people who already use
+Prompt Claro, powered by the NHA method, is a small open-source browser tool for people who already use
 ChatGPT, Gemini, Claude, or any AI tool, but still paste raw, messy thoughts
 and get inconsistent results.
 
@@ -23,7 +23,7 @@ Most people do not need an "AI agent" on day one.
 
 They first need a better way to ask.
 
-NHA Mini Desk teaches that step. It gives users a simple pattern:
+Prompt Claro teaches that step. It gives users a simple pattern:
 
 ```text
 raw thoughts -> TCE structure -> NHA rules -> better AI output
