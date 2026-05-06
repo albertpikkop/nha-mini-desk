@@ -6,7 +6,7 @@ Datos internos:
 
 Pedido probablemente #MX-4821, pero no estoy seguro porque el mensaje llegó sin número.
 
-Cliente se llama Mariana, apellido pendiente.
+Cliente se llama Mariana López, apellido materno pendiente.
 
 Compra aproximada: 24 o 25 de abril. Producto: silla ergonómica negra. En sistema aparece un retraso por inventario, pero falta confirmar con logística.
 

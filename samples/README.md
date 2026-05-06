@@ -8,6 +8,7 @@ Spanish examples are Mexico-first.
 
 They may include context such as:
 
+- Mexican names
 - RFC
 - IVA
 - CDMX
@@ -23,6 +24,7 @@ The built-in examples in `app.js` are India-first.
 
 They may include context such as:
 
+- Indian names
 - WhatsApp, Excel, and Gmail workflows
 - Gurugram and Mohali
 - INR / Rs

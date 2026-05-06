@@ -57,7 +57,7 @@ const translations = {
       "verification.five": "¿Hay una decisión humana pendiente antes de usarlo?",
       "privacy.note": "La herramienta no guarda lo que escribes. Si quieres borrarlo de la pantalla, presiona \"Limpiar\" o cierra la pestaña.",
       "footer.creator": "Creado por Ashish Punj",
-      "footer.meta": "v0.1.1 · © 2026 Ashish Punj · Lanzado 6 May 2026",
+      "footer.meta": "v0.1.2 · © 2026 Ashish Punj · Lanzado 6 May 2026",
       "footer.license": "MIT License",
       "footer.info": "Cómo funciona y términos",
       "info.eyebrow": "NHA Mini Desk",
@@ -181,7 +181,7 @@ Datos internos:
 
 Pedido probablemente #MX-4821, pero no estoy seguro porque el mensaje llegó sin número.
 
-Cliente se llama Mariana, apellido pendiente.
+Cliente se llama Mariana López, apellido materno pendiente.
 
 Compra aproximada: 24 o 25 de abril. Producto: silla ergonómica negra. En sistema aparece un retraso por inventario, pero falta confirmar con logística.
 
@@ -192,13 +192,13 @@ No prometer entrega hoy si no está confirmado.
 Necesitamos respuesta profesional y plan de seguimiento.`,
       consulting: `Notas de llamada con cliente:
 
-Empresa mediana de servicios B2B en Monterrey. Tienen equipo comercial de 6 personas. El dueño dice que están perdiendo oportunidades porque los vendedores no dan seguimiento constante.
+Empresa mediana de servicios B2B en Monterrey. La llamada fue con Carlos Rivas, dueño de la empresa. Tienen equipo comercial de 6 personas. Carlos dice que están perdiendo oportunidades porque los vendedores no dan seguimiento constante.
 
 Usan mensajes, Excel y correo. No tienen CRM formal. Cada vendedor maneja sus leads como quiere.
 
 Problema principal: nadie sabe cuántos prospectos hay, quién dio seguimiento, quién está caliente y quién se perdió.
 
-El dueño quiere "automatizar con IA", pero parece que primero necesitan ordenar proceso.
+Carlos quiere "automatizar con IA", pero parece que primero necesitan ordenar proceso.
 
 Mencionó que reciben 80 a 120 leads al mes, pero no está seguro. También dijo que la tasa de cierre anda entre 8% y 12%, pero no hay datos confiables.
 
@@ -207,15 +207,15 @@ Quiere propuesta para diagnóstico de 2 semanas y luego implementación.
 Pendiente confirmar presupuesto, herramientas actuales y quién sería responsable interno.`,
       legal: `Licenciado, necesitamos preparar contrato de arrendamiento para un local comercial en Roma Norte, CDMX.
 
-El local mide aprox 120 m2. La renta sería de $38,000 mensuales más IVA, pero falta confirmar si el arrendador factura como persona física o moral.
+El local mide aprox 120 m2. La renta sería de $38,000 mensuales más IVA. El arrendador podría ser José Luis Hernández, pero falta confirmar si factura como persona física o moral.
 
-El cliente quiere iniciar el 15 de junio, pero todavía no está 100% confirmado porque están esperando adecuaciones del local.
+La clienta, Ana Sofía Martínez, quiere iniciar el 15 de junio, pero todavía no está 100% confirmado porque están esperando adecuaciones del local.
 
-El arrendatario probablemente será una S.A. de C.V., pero no tengo todavía razón social completa ni RFC.
+El arrendatario probablemente será una S.A. de C.V.; mencionaron "Comercializadora Altavista", pero no tengo todavía razón social completa ni RFC.
 
 Quieren depósito de 2 meses. También quieren saber si se puede incluir subarrendamiento con autorización previa por escrito.
 
-El dueño quiere penalización si se salen antes de 12 meses. No sé todavía monto.
+José Luis quiere penalización si se salen antes de 12 meses. No sé todavía monto.
 
 Urge tener una primera versión para revisión mañana.`
     },
@@ -291,7 +291,7 @@ ${getShareUrl()}`
       "verification.five": "Is there a human decision pending before using it?",
       "privacy.note": "The tool does not save what you write. To remove it from the screen, press \"Clear\" or close the tab.",
       "footer.creator": "Created by Ashish Punj",
-      "footer.meta": "v0.1.1 · © 2026 Ashish Punj · Released 6 May 2026",
+      "footer.meta": "v0.1.2 · © 2026 Ashish Punj · Released 6 May 2026",
       "footer.license": "MIT License",
       "footer.info": "How it works and terms",
       "info.eyebrow": "NHA Mini Desk",
@@ -385,7 +385,7 @@ ${getShareUrl()}`
       draft: "Only draft if critical information is complete. If information is missing, list questions first.",
       actionPlan: "Give actions, suggested owner if indicated, date if present, and pending items.",
       email: "Give subject, email body, recommended tone, and missing details before sending.",
-      risks: "Give prioritized risks, evidence in the notes, and mitigation action."
+      risks: "Give prioritized risks, evidence in the text, and mitigation action."
     },
     samples: {
       cx: `An upset customer sent this message:
@@ -407,13 +407,13 @@ Do not promise delivery today if it is not confirmed.
 We need a professional response and follow-up plan.`,
       consulting: `Client call notes:
 
-Indian B2B services company in Gurugram. Sales team of 8 people. The founder says they are losing opportunities because the team does not follow up consistently.
+Indian B2B services company in Gurugram. The call was with Amit Mehra, the founder. Sales team of 8 people. Amit says they are losing opportunities because the team does not follow up consistently.
 
 They use WhatsApp, Excel, and Gmail. No formal CRM. Each salesperson handles leads their own way.
 
 Main problem: nobody knows how many prospects exist, who followed up, who is warm, and who was lost.
 
-The founder wants to "automate with AI", but it seems they need to organize the process first.
+Amit wants to "automate with AI", but it seems they need to organize the process first.
 
 He mentioned 200 to 300 leads per month, but he is not sure. He also said close rate is around 5% to 7%, but there is no reliable data.
 
@@ -422,15 +422,15 @@ He wants a proposal for a 2-week diagnosis and then implementation.
 Pending: confirm budget, current tools, and who would be responsible internally.`,
       legal: `We need to prepare a lease agreement for a commercial shop in Sector 67, Mohali.
 
-The shop is about 900 sq ft. Rent would be Rs 85,000 monthly plus GST if applicable, but we still need to confirm whether the landlord is an individual or a firm.
+The shop is about 900 sq ft. Rent would be Rs 85,000 monthly plus GST if applicable. Landlord may be Harpreet Singh, but we still need to confirm whether he is signing as an individual or through a firm.
 
-The client wants to start on 15 June, but it is not 100% confirmed because interior work is still pending.
+The client contact, Neha Kapoor, wants to start on 15 June, but it is not 100% confirmed because interior work is still pending.
 
-Tenant will probably be a Private Limited company, but I do not yet have full legal name, CIN, GSTIN, or authorized signatory details.
+Tenant will probably be UrbanFit Retail Private Limited, but I do not yet have full legal name, CIN, GSTIN, or authorized signatory details.
 
 They want a 2-month security deposit. They also want to know if subletting can be included with prior written approval.
 
-The landlord wants a lock-in penalty if they leave before 12 months. I do not know the amount yet.
+Harpreet wants a lock-in penalty if they leave before 12 months. I do not know the amount yet.
 
 Need first version for review tomorrow.`
     },
@@ -506,7 +506,7 @@ ${getShareUrl()}`
       "verification.five": "Use करने से पहले कोई human decision pending है?",
       "privacy.note": "यह tool आपकी लिखी हुई चीज़ save नहीं करता. Screen से हटाने के लिए \"Clear\" दबाएं या tab बंद करें.",
       "footer.creator": "Created by Ashish Punj",
-      "footer.meta": "v0.1.1 · © 2026 Ashish Punj · Released 6 May 2026",
+      "footer.meta": "v0.1.2 · © 2026 Ashish Punj · Released 6 May 2026",
       "footer.license": "MIT License",
       "footer.info": "कैसे काम करता है और terms",
       "info.eyebrow": "NHA Mini Desk",
@@ -600,7 +600,7 @@ ${getShareUrl()}`
       draft: "Critical information complete हो तो ही draft लिखें. Information missing हो तो पहले questions list करें.",
       actionPlan: "Actions, suggested owner if indicated, date if present, और pending items दें.",
       email: "Subject, email body, recommended tone, और send करने से पहले missing details दें.",
-      risks: "Prioritized risks, notes में evidence, और mitigation action दें."
+      risks: "Prioritized risks, text में evidence, और mitigation action दें."
     },
     samples: {
       cx: `एक नाराज customer ने message भेजा:
@@ -611,7 +611,7 @@ Internal notes:
 
 Order शायद #IN-4821 है, लेकिन sure नहीं क्योंकि message में order number नहीं था.
 
-Customer का नाम Riya Sharma है, phone number pending.
+Customer का नाम रिया शर्मा है, phone number pending.
 
 Approx purchase date: 24 या 25 April. Product: black ergonomic chair. System में warehouse delay दिख रहा है, लेकिन courier status confirm करना है.
 
@@ -622,13 +622,13 @@ Delivery today promise नहीं करनी अगर confirm नहीं 
 Professional response और follow-up plan चाहिए.`,
       consulting: `Client call notes:
 
-Gurugram की Indian B2B services company. Sales team 8 लोगों की है. Founder कहता है opportunities miss हो रही हैं क्योंकि team consistent follow-up नहीं करती.
+Gurugram की Indian B2B services company. Call अमित मेहरा, founder, के साथ थी. Sales team 8 लोगों की है. अमित कहता है opportunities miss हो रही हैं क्योंकि team consistent follow-up नहीं करती.
 
 वे WhatsApp, Excel और Gmail use करते हैं. Formal CRM नहीं है. हर salesperson leads अपने तरीके से handle करता है.
 
 Main problem: किसी को पता नहीं कितने prospects हैं, किसने follow up किया, कौन warm है, कौन lost हो गया.
 
-Founder "AI से automate" करना चाहता है, लेकिन लगता है पहले process order करना होगा.
+अमित "AI से automate" करना चाहता है, लेकिन लगता है पहले process order करना होगा.
 
 उसने 200 से 300 leads per month कहा, लेकिन sure नहीं. Close rate 5% से 7% बताया, लेकिन reliable data नहीं है.
 
@@ -637,15 +637,15 @@ Founder "AI से automate" करना चाहता है, लेकि�
 Pending: budget, current tools, और internal responsible person confirm करना.`,
       legal: `Sector 67, Mohali में commercial shop के lease agreement की जरूरत है.
 
-Shop लगभग 900 sq ft है. Rent Rs 85,000 monthly plus GST if applicable होगी, लेकिन landlord individual है या firm, confirm करना बाकी है.
+Shop लगभग 900 sq ft है. Rent Rs 85,000 monthly plus GST if applicable होगी. Landlord शायद हरप्रीत सिंह हैं, लेकिन वह individual की तरह sign करेंगे या firm के through, confirm करना बाकी है.
 
-Client 15 June से start करना चाहता है, लेकिन 100% confirmed नहीं क्योंकि interior work pending है.
+Client contact नेहा कपूर 15 June से start करना चाहती है, लेकिन 100% confirmed नहीं क्योंकि interior work pending है.
 
-Tenant शायद Private Limited company होगी, लेकिन full legal name, CIN, GSTIN और authorized signatory details अभी नहीं हैं.
+Tenant शायद UrbanFit Retail Private Limited होगी, लेकिन full legal name, CIN, GSTIN और authorized signatory details अभी नहीं हैं.
 
 2-month security deposit चाहिए. वे यह भी जानना चाहते हैं कि prior written approval के साथ subletting include कर सकते हैं या नहीं.
 
-Landlord lock-in penalty चाहता है अगर वे 12 months से पहले leave करें. Amount पता नहीं.
+हरप्रीत lock-in penalty चाहते हैं अगर वे 12 months से पहले leave करें. Amount पता नहीं.
 
 Tomorrow review के लिए first version चाहिए.`
     },
@@ -721,7 +721,7 @@ ${getShareUrl()}`
       "verification.five": "Use ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਕੋਈ human decision pending ਹੈ?",
       "privacy.note": "ਇਹ tool ਤੁਹਾਡੀ ਲਿਖੀ ਚੀਜ਼ save ਨਹੀਂ ਕਰਦਾ. Screen ਤੋਂ ਹਟਾਉਣ ਲਈ \"Clear\" ਦਬਾਓ ਜਾਂ tab close ਕਰੋ.",
       "footer.creator": "Created by Ashish Punj",
-      "footer.meta": "v0.1.1 · © 2026 Ashish Punj · Released 6 May 2026",
+      "footer.meta": "v0.1.2 · © 2026 Ashish Punj · Released 6 May 2026",
       "footer.license": "MIT License",
       "footer.info": "ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ ਅਤੇ terms",
       "info.eyebrow": "NHA Mini Desk",
@@ -815,7 +815,7 @@ ${getShareUrl()}`
       draft: "Critical information complete ਹੋਵੇ ਤਾਂ ਹੀ draft ਲਿਖੋ. Information missing ਹੋਵੇ ਤਾਂ ਪਹਿਲਾਂ questions list ਕਰੋ.",
       actionPlan: "Actions, suggested owner if indicated, date if present, ਅਤੇ pending items ਦਿਓ.",
       email: "Subject, email body, recommended tone, ਅਤੇ send ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ missing details ਦਿਓ.",
-      risks: "Prioritized risks, notes ਵਿੱਚ evidence, ਅਤੇ mitigation action ਦਿਓ."
+      risks: "Prioritized risks, text ਵਿੱਚ evidence, ਅਤੇ mitigation action ਦਿਓ."
     },
     samples: {
       cx: `ਇੱਕ angry customer ਨੇ message ਭੇਜਿਆ:
@@ -826,7 +826,7 @@ Internal notes:
 
 Order ਸ਼ਾਇਦ #IN-4821 ਹੈ, ਪਰ sure ਨਹੀਂ ਕਿਉਂਕਿ message ਵਿੱਚ order number ਨਹੀਂ ਸੀ.
 
-Customer ਦਾ ਨਾਮ Riya Sharma ਹੈ, phone number pending.
+Customer ਦਾ ਨਾਮ ਸਿਮਰਨ ਕੌਰ ਹੈ, phone number pending.
 
 Approx purchase date: 24 ਜਾਂ 25 April. Product: black ergonomic chair. System ਵਿੱਚ warehouse delay ਦਿਖ ਰਿਹਾ ਹੈ, ਪਰ courier status confirm ਕਰਨਾ ਹੈ.
 
@@ -837,13 +837,13 @@ Delivery today promise ਨਹੀਂ ਕਰਨੀ ਜੇ confirm ਨਹੀਂ ਹ
 Professional response ਅਤੇ follow-up plan ਚਾਹੀਦਾ ਹੈ.`,
       consulting: `Client call notes:
 
-Gurugram ਦੀ Indian B2B services company. Sales team 8 ਲੋਕਾਂ ਦੀ ਹੈ. Founder ਕਹਿੰਦਾ ਹੈ opportunities miss ਹੋ ਰਹੀਆਂ ਹਨ ਕਿਉਂਕਿ team consistent follow-up ਨਹੀਂ ਕਰਦੀ.
+Mohali ਦੀ Indian B2B services company. Call ਜਸਪ੍ਰੀਤ ਸਿੰਘ, founder, ਨਾਲ ਸੀ. Sales team 8 ਲੋਕਾਂ ਦੀ ਹੈ. ਜਸਪ੍ਰੀਤ ਕਹਿੰਦਾ ਹੈ opportunities miss ਹੋ ਰਹੀਆਂ ਹਨ ਕਿਉਂਕਿ team consistent follow-up ਨਹੀਂ ਕਰਦੀ.
 
 ਉਹ WhatsApp, Excel ਅਤੇ Gmail use ਕਰਦੇ ਹਨ. Formal CRM ਨਹੀਂ. ਹਰ salesperson leads ਆਪਣੇ ਤਰੀਕੇ ਨਾਲ handle ਕਰਦਾ ਹੈ.
 
 Main problem: ਕਿਸੇ ਨੂੰ ਨਹੀਂ ਪਤਾ ਕਿੰਨੇ prospects ਹਨ, ਕਿਸਨੇ follow up ਕੀਤਾ, ਕੌਣ warm ਹੈ, ਕੌਣ lost ਹੋ ਗਿਆ.
 
-Founder "AI ਨਾਲ automate" ਕਰਨਾ ਚਾਹੁੰਦਾ ਹੈ, ਪਰ ਲੱਗਦਾ ਹੈ ਪਹਿਲਾਂ process order ਕਰਨਾ ਪਵੇਗਾ.
+ਜਸਪ੍ਰੀਤ "AI ਨਾਲ automate" ਕਰਨਾ ਚਾਹੁੰਦਾ ਹੈ, ਪਰ ਲੱਗਦਾ ਹੈ ਪਹਿਲਾਂ process order ਕਰਨਾ ਪਵੇਗਾ.
 
 ਉਸਨੇ 200 ਤੋਂ 300 leads per month ਕਿਹਾ, ਪਰ sure ਨਹੀਂ. Close rate 5% ਤੋਂ 7% ਦੱਸਿਆ, ਪਰ reliable data ਨਹੀਂ.
 
@@ -852,15 +852,15 @@ Founder "AI ਨਾਲ automate" ਕਰਨਾ ਚਾਹੁੰਦਾ ਹੈ, ਪ�
 Pending: budget, current tools, ਅਤੇ internal responsible person confirm ਕਰਨਾ.`,
       legal: `Sector 67, Mohali ਵਿੱਚ commercial shop ਦੇ lease agreement ਦੀ ਲੋੜ ਹੈ.
 
-Shop ਲਗਭਗ 900 sq ft ਹੈ. Rent Rs 85,000 monthly plus GST if applicable ਹੋਵੇਗੀ, ਪਰ landlord individual ਹੈ ਜਾਂ firm, confirm ਕਰਨਾ ਬਾਕੀ ਹੈ.
+Shop ਲਗਭਗ 900 sq ft ਹੈ. Rent Rs 85,000 monthly plus GST if applicable ਹੋਵੇਗੀ. Landlord ਸ਼ਾਇਦ ਹਰਪ੍ਰੀਤ ਸਿੰਘ ਹਨ, ਪਰ ਉਹ individual ਵਜੋਂ sign ਕਰਨਗੇ ਜਾਂ firm ਰਾਹੀਂ, confirm ਕਰਨਾ ਬਾਕੀ ਹੈ.
 
-Client 15 June ਤੋਂ start ਕਰਨਾ ਚਾਹੁੰਦਾ ਹੈ, ਪਰ 100% confirmed ਨਹੀਂ ਕਿਉਂਕਿ interior work pending ਹੈ.
+Client contact ਨੇਹਾ ਕਪੂਰ 15 June ਤੋਂ start ਕਰਨਾ ਚਾਹੁੰਦੀ ਹੈ, ਪਰ 100% confirmed ਨਹੀਂ ਕਿਉਂਕਿ interior work pending ਹੈ.
 
-Tenant ਸ਼ਾਇਦ Private Limited company ਹੋਵੇਗੀ, ਪਰ full legal name, CIN, GSTIN ਅਤੇ authorized signatory details ਅਜੇ ਨਹੀਂ.
+Tenant ਸ਼ਾਇਦ UrbanFit Retail Private Limited ਹੋਵੇਗੀ, ਪਰ full legal name, CIN, GSTIN ਅਤੇ authorized signatory details ਅਜੇ ਨਹੀਂ.
 
 2-month security deposit ਚਾਹੀਦਾ ਹੈ. ਉਹ ਇਹ ਵੀ ਜਾਣਨਾ ਚਾਹੁੰਦੇ ਹਨ ਕਿ prior written approval ਨਾਲ subletting include ਕਰ ਸਕਦੇ ਹਨ ਜਾਂ ਨਹੀਂ.
 
-Landlord lock-in penalty ਚਾਹੁੰਦਾ ਹੈ ਜੇ ਉਹ 12 months ਤੋਂ ਪਹਿਲਾਂ leave ਕਰਨ. Amount ਪਤਾ ਨਹੀਂ.
+ਹਰਪ੍ਰੀਤ lock-in penalty ਚਾਹੁੰਦਾ ਹੈ ਜੇ ਉਹ 12 months ਤੋਂ ਪਹਿਲਾਂ leave ਕਰਨ. Amount ਪਤਾ ਨਹੀਂ.
 
 Tomorrow review ਲਈ first version ਚਾਹੀਦਾ ਹੈ.`
     },

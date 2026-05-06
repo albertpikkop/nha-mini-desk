@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.1.2 - 2026-05-06
+
+- Added culturally specific names and local business details to the examples.
+- Spanish examples now include Mexican names such as Mariana López, Carlos Rivas, Ana Sofía Martínez, and José Luis Hernández.
+- English and Hindi examples now include Indian names such as Riya Sharma, Amit Mehra, Neha Kapoor, and Harpreet Singh.
+- Punjabi examples now include Punjabi/North India names in Gurmukhi, such as ਸਿਮਰਨ ਕੌਰ, ਜਸਪ੍ਰੀਤ ਸਿੰਘ, ਨੇਹਾ ਕਪੂਰ, and ਹਰਪ੍ਰੀਤ ਸਿੰਘ.
+
 ## v0.1.1 - 2026-05-06
 
 - Replaced insider-facing Spanish "notas" copy with more generic public wording such as idea, message, request, and original text.
