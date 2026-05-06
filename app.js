@@ -1,4 +1,4 @@
-const caseKeys = ["general", "legal", "consulting", "cx", "operations", "proposal"];
+const caseKeys = ["general", "legal", "consulting", "cx", "operations", "coding", "proposal"];
 const outputKeys = ["facts", "summary", "draft", "actionPlan", "email", "risks"];
 
 const translations = {
@@ -96,6 +96,7 @@ const translations = {
       consulting: "Consultoría",
       cx: "CX / Cliente",
       operations: "Operaciones",
+      coding: "Código / producto",
       proposal: "Propuesta comercial"
     },
     outputs: {
@@ -110,6 +111,7 @@ const translations = {
       outcome: "Convierte mi caso en una salida clara, verificable y lista para revisar antes de usar.",
       emptyPrompt: "Tu prompt aparecerá aquí. Primero escribe o pega tu caso y presiona \"Generar prompt\"."
     },
+    downloadFileName: "prompt-claro.txt",
     statuses: {
       missingNotes: "Primero escribe o pega tu caso. Puede estar desordenado; esa es la idea.",
       generated: "Listo. Copia este prompt y pégalo en ChatGPT, Gemini, Claude o la IA que uses.",
@@ -119,7 +121,7 @@ const translations = {
       copied: "Prompt copiado al portapapeles.",
       selected: "No se pudo copiar automáticamente. El prompt quedó seleccionado.",
       downloadFirst: "Genera un prompt antes de descargar.",
-      downloaded: "Archivo nha-prompt.txt descargado.",
+      downloaded: "Archivo prompt-claro.txt descargado.",
       shareCopied: "Mensaje para compartir copiado.",
       shareFailed: "No se pudo copiar el mensaje. Copia el link manualmente.",
       languageChanged: "Idioma cambiado. Tu texto y prompt actual se conservan. Presiona \"Generar prompt\" para crear una versión en este idioma.",
@@ -131,13 +133,14 @@ const translations = {
         context: "CONTEXTO",
         notes: "TEXTO ORIGINAL",
         expectation: "EXPECTATIVA",
-        rules: "REGLAS NHA",
+        rules: "REGLAS DE VERIFICACIÓN",
         output: "FORMATO DE SALIDA"
       },
       caseType: "Tipo de trabajo",
       audienceLabel: "Audiencia",
       audience: "Profesional mexicano que necesita una salida útil, clara y verificable.",
       rawContext: "La información viene de un texto inicial y puede estar incompleta, mezclada o escrita con urgencia.",
+      responseLanguage: "Responde en español claro, salvo que el texto original pida otro idioma.",
       pendingOn: "Marca cualquier dato faltante, incierto o no confirmado como [PENDIENTE].",
       pendingOff: "Lista cualquier dato faltante, incierto o no confirmado en una sección de Faltantes.",
       expectations: [
@@ -163,6 +166,7 @@ const translations = {
       consulting: ["Separa síntomas de causas probables.", "No inventes métricas.", "Marca supuestos de negocio como [PENDIENTE].", "Incluye preguntas para diagnóstico."],
       cx: ["Mantén tono empático y profesional.", "No prometas compensaciones o fechas no confirmadas.", "Separa hechos internos de información del cliente.", "Incluye siguiente acción clara."],
       operations: ["Distingue problemas urgentes de mejoras estructurales.", "No inventes responsables.", "Marca dependencias y fechas faltantes como [PENDIENTE].", "Incluye riesgos operativos."],
+      coding: ["Separa comportamiento observado de hipótesis.", "No inventes rutas de archivos, funciones, APIs, errores ni dependencias.", "Si faltan stack, logs, pasos para reproducir o versión, marca [PENDIENTE].", "Incluye plan de depuración, cambios sugeridos y pruebas de verificación."],
       proposal: ["No inventes precios ni alcance.", "Separa necesidad confirmada de oportunidad posible.", "Incluye preguntas antes de cotizar.", "Sugiere estructura de propuesta."],
       general: ["Separa hechos, supuestos y pendientes.", "No inventes datos.", "Incluye preguntas de aclaración.", "Incluye riesgos de usar la salida sin revisión."]
     },
@@ -332,6 +336,7 @@ ${getShareUrl()}`
       consulting: "Consulting",
       cx: "CX / Customer",
       operations: "Operations",
+      coding: "Coding / Product",
       proposal: "Commercial proposal"
     },
     outputs: {
@@ -346,6 +351,7 @@ ${getShareUrl()}`
       outcome: "Turn my case into a clear, verifiable output that is ready to review before use.",
       emptyPrompt: "Your prompt will appear here. First write or paste your case and press \"Generate prompt\"."
     },
+    downloadFileName: "clear-prompt-builder.txt",
     statuses: {
       missingNotes: "First write or paste your case. It can be messy; that is the point.",
       generated: "Ready. Copy this prompt and paste it into ChatGPT, Gemini, Claude, or any AI you use.",
@@ -355,18 +361,19 @@ ${getShareUrl()}`
       copied: "Prompt copied to clipboard.",
       selected: "Could not copy automatically. The prompt has been selected.",
       downloadFirst: "Generate a prompt before downloading.",
-      downloaded: "File nha-prompt.txt downloaded.",
+      downloaded: "File clear-prompt-builder.txt downloaded.",
       shareCopied: "Share message copied.",
       shareFailed: "Could not copy the message. Copy the link manually.",
       languageChanged: "Language changed. Your text and current prompt were kept. Press \"Generate prompt\" to create a version in this language.",
       optionChanged: "Option changed. Press \"Generate prompt\" again to update the prompt."
     },
     prompt: {
-      headings: { task: "TASK", context: "CONTEXT", notes: "ORIGINAL TEXT", expectation: "EXPECTATION", rules: "NHA RULES", output: "OUTPUT FORMAT" },
+      headings: { task: "TASK", context: "CONTEXT", notes: "ORIGINAL TEXT", expectation: "EXPECTATION", rules: "AI GUARDRAILS", output: "OUTPUT FORMAT" },
       caseType: "Work type",
       audienceLabel: "Audience",
       audience: "Indian professional user who needs a useful, clear, verifiable output.",
       rawContext: "The information comes from the user's original text and may be incomplete, mixed, or written in a hurry.",
+      responseLanguage: "Respond in clear English unless the original text asks for another language.",
       pendingOn: "Mark any missing, uncertain, or unconfirmed information as [PENDING].",
       pendingOff: "List any missing, uncertain, or unconfirmed information in a Missing information section.",
       expectations: ["Work carefully and do not assume critical details.", "Use clear professional language.", "Separate confirmed information from assumptions.", "If critical information is missing, list questions first and then give a provisional output using confirmed facts only.", "Keep the answer practical and concise; do not write a long report unless the format asks for one."],
@@ -378,6 +385,7 @@ ${getShareUrl()}`
       consulting: ["Separate symptoms from probable causes.", "Do not invent metrics.", "Mark business assumptions as [PENDING].", "Include diagnostic questions."],
       cx: ["Keep the tone empathetic and professional.", "Do not promise compensation or dates that are not confirmed.", "Separate internal facts from customer information.", "Include a clear next action."],
       operations: ["Separate urgent problems from structural improvements.", "Do not invent owners.", "Mark missing dependencies and dates as [PENDING].", "Include operational risks."],
+      coding: ["Separate observed behavior from hypotheses.", "Do not invent file paths, functions, APIs, errors, or dependencies.", "If stack, logs, reproduction steps, or version are missing, mark [PENDING].", "Include a debugging plan, suggested changes, and verification tests."],
       proposal: ["Do not invent prices or scope.", "Separate confirmed need from possible opportunity.", "Include questions before quoting.", "Suggest a proposal structure."],
       general: ["Separate facts, assumptions, and pending items.", "Do not invent data.", "Include clarification questions.", "Include risks of using the output without review."]
     },
@@ -547,6 +555,7 @@ ${getShareUrl()}`
       consulting: "Consulting",
       cx: "CX / Customer",
       operations: "Operations",
+      coding: "Coding / Product",
       proposal: "Commercial proposal"
     },
     outputs: {
@@ -561,6 +570,7 @@ ${getShareUrl()}`
       outcome: "मेरे case को clear, verifiable output में बदलें जिसे use करने से पहले review किया जा सके.",
       emptyPrompt: "आपका prompt यहां दिखेगा. पहले अपना case लिखें या paste करें, फिर \"Prompt generate करें\" दबाएं."
     },
+    downloadFileName: "clear-prompt-builder.txt",
     statuses: {
       missingNotes: "पहले अपना case लिखें या paste करें. Messy हो सकता है; यही तो काम है.",
       generated: "Ready. इस prompt को copy करें और ChatGPT, Gemini, Claude या जिस AI को आप use करते हैं उसमें paste करें.",
@@ -570,18 +580,19 @@ ${getShareUrl()}`
       copied: "Prompt clipboard में copy हो गया.",
       selected: "Automatically copy नहीं हुआ. Prompt selected है.",
       downloadFirst: "Download करने से पहले prompt generate करें.",
-      downloaded: "File nha-prompt.txt download हो गई.",
+      downloaded: "File clear-prompt-builder.txt download हो गई.",
       shareCopied: "Share message copy हो गया.",
       shareFailed: "Message copy नहीं हुआ. Link manually copy करें.",
       languageChanged: "Language बदल गई. आपका text और current prompt वैसे ही रखे गए हैं. इस भाषा में version बनाने के लिए \"Prompt generate करें\" दबाएं.",
       optionChanged: "Option बदल गई. Prompt update करने के लिए \"Prompt generate करें\" फिर दबाएं."
     },
     prompt: {
-      headings: { task: "काम", context: "संदर्भ", notes: "मूल टेक्स्ट", expectation: "उम्मीद", rules: "NHA RULES", output: "OUTPUT FORMAT" },
+      headings: { task: "काम", context: "संदर्भ", notes: "मूल टेक्स्ट", expectation: "उम्मीद", rules: "AI GUARDRAILS", output: "OUTPUT FORMAT" },
       caseType: "काम का प्रकार",
       audienceLabel: "Audience",
       audience: "Indian professional user जिसे useful, clear और verifiable output चाहिए.",
       rawContext: "Information user के original text से आई है और incomplete, mixed या hurry में लिखी हो सकती है.",
+      responseLanguage: "Hinglish/Hindi style में जवाब दें, जब तक original text कोई दूसरी language न मांगे.",
       pendingOn: "Missing, uncertain या unconfirmed information को [PENDING] mark करें.",
       pendingOff: "Missing, uncertain या unconfirmed information को Missing information section में list करें.",
       expectations: ["Carefully काम करें और critical details assume न करें.", "Clear professional language use करें.", "Confirmed information और assumptions अलग करें.", "अगर critical information missing है, पहले questions list करें और फिर सिर्फ confirmed facts से provisional output दें.", "Answer practical और concise रखें; format न मांगे तो long report न लिखें."],
@@ -593,6 +604,7 @@ ${getShareUrl()}`
       consulting: ["Symptoms और probable causes अलग करें.", "Metrics invent न करें.", "Business assumptions को [PENDING] mark करें.", "Diagnostic questions include करें."],
       cx: ["Tone empathetic और professional रखें.", "Unconfirmed compensation या dates promise न करें.", "Internal facts और customer information अलग करें.", "Clear next action include करें."],
       operations: ["Urgent problems और structural improvements अलग करें.", "Owners invent न करें.", "Missing dependencies और dates को [PENDING] mark करें.", "Operational risks include करें."],
+      coding: ["Observed behavior और hypotheses अलग करें.", "File paths, functions, APIs, errors या dependencies invent न करें.", "Stack, logs, reproduction steps या version missing हो तो [PENDING] mark करें.", "Debugging plan, suggested changes और verification tests include करें."],
       proposal: ["Prices या scope invent न करें.", "Confirmed need और possible opportunity अलग करें.", "Quote करने से पहले questions include करें.", "Proposal structure suggest करें."],
       general: ["Facts, assumptions और pending items अलग करें.", "Data invent न करें.", "Clarification questions include करें.", "Review के बिना output use करने के risks include करें."]
     },
@@ -762,6 +774,7 @@ ${getShareUrl()}`
       consulting: "Consulting",
       cx: "CX / Customer",
       operations: "Operations",
+      coding: "Coding / Product",
       proposal: "Commercial proposal"
     },
     outputs: {
@@ -776,6 +789,7 @@ ${getShareUrl()}`
       outcome: "ਮੇਰੇ case ਨੂੰ clear, verifiable output ਵਿੱਚ ਬਦਲੋ ਜੋ use ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ review ਹੋ ਸਕੇ.",
       emptyPrompt: "ਤੁਹਾਡਾ prompt ਇੱਥੇ ਆਵੇਗਾ. ਪਹਿਲਾਂ ਆਪਣਾ case ਲਿਖੋ ਜਾਂ paste ਕਰੋ, ਫਿਰ \"Prompt generate ਕਰੋ\" ਦਬਾਓ."
     },
+    downloadFileName: "clear-prompt-builder.txt",
     statuses: {
       missingNotes: "ਪਹਿਲਾਂ ਆਪਣਾ case ਲਿਖੋ ਜਾਂ paste ਕਰੋ. Messy ਹੋ ਸਕਦਾ ਹੈ; ਇਹੀ ਤਾਂ ਕੰਮ ਹੈ.",
       generated: "Ready. ਇਹ prompt copy ਕਰੋ ਤੇ ChatGPT, Gemini, Claude ਜਾਂ ਜਿਸ AI ਨੂੰ ਤੁਸੀਂ use ਕਰਦੇ ਹੋ ਉਸ ਵਿੱਚ paste ਕਰੋ.",
@@ -785,18 +799,19 @@ ${getShareUrl()}`
       copied: "Prompt clipboard ਵਿੱਚ copy ਹੋ ਗਿਆ.",
       selected: "Automatically copy ਨਹੀਂ ਹੋਇਆ. Prompt selected ਹੈ.",
       downloadFirst: "Download ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ prompt generate ਕਰੋ.",
-      downloaded: "File nha-prompt.txt download ਹੋ ਗਈ.",
+      downloaded: "File clear-prompt-builder.txt download ਹੋ ਗਈ.",
       shareCopied: "Share message copy ਹੋ ਗਿਆ.",
       shareFailed: "Message copy ਨਹੀਂ ਹੋਇਆ. Link manually copy ਕਰੋ.",
       languageChanged: "Language ਬਦਲ ਗਈ. ਤੁਹਾਡਾ text ਅਤੇ current prompt ਉਹੀ ਰੱਖੇ ਗਏ ਹਨ. ਇਸ language ਵਿੱਚ version ਬਣਾਉਣ ਲਈ \"Prompt generate ਕਰੋ\" ਦਬਾਓ.",
       optionChanged: "Option ਬਦਲ ਗਈ. Prompt update ਕਰਨ ਲਈ \"Prompt generate ਕਰੋ\" ਫਿਰ ਦਬਾਓ."
     },
     prompt: {
-      headings: { task: "ਕੰਮ", context: "ਸੰਦਰਭ", notes: "ਮੂਲ text", expectation: "ਉਮੀਦ", rules: "NHA RULES", output: "OUTPUT FORMAT" },
+      headings: { task: "ਕੰਮ", context: "ਸੰਦਰਭ", notes: "ਮੂਲ text", expectation: "ਉਮੀਦ", rules: "AI GUARDRAILS", output: "OUTPUT FORMAT" },
       caseType: "ਕੰਮ ਦੀ type",
       audienceLabel: "Audience",
       audience: "Indian professional user ਜਿਸਨੂੰ useful, clear ਅਤੇ verifiable output ਚਾਹੀਦਾ ਹੈ.",
       rawContext: "Information user ਦੇ original text ਤੋਂ ਆਈ ਹੈ ਅਤੇ incomplete, mixed ਜਾਂ hurry ਵਿੱਚ ਲਿਖੀ ਹੋ ਸਕਦੀ ਹੈ.",
+      responseLanguage: "Punjabi-English natural style ਵਿੱਚ ਜਵਾਬ ਦਿਓ, ਜਦ ਤੱਕ original text ਕੋਈ ਹੋਰ language ਨਾ ਮੰਗੇ.",
       pendingOn: "Missing, uncertain ਜਾਂ unconfirmed information ਨੂੰ [PENDING] mark ਕਰੋ.",
       pendingOff: "Missing, uncertain ਜਾਂ unconfirmed information ਨੂੰ Missing information section ਵਿੱਚ list ਕਰੋ.",
       expectations: ["Carefully ਕੰਮ ਕਰੋ ਅਤੇ critical details assume ਨਾ ਕਰੋ.", "Clear professional language use ਕਰੋ.", "Confirmed information ਅਤੇ assumptions ਵੱਖ ਕਰੋ.", "ਜੇ critical information missing ਹੈ, ਪਹਿਲਾਂ questions list ਕਰੋ ਅਤੇ ਫਿਰ ਸਿਰਫ confirmed facts ਨਾਲ provisional output ਦਿਓ.", "Answer practical ਅਤੇ concise ਰੱਖੋ; format ਨਾ ਮੰਗੇ ਤਾਂ long report ਨਾ ਲਿਖੋ."],
@@ -808,6 +823,7 @@ ${getShareUrl()}`
       consulting: ["Symptoms ਅਤੇ probable causes ਵੱਖ ਕਰੋ.", "Metrics invent ਨਾ ਕਰੋ.", "Business assumptions ਨੂੰ [PENDING] mark ਕਰੋ.", "Diagnostic questions include ਕਰੋ."],
       cx: ["Tone empathetic ਅਤੇ professional ਰੱਖੋ.", "Unconfirmed compensation ਜਾਂ dates promise ਨਾ ਕਰੋ.", "Internal facts ਅਤੇ customer information ਵੱਖ ਕਰੋ.", "Clear next action include ਕਰੋ."],
       operations: ["Urgent problems ਅਤੇ structural improvements ਵੱਖ ਕਰੋ.", "Owners invent ਨਾ ਕਰੋ.", "Missing dependencies ਅਤੇ dates ਨੂੰ [PENDING] mark ਕਰੋ.", "Operational risks include ਕਰੋ."],
+      coding: ["Observed behavior ਅਤੇ hypotheses ਵੱਖ ਕਰੋ.", "File paths, functions, APIs, errors ਜਾਂ dependencies invent ਨਾ ਕਰੋ.", "Stack, logs, reproduction steps ਜਾਂ version missing ਹੋਵੇ ਤਾਂ [PENDING] mark ਕਰੋ.", "Debugging plan, suggested changes ਅਤੇ verification tests include ਕਰੋ."],
       proposal: ["Prices ਜਾਂ scope invent ਨਾ ਕਰੋ.", "Confirmed need ਅਤੇ possible opportunity ਵੱਖ ਕਰੋ.", "Quote ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ questions include ਕਰੋ.", "Proposal structure suggest ਕਰੋ."],
       general: ["Facts, assumptions ਅਤੇ pending items ਵੱਖ ਕਰੋ.", "Data invent ਨਾ ਕਰੋ.", "Clarification questions include ਕਰੋ.", "Review ਤੋਂ ਬਿਨਾਂ output use ਕਰਨ ਦੇ risks include ਕਰੋ."]
     },
@@ -902,6 +918,15 @@ No hay una lista única de pendientes. A veces dos personas trabajan lo mismo y 
 Hay que ordenar prioridades, responsables, fechas y riesgos. Falta confirmar quién aprueba cambios y qué tareas son urgentes.
 
 Necesitamos una forma clara de convertir esto en acciones.`,
+    coding: `Contexto técnico:
+
+Tengo una mini app hecha con React. Después de iniciar sesión, a veces el usuario se queda en una pantalla en blanco.
+
+El error no pasa siempre. En consola vi una vez "token expired", pero no sé si es la causa real. También puede estar relacionado con refresh de la página.
+
+No tengo todavía pasos exactos para reproducirlo. Falta confirmar navegador, versión, ruta afectada, logs del backend y si pasa en producción o solo local.
+
+Quiero convertir esto en un plan claro de depuración sin inventar archivos ni funciones que no he mostrado.`,
     proposal: `Contexto para propuesta:
 
 Un cliente quiere ayuda para ordenar su proceso de seguimiento. Dice que usa mensajes, Excel y correo, pero no tiene un flujo claro.
@@ -927,6 +952,15 @@ There is no single pending list. Sometimes two people work on the same thing and
 We need to organize priorities, owners, dates, and risks. It is still unclear who approves changes, which tasks are urgent, and what should be escalated to the business owner.
 
 We need a clear way to turn this into actions.`,
+    coding: `Technical context:
+
+I am building a React dashboard for an Indian services business. After login, some users sometimes land on a blank page.
+
+The issue is inconsistent. I once saw "token expired" in the browser console, but I am not sure if that is the root cause. It may also happen after page refresh.
+
+Missing details: exact browser, route, package versions, backend logs, reproduction steps, and whether this happens in production or only locally.
+
+I need a practical debugging plan without inventing file paths, functions, or dependencies that I have not provided.`,
     proposal: `Proposal context:
 
 An Indian client wants help organizing their sales follow-up process. They use WhatsApp, Excel, and Gmail, but do not have a clear flow.
@@ -952,6 +986,15 @@ Single pending list नहीं है. कभी दो लोग एक ह�
 Priorities, owners, dates और risks organize करने हैं. कौन changes approve करेगा, कौनसे tasks urgent हैं, और क्या business owner को escalate करना है, यह अभी clear नहीं.
 
 हमें इसे actions में बदलने का clear तरीका चाहिए.`,
+    coding: `Technical context:
+
+मैं एक React dashboard बना रहा हूं. Login के बाद कुछ users कभी-कभी blank page पर अटक जाते हैं.
+
+Issue consistent नहीं है. Console में एक बार "token expired" दिखा, लेकिन sure नहीं कि वही root cause है. Page refresh के बाद भी हो सकता है.
+
+Missing details: exact browser, route, package versions, backend logs, reproduction steps, और यह production में होता है या सिर्फ local में.
+
+मुझे practical debugging plan चाहिए, बिना file paths, functions या dependencies invent किए.`,
     proposal: `Proposal context:
 
 एक Indian client अपने sales follow-up process को organize करने में help चाहता है. वह WhatsApp, Excel और Gmail use करता है, लेकिन clear flow नहीं है.
@@ -977,6 +1020,15 @@ Single pending list ਨਹੀਂ ਹੈ. ਕਦੇ ਦੋ ਲੋਕ ਇੱਕੋ
 Priorities, owners, dates ਅਤੇ risks organize ਕਰਨੇ ਹਨ. ਕੌਣ changes approve ਕਰੇਗਾ, ਕਿਹੜੇ tasks urgent ਹਨ, ਅਤੇ ਕੀ business owner ਨੂੰ escalate ਕਰਨਾ ਹੈ, ਇਹ ਅਜੇ clear ਨਹੀਂ.
 
 ਸਾਨੂੰ ਇਸ ਨੂੰ actions ਵਿੱਚ ਬਦਲਣ ਦਾ clear ਤਰੀਕਾ ਚਾਹੀਦਾ ਹੈ.`,
+    coding: `Technical context:
+
+ਮੈਂ ਇੱਕ React dashboard ਬਣਾ ਰਿਹਾ ਹਾਂ. Login ਤੋਂ ਬਾਅਦ ਕੁਝ users ਕਦੇ-ਕਦੇ blank page ਤੇ stuck ਹੋ ਜਾਂਦੇ ਹਨ.
+
+Issue consistent ਨਹੀਂ ਹੈ. Console ਵਿੱਚ ਇੱਕ ਵਾਰੀ "token expired" ਦਿਖਿਆ ਸੀ, ਪਰ sure ਨਹੀਂ ਕਿ root cause ਉਹੀ ਹੈ. Page refresh ਤੋਂ ਬਾਅਦ ਵੀ ਹੋ ਸਕਦਾ ਹੈ.
+
+Missing details: exact browser, route, package versions, backend logs, reproduction steps, ਅਤੇ ਇਹ production ਵਿੱਚ ਹੁੰਦਾ ਹੈ ਜਾਂ ਸਿਰਫ local ਵਿੱਚ.
+
+ਮੈਨੂੰ practical debugging plan ਚਾਹੀਦਾ ਹੈ, ਬਿਨਾਂ file paths, functions ਜਾਂ dependencies invent ਕੀਤੇ.`,
     proposal: `Proposal context:
 
 ਇੱਕ Indian client ਆਪਣੇ sales follow-up process ਨੂੰ organize ਕਰਨ ਵਿੱਚ help ਚਾਹੁੰਦਾ ਹੈ. ਉਹ WhatsApp, Excel ਅਤੇ Gmail use ਕਰਦਾ ਹੈ, ਪਰ clear flow ਨਹੀਂ ਹੈ.
@@ -1001,10 +1053,27 @@ const selectedExamplePreview = document.querySelector("#selectedExamplePreview")
 const exampleStatus = document.querySelector("#exampleStatus");
 const languageSelects = document.querySelectorAll("[data-language-select]");
 
+const localizedPageNames = {
+  es: "",
+  en: "en.html",
+  hi: "hi.html",
+  pa: "pa.html"
+};
+
+function getLocalizedPath(language) {
+  const pageName = localizedPageNames[language] || "";
+  const basePath = window.location.pathname
+    .replace(/(?:index|en|hi|pa)\.html$/i, "")
+    .replace(/\/?$/, "/");
+  return `${basePath}${pageName}`;
+}
+
 function getShareUrl() {
   if (window.location.protocol === "file:") return "[LINK]";
   const url = new URL(window.location.href);
-  url.searchParams.set("lang", currentLanguage);
+  url.pathname = getLocalizedPath(currentLanguage);
+  url.search = "";
+  url.hash = "";
   return url.toString();
 }
 
@@ -1087,7 +1156,14 @@ function updateLanguageLinks() {
 function getInitialLanguage() {
   const params = new URLSearchParams(window.location.search);
   const requestedLanguage = params.get("lang");
-  return translations[requestedLanguage] ? requestedLanguage : "es";
+  if (translations[requestedLanguage]) return requestedLanguage;
+
+  const pageName = window.location.pathname.split("/").pop().toLowerCase();
+  const pageLanguage = Object.entries(localizedPageNames).find(([, name]) => name === pageName);
+  if (pageLanguage && translations[pageLanguage[0]]) return pageLanguage[0];
+
+  const htmlLanguage = document.documentElement.lang;
+  return translations[htmlLanguage] ? htmlLanguage : "es";
 }
 
 function populateOptions() {
@@ -1232,6 +1308,7 @@ ${notes}
 
 [${languageData.prompt.headings.expectation}]
 ${expectationRules}
+- ${languageData.prompt.responseLanguage}
 - ${pendingInstruction}
 
 [${languageData.prompt.headings.rules}]
@@ -1345,7 +1422,7 @@ function setupToolPage() {
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
-    link.download = "nha-prompt.txt";
+    link.download = languageData.downloadFileName || "prompt-claro.txt";
     document.body.appendChild(link);
     link.click();
     link.remove();

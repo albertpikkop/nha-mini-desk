@@ -41,7 +41,7 @@ visible.
 - Keeps Spanish examples Mexico-first and English/Hindi/Punjabi examples India-first.
 - Runs fully in the browser.
 - Does not require login, install, backend, API key, or database.
-- Includes examples for legal, consulting, CX, operations, and proposals.
+- Includes examples for legal, consulting, CX, operations, coding/product, and proposals.
 - Includes a human verification checklist before trusting AI output.
 
 ## Quick start
@@ -79,13 +79,16 @@ review the privacy policy of that AI tool.
 - Punjabi
 
 Language can be selected from the UI. The selected language can also be passed
-with a query parameter:
+with a query parameter or opened directly through a localized page:
 
 ```text
 ?lang=es
 ?lang=en
 ?lang=hi
 ?lang=pa
+/en.html
+/hi.html
+/pa.html
 ```
 
 ## Project structure
@@ -93,6 +96,9 @@ with a query parameter:
 ```text
 .
 |-- index.html
+|-- en.html
+|-- hi.html
+|-- pa.html
 |-- info.html
 |-- style.css
 |-- app.js
