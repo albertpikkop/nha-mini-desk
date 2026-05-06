@@ -225,9 +225,9 @@ Urge tener una primera versión para revisión mañana.`
     },
     shareText: () => `Amigos, prueben NHA Mini Desk.
 
-Escribe o pega lo que quieres pedirle a la IA y conviértelo en un prompt claro para ChatGPT, Gemini, Claude o la IA que uses.
+Convierte una idea en bruto en un brief claro para ChatGPT, Claude, Gemini, Codex, Cursor o la IA que uses.
 
-Elige el trabajo -> escribe o pega tu idea -> copia un mejor prompt
+Ordena la tarea -> agrega contexto -> marca pendientes -> copia un mejor prompt
 
 Gratis. Sin login. Sin instalar nada.
 
