@@ -3,7 +3,7 @@
 > Turn messy thoughts into clear, structured, verifiable AI prompts.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-0.1.2-blue.svg)](VERSION)
+[![Version](https://img.shields.io/badge/version-0.1.3-blue.svg)](VERSION)
 [![No Backend](https://img.shields.io/badge/backend-none-lightgrey.svg)](#privacy)
 [![Browser Only](https://img.shields.io/badge/runs-in_browser-brightgreen.svg)](#quick-start)
 
@@ -35,7 +35,7 @@ visible.
 
 ## What it does
 
-- Turns rough notes into a structured prompt.
+- Turns a rough ask, message, or work context into a structured prompt.
 - Works with ChatGPT, Gemini, Claude, or any AI you use.
 - Supports Spanish, English, Hindi, and Punjabi.
 - Keeps Spanish examples Mexico-first and English/Hindi/Punjabi examples India-first.
@@ -52,7 +52,7 @@ No setup required.
 2. Open `index.html` in your browser.
 3. Pick the work type.
 4. Pick what you want to receive.
-5. Paste rough notes or load an example.
+5. Write or paste your rough case, or load an example.
 6. Generate the prompt.
 7. Copy it into ChatGPT, Gemini, Claude, or any AI you use.
 
@@ -67,7 +67,7 @@ npm run check
 The prompt is generated locally in your browser.
 
 There is no backend in this project. The tool does not intentionally send your
-notes to a server or store them in a database. If you paste sensitive
+text to a server or store it in a database. If you paste sensitive
 information into any web page or into an AI tool, use your own judgment and
 review the privacy policy of that AI tool.
 
@@ -113,7 +113,7 @@ TCE means:
 
 NHA means:
 
-- keep the original notes visible
+- keep the original text visible
 - make assumptions explicit
 - ask the AI to mark missing information
 - keep human verification in the loop

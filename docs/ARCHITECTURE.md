@@ -20,7 +20,7 @@ There is no backend call in the prompt generation flow.
 
 ## Privacy model
 
-The app does not intentionally store notes in a database or send them to a
+The app does not intentionally store user text in a database or send it to a
 server. User-entered text lives in the current browser page while the page is
 open.
 

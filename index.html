@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>NHA Mini Desk | Convierte tu idea en un mejor prompt</title>
-    <meta name="description" content="Escribe o pega lo que quieres pedirle a la IA y conviértelo en un prompt claro para ChatGPT, Gemini, Claude o la IA que uses. Gratis, sin login y sin descargar apps.">
+    <title>NHA Mini Desk | Convierte tu idea en un prompt más claro</title>
+    <meta name="description" content="Escribe o pega lo que quieres pedirle a la IA, aunque esté en bruto. NHA Mini Desk lo convierte en un prompt claro para ChatGPT, Gemini, Claude o la IA que uses. Gratis, sin login y sin instalar nada.">
     <link rel="canonical" href="https://www.ashishpunj.com/nha-tce/">
     <meta property="og:title" content="NHA Mini Desk">
-    <meta property="og:description" content="Escribe o pega lo que quieres pedirle a la IA y conviértelo en un prompt claro para ChatGPT, Gemini, Claude o la IA que uses. Gratis, sin login y sin descargar apps.">
+    <meta property="og:description" content="Escribe o pega lo que quieres pedirle a la IA, aunque esté en bruto. NHA Mini Desk lo convierte en un prompt claro para ChatGPT, Gemini, Claude o la IA que uses. Gratis, sin login y sin instalar nada.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.ashishpunj.com/nha-tce/">
     <meta property="og:image" content="https://www.ashishpunj.com/gallery/og-image.jpg">
@@ -24,9 +24,9 @@
       </div>
 
       <header class="hero">
-        <p class="eyebrow" data-i18n="hero.eyebrow">Gratis - Sin login - Sin descargar app</p>
+        <p class="eyebrow" data-i18n="hero.eyebrow">Gratis - Sin login - Sin instalar nada</p>
         <h1>NHA Mini Desk</h1>
-        <p class="subtitle" data-i18n="hero.subtitle">Escribe o pega lo que quieres pedirle a la IA. La herramienta lo convierte en un prompt claro para ChatGPT, Gemini, Claude o la IA que uses.</p>
+        <p class="subtitle" data-i18n="hero.subtitle">Escribe o pega lo que quieres pedirle a la IA, aunque venga en bruto. NHA Mini Desk lo convierte en un prompt claro para ChatGPT, Gemini, Claude o la IA que uses.</p>
         <div class="hero-actions">
           <button type="button" id="tryExample" data-i18n="hero.tryExample">Probar en 20 segundos</button>
           <span data-i18n="hero.privacy">Lo que escribes no se guarda en una base de datos.</span>
@@ -36,7 +36,7 @@
       <section class="why-strip" aria-label="Por qué usar NHA Mini Desk">
         <div>
           <p class="mini-label" data-i18n="why.label">Para qué sirve</p>
-          <p data-i18n="why.copy">Cuando escribes una idea, mensaje o pedido de forma desordenada, la respuesta de la IA puede salir bonita pero incompleta. Esta herramienta ordena tu pedido antes de enviarlo.</p>
+          <p data-i18n="why.copy">Cuando mandas una idea revuelta a la IA, la respuesta puede sonar muy bien pero dejar huecos. Esta herramienta acomoda tu pedido antes de enviarlo.</p>
         </div>
         <div class="quick-steps" aria-label="Pasos rápidos">
           <span><strong>1</strong> <span data-i18n="steps.one">Elige el trabajo</span></span>
@@ -55,8 +55,8 @@
           </div>
 
           <div class="simple-explainer">
-            <strong data-i18n="input.explainerTitle">No tienes que ordenar nada antes.</strong>
-            <p data-i18n="input.explainerCopy">La herramienta te ayuda a convertir una idea inicial, mensaje, llamada o correo en una instrucción clara para la IA.</p>
+            <strong data-i18n="input.explainerTitle">No tienes que arreglarlo antes.</strong>
+            <p data-i18n="input.explainerCopy">Puede ser una idea, un mensaje, una llamada o un correo. La herramienta lo convierte en una instrucción clara para la IA.</p>
           </div>
 
           <div class="form-grid first-step">
@@ -71,7 +71,7 @@
             </label>
           </div>
 
-          <p class="choice-help" data-i18n="form.choiceHelp">Primero elige el trabajo y lo que quieres recibir. Luego puedes cargar un ejemplo para esa selección o escribir tu propia idea abajo.</p>
+          <p class="choice-help" data-i18n="form.choiceHelp">Primero elige el tipo de trabajo y el resultado que quieres. Luego carga un ejemplo o escribe tu propio caso abajo.</p>
 
           <div class="example-loader" aria-label="Ejemplo según selección">
             <p id="selectedExamplePreview" class="selected-example-preview"></p>
@@ -80,15 +80,15 @@
           </div>
 
           <div class="step-divider">
-            <h2 data-i18n="notes.title">2. Escribe o pega tu idea</h2>
-            <p data-i18n="notes.subtitle">Puede ser un mensaje, llamada, correo, pedido inicial o texto desordenado.</p>
+            <h2 data-i18n="notes.title">2. Escribe o pega tu caso</h2>
+            <p data-i18n="notes.subtitle">Puede ser un mensaje, una llamada, un correo, una idea o un texto medio revuelto.</p>
           </div>
 
-          <label for="rawNotes" data-i18n="notes.label">Tu idea, mensaje o texto, tal como está</label>
-          <p class="field-help" data-i18n="notes.help">No tiene que estar perfecto. Puedes escribir como piensas, pegar un mensaje, una llamada, un correo o una idea suelta.</p>
+          <label for="rawNotes" data-i18n="notes.label">Tu idea, mensaje o texto, sin arreglar</label>
+          <p class="field-help" data-i18n="notes.help">No lo maquilles. Escribe como piensas o pega lo que ya tienes; si hay dudas o datos faltantes, déjalos ahí.</p>
           <textarea id="rawNotes" spellcheck="true" data-i18n-placeholder="notes.placeholder" placeholder="Ejemplo: el cliente mandó un mensaje, faltan datos, hay una fecha dudosa, quiere una respuesta para mañana..."></textarea>
 
-          <label for="desiredOutcome" data-i18n="outcome.label">Dile a la IA qué resultado quieres</label>
+          <label for="desiredOutcome" data-i18n="outcome.label">Dile a la IA qué quieres que te entregue</label>
           <input id="desiredOutcome" type="text">
 
           <label class="check-row">
@@ -106,13 +106,13 @@
           <div class="panel-header">
             <div>
               <h2 data-i18n="output.title">4. Copia y usa</h2>
-              <p data-i18n="output.subtitle">Este texto incluye reglas para ordenar la información y reducir inventos.</p>
+              <p data-i18n="output.subtitle">Este texto lleva reglas para ordenar la información y reducir inventos.</p>
             </div>
           </div>
 
           <div class="outcome-note">
             <strong data-i18n="output.nextTitle">Qué haces después</strong>
-            <p data-i18n="output.nextCopy">Copia este prompt y pégalo en ChatGPT, Gemini, Claude o la IA que uses. La IA recibirá una mejor instrucción.</p>
+            <p data-i18n="output.nextCopy">Copia este prompt y pégalo en ChatGPT, Gemini, Claude o la IA que uses. Vas a darle una instrucción mucho más clara.</p>
           </div>
 
           <pre id="promptOutput" aria-live="polite"></pre>
@@ -137,7 +137,7 @@
 
           <section id="shareBox" class="share-box" aria-label="Compartir herramienta">
             <h3 data-i18n="share.title">¿Te ayudó este método?</h3>
-            <p data-i18n="share.copy">Si te resultó útil, compártelo con alguien que pueda beneficiarse de esta forma de pedirle mejor a la IA.</p>
+            <p data-i18n="share.copy">Si te sirvió, mándaselo a alguien que todavía le pide cosas a la IA de forma desordenada.</p>
             <button type="button" id="copyShare" class="secondary" data-i18n="actions.share">Copiar invitación para compartir</button>
           </section>
 
@@ -147,7 +147,7 @@
 
       <footer class="site-footer">
         <span data-i18n="footer.creator">Creado por Ashish Punj</span>
-        <span data-i18n="footer.meta">v0.1.2 · © 2026 Ashish Punj · Lanzado 6 May 2026</span>
+        <span data-i18n="footer.meta">v0.1.3 · © 2026 Ashish Punj · Lanzado 6 May 2026</span>
         <a href="LICENSE" data-i18n="footer.license">MIT License</a>
         <a href="info.html" data-i18n="footer.info">Cómo funciona y términos</a>
       </footer>

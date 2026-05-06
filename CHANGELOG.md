@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.1.3 - 2026-05-06
+
+- Rewrote Spanish, English, Hindi, and Punjabi UI copy to feel colloquial instead of literally translated.
+- Shifted public wording from "notes" to more natural phrases such as case, rough ask, original text, and jo AI se karwana hai.
+- Polished Hindi and Punjabi with more natural Hinglish/Punjabi-English phrasing for Indian users.
+- Updated README language to match the public product copy.
+
 ## v0.1.2 - 2026-05-06
 
 - Added culturally specific names and local business details to the examples.

@@ -5,48 +5,48 @@ const translations = {
   es: {
     name: "Español",
     htmlLang: "es",
-    title: "NHA Mini Desk | Convierte tu idea en un mejor prompt",
-    description: "Escribe o pega lo que quieres pedirle a la IA y conviértelo en un prompt claro para ChatGPT, Gemini, Claude o la IA que uses. Gratis, sin login y sin descargar apps.",
+    title: "NHA Mini Desk | Convierte tu idea en un prompt más claro",
+    description: "Escribe o pega lo que quieres pedirle a la IA, aunque esté en bruto. NHA Mini Desk lo convierte en un prompt claro para ChatGPT, Gemini, Claude o la IA que uses. Gratis, sin login y sin instalar nada.",
     ui: {
       "language.label": "Idioma",
-      "hero.eyebrow": "Gratis - Sin login - Sin descargar app",
-      "hero.subtitle": "Escribe o pega lo que quieres pedirle a la IA. La herramienta lo convierte en un prompt claro para ChatGPT, Gemini, Claude o la IA que uses.",
+      "hero.eyebrow": "Gratis - Sin login - Sin instalar nada",
+      "hero.subtitle": "Escribe o pega lo que quieres pedirle a la IA, aunque venga en bruto. NHA Mini Desk lo convierte en un prompt claro para ChatGPT, Gemini, Claude o la IA que uses.",
       "hero.tryExample": "Probar en 20 segundos",
       "hero.privacy": "Lo que escribes no se guarda en una base de datos.",
       "why.label": "Para qué sirve",
-      "why.copy": "Cuando escribes una idea, mensaje o pedido de forma desordenada, la respuesta de la IA puede salir bonita pero incompleta. Esta herramienta ordena tu pedido antes de enviarlo.",
+      "why.copy": "Cuando mandas una idea revuelta a la IA, la respuesta puede sonar muy bien pero dejar huecos. Esta herramienta acomoda tu pedido antes de enviarlo.",
       "steps.one": "Elige el trabajo",
       "steps.two": "Escribe o pega tu idea",
       "steps.three": "Copia el prompt a tu IA",
       "input.title": "1. Elige el trabajo",
       "input.subtitle": "Primero selecciona qué quieres hacer. Después escribe o pega tu idea tal como está.",
-      "input.explainerTitle": "No tienes que ordenar nada antes.",
-      "input.explainerCopy": "La herramienta te ayuda a convertir una idea inicial, mensaje, llamada o correo en una instrucción clara para la IA.",
+      "input.explainerTitle": "No tienes que arreglarlo antes.",
+      "input.explainerCopy": "Puede ser una idea, un mensaje, una llamada o un correo. La herramienta lo convierte en una instrucción clara para la IA.",
       "form.caseLabel": "¿Qué tipo de trabajo es?",
       "form.outputLabel": "¿Qué quieres recibir?",
-      "form.choiceHelp": "Primero elige el trabajo y lo que quieres recibir. Luego puedes cargar un ejemplo para esa selección o escribir tu propia idea abajo.",
+      "form.choiceHelp": "Primero elige el tipo de trabajo y el resultado que quieres. Luego carga un ejemplo o escribe tu propio caso abajo.",
       "samples.selected": "Cargar ejemplo para esta selección",
       "samples.selectedHelp": "El ejemplo aparecerá abajo en el cuadro de texto.",
       "samples.cx": "Cargar ejemplo de mensaje",
       "samples.consultoria": "Cargar ejemplo de consultoría",
       "samples.arrendamiento": "Cargar ejemplo legal",
-      "notes.title": "2. Escribe o pega tu idea",
-      "notes.subtitle": "Puede ser un mensaje, llamada, correo, pedido inicial o texto desordenado.",
-      "notes.label": "Tu idea, mensaje o texto, tal como está",
-      "notes.help": "No tiene que estar perfecto. Puedes escribir como piensas, pegar un mensaje, una llamada, un correo o una idea suelta.",
+      "notes.title": "2. Escribe o pega tu caso",
+      "notes.subtitle": "Puede ser un mensaje, una llamada, un correo, una idea o un texto medio revuelto.",
+      "notes.label": "Tu idea, mensaje o texto, sin arreglar",
+      "notes.help": "No lo maquilles. Escribe como piensas o pega lo que ya tienes; si hay dudas o datos faltantes, déjalos ahí.",
       "notes.placeholder": "Ejemplo: quiero responder a un cliente, tengo estos datos, falta confirmar la fecha, no quiero prometer algo que no sé...",
-      "outcome.label": "Dile a la IA qué resultado quieres",
+      "outcome.label": "Dile a la IA qué quieres que te entregue",
       "pending.label": "Si falta información, obligar a la IA a marcar [PENDIENTE]",
       "actions.generate": "3. Generar prompt",
       "actions.clear": "Limpiar",
       "output.title": "4. Copia y usa",
-      "output.subtitle": "Este texto incluye reglas para ordenar la información y reducir inventos.",
+      "output.subtitle": "Este texto lleva reglas para ordenar la información y reducir inventos.",
       "output.nextTitle": "Qué haces después",
-      "output.nextCopy": "Copia este prompt y pégalo en ChatGPT, Gemini, Claude o la IA que uses. La IA recibirá una mejor instrucción.",
+      "output.nextCopy": "Copia este prompt y pégalo en ChatGPT, Gemini, Claude o la IA que uses. Vas a darle una instrucción mucho más clara.",
       "actions.copy": "Copiar para tu IA",
       "actions.download": "Descargar .txt",
       "share.title": "¿Te ayudó este método?",
-      "share.copy": "Si te resultó útil, compártelo con alguien que pueda beneficiarse de esta forma de pedirle mejor a la IA.",
+      "share.copy": "Si te sirvió, mándaselo a alguien que todavía le pide cosas a la IA de forma desordenada.",
       "actions.share": "Copiar invitación para compartir",
       "verification.title": "Antes de confiar en la respuesta de la IA",
       "verification.one": "¿La IA separó hechos de supuestos?",
@@ -57,23 +57,23 @@ const translations = {
       "verification.five": "¿Hay una decisión humana pendiente antes de usarlo?",
       "privacy.note": "La herramienta no guarda lo que escribes. Si quieres borrarlo de la pantalla, presiona \"Limpiar\" o cierra la pestaña.",
       "footer.creator": "Creado por Ashish Punj",
-      "footer.meta": "v0.1.2 · © 2026 Ashish Punj · Lanzado 6 May 2026",
+      "footer.meta": "v0.1.3 · © 2026 Ashish Punj · Lanzado 6 May 2026",
       "footer.license": "MIT License",
       "footer.info": "Cómo funciona y términos",
       "info.eyebrow": "NHA Mini Desk",
       "info.title": "Cómo funciona y términos",
-      "info.subtitle": "Una explicación simple para usar la herramienta con confianza.",
+      "info.subtitle": "Una explicación sencilla para que sepas qué hace y qué no hace.",
       "info.whatTitle": "Qué hace",
-      "info.whatOne": "NHA Mini Desk convierte lo que quieres pedirle a la IA en un prompt más claro para usar en ChatGPT, Gemini, Claude o la IA que uses.",
+      "info.whatOne": "NHA Mini Desk toma lo que quieres pedirle a la IA y lo convierte en un prompt más claro para ChatGPT, Gemini, Claude o la IA que uses.",
       "info.whatTwo": "No responde por la IA. No reemplaza tu criterio. Solo te ayuda a pedir mejor.",
       "info.howTitle": "Cómo se usa",
       "info.howOne": "Elige qué tipo de trabajo quieres hacer.",
-      "info.howTwo": "Escribe o pega tu idea tal como está.",
+      "info.howTwo": "Escribe o pega tu caso tal como lo tienes.",
       "info.howThree": "Genera el prompt.",
       "info.howFour": "Copia el prompt y pégalo en ChatGPT, Gemini, Claude o la IA que uses.",
       "info.howFive": "Revisa la respuesta antes de usarla.",
       "info.browserTitle": "Cómo funciona",
-      "info.browserOne": "La página arma el prompt en tu navegador. No necesitas descargar una app ni crear cuenta.",
+      "info.browserOne": "La página arma el prompt en tu navegador. No necesitas instalar una app ni crear cuenta.",
       "info.browserTwo": "La herramienta no guarda lo que escribes en una base de datos y no lo envía a nuestro servidor para generar el prompt.",
       "info.browserThree": "Si quieres borrar lo que pegaste, presiona \"Limpiar\" o cierra la pestaña.",
       "info.privacyTitle": "Privacidad",
@@ -106,11 +106,11 @@ const translations = {
       risks: "Checklist de riesgos"
     },
     defaults: {
-      outcome: "Convierte mi idea en una salida clara, verificable y lista para revisar antes de usar.",
-      emptyPrompt: "Tu prompt aparecerá aquí. Primero escribe o pega tu idea y presiona \"Generar prompt\"."
+      outcome: "Convierte mi caso en una salida clara, verificable y lista para revisar antes de usar.",
+      emptyPrompt: "Tu prompt aparecerá aquí. Primero escribe o pega tu caso y presiona \"Generar prompt\"."
     },
     statuses: {
-      missingNotes: "Primero escribe o pega tu idea. Puede estar desordenada; esa es la idea.",
+      missingNotes: "Primero escribe o pega tu caso. Puede estar desordenado; esa es la idea.",
       generated: "Listo. Copia este prompt y pégalo en ChatGPT, Gemini, Claude o la IA que uses.",
       sampleReady: "Ejemplo listo. Copia el prompt y pégalo en ChatGPT, Gemini, Claude o la IA que uses para ver la diferencia.",
       sampleLoaded: "Ejemplo cargado. Puedes editarlo antes de generar el prompt.",
@@ -120,8 +120,7 @@ const translations = {
       downloadFirst: "Genera un prompt antes de descargar.",
       downloaded: "Archivo nha-prompt.txt descargado.",
       shareCopied: "Mensaje para compartir copiado.",
-      shareFailed: "No se pudo copiar el mensaje. Copia el link manualmente."
-      ,
+      shareFailed: "No se pudo copiar el mensaje. Copia el link manualmente.",
       languageChanged: "Idioma cambiado. Tu texto y prompt actual se conservan. Presiona \"Generar prompt\" para crear una versión en este idioma.",
       optionChanged: "Opción cambiada. Presiona \"Generar prompt\" otra vez para actualizar el prompt."
     },
@@ -190,7 +189,7 @@ El equipo de soporte quiere responder con empatía, explicar situación y pedir 
 No prometer entrega hoy si no está confirmado.
 
 Necesitamos respuesta profesional y plan de seguimiento.`,
-      consulting: `Notas de llamada con cliente:
+      consulting: `Contexto de llamada con cliente:
 
 Empresa mediana de servicios B2B en Monterrey. La llamada fue con Carlos Rivas, dueño de la empresa. Tienen equipo comercial de 6 personas. Carlos dice que están perdiendo oportunidades porque los vendedores no dan seguimiento constante.
 
@@ -230,7 +229,7 @@ Escribe o pega lo que quieres pedirle a la IA y conviértelo en un prompt claro 
 
 Elige el trabajo -> escribe o pega tu idea -> copia un mejor prompt
 
-Gratis. Sin login. Sin descargar apps.
+Gratis. Sin login. Sin instalar nada.
 
 Si te sirve, compártelo con alguien que pueda beneficiarse de este método:
 ${getShareUrl()}`
@@ -239,80 +238,80 @@ ${getShareUrl()}`
   en: {
     name: "English",
     htmlLang: "en",
-    title: "NHA Mini Desk | Turn your idea into a better prompt",
-    description: "Write or paste what you want to ask AI and turn it into a clear prompt for ChatGPT, Gemini, Claude, or any AI you use. Free, no login, no app download.",
+    title: "NHA Mini Desk | Turn a rough ask into a clear prompt",
+    description: "Write or paste what you want the AI to do, even if it is rough. NHA Mini Desk turns it into a clearer prompt for ChatGPT, Gemini, Claude, or any AI you use. Free, no login, no app install.",
     ui: {
       "language.label": "Language",
-      "hero.eyebrow": "Free - No login - No app download",
-      "hero.subtitle": "Write or paste what you want to ask AI. The tool turns it into a clear prompt for ChatGPT, Gemini, Claude, or any AI you use.",
+      "hero.eyebrow": "Free - No login - No app install",
+      "hero.subtitle": "Write or paste what you want the AI to do, even if it is rough. NHA Mini Desk turns it into a clear prompt for ChatGPT, Gemini, Claude, or any AI you use.",
       "hero.tryExample": "Try in 20 seconds",
-      "hero.privacy": "Your notes are not saved in a database.",
-      "why.label": "What it does",
-      "why.copy": "When you paste confusing notes into AI, the answer may look polished but miss important details. This tool organizes your request before you send it.",
-      "steps.one": "Choose the work",
+      "hero.privacy": "What you write is not saved in a database.",
+      "why.label": "Why this helps",
+      "why.copy": "When you send a half-formed ask to AI, the reply can look polished and still miss the point. This tool shapes the ask before you send it.",
+      "steps.one": "Pick the work",
       "steps.two": "Write or paste your idea",
-      "steps.three": "Copy the prompt to your AI",
-      "input.title": "1. Choose the work",
-      "input.subtitle": "First choose what you want to do. Then paste your notes as they are.",
-      "input.explainerTitle": "You do not need to clean anything first.",
-      "input.explainerCopy": "The tool helps turn an initial idea, message, or call notes into a clear instruction for AI.",
+      "steps.three": "Copy it to your AI",
+      "input.title": "1. Pick the work",
+      "input.subtitle": "First choose the kind of work. Then write or paste your rough ask as it is.",
+      "input.explainerTitle": "No need to polish it first.",
+      "input.explainerCopy": "It can be an idea, message, call, or email. The tool turns it into a clear instruction for AI.",
       "form.caseLabel": "What type of work is this?",
       "form.outputLabel": "What do you want to receive?",
-      "form.choiceHelp": "First choose the work and what you want to receive. Then load an example for that selection or paste your own notes below.",
+      "form.choiceHelp": "Choose the work and the output you want. Then load a matching example or write your own case below.",
       "samples.selected": "Load example for this selection",
-      "samples.selectedHelp": "The example will appear below in the notes box.",
+      "samples.selectedHelp": "The example will appear below in the text box.",
       "samples.cx": "Load message example",
       "samples.consultoria": "Load consulting example",
       "samples.arrendamiento": "Load legal example",
-      "notes.title": "2. Write or paste your idea",
-      "notes.subtitle": "Message, call, email, first request, or messy text.",
-      "notes.label": "Your idea, message, or first request",
-      "notes.help": "It does not need to be perfect. You can write how you think, paste a message, a call, an email, or a loose idea.",
+      "notes.title": "2. Write or paste your case",
+      "notes.subtitle": "A message, call, email, first ask, or rough text is enough.",
+      "notes.label": "Your idea, message, or text, unpolished",
+      "notes.help": "Do not make it neat yet. Write it the way it came to you or paste what you already have.",
       "notes.placeholder": "Example: I want to reply to a client, I have these details, the date is not confirmed, I do not want to promise something I do not know...",
-      "outcome.label": "Tell the AI what result you want",
+      "outcome.label": "Tell the AI what you want back",
       "pending.label": "If information is missing, force the AI to mark it as [PENDING]",
       "actions.generate": "3. Generate prompt",
       "actions.clear": "Clear",
       "output.title": "4. Copy and use",
-      "output.subtitle": "This text includes rules to organize the information and reduce made-up details.",
+      "output.subtitle": "This prompt includes rules to organize the information and reduce made-up details.",
       "output.nextTitle": "What to do next",
-      "output.nextCopy": "Copy this prompt and paste it into ChatGPT, Gemini, Claude, or any AI you use. The AI will receive a better instruction.",
+      "output.nextCopy": "Copy this prompt and paste it into ChatGPT, Gemini, Claude, or any AI you use. You will be giving the AI a much clearer brief.",
       "actions.copy": "Copy for your AI",
       "actions.download": "Download .txt",
       "share.title": "Did this method help?",
-      "share.copy": "If it was useful, share it with someone who could benefit from asking AI in a clearer way.",
+      "share.copy": "If it helped, share it with someone who still sends messy asks straight into AI.",
       "actions.share": "Copy invitation to share",
       "verification.title": "Before trusting the AI response",
       "verification.one": "Did the AI separate facts from assumptions?",
       "verification.two": "Did it mark missing information as [PENDING]?",
       "verification.twoOff": "Did it clearly separate missing or uncertain information?",
-      "verification.three": "Did it invent anything that was not in the notes?",
+      "verification.three": "Did it invent anything that was not in your text?",
       "verification.four": "Can the result be traced back to real information?",
       "verification.five": "Is there a human decision pending before using it?",
       "privacy.note": "The tool does not save what you write. To remove it from the screen, press \"Clear\" or close the tab.",
       "footer.creator": "Created by Ashish Punj",
-      "footer.meta": "v0.1.2 · © 2026 Ashish Punj · Released 6 May 2026",
+      "footer.meta": "v0.1.3 · © 2026 Ashish Punj · Released 6 May 2026",
       "footer.license": "MIT License",
       "footer.info": "How it works and terms",
       "info.eyebrow": "NHA Mini Desk",
       "info.title": "How it works and terms",
-      "info.subtitle": "A simple explanation so you can use the tool with confidence.",
+      "info.subtitle": "A plain explanation of what the tool does and what it does not do.",
       "info.whatTitle": "What it does",
-      "info.whatOne": "NHA Mini Desk turns what you want to ask AI into a clearer prompt for ChatGPT, Gemini, Claude, or any AI you use.",
+      "info.whatOne": "NHA Mini Desk takes what you want the AI to do and turns it into a clearer prompt for ChatGPT, Gemini, Claude, or any AI you use.",
       "info.whatTwo": "It does not answer for the AI. It does not replace your judgment. It only helps you ask better.",
       "info.howTitle": "How to use it",
       "info.howOne": "Choose the type of work you want to do.",
-      "info.howTwo": "Paste your notes as they are.",
+      "info.howTwo": "Write or paste your case as it is.",
       "info.howThree": "Generate the prompt.",
       "info.howFour": "Copy the prompt and paste it into ChatGPT, Gemini, Claude, or any AI you use.",
       "info.howFive": "Review the response before using it.",
       "info.browserTitle": "How it works",
-      "info.browserOne": "The page builds the prompt in your browser. You do not need to download an app or create an account.",
-      "info.browserTwo": "The tool does not save your notes in a database and does not send them to our server to generate the prompt.",
+      "info.browserOne": "The page builds the prompt in your browser. You do not need to install an app or create an account.",
+      "info.browserTwo": "The tool does not save what you write in a database and does not send it to our server to generate the prompt.",
       "info.browserThree": "To remove what you pasted, press \"Clear\" or close the tab.",
       "info.privacyTitle": "Privacy",
       "info.privacyOne": "Avoid pasting extremely sensitive information if you are not sure you want to work with it on a web page.",
-      "info.privacyTwo": "Browsers may temporarily preserve page state for convenience. The tool does not intentionally save your notes.",
+      "info.privacyTwo": "Browsers may temporarily preserve page state for convenience. The tool does not intentionally save what you write.",
       "info.limitsTitle": "Limits",
       "info.limitsOne": "Any AI output can contain mistakes. Always review names, dates, numbers, laws, medical information, financial information, and important decisions.",
       "info.limitsTwo": "This tool does not provide legal, medical, financial, or professional advice. It helps organize instructions.",
@@ -340,11 +339,11 @@ ${getShareUrl()}`
       risks: "Risk checklist"
     },
     defaults: {
-      outcome: "Turn my notes into a clear, verifiable output that is ready to review before use.",
-      emptyPrompt: "Your prompt will appear here. First paste your notes and press \"Generate prompt\"."
+      outcome: "Turn my case into a clear, verifiable output that is ready to review before use.",
+      emptyPrompt: "Your prompt will appear here. First write or paste your case and press \"Generate prompt\"."
     },
     statuses: {
-      missingNotes: "First paste your notes. They can be messy; that is the point.",
+      missingNotes: "First write or paste your case. It can be messy; that is the point.",
       generated: "Ready. Copy this prompt and paste it into ChatGPT, Gemini, Claude, or any AI you use.",
       sampleReady: "Example ready. Copy the prompt and paste it into ChatGPT, Gemini, Claude, or any AI you use to see the difference.",
       sampleLoaded: "Example loaded. You can edit it before generating the prompt.",
@@ -354,13 +353,12 @@ ${getShareUrl()}`
       downloadFirst: "Generate a prompt before downloading.",
       downloaded: "File nha-prompt.txt downloaded.",
       shareCopied: "Share message copied.",
-      shareFailed: "Could not copy the message. Copy the link manually."
-      ,
+      shareFailed: "Could not copy the message. Copy the link manually.",
       languageChanged: "Language changed. Your text and current prompt were kept. Press \"Generate prompt\" to create a version in this language.",
       optionChanged: "Option changed. Press \"Generate prompt\" again to update the prompt."
     },
     prompt: {
-      headings: { task: "TASK", context: "CONTEXT", notes: "RAW NOTES", expectation: "EXPECTATION", rules: "NHA RULES", output: "OUTPUT FORMAT" },
+      headings: { task: "TASK", context: "CONTEXT", notes: "ORIGINAL TEXT", expectation: "EXPECTATION", rules: "NHA RULES", output: "OUTPUT FORMAT" },
       caseType: "Work type",
       audienceLabel: "Audience",
       audience: "Indian professional user who needs a useful, clear, verifiable output.",
@@ -392,7 +390,7 @@ ${getShareUrl()}`
 
 "This is the third time your team said my order will be delivered tomorrow. I ordered almost two weeks ago. Nobody is giving a clear answer. If it does not arrive today, I want a refund."
 
-Internal notes:
+Internal context:
 
 Order is probably #IN-4821, but I am not sure because the message came without an order number.
 
@@ -405,7 +403,7 @@ Support team wants to respond with empathy, explain the situation, and ask for m
 Do not promise delivery today if it is not confirmed.
 
 We need a professional response and follow-up plan.`,
-      consulting: `Client call notes:
+      consulting: `Call context:
 
 Indian B2B services company in Gurugram. The call was with Amit Mehra, the founder. Sales team of 8 people. Amit says they are losing opportunities because the team does not follow up consistently.
 
@@ -436,8 +434,8 @@ Need first version for review tomorrow.`
     },
     sampleSettings: {
       cx: { caseKey: "cx", outputKey: "email", desiredOutcome: "Prepare an empathetic and professional response, separating confirmed information from pending items before promising anything." },
-      consulting: { caseKey: "consulting", outputKey: "actionPlan", desiredOutcome: "Organize these call notes into diagnosis, priorities, pending questions, and next step." },
-      legal: { caseKey: "legal", outputKey: "facts", desiredOutcome: "Turn these notes into facts, pending items, risks, and questions to respond better." }
+      consulting: { caseKey: "consulting", outputKey: "actionPlan", desiredOutcome: "Organize this call context into diagnosis, priorities, pending questions, and next step." },
+      legal: { caseKey: "legal", outputKey: "facts", desiredOutcome: "Turn this information into facts, pending items, risks, and questions to respond better." }
     },
     shareText: () => `Try NHA Mini Desk.
 
@@ -445,7 +443,7 @@ Write or paste what you want to ask AI and turn it into a clear prompt for ChatG
 
 Choose the work -> write or paste your idea -> copy a better prompt
 
-Free. No login. No app download.
+Free. No login. No app install.
 
 If it helps, share it with someone who could benefit from this method:
 ${getShareUrl()}`
@@ -454,80 +452,80 @@ ${getShareUrl()}`
   hi: {
     name: "हिंदी",
     htmlLang: "hi",
-    title: "NHA Mini Desk | अपनी idea को बेहतर prompt बनाएं",
-    description: "आप AI से जो पूछना चाहते हैं उसे लिखें या paste करें और ChatGPT, Gemini, Claude या किसी भी AI के लिए clear prompt बनाएं। मुफ्त, बिना login, बिना app download.",
+    title: "NHA Mini Desk | अपनी बात को बेहतर prompt में बदलें",
+    description: "AI से जो करवाना है, जैसे दिमाग में है वैसे लिखें या paste करें. NHA Mini Desk उसे ChatGPT, Gemini, Claude या किसी भी AI के लिए clear prompt बना देता है. Free, no login, no app install.",
     ui: {
       "language.label": "भाषा",
-      "hero.eyebrow": "मुफ्त - Login नहीं - App download नहीं",
-      "hero.subtitle": "आप AI से जो पूछना चाहते हैं उसे लिखें या paste करें. Tool उसे ChatGPT, Gemini, Claude या जिस AI को आप use करते हैं उसके लिए clear prompt में बदलता है.",
+      "hero.eyebrow": "Free - Login नहीं - App install नहीं",
+      "hero.subtitle": "AI से जो करवाना है, जैसे दिमाग में है वैसे लिखें या paste करें. NHA Mini Desk उसे ChatGPT, Gemini, Claude या जिस AI को आप use करते हैं उसके लिए clear prompt बना देता है.",
       "hero.tryExample": "20 सेकंड में try करें",
-      "hero.privacy": "आपके notes database में save नहीं होते.",
-      "why.label": "यह क्या करता है",
-      "why.copy": "जब आप confused notes सीधे AI में paste करते हैं, जवाब अच्छा दिख सकता है लेकिन जरूरी बात छूट सकती है. यह tool भेजने से पहले आपके request को order करता है.",
+      "hero.privacy": "आप जो लिखते हैं, वह database में save नहीं होता.",
+      "why.label": "यह क्यों काम आता है",
+      "why.copy": "जब हम अधूरी या उलझी हुई बात सीधे AI में डालते हैं, जवाब अच्छा दिख सकता है लेकिन जरूरी चीज छूट सकती है. यह tool भेजने से पहले आपकी बात को shape देता है.",
       "steps.one": "काम चुनें",
-      "steps.two": "अपनी idea लिखें या paste करें",
-      "steps.three": "Prompt अपनी AI में copy करें",
+      "steps.two": "Rough बात डालें",
+      "steps.three": "Prompt AI में copy करें",
       "input.title": "1. काम चुनें",
-      "input.subtitle": "पहले चुनें कि आप क्या करना चाहते हैं. फिर notes जैसे हैं वैसे paste करें.",
-      "input.explainerTitle": "पहले कुछ साफ करने की जरूरत नहीं.",
-      "input.explainerCopy": "यह tool आपकी initial idea, message या call notes को AI के लिए clear instruction में बदलने में मदद करता है.",
-      "form.caseLabel": "यह किस तरह का काम है?",
-      "form.outputLabel": "आपको क्या चाहिए?",
-      "form.choiceHelp": "पहले काम और result चुनें. फिर इस selection के लिए example load करें या नीचे अपने notes paste करें.",
+      "input.subtitle": "पहले काम का type चुनें. फिर अपनी rough बात जैसे है वैसे डाल दें.",
+      "input.explainerTitle": "पहले polish करने की जरूरत नहीं.",
+      "input.explainerCopy": "Idea, message, call या email कुछ भी हो सकता है. Tool उसे AI के लिए clear instruction में बदल देता है.",
+      "form.caseLabel": "किस तरह का काम है?",
+      "form.outputLabel": "AI से क्या output चाहिए?",
+      "form.choiceHelp": "काम और output चुनें. फिर matching example load करें या नीचे अपना case लिखें.",
       "samples.selected": "इस selection के लिए example load करें",
-      "samples.selectedHelp": "Example नीचे notes box में आएगा.",
+      "samples.selectedHelp": "Example नीचे text box में आ जाएगा.",
       "samples.cx": "Message example load करें",
       "samples.consultoria": "Consulting example load करें",
       "samples.arrendamiento": "Legal example load करें",
-      "notes.title": "2. अपनी idea लिखें या paste करें",
-      "notes.subtitle": "Message, call, email, पहला request या messy text.",
-      "notes.label": "आपकी idea, message या पहला request",
-      "notes.help": "Perfect होना जरूरी नहीं. आप जैसे सोचते हैं वैसे लिख सकते हैं, message, call, email या loose idea paste कर सकते हैं.",
+      "notes.title": "2. अपना case लिखें या paste करें",
+      "notes.subtitle": "Message, call, email, पहली बात या rough text काफी है.",
+      "notes.label": "आपकी बात, message या text, बिना polish किए",
+      "notes.help": "Perfect बनाने की जरूरत नहीं. जैसे मन में आया है वैसे लिखें या जो already है वह paste कर दें.",
       "notes.placeholder": "Example: मुझे client को reply करना है, मेरे पास ये details हैं, date confirm नहीं है, मैं ऐसी बात promise नहीं करना चाहता जो मुझे पता नहीं...",
-      "outcome.label": "AI को बताएं कि आपको कैसा result चाहिए",
+      "outcome.label": "AI से क्या वापस चाहिए?",
       "pending.label": "अगर जानकारी missing है, AI को [PENDING] mark करने को कहें",
       "actions.generate": "3. Prompt generate करें",
       "actions.clear": "Clear",
       "output.title": "4. Copy करें और use करें",
-      "output.subtitle": "इस text में information को order करने और invented details कम करने के rules हैं.",
+      "output.subtitle": "इस prompt में information को order करने और invented details कम करने के rules हैं.",
       "output.nextTitle": "इसके बाद क्या करें",
-      "output.nextCopy": "इस prompt को copy करें और ChatGPT, Gemini, Claude या जिस AI को आप use करते हैं उसमें paste करें. AI को बेहतर instruction मिलेगा.",
+      "output.nextCopy": "इस prompt को copy करें और ChatGPT, Gemini, Claude या जिस AI को आप use करते हैं उसमें paste करें. AI को अब much clearer brief मिलेगा.",
       "actions.copy": "अपनी AI के लिए copy करें",
       "actions.download": ".txt download करें",
       "share.title": "क्या यह method helpful लगा?",
-      "share.copy": "अगर यह आपके काम आया, तो इसे किसी ऐसे व्यक्ति के साथ share करें जिसे AI से बेहतर तरीके से पूछने में फायदा होगा.",
+      "share.copy": "अगर काम आया, तो इसे ऐसे किसी व्यक्ति को भेजें जो अभी भी rough बात सीधे AI में डाल देता है.",
       "actions.share": "Share invitation copy करें",
       "verification.title": "AI response पर भरोसा करने से पहले",
       "verification.one": "क्या AI ने facts और assumptions अलग किए?",
       "verification.two": "क्या missing information को [PENDING] mark किया?",
       "verification.twoOff": "क्या missing या uncertain information साफ अलग की?",
-      "verification.three": "क्या notes में न होने वाली कोई बात invent की?",
+      "verification.three": "क्या आपके text में न होने वाली कोई बात invent की?",
       "verification.four": "क्या result real information से trace हो सकता है?",
       "verification.five": "Use करने से पहले कोई human decision pending है?",
       "privacy.note": "यह tool आपकी लिखी हुई चीज़ save नहीं करता. Screen से हटाने के लिए \"Clear\" दबाएं या tab बंद करें.",
       "footer.creator": "Created by Ashish Punj",
-      "footer.meta": "v0.1.2 · © 2026 Ashish Punj · Released 6 May 2026",
+      "footer.meta": "v0.1.3 · © 2026 Ashish Punj · Released 6 May 2026",
       "footer.license": "MIT License",
       "footer.info": "कैसे काम करता है और terms",
       "info.eyebrow": "NHA Mini Desk",
       "info.title": "कैसे काम करता है और terms",
-      "info.subtitle": "Tool को confidence के साथ use करने के लिए simple explanation.",
+      "info.subtitle": "Simple explanation: tool क्या करता है, और क्या नहीं करता.",
       "info.whatTitle": "यह क्या करता है",
-      "info.whatOne": "NHA Mini Desk आप जो AI से पूछना चाहते हैं उसे ChatGPT, Gemini, Claude या जिस AI को आप use करते हैं उसके लिए clear prompt में बदलता है.",
+      "info.whatOne": "NHA Mini Desk AI से जो काम करवाना है उसे ChatGPT, Gemini, Claude या जिस AI को आप use करते हैं उसके लिए clear prompt में बदलता है.",
       "info.whatTwo": "यह AI की जगह जवाब नहीं देता. यह आपके judgment को replace नहीं करता. यह सिर्फ बेहतर पूछने में मदद करता है.",
       "info.howTitle": "Use कैसे करें",
       "info.howOne": "जिस तरह का काम करना है, उसे चुनें.",
-      "info.howTwo": "अपने notes जैसे हैं वैसे paste करें.",
+      "info.howTwo": "अपना case जैसे है वैसे लिखें या paste करें.",
       "info.howThree": "Prompt generate करें.",
       "info.howFour": "Prompt copy करें और ChatGPT, Gemini, Claude या जिस AI को आप use करते हैं उसमें paste करें.",
       "info.howFive": "Use करने से पहले response review करें.",
       "info.browserTitle": "यह कैसे काम करता है",
-      "info.browserOne": "Page आपके browser में prompt बनाता है. आपको app download या account create करने की जरूरत नहीं.",
-      "info.browserTwo": "Tool आपके notes database में save नहीं करता और prompt generate करने के लिए हमारे server पर नहीं भेजता.",
+      "info.browserOne": "Page आपके browser में prompt बनाता है. App install या account बनाने की जरूरत नहीं.",
+      "info.browserTwo": "Tool आपकी लिखी हुई बात database में save नहीं करता और prompt बनाने के लिए हमारे server पर नहीं भेजता.",
       "info.browserThree": "Paste की हुई चीज हटाने के लिए \"Clear\" दबाएं या tab बंद करें.",
       "info.privacyTitle": "Privacy",
       "info.privacyOne": "अगर आप sure नहीं हैं कि web page पर काम करना है, तो extremely sensitive information paste न करें.",
-      "info.privacyTwo": "Browsers सुविधा के लिए page state temporary रख सकते हैं. Tool intentionally आपके notes save नहीं करता.",
+      "info.privacyTwo": "Browsers सुविधा के लिए page state temporary रख सकते हैं. Tool intentionally आपकी लिखी हुई बात save नहीं करता.",
       "info.limitsTitle": "Limits",
       "info.limitsOne": "किसी भी AI की output में errors हो सकते हैं. Names, dates, numbers, laws, medical info, financial info और important decisions हमेशा review करें.",
       "info.limitsTwo": "यह tool legal, medical, financial या professional advice नहीं देता. यह instructions को order करने में मदद करता है.",
@@ -555,11 +553,11 @@ ${getShareUrl()}`
       risks: "Risk checklist"
     },
     defaults: {
-      outcome: "मेरे notes को clear, verifiable output में बदलें जिसे use करने से पहले review किया जा सके.",
-      emptyPrompt: "आपका prompt यहां दिखेगा. पहले notes paste करें और \"Prompt generate करें\" दबाएं."
+      outcome: "मेरे case को clear, verifiable output में बदलें जिसे use करने से पहले review किया जा सके.",
+      emptyPrompt: "आपका prompt यहां दिखेगा. पहले अपना case लिखें या paste करें, फिर \"Prompt generate करें\" दबाएं."
     },
     statuses: {
-      missingNotes: "पहले अपने notes paste करें. वे messy हो सकते हैं; यही idea है.",
+      missingNotes: "पहले अपना case लिखें या paste करें. Messy हो सकता है; यही तो काम है.",
       generated: "Ready. इस prompt को copy करें और ChatGPT, Gemini, Claude या जिस AI को आप use करते हैं उसमें paste करें.",
       sampleReady: "Example ready. फर्क देखने के लिए prompt copy करके ChatGPT, Gemini, Claude या जिस AI को आप use करते हैं उसमें paste करें.",
       sampleLoaded: "Example loaded. Prompt generate करने से पहले आप इसे edit कर सकते हैं.",
@@ -569,13 +567,12 @@ ${getShareUrl()}`
       downloadFirst: "Download करने से पहले prompt generate करें.",
       downloaded: "File nha-prompt.txt download हो गई.",
       shareCopied: "Share message copy हो गया.",
-      shareFailed: "Message copy नहीं हुआ. Link manually copy करें."
-      ,
+      shareFailed: "Message copy नहीं हुआ. Link manually copy करें.",
       languageChanged: "Language बदल गई. आपका text और current prompt वैसे ही रखे गए हैं. इस भाषा में version बनाने के लिए \"Prompt generate करें\" दबाएं.",
       optionChanged: "Option बदल गई. Prompt update करने के लिए \"Prompt generate करें\" फिर दबाएं."
     },
     prompt: {
-      headings: { task: "काम", context: "संदर्भ", notes: "RAW NOTES", expectation: "उम्मीद", rules: "NHA RULES", output: "OUTPUT FORMAT" },
+      headings: { task: "काम", context: "संदर्भ", notes: "मूल टेक्स्ट", expectation: "उम्मीद", rules: "NHA RULES", output: "OUTPUT FORMAT" },
       caseType: "काम का प्रकार",
       audienceLabel: "Audience",
       audience: "Indian professional user जिसे useful, clear और verifiable output चाहिए.",
@@ -607,7 +604,7 @@ ${getShareUrl()}`
 
 "तीसरी बार आपकी team ने कहा order कल deliver होगा, लेकिन अभी तक नहीं आया. मैंने लगभग दो हफ्ते पहले order किया था. कोई clear answer नहीं दे रहा. अगर आज नहीं आया तो refund चाहिए."
 
-Internal notes:
+Internal context:
 
 Order शायद #IN-4821 है, लेकिन sure नहीं क्योंकि message में order number नहीं था.
 
@@ -620,7 +617,7 @@ Support team empathy के साथ reply करना चाहती है,
 Delivery today promise नहीं करनी अगर confirm नहीं है.
 
 Professional response और follow-up plan चाहिए.`,
-      consulting: `Client call notes:
+      consulting: `Call context:
 
 Gurugram की Indian B2B services company. Call अमित मेहरा, founder, के साथ थी. Sales team 8 लोगों की है. अमित कहता है opportunities miss हो रही हैं क्योंकि team consistent follow-up नहीं करती.
 
@@ -651,8 +648,8 @@ Tomorrow review के लिए first version चाहिए.`
     },
     sampleSettings: {
       cx: { caseKey: "cx", outputKey: "email", desiredOutcome: "Confirmed और pending information अलग करते हुए empathetic professional response तैयार करें, कुछ भी promise करने से पहले." },
-      consulting: { caseKey: "consulting", outputKey: "actionPlan", desiredOutcome: "इन call notes को diagnosis, priorities, pending questions और next step में organize करें." },
-      legal: { caseKey: "legal", outputKey: "facts", desiredOutcome: "इन notes को facts, pending items, risks और questions में बदलें ताकि बेहतर reply दिया जा सके." }
+      consulting: { caseKey: "consulting", outputKey: "actionPlan", desiredOutcome: "इस call context को diagnosis, priorities, pending questions और next step में organize करें." },
+      legal: { caseKey: "legal", outputKey: "facts", desiredOutcome: "इस information को facts, pending items, risks और questions में बदलें ताकि बेहतर reply दिया जा सके." }
     },
     shareText: () => `NHA Mini Desk try करें.
 
@@ -660,7 +657,7 @@ Tomorrow review के लिए first version चाहिए.`
 
 काम चुनें -> अपनी idea लिखें या paste करें -> बेहतर prompt copy करें
 
-Free. No login. No app download.
+Free. No login. No app install.
 
 अगर यह helpful लगे, तो इसे किसी ऐसे व्यक्ति को share करें जिसे इस method से फायदा होगा:
 ${getShareUrl()}`
@@ -669,80 +666,80 @@ ${getShareUrl()}`
   pa: {
     name: "ਪੰਜਾਬੀ",
     htmlLang: "pa",
-    title: "NHA Mini Desk | ਆਪਣੀ idea ਨੂੰ ਵਧੀਆ prompt ਬਣਾਓ",
-    description: "ਤੁਸੀਂ AI ਤੋਂ ਜੋ ਪੁੱਛਣਾ ਚਾਹੁੰਦੇ ਹੋ ਉਹ ਲਿਖੋ ਜਾਂ paste ਕਰੋ ਅਤੇ ChatGPT, Gemini, Claude ਜਾਂ ਕਿਸੇ ਵੀ AI ਲਈ clear prompt ਬਣਾਓ। Free, no login, no app download.",
+    title: "NHA Mini Desk | ਆਪਣੀ ਗੱਲ ਨੂੰ ਵਧੀਆ prompt ਬਣਾਓ",
+    description: "AI ਤੋਂ ਜੋ ਕਰਵਾਉਣਾ ਹੈ, ਜਿਵੇਂ ਮਨ ਵਿੱਚ ਹੈ ਉਹ ਲਿਖੋ ਜਾਂ paste ਕਰੋ. NHA Mini Desk ਇਸਨੂੰ ChatGPT, Gemini, Claude ਜਾਂ ਕਿਸੇ ਵੀ AI ਲਈ clear prompt ਬਣਾ ਦਿੰਦਾ ਹੈ. Free, no login, no app install.",
     ui: {
       "language.label": "ਭਾਸ਼ਾ",
-      "hero.eyebrow": "Free - Login ਨਹੀਂ - App download ਨਹੀਂ",
-      "hero.subtitle": "ਤੁਸੀਂ AI ਤੋਂ ਜੋ ਪੁੱਛਣਾ ਚਾਹੁੰਦੇ ਹੋ ਉਹ ਲਿਖੋ ਜਾਂ paste ਕਰੋ. Tool ਇਸਨੂੰ ChatGPT, Gemini, Claude ਜਾਂ ਜਿਸ AI ਨੂੰ ਤੁਸੀਂ use ਕਰਦੇ ਹੋ ਉਸ ਲਈ clear prompt ਵਿੱਚ ਬਦਲਦਾ ਹੈ.",
+      "hero.eyebrow": "Free - Login ਨਹੀਂ - App install ਨਹੀਂ",
+      "hero.subtitle": "AI ਤੋਂ ਜੋ ਕਰਵਾਉਣਾ ਹੈ, ਜਿਵੇਂ ਮਨ ਵਿੱਚ ਹੈ ਉਹ ਲਿਖੋ ਜਾਂ paste ਕਰੋ. NHA Mini Desk ਇਸਨੂੰ ChatGPT, Gemini, Claude ਜਾਂ ਜਿਸ AI ਨੂੰ ਤੁਸੀਂ use ਕਰਦੇ ਹੋ ਉਸ ਲਈ clear prompt ਬਣਾ ਦਿੰਦਾ ਹੈ.",
       "hero.tryExample": "20 seconds ਵਿੱਚ try ਕਰੋ",
-      "hero.privacy": "ਤੁਹਾਡੇ notes database ਵਿੱਚ save ਨਹੀਂ ਹੁੰਦੇ.",
-      "why.label": "ਇਹ ਕੀ ਕਰਦਾ ਹੈ",
-      "why.copy": "ਜਦੋਂ ਤੁਸੀਂ confused notes ਸਿੱਧੇ AI ਵਿੱਚ paste ਕਰਦੇ ਹੋ, answer ਵਧੀਆ ਲੱਗ ਸਕਦਾ ਹੈ ਪਰ important details miss ਹੋ ਸਕਦੀਆਂ ਹਨ. ਇਹ tool ਭੇਜਣ ਤੋਂ ਪਹਿਲਾਂ request ਨੂੰ order ਕਰਦਾ ਹੈ.",
+      "hero.privacy": "ਤੁਸੀਂ ਜੋ ਲਿਖਦੇ ਹੋ, ਉਹ database ਵਿੱਚ save ਨਹੀਂ ਹੁੰਦਾ.",
+      "why.label": "ਇਹ ਕਿਉਂ ਕੰਮ ਆਉਂਦਾ ਹੈ",
+      "why.copy": "ਜਦੋਂ ਅਸੀਂ ਅਧੂਰੀ ਜਾਂ ਉਲਝੀ ਗੱਲ ਸਿੱਧੀ AI ਵਿੱਚ ਪਾ ਦਿੰਦੇ ਹਾਂ, answer ਵਧੀਆ ਲੱਗ ਸਕਦਾ ਹੈ ਪਰ ਜ਼ਰੂਰੀ ਗੱਲ miss ਹੋ ਸਕਦੀ ਹੈ. ਇਹ tool ਭੇਜਣ ਤੋਂ ਪਹਿਲਾਂ ਤੁਹਾਡੀ ਗੱਲ ਨੂੰ shape ਦਿੰਦਾ ਹੈ.",
       "steps.one": "ਕੰਮ ਚੁਣੋ",
-      "steps.two": "ਆਪਣੀ idea ਲਿਖੋ ਜਾਂ paste ਕਰੋ",
+      "steps.two": "ਆਪਣੀ rough ਗੱਲ ਪਾਓ",
       "steps.three": "Prompt ਆਪਣੀ AI ਵਿੱਚ copy ਕਰੋ",
       "input.title": "1. ਕੰਮ ਚੁਣੋ",
-      "input.subtitle": "ਪਹਿਲਾਂ ਚੁਣੋ ਤੁਸੀਂ ਕੀ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ. ਫਿਰ notes ਜਿਵੇਂ ਹਨ paste ਕਰੋ.",
-      "input.explainerTitle": "ਪਹਿਲਾਂ ਕੁਝ clean ਕਰਨ ਦੀ ਲੋੜ ਨਹੀਂ.",
-      "input.explainerCopy": "ਇਹ tool ਤੁਹਾਡੀ initial idea, message ਜਾਂ call notes ਨੂੰ AI ਲਈ clear instruction ਵਿੱਚ ਬਦਲਣ ਵਿੱਚ help ਕਰਦਾ ਹੈ.",
-      "form.caseLabel": "ਇਹ ਕਿਸ type ਦਾ ਕੰਮ ਹੈ?",
-      "form.outputLabel": "ਤੁਹਾਨੂੰ ਕੀ ਚਾਹੀਦਾ ਹੈ?",
-      "form.choiceHelp": "ਪਹਿਲਾਂ ਕੰਮ ਅਤੇ result ਚੁਣੋ. ਫਿਰ ਇਸ selection ਲਈ example load ਕਰੋ ਜਾਂ ਹੇਠਾਂ ਆਪਣੇ notes paste ਕਰੋ.",
+      "input.subtitle": "ਪਹਿਲਾਂ ਕੰਮ ਦੀ type ਚੁਣੋ. ਫਿਰ ਆਪਣੀ rough ਗੱਲ ਜਿਵੇਂ ਹੈ ਤਿਵੇਂ ਪਾ ਦਿਓ.",
+      "input.explainerTitle": "ਪਹਿਲਾਂ polish ਕਰਨ ਦੀ ਲੋੜ ਨਹੀਂ.",
+      "input.explainerCopy": "Idea, message, call ਜਾਂ email ਕੁਝ ਵੀ ਹੋ ਸਕਦਾ ਹੈ. Tool ਇਸਨੂੰ AI ਲਈ clear instruction ਬਣਾ ਦਿੰਦਾ ਹੈ.",
+      "form.caseLabel": "ਕਿਸ type ਦਾ ਕੰਮ ਹੈ?",
+      "form.outputLabel": "AI ਤੋਂ ਕੀ output ਚਾਹੀਦਾ ਹੈ?",
+      "form.choiceHelp": "ਕੰਮ ਅਤੇ output ਚੁਣੋ. ਫਿਰ matching example load ਕਰੋ ਜਾਂ ਹੇਠਾਂ ਆਪਣਾ case ਲਿਖੋ.",
       "samples.selected": "ਇਸ selection ਲਈ example load ਕਰੋ",
-      "samples.selectedHelp": "Example ਹੇਠਾਂ notes box ਵਿੱਚ ਆਵੇਗਾ.",
+      "samples.selectedHelp": "Example ਹੇਠਾਂ text box ਵਿੱਚ ਆ ਜਾਏਗਾ.",
       "samples.cx": "Message example load ਕਰੋ",
       "samples.consultoria": "Consulting example load ਕਰੋ",
       "samples.arrendamiento": "Legal example load ਕਰੋ",
-      "notes.title": "2. ਆਪਣੀ idea ਲਿਖੋ ਜਾਂ paste ਕਰੋ",
-      "notes.subtitle": "Message, call, email, ਪਹਿਲਾ request ਜਾਂ messy text.",
-      "notes.label": "ਤੁਹਾਡੀ idea, message ਜਾਂ ਪਹਿਲਾ request",
-      "notes.help": "Perfect ਹੋਣਾ ਜ਼ਰੂਰੀ ਨਹੀਂ. ਤੁਸੀਂ ਜਿਵੇਂ ਸੋਚਦੇ ਹੋ ਲਿਖ ਸਕਦੇ ਹੋ, message, call, email ਜਾਂ loose idea paste ਕਰ ਸਕਦੇ ਹੋ.",
+      "notes.title": "2. ਆਪਣਾ case ਲਿਖੋ ਜਾਂ paste ਕਰੋ",
+      "notes.subtitle": "Message, call, email, ਪਹਿਲੀ ਗੱਲ ਜਾਂ rough text ਕਾਫੀ ਹੈ.",
+      "notes.label": "ਤੁਹਾਡੀ ਗੱਲ, message ਜਾਂ text, ਬਿਨਾਂ polish ਕੀਤੇ",
+      "notes.help": "Perfect ਬਣਾਉਣ ਦੀ ਲੋੜ ਨਹੀਂ. ਜਿਵੇਂ ਮਨ ਵਿੱਚ ਆਇਆ ਹੈ ਤਿਵੇਂ ਲਿਖੋ ਜਾਂ ਜੋ already ਹੈ ਉਹ paste ਕਰ ਦਿਓ.",
       "notes.placeholder": "Example: ਮੈਨੂੰ client ਨੂੰ reply ਕਰਨਾ ਹੈ, ਮੇਰੇ ਕੋਲ ਇਹ details ਹਨ, date confirm ਨਹੀਂ, ਮੈਂ ਅਜਿਹੀ ਗੱਲ promise ਨਹੀਂ ਕਰਨੀ ਜੋ ਮੈਨੂੰ ਪਤਾ ਨਹੀਂ...",
-      "outcome.label": "AI ਨੂੰ ਦੱਸੋ ਤੁਹਾਨੂੰ ਕਿਹੋ ਜਿਹਾ result ਚਾਹੀਦਾ ਹੈ",
+      "outcome.label": "AI ਤੋਂ ਵਾਪਸ ਕੀ ਚਾਹੀਦਾ ਹੈ?",
       "pending.label": "ਜੇ information missing ਹੈ, AI ਨੂੰ [PENDING] mark ਕਰਨ ਲਈ ਕਹੋ",
       "actions.generate": "3. Prompt generate ਕਰੋ",
       "actions.clear": "Clear",
       "output.title": "4. Copy ਕਰੋ ਤੇ use ਕਰੋ",
-      "output.subtitle": "ਇਸ text ਵਿੱਚ information ਨੂੰ order ਕਰਨ ਤੇ invented details ਘਟਾਉਣ ਦੇ rules ਹਨ.",
+      "output.subtitle": "ਇਸ prompt ਵਿੱਚ information ਨੂੰ order ਕਰਨ ਅਤੇ invented details ਘਟਾਉਣ ਦੇ rules ਹਨ.",
       "output.nextTitle": "ਇਸ ਤੋਂ ਬਾਅਦ ਕੀ ਕਰਨਾ ਹੈ",
-      "output.nextCopy": "ਇਹ prompt copy ਕਰੋ ਤੇ ChatGPT, Gemini, Claude ਜਾਂ ਜਿਸ AI ਨੂੰ ਤੁਸੀਂ use ਕਰਦੇ ਹੋ ਉਸ ਵਿੱਚ paste ਕਰੋ. AI ਨੂੰ better instruction ਮਿਲੇਗੀ.",
+      "output.nextCopy": "ਇਹ prompt copy ਕਰੋ ਤੇ ChatGPT, Gemini, Claude ਜਾਂ ਜਿਸ AI ਨੂੰ ਤੁਸੀਂ use ਕਰਦੇ ਹੋ ਉਸ ਵਿੱਚ paste ਕਰੋ. AI ਨੂੰ ਹੁਣ much clearer brief ਮਿਲੇਗਾ.",
       "actions.copy": "ਆਪਣੀ AI ਲਈ copy ਕਰੋ",
       "actions.download": ".txt download ਕਰੋ",
       "share.title": "ਕੀ ਇਹ method helpful ਲੱਗਾ?",
-      "share.copy": "ਜੇ ਇਹ ਤੁਹਾਡੇ ਕੰਮ ਆਇਆ, ਤਾਂ ਇਸਨੂੰ ਕਿਸੇ ਨਾਲ share ਕਰੋ ਜਿਸਨੂੰ AI ਤੋਂ better ਤਰੀਕੇ ਨਾਲ ਪੁੱਛਣ ਵਿੱਚ benefit ਹੋਵੇ.",
+      "share.copy": "ਜੇ ਕੰਮ ਆਇਆ, ਤਾਂ ਇਹ ਕਿਸੇ ਐਸੇ person ਨੂੰ ਭੇਜੋ ਜੋ ਅਜੇ ਵੀ rough ਗੱਲ ਸਿੱਧੀ AI ਵਿੱਚ ਪਾ ਦਿੰਦਾ ਹੈ.",
       "actions.share": "Share invitation copy ਕਰੋ",
       "verification.title": "AI response ਤੇ trust ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ",
       "verification.one": "ਕੀ AI ਨੇ facts ਤੇ assumptions ਵੱਖ ਕੀਤੇ?",
       "verification.two": "ਕੀ missing information ਨੂੰ [PENDING] mark ਕੀਤਾ?",
       "verification.twoOff": "ਕੀ missing ਜਾਂ uncertain information ਸਾਫ਼ ਵੱਖ ਕੀਤੀ?",
-      "verification.three": "ਕੀ notes ਵਿੱਚ ਨਾ ਹੋਣ ਵਾਲੀ ਕੋਈ ਗੱਲ invent ਕੀਤੀ?",
+      "verification.three": "ਕੀ ਤੁਹਾਡੇ text ਵਿੱਚ ਨਾ ਹੋਣ ਵਾਲੀ ਕੋਈ ਗੱਲ invent ਕੀਤੀ?",
       "verification.four": "ਕੀ result real information ਨਾਲ trace ਹੋ ਸਕਦਾ ਹੈ?",
       "verification.five": "Use ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਕੋਈ human decision pending ਹੈ?",
       "privacy.note": "ਇਹ tool ਤੁਹਾਡੀ ਲਿਖੀ ਚੀਜ਼ save ਨਹੀਂ ਕਰਦਾ. Screen ਤੋਂ ਹਟਾਉਣ ਲਈ \"Clear\" ਦਬਾਓ ਜਾਂ tab close ਕਰੋ.",
       "footer.creator": "Created by Ashish Punj",
-      "footer.meta": "v0.1.2 · © 2026 Ashish Punj · Released 6 May 2026",
+      "footer.meta": "v0.1.3 · © 2026 Ashish Punj · Released 6 May 2026",
       "footer.license": "MIT License",
       "footer.info": "ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ ਅਤੇ terms",
       "info.eyebrow": "NHA Mini Desk",
       "info.title": "ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ ਅਤੇ terms",
-      "info.subtitle": "Tool ਨੂੰ confidence ਨਾਲ use ਕਰਨ ਲਈ simple explanation.",
+      "info.subtitle": "Simple explanation: tool ਕੀ ਕਰਦਾ ਹੈ, ਤੇ ਕੀ ਨਹੀਂ ਕਰਦਾ.",
       "info.whatTitle": "ਇਹ ਕੀ ਕਰਦਾ ਹੈ",
-      "info.whatOne": "NHA Mini Desk ਤੁਸੀਂ AI ਤੋਂ ਜੋ ਪੁੱਛਣਾ ਚਾਹੁੰਦੇ ਹੋ ਉਸਨੂੰ ChatGPT, Gemini, Claude ਜਾਂ ਜਿਸ AI ਨੂੰ ਤੁਸੀਂ use ਕਰਦੇ ਹੋ ਉਸ ਲਈ clear prompt ਵਿੱਚ ਬਦਲਦਾ ਹੈ.",
+      "info.whatOne": "NHA Mini Desk AI ਤੋਂ ਜੋ ਕੰਮ ਕਰਵਾਉਣਾ ਹੈ ਉਸਨੂੰ ChatGPT, Gemini, Claude ਜਾਂ ਜਿਸ AI ਨੂੰ ਤੁਸੀਂ use ਕਰਦੇ ਹੋ ਉਸ ਲਈ clear prompt ਵਿੱਚ ਬਦਲਦਾ ਹੈ.",
       "info.whatTwo": "ਇਹ AI ਦੀ ਥਾਂ answer ਨਹੀਂ ਦਿੰਦਾ. ਇਹ ਤੁਹਾਡੇ judgment ਨੂੰ replace ਨਹੀਂ ਕਰਦਾ. ਇਹ ਸਿਰਫ better ask ਕਰਨ ਵਿੱਚ help ਕਰਦਾ ਹੈ.",
       "info.howTitle": "Use ਕਿਵੇਂ ਕਰਨਾ ਹੈ",
       "info.howOne": "ਜਿਸ type ਦਾ ਕੰਮ ਕਰਨਾ ਹੈ, ਉਹ ਚੁਣੋ.",
-      "info.howTwo": "ਆਪਣੇ notes ਜਿਵੇਂ ਹਨ paste ਕਰੋ.",
+      "info.howTwo": "ਆਪਣਾ case ਜਿਵੇਂ ਹੈ ਤਿਵੇਂ ਲਿਖੋ ਜਾਂ paste ਕਰੋ.",
       "info.howThree": "Prompt generate ਕਰੋ.",
       "info.howFour": "Prompt copy ਕਰੋ ਤੇ ChatGPT, Gemini, Claude ਜਾਂ ਜਿਸ AI ਨੂੰ ਤੁਸੀਂ use ਕਰਦੇ ਹੋ ਉਸ ਵਿੱਚ paste ਕਰੋ.",
       "info.howFive": "Use ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ response review ਕਰੋ.",
       "info.browserTitle": "ਇਹ ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ",
-      "info.browserOne": "Page ਤੁਹਾਡੇ browser ਵਿੱਚ prompt ਬਣਾਉਂਦਾ ਹੈ. App download ਜਾਂ account create ਕਰਨ ਦੀ ਲੋੜ ਨਹੀਂ.",
-      "info.browserTwo": "Tool ਤੁਹਾਡੇ notes database ਵਿੱਚ save ਨਹੀਂ ਕਰਦਾ ਤੇ prompt generate ਕਰਨ ਲਈ ਸਾਡੇ server ਤੇ ਨਹੀਂ ਭੇਜਦਾ.",
+      "info.browserOne": "Page ਤੁਹਾਡੇ browser ਵਿੱਚ prompt ਬਣਾਉਂਦਾ ਹੈ. App install ਜਾਂ account ਬਣਾਉਣ ਦੀ ਲੋੜ ਨਹੀਂ.",
+      "info.browserTwo": "Tool ਤੁਹਾਡੀ ਲਿਖੀ ਗੱਲ database ਵਿੱਚ save ਨਹੀਂ ਕਰਦਾ ਤੇ prompt ਬਣਾਉਣ ਲਈ ਸਾਡੇ server ਤੇ ਨਹੀਂ ਭੇਜਦਾ.",
       "info.browserThree": "Paste ਕੀਤੀ ਚੀਜ਼ ਹਟਾਉਣ ਲਈ \"Clear\" ਦਬਾਓ ਜਾਂ tab close ਕਰੋ.",
       "info.privacyTitle": "Privacy",
       "info.privacyOne": "ਜੇ ਤੁਸੀਂ sure ਨਹੀਂ ਕਿ web page ਤੇ ਕੰਮ ਕਰਨਾ ਹੈ, ਤਾਂ extremely sensitive information paste ਨਾ ਕਰੋ.",
-      "info.privacyTwo": "Browsers convenience ਲਈ page state temporary ਰੱਖ ਸਕਦੇ ਹਨ. Tool intentionally ਤੁਹਾਡੇ notes save ਨਹੀਂ ਕਰਦਾ.",
+      "info.privacyTwo": "Browsers convenience ਲਈ page state temporary ਰੱਖ ਸਕਦੇ ਹਨ. Tool intentionally ਤੁਹਾਡੀ ਲਿਖੀ ਗੱਲ save ਨਹੀਂ ਕਰਦਾ.",
       "info.limitsTitle": "Limits",
       "info.limitsOne": "ਕਿਸੇ ਵੀ AI output ਵਿੱਚ errors ਹੋ ਸਕਦੇ ਹਨ. Names, dates, numbers, laws, medical info, financial info ਅਤੇ important decisions ਹਮੇਸ਼ਾਂ review ਕਰੋ.",
       "info.limitsTwo": "ਇਹ tool legal, medical, financial ਜਾਂ professional advice ਨਹੀਂ ਦਿੰਦਾ. ਇਹ instructions ਨੂੰ order ਕਰਨ ਵਿੱਚ help ਕਰਦਾ ਹੈ.",
@@ -770,11 +767,11 @@ ${getShareUrl()}`
       risks: "Risk checklist"
     },
     defaults: {
-      outcome: "ਮੇਰੇ notes ਨੂੰ clear, verifiable output ਵਿੱਚ ਬਦਲੋ ਜੋ use ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ review ਹੋ ਸਕੇ.",
-      emptyPrompt: "ਤੁਹਾਡਾ prompt ਇੱਥੇ ਆਵੇਗਾ. ਪਹਿਲਾਂ notes paste ਕਰੋ ਤੇ \"Prompt generate ਕਰੋ\" ਦਬਾਓ."
+      outcome: "ਮੇਰੇ case ਨੂੰ clear, verifiable output ਵਿੱਚ ਬਦਲੋ ਜੋ use ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ review ਹੋ ਸਕੇ.",
+      emptyPrompt: "ਤੁਹਾਡਾ prompt ਇੱਥੇ ਆਵੇਗਾ. ਪਹਿਲਾਂ ਆਪਣਾ case ਲਿਖੋ ਜਾਂ paste ਕਰੋ, ਫਿਰ \"Prompt generate ਕਰੋ\" ਦਬਾਓ."
     },
     statuses: {
-      missingNotes: "ਪਹਿਲਾਂ ਆਪਣੇ notes paste ਕਰੋ. ਉਹ messy ਹੋ ਸਕਦੇ ਹਨ; ਇਹੀ idea ਹੈ.",
+      missingNotes: "ਪਹਿਲਾਂ ਆਪਣਾ case ਲਿਖੋ ਜਾਂ paste ਕਰੋ. Messy ਹੋ ਸਕਦਾ ਹੈ; ਇਹੀ ਤਾਂ ਕੰਮ ਹੈ.",
       generated: "Ready. ਇਹ prompt copy ਕਰੋ ਤੇ ChatGPT, Gemini, Claude ਜਾਂ ਜਿਸ AI ਨੂੰ ਤੁਸੀਂ use ਕਰਦੇ ਹੋ ਉਸ ਵਿੱਚ paste ਕਰੋ.",
       sampleReady: "Example ready. Difference ਵੇਖਣ ਲਈ prompt copy ਕਰਕੇ ChatGPT, Gemini, Claude ਜਾਂ ਜਿਸ AI ਨੂੰ ਤੁਸੀਂ use ਕਰਦੇ ਹੋ ਉਸ ਵਿੱਚ paste ਕਰੋ.",
       sampleLoaded: "Example loaded. Prompt generate ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਤੁਸੀਂ edit ਕਰ ਸਕਦੇ ਹੋ.",
@@ -784,13 +781,12 @@ ${getShareUrl()}`
       downloadFirst: "Download ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ prompt generate ਕਰੋ.",
       downloaded: "File nha-prompt.txt download ਹੋ ਗਈ.",
       shareCopied: "Share message copy ਹੋ ਗਿਆ.",
-      shareFailed: "Message copy ਨਹੀਂ ਹੋਇਆ. Link manually copy ਕਰੋ."
-      ,
+      shareFailed: "Message copy ਨਹੀਂ ਹੋਇਆ. Link manually copy ਕਰੋ.",
       languageChanged: "Language ਬਦਲ ਗਈ. ਤੁਹਾਡਾ text ਅਤੇ current prompt ਉਹੀ ਰੱਖੇ ਗਏ ਹਨ. ਇਸ language ਵਿੱਚ version ਬਣਾਉਣ ਲਈ \"Prompt generate ਕਰੋ\" ਦਬਾਓ.",
       optionChanged: "Option ਬਦਲ ਗਈ. Prompt update ਕਰਨ ਲਈ \"Prompt generate ਕਰੋ\" ਫਿਰ ਦਬਾਓ."
     },
     prompt: {
-      headings: { task: "ਕੰਮ", context: "ਸੰਦਰਭ", notes: "RAW NOTES", expectation: "ਉਮੀਦ", rules: "NHA RULES", output: "OUTPUT FORMAT" },
+      headings: { task: "ਕੰਮ", context: "ਸੰਦਰਭ", notes: "ਮੂਲ text", expectation: "ਉਮੀਦ", rules: "NHA RULES", output: "OUTPUT FORMAT" },
       caseType: "ਕੰਮ ਦੀ type",
       audienceLabel: "Audience",
       audience: "Indian professional user ਜਿਸਨੂੰ useful, clear ਅਤੇ verifiable output ਚਾਹੀਦਾ ਹੈ.",
@@ -822,7 +818,7 @@ ${getShareUrl()}`
 
 "ਤੀਜੀ ਵਾਰੀ ਤੁਹਾਡੀ team ਨੇ ਕਿਹਾ order ਕੱਲ੍ਹ deliver ਹੋਵੇਗਾ, ਪਰ ਅਜੇ ਤੱਕ ਨਹੀਂ ਆਇਆ. ਮੈਂ ਲਗਭਗ ਦੋ ਹਫ਼ਤੇ ਪਹਿਲਾਂ order ਕੀਤਾ ਸੀ. ਕੋਈ clear answer ਨਹੀਂ ਦੇ ਰਿਹਾ. ਜੇ ਅੱਜ ਨਹੀਂ ਆਇਆ ਤਾਂ refund ਚਾਹੀਦਾ."
 
-Internal notes:
+Internal context:
 
 Order ਸ਼ਾਇਦ #IN-4821 ਹੈ, ਪਰ sure ਨਹੀਂ ਕਿਉਂਕਿ message ਵਿੱਚ order number ਨਹੀਂ ਸੀ.
 
@@ -835,7 +831,7 @@ Support team empathy ਨਾਲ reply ਕਰਨਾ ਚਾਹੁੰਦੀ ਹੈ, 
 Delivery today promise ਨਹੀਂ ਕਰਨੀ ਜੇ confirm ਨਹੀਂ ਹੈ.
 
 Professional response ਅਤੇ follow-up plan ਚਾਹੀਦਾ ਹੈ.`,
-      consulting: `Client call notes:
+      consulting: `Call context:
 
 Mohali ਦੀ Indian B2B services company. Call ਜਸਪ੍ਰੀਤ ਸਿੰਘ, founder, ਨਾਲ ਸੀ. Sales team 8 ਲੋਕਾਂ ਦੀ ਹੈ. ਜਸਪ੍ਰੀਤ ਕਹਿੰਦਾ ਹੈ opportunities miss ਹੋ ਰਹੀਆਂ ਹਨ ਕਿਉਂਕਿ team consistent follow-up ਨਹੀਂ ਕਰਦੀ.
 
@@ -866,8 +862,8 @@ Tomorrow review ਲਈ first version ਚਾਹੀਦਾ ਹੈ.`
     },
     sampleSettings: {
       cx: { caseKey: "cx", outputKey: "email", desiredOutcome: "Confirmed ਅਤੇ pending information ਵੱਖ ਕਰਦੇ ਹੋਏ empathetic professional response ਤਿਆਰ ਕਰੋ, ਕੁਝ ਵੀ promise ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ." },
-      consulting: { caseKey: "consulting", outputKey: "actionPlan", desiredOutcome: "ਇਹ call notes ਨੂੰ diagnosis, priorities, pending questions ਅਤੇ next step ਵਿੱਚ organize ਕਰੋ." },
-      legal: { caseKey: "legal", outputKey: "facts", desiredOutcome: "ਇਹ notes ਨੂੰ facts, pending items, risks ਅਤੇ questions ਵਿੱਚ ਬਦਲੋ ਤਾਂ ਕਿ better reply ਦਿੱਤਾ ਜਾ ਸਕੇ." }
+      consulting: { caseKey: "consulting", outputKey: "actionPlan", desiredOutcome: "ਇਸ call context ਨੂੰ diagnosis, priorities, pending questions ਅਤੇ next step ਵਿੱਚ organize ਕਰੋ." },
+      legal: { caseKey: "legal", outputKey: "facts", desiredOutcome: "ਇਸ information ਨੂੰ facts, pending items, risks ਅਤੇ questions ਵਿੱਚ ਬਦਲੋ ਤਾਂ ਕਿ better reply ਦਿੱਤਾ ਜਾ ਸਕੇ." }
     },
     shareText: () => `NHA Mini Desk try ਕਰੋ.
 
@@ -875,7 +871,7 @@ Tomorrow review ਲਈ first version ਚਾਹੀਦਾ ਹੈ.`
 
 ਕੰਮ ਚੁਣੋ -> ਆਪਣੀ idea ਲਿਖੋ ਜਾਂ paste ਕਰੋ -> better prompt copy ਕਰੋ
 
-Free. No login. No app download.
+Free. No login. No app install.
 
 ਜੇ helpful ਲੱਗੇ, ਇਸਨੂੰ ਕਿਸੇ ਨਾਲ share ਕਰੋ ਜਿਸਨੂੰ ਇਸ method ਤੋਂ benefit ਹੋਵੇ:
 ${getShareUrl()}`
@@ -891,7 +887,7 @@ Quiero organizar una idea que tengo para mejorar mi trabajo con IA. Tengo varias
 Quiero entender qué partes ya están claras, qué falta definir, qué riesgos hay y cuál sería el siguiente paso lógico.
 
 Hay cosas que todavía no sé: tiempo disponible, herramientas exactas, costo y prioridad.`,
-    operations: `Notas operativas:
+    operations: `Contexto operativo:
 
 El equipo está recibiendo solicitudes por varios canales. Algunas llegan por mensaje, otras por correo y otras por llamada.
 
@@ -900,7 +896,7 @@ No hay una lista única de pendientes. A veces dos personas trabajan lo mismo y 
 Hay que ordenar prioridades, responsables, fechas y riesgos. Falta confirmar quién aprueba cambios y qué tareas son urgentes.
 
 Necesitamos una forma clara de convertir esto en acciones.`,
-    proposal: `Notas para propuesta:
+    proposal: `Contexto para propuesta:
 
 Un cliente quiere ayuda para ordenar su proceso de seguimiento. Dice que usa mensajes, Excel y correo, pero no tiene un flujo claro.
 
@@ -916,7 +912,7 @@ I want to organize an idea for improving how my team uses AI at work. I have sev
 I want to understand what is already clear, what is missing, what risks exist, and what the next logical step should be.
 
 Some things are still unknown: available time, exact tools, budget, owner, and priority.`,
-    operations: `Operations notes:
+    operations: `Operations context:
 
 The team is receiving customer enquiries through WhatsApp, Gmail, and phone calls.
 
@@ -925,13 +921,13 @@ There is no single pending list. Sometimes two people work on the same thing and
 We need to organize priorities, owners, dates, and risks. It is still unclear who approves changes, which tasks are urgent, and what should be escalated to the business owner.
 
 We need a clear way to turn this into actions.`,
-    proposal: `Proposal notes:
+    proposal: `Proposal context:
 
 An Indian client wants help organizing their sales follow-up process. They use WhatsApp, Excel, and Gmail, but do not have a clear flow.
 
 They want to "use AI", but scope, budget in INR, dates, and internal owner are still unclear.
 
-We need to turn these notes into a clear proposal without inventing prices or promising anything unconfirmed.`
+We need to turn this information into a clear proposal without inventing prices or promising anything unconfirmed.`
   },
   hi: {
     general: `Initial idea:
@@ -941,7 +937,7 @@ We need to turn these notes into a clear proposal without inventing prices or pr
 मुझे समझना है कि क्या clear है, क्या missing है, कौनसे risks हैं, और next logical step क्या होगा.
 
 कुछ चीज़ें अभी unknown हैं: time available, exact tools, budget, owner और priority.`,
-    operations: `Operations notes:
+    operations: `Operations context:
 
 Team को customer enquiries WhatsApp, Gmail और phone calls से मिल रही हैं.
 
@@ -950,13 +946,13 @@ Single pending list नहीं है. कभी दो लोग एक ह�
 Priorities, owners, dates और risks organize करने हैं. कौन changes approve करेगा, कौनसे tasks urgent हैं, और क्या business owner को escalate करना है, यह अभी clear नहीं.
 
 हमें इसे actions में बदलने का clear तरीका चाहिए.`,
-    proposal: `Proposal notes:
+    proposal: `Proposal context:
 
 एक Indian client अपने sales follow-up process को organize करने में help चाहता है. वह WhatsApp, Excel और Gmail use करता है, लेकिन clear flow नहीं है.
 
 वह "AI use" करना चाहता है, लेकिन scope, INR budget, dates और internal owner अभी clear नहीं.
 
-हमें इन notes को clear proposal में बदलना है, बिना prices invent किए या unconfirmed चीज़ promise किए.`
+हमें इस information को clear proposal में बदलना है, बिना prices invent किए या unconfirmed चीज़ promise किए.`
   },
   pa: {
     general: `Initial idea:
@@ -966,7 +962,7 @@ Priorities, owners, dates और risks organize करने हैं. कौ�
 ਮੈਨੂੰ ਸਮਝਣਾ ਹੈ ਕਿ ਕੀ clear ਹੈ, ਕੀ missing ਹੈ, ਕਿਹੜੇ risks ਹਨ, ਅਤੇ next logical step ਕੀ ਹੋਵੇਗਾ.
 
 ਕੁਝ ਚੀਜ਼ਾਂ ਅਜੇ unknown ਹਨ: time available, exact tools, budget, owner ਅਤੇ priority.`,
-    operations: `Operations notes:
+    operations: `Operations context:
 
 Team ਨੂੰ customer enquiries WhatsApp, Gmail ਅਤੇ phone calls ਤੋਂ ਆ ਰਹੀਆਂ ਹਨ.
 
@@ -975,13 +971,13 @@ Single pending list ਨਹੀਂ ਹੈ. ਕਦੇ ਦੋ ਲੋਕ ਇੱਕੋ
 Priorities, owners, dates ਅਤੇ risks organize ਕਰਨੇ ਹਨ. ਕੌਣ changes approve ਕਰੇਗਾ, ਕਿਹੜੇ tasks urgent ਹਨ, ਅਤੇ ਕੀ business owner ਨੂੰ escalate ਕਰਨਾ ਹੈ, ਇਹ ਅਜੇ clear ਨਹੀਂ.
 
 ਸਾਨੂੰ ਇਸ ਨੂੰ actions ਵਿੱਚ ਬਦਲਣ ਦਾ clear ਤਰੀਕਾ ਚਾਹੀਦਾ ਹੈ.`,
-    proposal: `Proposal notes:
+    proposal: `Proposal context:
 
 ਇੱਕ Indian client ਆਪਣੇ sales follow-up process ਨੂੰ organize ਕਰਨ ਵਿੱਚ help ਚਾਹੁੰਦਾ ਹੈ. ਉਹ WhatsApp, Excel ਅਤੇ Gmail use ਕਰਦਾ ਹੈ, ਪਰ clear flow ਨਹੀਂ ਹੈ.
 
 ਉਹ "AI use" ਕਰਨਾ ਚਾਹੁੰਦਾ ਹੈ, ਪਰ scope, INR budget, dates ਅਤੇ internal owner ਅਜੇ clear ਨਹੀਂ.
 
-ਸਾਨੂੰ ਇਹ notes clear proposal ਵਿੱਚ ਬਦਲਣੇ ਹਨ, ਬਿਨਾਂ prices invent ਕੀਤੇ ਜਾਂ unconfirmed ਚੀਜ਼ promise ਕੀਤੇ.`
+ਸਾਨੂੰ ਇਸ information ਨੂੰ clear proposal ਵਿੱਚ ਬਦਲਣਾ ਹੈ, ਬਿਨਾਂ prices invent ਕੀਤੇ ਜਾਂ unconfirmed ਚੀਜ਼ promise ਕੀਤੇ.`
   }
 };
 

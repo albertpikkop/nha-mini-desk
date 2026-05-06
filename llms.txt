@@ -1,8 +1,8 @@
 # NHA Mini Desk
 
-NHA Mini Desk is an open-source browser tool that turns rough thoughts, notes,
-messages, and client context into structured AI prompts for ChatGPT, Gemini,
-Claude, or any AI tool.
+NHA Mini Desk is an open-source browser tool that turns a rough ask, message,
+case, or client context into structured AI prompts for ChatGPT, Gemini, Claude,
+or any AI tool.
 
 Live demo: https://www.ashishpunj.com/nha-tce/
 
