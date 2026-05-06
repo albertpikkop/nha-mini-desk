@@ -25,8 +25,8 @@ const translations = {
       "form.caseLabel": "¿Qué tipo de trabajo es?",
       "form.outputLabel": "¿Qué quieres recibir?",
       "form.choiceHelp": "Primero elige el tipo de trabajo y el resultado que quieres. Luego carga un ejemplo o escribe tu propio caso abajo.",
-      "samples.selected": "Cargar ejemplo para esta selección",
-      "samples.selectedHelp": "El ejemplo aparecerá abajo en el cuadro de texto.",
+      "samples.selected": "Cargar ejemplo",
+      "samples.selectedHelp": "El botón cargará abajo un caso de ejemplo según el trabajo y resultado elegidos.",
       "samples.cx": "Cargar ejemplo de mensaje",
       "samples.consultoria": "Cargar ejemplo de consultoría",
       "samples.arrendamiento": "Cargar ejemplo legal",
@@ -258,8 +258,8 @@ ${getShareUrl()}`
       "form.caseLabel": "What type of work is this?",
       "form.outputLabel": "What do you want to receive?",
       "form.choiceHelp": "Choose the work and the output you want. Then load a matching example or write your own case below.",
-      "samples.selected": "Load example for this selection",
-      "samples.selectedHelp": "The example will appear below in the text box.",
+      "samples.selected": "Load example",
+      "samples.selectedHelp": "The button will load a sample case below based on the work and output you chose.",
       "samples.cx": "Load message example",
       "samples.consultoria": "Load consulting example",
       "samples.arrendamiento": "Load legal example",
@@ -472,8 +472,8 @@ ${getShareUrl()}`
       "form.caseLabel": "किस तरह का काम है?",
       "form.outputLabel": "AI से क्या output चाहिए?",
       "form.choiceHelp": "काम और output चुनें. फिर matching example load करें या नीचे अपना case लिखें.",
-      "samples.selected": "इस selection के लिए example load करें",
-      "samples.selectedHelp": "Example नीचे text box में आ जाएगा.",
+      "samples.selected": "Example load करें",
+      "samples.selectedHelp": "Button आपके चुने हुए काम और output के हिसाब से नीचे sample case load करेगा.",
       "samples.cx": "Message example load करें",
       "samples.consultoria": "Consulting example load करें",
       "samples.arrendamiento": "Legal example load करें",
@@ -686,8 +686,8 @@ ${getShareUrl()}`
       "form.caseLabel": "ਕਿਸ type ਦਾ ਕੰਮ ਹੈ?",
       "form.outputLabel": "AI ਤੋਂ ਕੀ output ਚਾਹੀਦਾ ਹੈ?",
       "form.choiceHelp": "ਕੰਮ ਅਤੇ output ਚੁਣੋ. ਫਿਰ matching example load ਕਰੋ ਜਾਂ ਹੇਠਾਂ ਆਪਣਾ case ਲਿਖੋ.",
-      "samples.selected": "ਇਸ selection ਲਈ example load ਕਰੋ",
-      "samples.selectedHelp": "Example ਹੇਠਾਂ text box ਵਿੱਚ ਆ ਜਾਏਗਾ.",
+      "samples.selected": "Example load ਕਰੋ",
+      "samples.selectedHelp": "Button ਤੁਹਾਡੇ ਚੁਣੇ ਕੰਮ ਅਤੇ output ਦੇ ਹਿਸਾਬ ਨਾਲ ਹੇਠਾਂ sample case load ਕਰੇਗਾ.",
       "samples.cx": "Message example load ਕਰੋ",
       "samples.consultoria": "Consulting example load ਕਰੋ",
       "samples.arrendamiento": "Legal example load ਕਰੋ",
@@ -1115,10 +1115,23 @@ function getSelectedExamplePreviewText(selectedCase = caseType.value, selectedOu
   const caseLabel = languageData.cases[selectedCase];
   const outputLabel = languageData.outputs[selectedOutput];
   const messages = {
-    es: `Ejemplo que se cargará: ${caseLabel} -> ${outputLabel}`,
-    en: `Example to load: ${caseLabel} -> ${outputLabel}`,
-    hi: `Load होने वाला example: ${caseLabel} -> ${outputLabel}`,
-    pa: `Load ਹੋਣ ਵਾਲਾ example: ${caseLabel} -> ${outputLabel}`
+    es: `Ejemplo preparado: ${caseLabel} -> ${outputLabel}`,
+    en: `Prepared example: ${caseLabel} -> ${outputLabel}`,
+    hi: `तैयार example: ${caseLabel} -> ${outputLabel}`,
+    pa: `ਤਿਆਰ example: ${caseLabel} -> ${outputLabel}`
+  };
+  return messages[currentLanguage] || messages.es;
+}
+
+function getSelectedExampleButtonText(selectedCase = caseType.value, selectedOutput = outputFormat.value) {
+  const languageData = translations[currentLanguage];
+  const caseLabel = languageData.cases[selectedCase];
+  const outputLabel = languageData.outputs[selectedOutput];
+  const messages = {
+    es: `Cargar ejemplo: ${caseLabel} -> ${outputLabel}`,
+    en: `Load example: ${caseLabel} -> ${outputLabel}`,
+    hi: `Example load करें: ${caseLabel} -> ${outputLabel}`,
+    pa: `Example load ਕਰੋ: ${caseLabel} -> ${outputLabel}`
   };
   return messages[currentLanguage] || messages.es;
 }
@@ -1141,10 +1154,10 @@ function getSelectedExampleLoadedText(selectedCase, selectedOutput) {
   const caseLabel = languageData.cases[selectedCase];
   const outputLabel = languageData.outputs[selectedOutput];
   const messages = {
-    es: `Ejemplo cargado para ${caseLabel} -> ${outputLabel}. Ahora baja y presiona "Generar prompt".`,
-    en: `Example loaded for ${caseLabel} -> ${outputLabel}. Now go down and press "Generate prompt".`,
-    hi: `${caseLabel} -> ${outputLabel} के लिए example load हो गया. अब नीचे जाकर "Prompt generate करें" दबाएं.`,
-    pa: `${caseLabel} -> ${outputLabel} ਲਈ example load ਹੋ ਗਿਆ. ਹੁਣ ਹੇਠਾਂ ਜਾ ਕੇ "Prompt generate ਕਰੋ" ਦਬਾਓ.`
+    es: `Cargué un ejemplo de ${caseLabel} con salida de ${outputLabel}. Revísalo abajo y genera el prompt.`,
+    en: `Loaded a ${caseLabel} example with ${outputLabel} output. Review it below, then generate the prompt.`,
+    hi: `${caseLabel} example ${outputLabel} output के साथ load हो गया. नीचे review करें, फिर prompt generate करें.`,
+    pa: `${caseLabel} example ${outputLabel} output ਨਾਲ load ਹੋ ਗਿਆ. ਹੇਠਾਂ review ਕਰੋ, ਫਿਰ prompt generate ਕਰੋ.`
   };
   return messages[currentLanguage] || messages.es;
 }
@@ -1152,6 +1165,8 @@ function getSelectedExampleLoadedText(selectedCase, selectedOutput) {
 function updateSelectedExamplePreview() {
   if (!selectedExamplePreview || !caseType || !outputFormat) return;
   selectedExamplePreview.textContent = getSelectedExamplePreviewText();
+  const loadButton = document.querySelector("#loadSelectedExample");
+  if (loadButton) loadButton.textContent = getSelectedExampleButtonText();
   if (exampleStatus) exampleStatus.textContent = t("samples.selectedHelp");
 }
 
