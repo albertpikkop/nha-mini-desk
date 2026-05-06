@@ -1,0 +1,150 @@
+# NHA Mini Desk
+
+> Turn messy thoughts into clear, structured, verifiable AI prompts.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)](VERSION)
+[![No Backend](https://img.shields.io/badge/backend-none-lightgrey.svg)](#privacy)
+[![Browser Only](https://img.shields.io/badge/runs-in_browser-brightgreen.svg)](#quick-start)
+
+NHA Mini Desk is a small open-source browser tool for people who already use
+ChatGPT, Gemini, Claude, or any AI tool, but still paste raw, messy thoughts
+and get inconsistent results.
+
+It helps you turn an initial idea, call note, WhatsApp-style message, client
+brief, or legal/operations note into a cleaner prompt using a TCE + NHA style
+workflow.
+
+Live demo: [https://www.ashishpunj.com/nha-tce/](https://www.ashishpunj.com/nha-tce/)
+
+## Why this exists
+
+Most people do not need an "AI agent" on day one.
+
+They first need a better way to ask.
+
+NHA Mini Desk teaches that step. It gives users a simple pattern:
+
+```text
+raw thoughts -> TCE structure -> NHA rules -> better AI output
+```
+
+The goal is not to replace judgment. The goal is to make the instruction more
+explicit, separate facts from assumptions, and force missing information to stay
+visible.
+
+## What it does
+
+- Turns rough notes into a structured prompt.
+- Works with ChatGPT, Gemini, Claude, or any AI you use.
+- Supports Spanish, English, Hindi, and Punjabi.
+- Runs fully in the browser.
+- Does not require login, install, backend, API key, or database.
+- Includes examples for legal, consulting, CX, operations, and proposals.
+- Includes a human verification checklist before trusting AI output.
+
+## Quick start
+
+No setup required.
+
+1. Download or clone this repo.
+2. Open `index.html` in your browser.
+3. Pick the work type.
+4. Pick what you want to receive.
+5. Paste rough notes or load an example.
+6. Generate the prompt.
+7. Copy it into ChatGPT, Gemini, Claude, or any AI you use.
+
+Optional check for contributors:
+
+```bash
+npm run check
+```
+
+## Privacy
+
+The prompt is generated locally in your browser.
+
+There is no backend in this project. The tool does not intentionally send your
+notes to a server or store them in a database. If you paste sensitive
+information into any web page or into an AI tool, use your own judgment and
+review the privacy policy of that AI tool.
+
+## Languages
+
+- Spanish
+- English
+- Hindi
+- Punjabi
+
+Language can be selected from the UI. The selected language can also be passed
+with a query parameter:
+
+```text
+?lang=es
+?lang=en
+?lang=hi
+?lang=pa
+```
+
+## Project structure
+
+```text
+.
+|-- index.html
+|-- info.html
+|-- style.css
+|-- app.js
+|-- samples/
+|-- docs/
+|-- LICENSE
+|-- VERSION
+`-- CHANGELOG.md
+```
+
+## What TCE and NHA mean here
+
+TCE means:
+
+- Task
+- Context
+- Expectation
+
+NHA means:
+
+- keep the original notes visible
+- make assumptions explicit
+- ask the AI to mark missing information
+- keep human verification in the loop
+
+This is intentionally practical, not academic. The project is meant to help
+people move from casual prompting to a more reliable way of working with AI.
+
+## Contributing
+
+Good first contributions:
+
+- improve translations
+- add better examples
+- add more output formats
+- improve mobile UX
+- add accessibility fixes
+- make the prompt rules clearer
+- create classroom exercises around the tool
+
+Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
+
+## Roadmap
+
+See [ROADMAP.md](ROADMAP.md).
+
+## License
+
+MIT License. See [LICENSE](LICENSE).
+
+Copyright (c) 2026 Ashish Punj.
+
+## Star the project
+
+If this helps you or your students get better AI outputs, please star the repo.
+It helps more people discover a practical way to move beyond random prompting.

@@ -1,0 +1,31 @@
+{
+  "name": "nha-mini-desk",
+  "version": "0.1.0",
+  "description": "Open-source browser tool that turns rough thoughts into structured, verifiable AI prompts.",
+  "private": false,
+  "license": "MIT",
+  "type": "commonjs",
+  "scripts": {
+    "check": "node --check app.js"
+  },
+  "keywords": [
+    "ai",
+    "prompt-engineering",
+    "chatgpt",
+    "gemini",
+    "claude",
+    "browser-tool",
+    "education",
+    "spanish",
+    "hindi",
+    "punjabi"
+  ],
+  "homepage": "https://www.ashishpunj.com/nha-tce/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/albertpikkop/nha-mini-desk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/albertpikkop/nha-mini-desk/issues"
+  }
+}
