@@ -1055,7 +1055,7 @@ function setLanguage(language, showChangeNotice = false) {
   lastDefaultOutcome = languageData.defaults.outcome;
 
   if (promptOutput && (!promptOutput.textContent.trim() || isEmptyPrompt(promptOutput.textContent.trim()))) {
-    promptOutput.textContent = languageData.defaults.emptyPrompt;
+    renderPromptOutput(languageData.defaults.emptyPrompt);
   }
 
   if (showChangeNotice && (hasGeneratedPrompt || hasUserText)) {
@@ -1182,6 +1182,24 @@ function getPendingAwareRules(rules) {
   return pendingRule.checked ? rules : rules.filter((rule) => !hasPendingMarker(rule));
 }
 
+function escapeHtml(text) {
+  return text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+function renderPromptOutput(text) {
+  if (!promptOutput) return;
+  const safeText = escapeHtml(text);
+  promptOutput.innerHTML = safeText.replace(
+    /\[(PENDIENTE|PENDING)\]/gi,
+    '<span class="pending-marker">[$1]</span>'
+  );
+}
+
 function buildPrompt() {
   const languageData = translations[currentLanguage];
   const notes = rawNotes.value.trim();
@@ -1242,7 +1260,7 @@ function loadSample(sampleName, generateImmediately = false) {
 
   if (generateImmediately) {
     const prompt = buildPrompt();
-    promptOutput.textContent = prompt;
+    renderPromptOutput(prompt);
     setStatus(languageData.statuses.sampleReady);
     document.querySelector(".workspace").scrollIntoView({ behavior: "smooth", block: "start" });
     return;
@@ -1259,7 +1277,7 @@ function loadSelectedExample() {
 
   rawNotes.value = languageData.samples[selectedCase] || fallbackSamples[selectedCase] || fallbackSamples.general;
   desiredOutcome.value = getSelectedOutcomeText(selectedCase, selectedOutput);
-  promptOutput.textContent = languageData.defaults.emptyPrompt;
+  renderPromptOutput(languageData.defaults.emptyPrompt);
   const message = getSelectedExampleLoadedText(selectedCase, selectedOutput);
   if (exampleStatus) exampleStatus.textContent = message;
   setStatus(message);
@@ -1272,7 +1290,7 @@ function setupToolPage() {
   document.querySelector("#generatePrompt").addEventListener("click", () => {
     const prompt = buildPrompt();
     if (!prompt) return;
-    promptOutput.textContent = prompt;
+    renderPromptOutput(prompt);
     setStatus(translations[currentLanguage].statuses.generated);
   });
 
@@ -1351,7 +1369,7 @@ function setupToolPage() {
     caseType.value = "general";
     outputFormat.value = "facts";
     desiredOutcome.value = languageData.defaults.outcome;
-    promptOutput.textContent = languageData.defaults.emptyPrompt;
+    renderPromptOutput(languageData.defaults.emptyPrompt);
     if (exampleStatus) exampleStatus.textContent = t("samples.selectedHelp");
     setStatus("");
   });
