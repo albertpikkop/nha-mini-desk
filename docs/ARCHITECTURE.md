@@ -8,15 +8,16 @@ Prompt Claro / Clear Prompt Builder is a static browser app.
 - `info.html` explains how the tool works and the basic terms.
 - `style.css` contains the visual design.
 - `app.js` contains translations, examples, prompt assembly, copy/download
-  actions, and UI state.
+  actions, response-verification prompt assembly, and UI state.
 
 ## Data flow
 
 ```text
 user input -> browser JavaScript -> generated prompt -> copy/download
+AI response -> browser JavaScript -> verification prompt -> copy
 ```
 
-There is no backend call in the prompt generation flow.
+There is no backend call in the prompt generation or verification prompt flow.
 
 ## Privacy model
 

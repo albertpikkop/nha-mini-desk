@@ -1,9 +1,9 @@
 # Prompt Claro / Clear Prompt Builder
 
-> Turn messy thoughts into clear, structured, verifiable AI prompts.
+> Turn messy thoughts into clear AI prompts, then verify the AI response against the original text.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-0.1.3-blue.svg)](VERSION)
+[![Version](https://img.shields.io/badge/version-0.1.4-blue.svg)](VERSION)
 [![No Backend](https://img.shields.io/badge/backend-none-lightgrey.svg)](#privacy)
 [![Browser Only](https://img.shields.io/badge/runs-in_browser-brightgreen.svg)](#quick-start)
 
@@ -14,6 +14,10 @@ and get inconsistent results.
 It helps you turn an initial idea, call note, WhatsApp-style message, client
 brief, or legal/operations note into a cleaner prompt using a TCE + NHA style
 workflow.
+
+It also gives you a second verification prompt: paste the AI response back in
+and check whether the AI invented facts, skipped pending information, or drifted
+away from the original text.
 
 Live demo: [https://www.ashishpunj.com/nha-tce/](https://www.ashishpunj.com/nha-tce/)
 
@@ -27,6 +31,7 @@ Prompt Claro teaches that step. It gives users a simple pattern:
 
 ```text
 raw thoughts -> TCE structure -> NHA rules -> better AI output
+AI output -> verification prompt -> safer human review
 ```
 
 The goal is not to replace judgment. The goal is to make the instruction more
@@ -43,6 +48,7 @@ visible.
 - Does not require login, install, backend, API key, or database.
 - Includes examples for legal, consulting, CX, operations, coding/product, and proposals.
 - Includes a human verification checklist before trusting AI output.
+- Generates a second prompt to audit the AI response against the original text.
 
 ## Quick start
 
@@ -55,6 +61,8 @@ No setup required.
 5. Write or paste your rough case, or load an example.
 6. Generate the prompt.
 7. Copy it into ChatGPT, Gemini, Claude, or any AI you use.
+8. Paste the AI response back into the verification box.
+9. Generate a verification prompt and use it to review the answer before acting.
 
 Optional check for contributors:
 

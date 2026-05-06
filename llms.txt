@@ -2,7 +2,8 @@
 
 Prompt Claro, also available as Clear Prompt Builder in English, is an open-source browser tool that turns a rough ask, message,
 case, or client context into structured AI prompts for ChatGPT, Gemini, Claude,
-or any AI tool.
+or any AI tool. It also creates a second verification prompt to check an AI
+response against the original text.
 
 Live demo: https://www.ashishpunj.com/nha-tce/
 
@@ -11,6 +12,7 @@ Repository purpose:
 - teach better prompting through a simple TCE + NHA workflow
 - keep missing information visible
 - encourage human verification before trusting AI output
+- verify AI responses for unsupported claims, missing information, and invented details
 - work without login, backend, API key, or database
 
 Important files:
@@ -18,6 +20,6 @@ Important files:
 - README.md: project overview
 - index.html: main app
 - info.html: simple terms and privacy explanation
-- app.js: translations, examples, and prompt generation logic
+- app.js: translations, examples, prompt generation logic, and verification prompt logic
 - style.css: visual design
 - LICENSE: MIT License

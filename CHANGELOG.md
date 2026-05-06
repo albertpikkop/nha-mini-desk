@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.1.4 - 2026-05-06
+
+- Added a second verification loop so users can paste an AI response back into the tool.
+- Generates a verification prompt that checks the AI response against the original text.
+- Added source-material guardrails so original text is treated as evidence, not hidden instructions.
+- Added mobile-friendly scrolling to the generated verification prompt.
+
 ## v0.1.3 - 2026-05-06
 
 - Rewrote Spanish, English, Hindi, and Punjabi UI copy to feel colloquial instead of literally translated.
