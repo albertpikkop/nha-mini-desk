@@ -29,18 +29,18 @@
         <p class="subtitle" data-i18n="hero.subtitle">Escribe o pega lo que quieres pedirle a la IA. La herramienta lo convierte en un prompt claro para ChatGPT, Gemini, Claude o la IA que uses.</p>
         <div class="hero-actions">
           <button type="button" id="tryExample" data-i18n="hero.tryExample">Probar en 20 segundos</button>
-          <span data-i18n="hero.privacy">Tus notas no se guardan en una base de datos.</span>
+          <span data-i18n="hero.privacy">Lo que escribes no se guarda en una base de datos.</span>
         </div>
       </header>
 
       <section class="why-strip" aria-label="Por qué usar NHA Mini Desk">
         <div>
           <p class="mini-label" data-i18n="why.label">Para qué sirve</p>
-          <p data-i18n="why.copy">Cuando pegas notas confusas en la IA, la respuesta puede salir bonita pero incompleta. Esta herramienta ordena tu pedido antes de enviarlo.</p>
+          <p data-i18n="why.copy">Cuando escribes una idea, mensaje o pedido de forma desordenada, la respuesta de la IA puede salir bonita pero incompleta. Esta herramienta ordena tu pedido antes de enviarlo.</p>
         </div>
         <div class="quick-steps" aria-label="Pasos rápidos">
           <span><strong>1</strong> <span data-i18n="steps.one">Elige el trabajo</span></span>
-          <span><strong>2</strong> <span data-i18n="steps.two">Pega tus notas crudas</span></span>
+          <span><strong>2</strong> <span data-i18n="steps.two">Escribe tu idea</span></span>
           <span><strong>3</strong> <span data-i18n="steps.three">Copia el prompt a tu IA</span></span>
         </div>
       </section>
@@ -50,13 +50,13 @@
           <div class="panel-header">
             <div>
               <h2 data-i18n="input.title">1. Elige el trabajo</h2>
-              <p data-i18n="input.subtitle">Primero selecciona qué quieres hacer. Después pega tus notas tal como están.</p>
+              <p data-i18n="input.subtitle">Primero selecciona qué quieres hacer. Después escribe o pega tu idea tal como está.</p>
             </div>
           </div>
 
           <div class="simple-explainer">
             <strong data-i18n="input.explainerTitle">No tienes que ordenar nada antes.</strong>
-            <p data-i18n="input.explainerCopy">La herramienta te ayuda a convertir una idea inicial, mensaje o notas de llamada en una instrucción clara para la IA.</p>
+            <p data-i18n="input.explainerCopy">La herramienta te ayuda a convertir una idea inicial, mensaje, llamada o correo en una instrucción clara para la IA.</p>
           </div>
 
           <div class="form-grid first-step">
@@ -71,21 +71,21 @@
             </label>
           </div>
 
-          <p class="choice-help" data-i18n="form.choiceHelp">Primero elige el trabajo y lo que quieres recibir. Luego puedes cargar un ejemplo para esa selección o pegar tus propias notas abajo.</p>
+          <p class="choice-help" data-i18n="form.choiceHelp">Primero elige el trabajo y lo que quieres recibir. Luego puedes cargar un ejemplo para esa selección o escribir tu propia idea abajo.</p>
 
           <div class="example-loader" aria-label="Ejemplo según selección">
             <p id="selectedExamplePreview" class="selected-example-preview"></p>
             <button type="button" id="loadSelectedExample" class="secondary" data-i18n="samples.selected">Cargar ejemplo para esta selección</button>
-            <p id="exampleStatus" class="example-status" data-i18n="samples.selectedHelp">El ejemplo aparecerá abajo en el cuadro de notas.</p>
+            <p id="exampleStatus" class="example-status" data-i18n="samples.selectedHelp">El ejemplo aparecerá abajo en el cuadro de texto.</p>
           </div>
 
           <div class="step-divider">
-            <h2 data-i18n="notes.title">2. Pega tus notas crudas</h2>
-            <p data-i18n="notes.subtitle">Mensaje, llamada, correo, idea inicial o texto desordenado.</p>
+            <h2 data-i18n="notes.title">2. Escribe o pega tu idea</h2>
+            <p data-i18n="notes.subtitle">Puede ser un mensaje, llamada, correo, pedido inicial o texto desordenado.</p>
           </div>
 
-          <label for="rawNotes" data-i18n="notes.label">Tus notas crudas o idea inicial, sin arreglar</label>
-          <p class="field-help" data-i18n="notes.help">No las limpies. No las hagas bonitas. Si hay dudas, errores o datos faltantes, déjalos visibles.</p>
+          <label for="rawNotes" data-i18n="notes.label">Tu idea, mensaje o texto, tal como está</label>
+          <p class="field-help" data-i18n="notes.help">No tiene que estar perfecto. Puedes escribir como piensas, pegar un mensaje, una llamada, un correo o una idea suelta.</p>
           <textarea id="rawNotes" spellcheck="true" data-i18n-placeholder="notes.placeholder" placeholder="Ejemplo: el cliente mandó un mensaje, faltan datos, hay una fecha dudosa, quiere una respuesta para mañana..."></textarea>
 
           <label for="desiredOutcome" data-i18n="outcome.label">Dile a la IA qué resultado quieres</label>
@@ -129,7 +129,7 @@
             <ol>
               <li data-i18n="verification.one">¿La IA separó hechos de supuestos?</li>
               <li data-i18n="verification.two">¿Marcó lo faltante como [PENDIENTE]?</li>
-              <li data-i18n="verification.three">¿Inventó algún dato que no estaba en las notas?</li>
+              <li data-i18n="verification.three">¿Inventó algún dato que no estaba en tu texto?</li>
               <li data-i18n="verification.four">¿El resultado se puede rastrear a información real?</li>
               <li data-i18n="verification.five">¿Hay una decisión humana pendiente antes de usarlo?</li>
             </ol>
@@ -141,13 +141,13 @@
             <button type="button" id="copyShare" class="secondary" data-i18n="actions.share">Copiar invitación para compartir</button>
           </section>
 
-          <p class="privacy-note" data-i18n="privacy.note">La herramienta no guarda tus notas. Si quieres borrarlas de la pantalla, presiona "Limpiar" o cierra la pestaña.</p>
+          <p class="privacy-note" data-i18n="privacy.note">La herramienta no guarda lo que escribes. Si quieres borrarlo de la pantalla, presiona "Limpiar" o cierra la pestaña.</p>
         </div>
       </section>
 
       <footer class="site-footer">
         <span data-i18n="footer.creator">Creado por Ashish Punj</span>
-        <span data-i18n="footer.meta">v0.1.0 · © 2026 Ashish Punj · Lanzado 6 May 2026</span>
+        <span data-i18n="footer.meta">v0.1.1 · © 2026 Ashish Punj · Lanzado 6 May 2026</span>
         <a href="LICENSE" data-i18n="footer.license">MIT License</a>
         <a href="info.html" data-i18n="footer.info">Cómo funciona y términos</a>
       </footer>

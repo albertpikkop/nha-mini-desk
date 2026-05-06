@@ -12,27 +12,27 @@ const translations = {
       "hero.eyebrow": "Gratis - Sin login - Sin descargar app",
       "hero.subtitle": "Escribe o pega lo que quieres pedirle a la IA. La herramienta lo convierte en un prompt claro para ChatGPT, Gemini, Claude o la IA que uses.",
       "hero.tryExample": "Probar en 20 segundos",
-      "hero.privacy": "Tus notas no se guardan en una base de datos.",
+      "hero.privacy": "Lo que escribes no se guarda en una base de datos.",
       "why.label": "Para qué sirve",
-      "why.copy": "Cuando pegas notas confusas en la IA, la respuesta puede salir bonita pero incompleta. Esta herramienta ordena tu pedido antes de enviarlo.",
+      "why.copy": "Cuando escribes una idea, mensaje o pedido de forma desordenada, la respuesta de la IA puede salir bonita pero incompleta. Esta herramienta ordena tu pedido antes de enviarlo.",
       "steps.one": "Elige el trabajo",
       "steps.two": "Escribe o pega tu idea",
       "steps.three": "Copia el prompt a tu IA",
       "input.title": "1. Elige el trabajo",
-      "input.subtitle": "Primero selecciona qué quieres hacer. Después pega tus notas tal como están.",
+      "input.subtitle": "Primero selecciona qué quieres hacer. Después escribe o pega tu idea tal como está.",
       "input.explainerTitle": "No tienes que ordenar nada antes.",
-      "input.explainerCopy": "La herramienta te ayuda a convertir una idea inicial, mensaje o notas de llamada en una instrucción clara para la IA.",
+      "input.explainerCopy": "La herramienta te ayuda a convertir una idea inicial, mensaje, llamada o correo en una instrucción clara para la IA.",
       "form.caseLabel": "¿Qué tipo de trabajo es?",
       "form.outputLabel": "¿Qué quieres recibir?",
-      "form.choiceHelp": "Primero elige el trabajo y lo que quieres recibir. Luego puedes cargar un ejemplo para esa selección o pegar tus propias notas abajo.",
+      "form.choiceHelp": "Primero elige el trabajo y lo que quieres recibir. Luego puedes cargar un ejemplo para esa selección o escribir tu propia idea abajo.",
       "samples.selected": "Cargar ejemplo para esta selección",
-      "samples.selectedHelp": "El ejemplo aparecerá abajo en el cuadro de notas.",
+      "samples.selectedHelp": "El ejemplo aparecerá abajo en el cuadro de texto.",
       "samples.cx": "Cargar ejemplo de mensaje",
       "samples.consultoria": "Cargar ejemplo de consultoría",
       "samples.arrendamiento": "Cargar ejemplo legal",
       "notes.title": "2. Escribe o pega tu idea",
-      "notes.subtitle": "Mensaje, llamada, correo, pedido inicial o texto desordenado.",
-      "notes.label": "Tu idea, mensaje o pedido inicial",
+      "notes.subtitle": "Puede ser un mensaje, llamada, correo, pedido inicial o texto desordenado.",
+      "notes.label": "Tu idea, mensaje o texto, tal como está",
       "notes.help": "No tiene que estar perfecto. Puedes escribir como piensas, pegar un mensaje, una llamada, un correo o una idea suelta.",
       "notes.placeholder": "Ejemplo: quiero responder a un cliente, tengo estos datos, falta confirmar la fecha, no quiero prometer algo que no sé...",
       "outcome.label": "Dile a la IA qué resultado quieres",
@@ -52,12 +52,12 @@ const translations = {
       "verification.one": "¿La IA separó hechos de supuestos?",
       "verification.two": "¿Marcó lo faltante como [PENDIENTE]?",
       "verification.twoOff": "¿Separó claramente lo faltante o incierto?",
-      "verification.three": "¿Inventó algún dato que no estaba en las notas?",
+      "verification.three": "¿Inventó algún dato que no estaba en tu texto?",
       "verification.four": "¿El resultado se puede rastrear a información real?",
       "verification.five": "¿Hay una decisión humana pendiente antes de usarlo?",
       "privacy.note": "La herramienta no guarda lo que escribes. Si quieres borrarlo de la pantalla, presiona \"Limpiar\" o cierra la pestaña.",
       "footer.creator": "Creado por Ashish Punj",
-      "footer.meta": "v0.1.0 · © 2026 Ashish Punj · Lanzado 6 May 2026",
+      "footer.meta": "v0.1.1 · © 2026 Ashish Punj · Lanzado 6 May 2026",
       "footer.license": "MIT License",
       "footer.info": "Cómo funciona y términos",
       "info.eyebrow": "NHA Mini Desk",
@@ -68,17 +68,17 @@ const translations = {
       "info.whatTwo": "No responde por la IA. No reemplaza tu criterio. Solo te ayuda a pedir mejor.",
       "info.howTitle": "Cómo se usa",
       "info.howOne": "Elige qué tipo de trabajo quieres hacer.",
-      "info.howTwo": "Pega tus notas tal como están.",
+      "info.howTwo": "Escribe o pega tu idea tal como está.",
       "info.howThree": "Genera el prompt.",
       "info.howFour": "Copia el prompt y pégalo en ChatGPT, Gemini, Claude o la IA que uses.",
       "info.howFive": "Revisa la respuesta antes de usarla.",
       "info.browserTitle": "Cómo funciona",
       "info.browserOne": "La página arma el prompt en tu navegador. No necesitas descargar una app ni crear cuenta.",
-      "info.browserTwo": "La herramienta no guarda tus notas en una base de datos y no las envía a nuestro servidor para generar el prompt.",
+      "info.browserTwo": "La herramienta no guarda lo que escribes en una base de datos y no lo envía a nuestro servidor para generar el prompt.",
       "info.browserThree": "Si quieres borrar lo que pegaste, presiona \"Limpiar\" o cierra la pestaña.",
       "info.privacyTitle": "Privacidad",
       "info.privacyOne": "Evita pegar información extremadamente sensible si no estás seguro de querer trabajar con ella en una página web.",
-      "info.privacyTwo": "Los navegadores pueden conservar temporalmente el estado de una página por comodidad. La herramienta no guarda tus notas de forma intencional.",
+      "info.privacyTwo": "Los navegadores pueden conservar temporalmente el estado de una página por comodidad. La herramienta no guarda lo que escribes de forma intencional.",
       "info.limitsTitle": "Límites",
       "info.limitsOne": "La salida de cualquier IA puede tener errores. Revisa siempre nombres, fechas, cifras, leyes, datos médicos, datos financieros y cualquier decisión importante.",
       "info.limitsTwo": "Esta herramienta no da asesoría legal, médica, financiera ni profesional. Es una ayuda para ordenar instrucciones.",
@@ -106,11 +106,11 @@ const translations = {
       risks: "Checklist de riesgos"
     },
     defaults: {
-      outcome: "Convierte mis notas en una salida clara, verificable y lista para revisar antes de usar.",
-      emptyPrompt: "Tu prompt aparecerá aquí. Primero pega tus notas y presiona \"Generar prompt\"."
+      outcome: "Convierte mi idea en una salida clara, verificable y lista para revisar antes de usar.",
+      emptyPrompt: "Tu prompt aparecerá aquí. Primero escribe o pega tu idea y presiona \"Generar prompt\"."
     },
     statuses: {
-      missingNotes: "Primero pega tus notas. Pueden estar desordenadas; esa es la idea.",
+      missingNotes: "Primero escribe o pega tu idea. Puede estar desordenada; esa es la idea.",
       generated: "Listo. Copia este prompt y pégalo en ChatGPT, Gemini, Claude o la IA que uses.",
       sampleReady: "Ejemplo listo. Copia el prompt y pégalo en ChatGPT, Gemini, Claude o la IA que uses para ver la diferencia.",
       sampleLoaded: "Ejemplo cargado. Puedes editarlo antes de generar el prompt.",
@@ -129,7 +129,7 @@ const translations = {
       headings: {
         task: "TAREA",
         context: "CONTEXTO",
-        notes: "NOTAS CRUDAS",
+        notes: "TEXTO ORIGINAL",
         expectation: "EXPECTATIVA",
         rules: "REGLAS NHA",
         output: "FORMATO DE SALIDA"
@@ -137,7 +137,7 @@ const translations = {
       caseType: "Tipo de trabajo",
       audienceLabel: "Audiencia",
       audience: "Profesional mexicano que necesita una salida útil, clara y verificable.",
-      rawContext: "La información viene de notas crudas y puede estar incompleta, mezclada o escrita con urgencia.",
+      rawContext: "La información viene de un texto inicial y puede estar incompleta, mezclada o escrita con urgencia.",
       pendingOn: "Marca cualquier dato faltante, incierto o no confirmado como [PENDIENTE].",
       pendingOff: "Lista cualquier dato faltante, incierto o no confirmado en una sección de Faltantes.",
       expectations: [
@@ -170,7 +170,7 @@ const translations = {
       draft: "Solo redacta borrador si la información crítica está completa. Si falta información, primero lista preguntas.",
       actionPlan: "Entrega acciones, responsable sugerido si está indicado, fecha si existe y pendientes.",
       email: "Entrega asunto, cuerpo del email, tono recomendado y datos que faltan antes de enviar.",
-      risks: "Entrega riesgos priorizados, evidencia en notas y acción de mitigación."
+      risks: "Entrega riesgos priorizados, evidencia en el texto y acción de mitigación."
     },
     samples: {
       cx: `Cliente molesto escribió por mensaje:
@@ -221,8 +221,8 @@ Urge tener una primera versión para revisión mañana.`
     },
     sampleSettings: {
       cx: { caseKey: "cx", outputKey: "email", desiredOutcome: "Prepara una respuesta empática y profesional, separando lo confirmado de lo pendiente antes de prometer algo." },
-      consulting: { caseKey: "consulting", outputKey: "actionPlan", desiredOutcome: "Organiza estas notas de llamada en diagnóstico, prioridades, preguntas pendientes y siguiente paso." },
-      legal: { caseKey: "legal", outputKey: "facts", desiredOutcome: "Convierte estas notas en hechos, pendientes, riesgos y preguntas para responder mejor." }
+      consulting: { caseKey: "consulting", outputKey: "actionPlan", desiredOutcome: "Organiza esta información de llamada en diagnóstico, prioridades, preguntas pendientes y siguiente paso." },
+      legal: { caseKey: "legal", outputKey: "facts", desiredOutcome: "Convierte esta información en hechos, pendientes, riesgos y preguntas para responder mejor." }
     },
     shareText: () => `Amigos, prueben NHA Mini Desk.
 
@@ -291,7 +291,7 @@ ${getShareUrl()}`
       "verification.five": "Is there a human decision pending before using it?",
       "privacy.note": "The tool does not save what you write. To remove it from the screen, press \"Clear\" or close the tab.",
       "footer.creator": "Created by Ashish Punj",
-      "footer.meta": "v0.1.0 · © 2026 Ashish Punj · Released 6 May 2026",
+      "footer.meta": "v0.1.1 · © 2026 Ashish Punj · Released 6 May 2026",
       "footer.license": "MIT License",
       "footer.info": "How it works and terms",
       "info.eyebrow": "NHA Mini Desk",
@@ -325,7 +325,7 @@ ${getShareUrl()}`
     },
     cases: {
       general: "General",
-      legal: "Legal",
+      legal: "Legal India",
       consulting: "Consulting",
       cx: "CX / Customer",
       operations: "Operations",
@@ -363,8 +363,8 @@ ${getShareUrl()}`
       headings: { task: "TASK", context: "CONTEXT", notes: "RAW NOTES", expectation: "EXPECTATION", rules: "NHA RULES", output: "OUTPUT FORMAT" },
       caseType: "Work type",
       audienceLabel: "Audience",
-      audience: "Professional user who needs a useful, clear, verifiable output.",
-      rawContext: "The information comes from raw notes and may be incomplete, mixed, or written in a hurry.",
+      audience: "Indian professional user who needs a useful, clear, verifiable output.",
+      rawContext: "The information comes from the user's original text and may be incomplete, mixed, or written in a hurry.",
       pendingOn: "Mark any missing, uncertain, or unconfirmed information as [PENDING].",
       pendingOff: "List any missing, uncertain, or unconfirmed information in a Missing information section.",
       expectations: ["Work carefully and do not assume critical details.", "Use clear professional language.", "Separate confirmed information from assumptions.", "If critical information is missing, list questions before drafting a final version."],
@@ -390,15 +390,15 @@ ${getShareUrl()}`
     samples: {
       cx: `An upset customer sent this message:
 
-"This is the third time you tell me my order will arrive tomorrow and nothing happens. I bought it almost two weeks ago. Nobody answers clearly. If it does not arrive today, I want a refund."
+"This is the third time your team said my order will be delivered tomorrow. I ordered almost two weeks ago. Nobody is giving a clear answer. If it does not arrive today, I want a refund."
 
 Internal notes:
 
-Order is probably #MX-4821, but I am not sure because the message arrived without an order number.
+Order is probably #IN-4821, but I am not sure because the message came without an order number.
 
-Customer name is Mariana, last name pending.
+Customer name is Riya Sharma, phone number pending.
 
-Approximate purchase date: April 24 or 25. Product: black ergonomic chair. System shows an inventory delay, but logistics must confirm.
+Approximate purchase date: 24 or 25 April. Product: black ergonomic chair. System shows a warehouse delay, but courier status must be confirmed.
 
 Support team wants to respond with empathy, explain the situation, and ask for missing details without sounding bureaucratic.
 
@@ -407,30 +407,30 @@ Do not promise delivery today if it is not confirmed.
 We need a professional response and follow-up plan.`,
       consulting: `Client call notes:
 
-Mid-sized B2B services company in Monterrey. Sales team of 6 people. The owner says they are losing opportunities because salespeople do not follow up consistently.
+Indian B2B services company in Gurugram. Sales team of 8 people. The founder says they are losing opportunities because the team does not follow up consistently.
 
-They use messages, Excel, and email. No formal CRM. Each salesperson handles leads their own way.
+They use WhatsApp, Excel, and Gmail. No formal CRM. Each salesperson handles leads their own way.
 
 Main problem: nobody knows how many prospects exist, who followed up, who is warm, and who was lost.
 
-The owner wants to "automate with AI", but it seems they need to organize the process first.
+The founder wants to "automate with AI", but it seems they need to organize the process first.
 
-He mentioned 80 to 120 leads per month, but he is not sure. He also said close rate is around 8% to 12%, but there is no reliable data.
+He mentioned 200 to 300 leads per month, but he is not sure. He also said close rate is around 5% to 7%, but there is no reliable data.
 
 He wants a proposal for a 2-week diagnosis and then implementation.
 
 Pending: confirm budget, current tools, and who would be responsible internally.`,
-      legal: `We need to prepare a lease agreement for a commercial space in Roma Norte, Mexico City.
+      legal: `We need to prepare a lease agreement for a commercial shop in Sector 67, Mohali.
 
-The space is about 120 m2. Rent would be $38,000 monthly plus VAT, but we still need to confirm if the landlord invoices as an individual or company.
+The shop is about 900 sq ft. Rent would be Rs 85,000 monthly plus GST if applicable, but we still need to confirm whether the landlord is an individual or a firm.
 
-The client wants to start on June 15, but it is not 100% confirmed because they are waiting for improvements to the space.
+The client wants to start on 15 June, but it is not 100% confirmed because interior work is still pending.
 
-Tenant will probably be an S.A. de C.V., but I do not yet have full legal name or tax ID.
+Tenant will probably be a Private Limited company, but I do not yet have full legal name, CIN, GSTIN, or authorized signatory details.
 
-They want a 2-month deposit. They also want to know if subleasing can be included with prior written authorization.
+They want a 2-month security deposit. They also want to know if subletting can be included with prior written approval.
 
-The owner wants a penalty if they leave before 12 months. I do not know the amount yet.
+The landlord wants a lock-in penalty if they leave before 12 months. I do not know the amount yet.
 
 Need first version for review tomorrow.`
     },
@@ -506,7 +506,7 @@ ${getShareUrl()}`
       "verification.five": "Use करने से पहले कोई human decision pending है?",
       "privacy.note": "यह tool आपकी लिखी हुई चीज़ save नहीं करता. Screen से हटाने के लिए \"Clear\" दबाएं या tab बंद करें.",
       "footer.creator": "Created by Ashish Punj",
-      "footer.meta": "v0.1.0 · © 2026 Ashish Punj · Released 6 May 2026",
+      "footer.meta": "v0.1.1 · © 2026 Ashish Punj · Released 6 May 2026",
       "footer.license": "MIT License",
       "footer.info": "कैसे काम करता है और terms",
       "info.eyebrow": "NHA Mini Desk",
@@ -540,7 +540,7 @@ ${getShareUrl()}`
     },
     cases: {
       general: "General",
-      legal: "Legal",
+      legal: "Legal India",
       consulting: "Consulting",
       cx: "CX / Customer",
       operations: "Operations",
@@ -578,8 +578,8 @@ ${getShareUrl()}`
       headings: { task: "काम", context: "संदर्भ", notes: "RAW NOTES", expectation: "उम्मीद", rules: "NHA RULES", output: "OUTPUT FORMAT" },
       caseType: "काम का प्रकार",
       audienceLabel: "Audience",
-      audience: "Professional user जिसे useful, clear और verifiable output चाहिए.",
-      rawContext: "Information raw notes से आई है और incomplete, mixed या hurry में लिखी हो सकती है.",
+      audience: "Indian professional user जिसे useful, clear और verifiable output चाहिए.",
+      rawContext: "Information user के original text से आई है और incomplete, mixed या hurry में लिखी हो सकती है.",
       pendingOn: "Missing, uncertain या unconfirmed information को [PENDING] mark करें.",
       pendingOff: "Missing, uncertain या unconfirmed information को Missing information section में list करें.",
       expectations: ["Carefully काम करें और critical details assume न करें.", "Clear professional language use करें.", "Confirmed information और assumptions अलग करें.", "अगर critical information missing है, final version लिखने से पहले questions list करें."],
@@ -605,15 +605,15 @@ ${getShareUrl()}`
     samples: {
       cx: `एक नाराज customer ने message भेजा:
 
-"तीसरी बार आपने कहा order कल आएगा और अभी तक कुछ नहीं हुआ. मैंने लगभग दो हफ्ते पहले खरीदा था. कोई ठीक से जवाब नहीं दे रहा. अगर आज नहीं आया तो refund चाहिए."
+"तीसरी बार आपकी team ने कहा order कल deliver होगा, लेकिन अभी तक नहीं आया. मैंने लगभग दो हफ्ते पहले order किया था. कोई clear answer नहीं दे रहा. अगर आज नहीं आया तो refund चाहिए."
 
 Internal notes:
 
-Order शायद #MX-4821 है, लेकिन sure नहीं क्योंकि message में order number नहीं था.
+Order शायद #IN-4821 है, लेकिन sure नहीं क्योंकि message में order number नहीं था.
 
-Customer का नाम Mariana है, last name pending.
+Customer का नाम Riya Sharma है, phone number pending.
 
-Approx purchase date: 24 या 25 April. Product: black ergonomic chair. System में inventory delay दिख रहा है, लेकिन logistics से confirm करना है.
+Approx purchase date: 24 या 25 April. Product: black ergonomic chair. System में warehouse delay दिख रहा है, लेकिन courier status confirm करना है.
 
 Support team empathy के साथ reply करना चाहती है, situation explain करनी है और missing details मांगनी हैं बिना bureaucratic लगे.
 
@@ -622,30 +622,30 @@ Delivery today promise नहीं करनी अगर confirm नहीं 
 Professional response और follow-up plan चाहिए.`,
       consulting: `Client call notes:
 
-Medium B2B services company in Monterrey. Sales team 6 लोगों की है. Owner कहता है opportunities miss हो रही हैं क्योंकि salespeople consistent follow-up नहीं करते.
+Gurugram की Indian B2B services company. Sales team 8 लोगों की है. Founder कहता है opportunities miss हो रही हैं क्योंकि team consistent follow-up नहीं करती.
 
-वे messages, Excel और email use करते हैं. Formal CRM नहीं है. हर salesperson leads अपने तरीके से handle करता है.
+वे WhatsApp, Excel और Gmail use करते हैं. Formal CRM नहीं है. हर salesperson leads अपने तरीके से handle करता है.
 
 Main problem: किसी को पता नहीं कितने prospects हैं, किसने follow up किया, कौन warm है, कौन lost हो गया.
 
-Owner "AI से automate" करना चाहता है, लेकिन लगता है पहले process order करना होगा.
+Founder "AI से automate" करना चाहता है, लेकिन लगता है पहले process order करना होगा.
 
-उसने 80 से 120 leads per month कहा, लेकिन sure नहीं. Close rate 8% से 12% बताया, लेकिन reliable data नहीं है.
+उसने 200 से 300 leads per month कहा, लेकिन sure नहीं. Close rate 5% से 7% बताया, लेकिन reliable data नहीं है.
 
 2-week diagnosis और फिर implementation के लिए proposal चाहिए.
 
 Pending: budget, current tools, और internal responsible person confirm करना.`,
-      legal: `Commercial space के lease agreement की जरूरत है, Roma Norte, Mexico City.
+      legal: `Sector 67, Mohali में commercial shop के lease agreement की जरूरत है.
 
-Space लगभग 120 m2 है. Rent $38,000 monthly plus VAT होगी, लेकिन landlord individual है या company, confirm करना बाकी है.
+Shop लगभग 900 sq ft है. Rent Rs 85,000 monthly plus GST if applicable होगी, लेकिन landlord individual है या firm, confirm करना बाकी है.
 
-Client 15 June से start करना चाहता है, लेकिन 100% confirmed नहीं क्योंकि space improvements pending हैं.
+Client 15 June से start करना चाहता है, लेकिन 100% confirmed नहीं क्योंकि interior work pending है.
 
-Tenant शायद S.A. de C.V. होगा, लेकिन full legal name और tax ID अभी नहीं है.
+Tenant शायद Private Limited company होगी, लेकिन full legal name, CIN, GSTIN और authorized signatory details अभी नहीं हैं.
 
-2-month deposit चाहिए. वे यह भी जानना चाहते हैं कि prior written authorization के साथ sublease include कर सकते हैं या नहीं.
+2-month security deposit चाहिए. वे यह भी जानना चाहते हैं कि prior written approval के साथ subletting include कर सकते हैं या नहीं.
 
-Owner penalty चाहता है अगर वे 12 months से पहले leave करें. Amount पता नहीं.
+Landlord lock-in penalty चाहता है अगर वे 12 months से पहले leave करें. Amount पता नहीं.
 
 Tomorrow review के लिए first version चाहिए.`
     },
@@ -721,7 +721,7 @@ ${getShareUrl()}`
       "verification.five": "Use ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਕੋਈ human decision pending ਹੈ?",
       "privacy.note": "ਇਹ tool ਤੁਹਾਡੀ ਲਿਖੀ ਚੀਜ਼ save ਨਹੀਂ ਕਰਦਾ. Screen ਤੋਂ ਹਟਾਉਣ ਲਈ \"Clear\" ਦਬਾਓ ਜਾਂ tab close ਕਰੋ.",
       "footer.creator": "Created by Ashish Punj",
-      "footer.meta": "v0.1.0 · © 2026 Ashish Punj · Released 6 May 2026",
+      "footer.meta": "v0.1.1 · © 2026 Ashish Punj · Released 6 May 2026",
       "footer.license": "MIT License",
       "footer.info": "ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ ਅਤੇ terms",
       "info.eyebrow": "NHA Mini Desk",
@@ -755,7 +755,7 @@ ${getShareUrl()}`
     },
     cases: {
       general: "General",
-      legal: "Legal",
+      legal: "Legal India",
       consulting: "Consulting",
       cx: "CX / Customer",
       operations: "Operations",
@@ -793,8 +793,8 @@ ${getShareUrl()}`
       headings: { task: "ਕੰਮ", context: "ਸੰਦਰਭ", notes: "RAW NOTES", expectation: "ਉਮੀਦ", rules: "NHA RULES", output: "OUTPUT FORMAT" },
       caseType: "ਕੰਮ ਦੀ type",
       audienceLabel: "Audience",
-      audience: "Professional user ਜਿਸਨੂੰ useful, clear ਅਤੇ verifiable output ਚਾਹੀਦਾ ਹੈ.",
-      rawContext: "Information raw notes ਤੋਂ ਆਈ ਹੈ ਅਤੇ incomplete, mixed ਜਾਂ hurry ਵਿੱਚ ਲਿਖੀ ਹੋ ਸਕਦੀ ਹੈ.",
+      audience: "Indian professional user ਜਿਸਨੂੰ useful, clear ਅਤੇ verifiable output ਚਾਹੀਦਾ ਹੈ.",
+      rawContext: "Information user ਦੇ original text ਤੋਂ ਆਈ ਹੈ ਅਤੇ incomplete, mixed ਜਾਂ hurry ਵਿੱਚ ਲਿਖੀ ਹੋ ਸਕਦੀ ਹੈ.",
       pendingOn: "Missing, uncertain ਜਾਂ unconfirmed information ਨੂੰ [PENDING] mark ਕਰੋ.",
       pendingOff: "Missing, uncertain ਜਾਂ unconfirmed information ਨੂੰ Missing information section ਵਿੱਚ list ਕਰੋ.",
       expectations: ["Carefully ਕੰਮ ਕਰੋ ਅਤੇ critical details assume ਨਾ ਕਰੋ.", "Clear professional language use ਕਰੋ.", "Confirmed information ਅਤੇ assumptions ਵੱਖ ਕਰੋ.", "ਜੇ critical information missing ਹੈ, final version ਲਿਖਣ ਤੋਂ ਪਹਿਲਾਂ questions list ਕਰੋ."],
@@ -820,15 +820,15 @@ ${getShareUrl()}`
     samples: {
       cx: `ਇੱਕ angry customer ਨੇ message ਭੇਜਿਆ:
 
-"ਤੀਜੀ ਵਾਰੀ ਤੁਸੀਂ ਕਿਹਾ order ਕੱਲ੍ਹ ਆਵੇਗਾ ਤੇ ਅਜੇ ਤੱਕ ਕੁਝ ਨਹੀਂ ਹੋਇਆ. ਮੈਂ ਲਗਭਗ ਦੋ ਹਫ਼ਤੇ ਪਹਿਲਾਂ ਖਰੀਦਿਆ ਸੀ. ਕੋਈ ਠੀਕ ਜਵਾਬ ਨਹੀਂ ਦੇ ਰਿਹਾ. ਜੇ ਅੱਜ ਨਹੀਂ ਆਇਆ ਤਾਂ refund ਚਾਹੀਦਾ."
+"ਤੀਜੀ ਵਾਰੀ ਤੁਹਾਡੀ team ਨੇ ਕਿਹਾ order ਕੱਲ੍ਹ deliver ਹੋਵੇਗਾ, ਪਰ ਅਜੇ ਤੱਕ ਨਹੀਂ ਆਇਆ. ਮੈਂ ਲਗਭਗ ਦੋ ਹਫ਼ਤੇ ਪਹਿਲਾਂ order ਕੀਤਾ ਸੀ. ਕੋਈ clear answer ਨਹੀਂ ਦੇ ਰਿਹਾ. ਜੇ ਅੱਜ ਨਹੀਂ ਆਇਆ ਤਾਂ refund ਚਾਹੀਦਾ."
 
 Internal notes:
 
-Order ਸ਼ਾਇਦ #MX-4821 ਹੈ, ਪਰ sure ਨਹੀਂ ਕਿਉਂਕਿ message ਵਿੱਚ order number ਨਹੀਂ ਸੀ.
+Order ਸ਼ਾਇਦ #IN-4821 ਹੈ, ਪਰ sure ਨਹੀਂ ਕਿਉਂਕਿ message ਵਿੱਚ order number ਨਹੀਂ ਸੀ.
 
-Customer ਦਾ ਨਾਮ Mariana ਹੈ, last name pending.
+Customer ਦਾ ਨਾਮ Riya Sharma ਹੈ, phone number pending.
 
-Approx purchase date: 24 ਜਾਂ 25 April. Product: black ergonomic chair. System ਵਿੱਚ inventory delay ਦਿਖ ਰਿਹਾ ਹੈ, ਪਰ logistics ਤੋਂ confirm ਕਰਨਾ ਹੈ.
+Approx purchase date: 24 ਜਾਂ 25 April. Product: black ergonomic chair. System ਵਿੱਚ warehouse delay ਦਿਖ ਰਿਹਾ ਹੈ, ਪਰ courier status confirm ਕਰਨਾ ਹੈ.
 
 Support team empathy ਨਾਲ reply ਕਰਨਾ ਚਾਹੁੰਦੀ ਹੈ, situation explain ਕਰਨੀ ਹੈ ਅਤੇ missing details ਮੰਗਣੀਆਂ ਹਨ ਬਿਨਾਂ bureaucratic ਲੱਗੇ.
 
@@ -837,30 +837,30 @@ Delivery today promise ਨਹੀਂ ਕਰਨੀ ਜੇ confirm ਨਹੀਂ ਹ
 Professional response ਅਤੇ follow-up plan ਚਾਹੀਦਾ ਹੈ.`,
       consulting: `Client call notes:
 
-Medium B2B services company in Monterrey. Sales team 6 ਲੋਕਾਂ ਦੀ ਹੈ. Owner ਕਹਿੰਦਾ ਹੈ opportunities miss ਹੋ ਰਹੀਆਂ ਹਨ ਕਿਉਂਕਿ salespeople consistent follow-up ਨਹੀਂ ਕਰਦੇ.
+Gurugram ਦੀ Indian B2B services company. Sales team 8 ਲੋਕਾਂ ਦੀ ਹੈ. Founder ਕਹਿੰਦਾ ਹੈ opportunities miss ਹੋ ਰਹੀਆਂ ਹਨ ਕਿਉਂਕਿ team consistent follow-up ਨਹੀਂ ਕਰਦੀ.
 
-ਉਹ messages, Excel ਅਤੇ email use ਕਰਦੇ ਹਨ. Formal CRM ਨਹੀਂ. ਹਰ salesperson leads ਆਪਣੇ ਤਰੀਕੇ ਨਾਲ handle ਕਰਦਾ ਹੈ.
+ਉਹ WhatsApp, Excel ਅਤੇ Gmail use ਕਰਦੇ ਹਨ. Formal CRM ਨਹੀਂ. ਹਰ salesperson leads ਆਪਣੇ ਤਰੀਕੇ ਨਾਲ handle ਕਰਦਾ ਹੈ.
 
 Main problem: ਕਿਸੇ ਨੂੰ ਨਹੀਂ ਪਤਾ ਕਿੰਨੇ prospects ਹਨ, ਕਿਸਨੇ follow up ਕੀਤਾ, ਕੌਣ warm ਹੈ, ਕੌਣ lost ਹੋ ਗਿਆ.
 
-Owner "AI ਨਾਲ automate" ਕਰਨਾ ਚਾਹੁੰਦਾ ਹੈ, ਪਰ ਲੱਗਦਾ ਹੈ ਪਹਿਲਾਂ process order ਕਰਨਾ ਪਵੇਗਾ.
+Founder "AI ਨਾਲ automate" ਕਰਨਾ ਚਾਹੁੰਦਾ ਹੈ, ਪਰ ਲੱਗਦਾ ਹੈ ਪਹਿਲਾਂ process order ਕਰਨਾ ਪਵੇਗਾ.
 
-ਉਸਨੇ 80 ਤੋਂ 120 leads per month ਕਿਹਾ, ਪਰ sure ਨਹੀਂ. Close rate 8% ਤੋਂ 12% ਦੱਸਿਆ, ਪਰ reliable data ਨਹੀਂ.
+ਉਸਨੇ 200 ਤੋਂ 300 leads per month ਕਿਹਾ, ਪਰ sure ਨਹੀਂ. Close rate 5% ਤੋਂ 7% ਦੱਸਿਆ, ਪਰ reliable data ਨਹੀਂ.
 
 2-week diagnosis ਅਤੇ ਫਿਰ implementation ਲਈ proposal ਚਾਹੀਦਾ ਹੈ.
 
 Pending: budget, current tools, ਅਤੇ internal responsible person confirm ਕਰਨਾ.`,
-      legal: `Commercial space ਦੇ lease agreement ਦੀ ਲੋੜ ਹੈ, Roma Norte, Mexico City.
+      legal: `Sector 67, Mohali ਵਿੱਚ commercial shop ਦੇ lease agreement ਦੀ ਲੋੜ ਹੈ.
 
-Space ਲਗਭਗ 120 m2 ਹੈ. Rent $38,000 monthly plus VAT ਹੋਵੇਗੀ, ਪਰ landlord individual ਹੈ ਜਾਂ company, confirm ਕਰਨਾ ਬਾਕੀ ਹੈ.
+Shop ਲਗਭਗ 900 sq ft ਹੈ. Rent Rs 85,000 monthly plus GST if applicable ਹੋਵੇਗੀ, ਪਰ landlord individual ਹੈ ਜਾਂ firm, confirm ਕਰਨਾ ਬਾਕੀ ਹੈ.
 
-Client 15 June ਤੋਂ start ਕਰਨਾ ਚਾਹੁੰਦਾ ਹੈ, ਪਰ 100% confirmed ਨਹੀਂ ਕਿਉਂਕਿ space improvements pending ਹਨ.
+Client 15 June ਤੋਂ start ਕਰਨਾ ਚਾਹੁੰਦਾ ਹੈ, ਪਰ 100% confirmed ਨਹੀਂ ਕਿਉਂਕਿ interior work pending ਹੈ.
 
-Tenant ਸ਼ਾਇਦ S.A. de C.V. ਹੋਵੇਗਾ, ਪਰ full legal name ਅਤੇ tax ID ਅਜੇ ਨਹੀਂ.
+Tenant ਸ਼ਾਇਦ Private Limited company ਹੋਵੇਗੀ, ਪਰ full legal name, CIN, GSTIN ਅਤੇ authorized signatory details ਅਜੇ ਨਹੀਂ.
 
-2-month deposit ਚਾਹੀਦਾ ਹੈ. ਉਹ ਇਹ ਵੀ ਜਾਣਨਾ ਚਾਹੁੰਦੇ ਹਨ ਕਿ prior written authorization ਨਾਲ sublease include ਕਰ ਸਕਦੇ ਹਨ ਜਾਂ ਨਹੀਂ.
+2-month security deposit ਚਾਹੀਦਾ ਹੈ. ਉਹ ਇਹ ਵੀ ਜਾਣਨਾ ਚਾਹੁੰਦੇ ਹਨ ਕਿ prior written approval ਨਾਲ subletting include ਕਰ ਸਕਦੇ ਹਨ ਜਾਂ ਨਹੀਂ.
 
-Owner penalty ਚਾਹੁੰਦਾ ਹੈ ਜੇ ਉਹ 12 months ਤੋਂ ਪਹਿਲਾਂ leave ਕਰਨ. Amount ਪਤਾ ਨਹੀਂ.
+Landlord lock-in penalty ਚਾਹੁੰਦਾ ਹੈ ਜੇ ਉਹ 12 months ਤੋਂ ਪਹਿਲਾਂ leave ਕਰਨ. Amount ਪਤਾ ਨਹੀਂ.
 
 Tomorrow review ਲਈ first version ਚਾਹੀਦਾ ਹੈ.`
     },
@@ -886,7 +886,7 @@ const contextualSamples = {
   es: {
     general: `Idea inicial:
 
-Quiero organizar una idea que tengo para mejorar mi trabajo con IA. Tengo varias notas sueltas, algunas dudas y no sé por dónde empezar.
+Quiero organizar una idea que tengo para mejorar mi trabajo con IA. Tengo varias ideas sueltas, algunas dudas y no sé por dónde empezar.
 
 Quiero entender qué partes ya están claras, qué falta definir, qué riesgos hay y cuál sería el siguiente paso lógico.
 
@@ -906,80 +906,80 @@ Un cliente quiere ayuda para ordenar su proceso de seguimiento. Dice que usa men
 
 Quiere "usar IA", pero todavía no está claro el alcance, presupuesto, fechas ni quién será responsable internamente.
 
-Necesitamos convertir estas notas en una propuesta clara, sin inventar precios ni prometer cosas que no están confirmadas.`
+Necesitamos convertir esta información en una propuesta clara, sin inventar precios ni prometer cosas que no están confirmadas.`
   },
   en: {
     general: `Initial idea:
 
-I want to organize an idea I have for improving my work with AI. I have several loose notes, some doubts, and I do not know where to start.
+I want to organize an idea for improving how my team uses AI at work. I have several loose thoughts, some doubts, and I do not know where to start.
 
 I want to understand what is already clear, what is missing, what risks exist, and what the next logical step should be.
 
-Some things are still unknown: available time, exact tools, cost, and priority.`,
+Some things are still unknown: available time, exact tools, budget, owner, and priority.`,
     operations: `Operations notes:
 
-The team is receiving requests through several channels. Some arrive by message, some by email, and some by call.
+The team is receiving customer enquiries through WhatsApp, Gmail, and phone calls.
 
 There is no single pending list. Sometimes two people work on the same thing and other tasks have no owner.
 
-We need to organize priorities, owners, dates, and risks. It is still unclear who approves changes and which tasks are urgent.
+We need to organize priorities, owners, dates, and risks. It is still unclear who approves changes, which tasks are urgent, and what should be escalated to the business owner.
 
 We need a clear way to turn this into actions.`,
     proposal: `Proposal notes:
 
-A client wants help organizing their follow-up process. They say they use messages, Excel, and email, but do not have a clear flow.
+An Indian client wants help organizing their sales follow-up process. They use WhatsApp, Excel, and Gmail, but do not have a clear flow.
 
-They want to "use AI", but scope, budget, dates, and internal owner are still unclear.
+They want to "use AI", but scope, budget in INR, dates, and internal owner are still unclear.
 
 We need to turn these notes into a clear proposal without inventing prices or promising anything unconfirmed.`
   },
   hi: {
     general: `Initial idea:
 
-मैं AI के साथ अपना काम improve करने की एक idea organize करना चाहता हूं. मेरे पास loose notes हैं, कुछ doubts हैं, और पता नहीं कहां से शुरू करूं.
+मैं अपनी team के AI use को improve करने की idea organize करना चाहता हूं. मेरे पास loose thoughts हैं, कुछ doubts हैं, और पता नहीं कहां से शुरू करूं.
 
 मुझे समझना है कि क्या clear है, क्या missing है, कौनसे risks हैं, और next logical step क्या होगा.
 
-कुछ चीज़ें अभी unknown हैं: time available, exact tools, cost और priority.`,
+कुछ चीज़ें अभी unknown हैं: time available, exact tools, budget, owner और priority.`,
     operations: `Operations notes:
 
-Team को कई channels से requests मिल रही हैं. कुछ messages से आती हैं, कुछ email से, कुछ call से.
+Team को customer enquiries WhatsApp, Gmail और phone calls से मिल रही हैं.
 
 Single pending list नहीं है. कभी दो लोग एक ही काम कर लेते हैं और कुछ tasks बिना owner के रह जाते हैं.
 
-Priorities, owners, dates और risks organize करने हैं. कौन changes approve करेगा और कौनसे tasks urgent हैं, यह अभी clear नहीं.
+Priorities, owners, dates और risks organize करने हैं. कौन changes approve करेगा, कौनसे tasks urgent हैं, और क्या business owner को escalate करना है, यह अभी clear नहीं.
 
 हमें इसे actions में बदलने का clear तरीका चाहिए.`,
     proposal: `Proposal notes:
 
-एक client अपने follow-up process को organize करने में help चाहता है. वह messages, Excel और email use करता है, लेकिन clear flow नहीं है.
+एक Indian client अपने sales follow-up process को organize करने में help चाहता है. वह WhatsApp, Excel और Gmail use करता है, लेकिन clear flow नहीं है.
 
-वह "AI use" करना चाहता है, लेकिन scope, budget, dates और internal owner अभी clear नहीं.
+वह "AI use" करना चाहता है, लेकिन scope, INR budget, dates और internal owner अभी clear नहीं.
 
 हमें इन notes को clear proposal में बदलना है, बिना prices invent किए या unconfirmed चीज़ promise किए.`
   },
   pa: {
     general: `Initial idea:
 
-ਮੈਂ AI ਨਾਲ ਆਪਣਾ ਕੰਮ improve ਕਰਨ ਦੀ ਇੱਕ idea organize ਕਰਨੀ ਚਾਹੁੰਦਾ ਹਾਂ. ਮੇਰੇ ਕੋਲ loose notes ਹਨ, ਕੁਝ doubts ਹਨ, ਅਤੇ ਪਤਾ ਨਹੀਂ ਕਿੱਥੋਂ ਸ਼ੁਰੂ ਕਰਾਂ.
+ਮੈਂ ਆਪਣੀ team ਦੇ AI use ਨੂੰ improve ਕਰਨ ਦੀ idea organize ਕਰਨੀ ਚਾਹੁੰਦਾ ਹਾਂ. ਮੇਰੇ ਕੋਲ loose thoughts ਹਨ, ਕੁਝ doubts ਹਨ, ਅਤੇ ਪਤਾ ਨਹੀਂ ਕਿੱਥੋਂ ਸ਼ੁਰੂ ਕਰਾਂ.
 
 ਮੈਨੂੰ ਸਮਝਣਾ ਹੈ ਕਿ ਕੀ clear ਹੈ, ਕੀ missing ਹੈ, ਕਿਹੜੇ risks ਹਨ, ਅਤੇ next logical step ਕੀ ਹੋਵੇਗਾ.
 
-ਕੁਝ ਚੀਜ਼ਾਂ ਅਜੇ unknown ਹਨ: time available, exact tools, cost ਅਤੇ priority.`,
+ਕੁਝ ਚੀਜ਼ਾਂ ਅਜੇ unknown ਹਨ: time available, exact tools, budget, owner ਅਤੇ priority.`,
     operations: `Operations notes:
 
-Team ਨੂੰ ਕਈ channels ਤੋਂ requests ਆ ਰਹੀਆਂ ਹਨ. ਕੁਝ messages ਨਾਲ, ਕੁਝ email ਨਾਲ, ਕੁਝ call ਨਾਲ.
+Team ਨੂੰ customer enquiries WhatsApp, Gmail ਅਤੇ phone calls ਤੋਂ ਆ ਰਹੀਆਂ ਹਨ.
 
 Single pending list ਨਹੀਂ ਹੈ. ਕਦੇ ਦੋ ਲੋਕ ਇੱਕੋ ਕੰਮ ਕਰ ਲੈਂਦੇ ਹਨ ਅਤੇ ਕੁਝ tasks ਬਿਨਾਂ owner ਦੇ ਰਹਿ ਜਾਂਦੇ ਹਨ.
 
-Priorities, owners, dates ਅਤੇ risks organize ਕਰਨੇ ਹਨ. ਕੌਣ changes approve ਕਰੇਗਾ ਅਤੇ ਕਿਹੜੇ tasks urgent ਹਨ, ਇਹ ਅਜੇ clear ਨਹੀਂ.
+Priorities, owners, dates ਅਤੇ risks organize ਕਰਨੇ ਹਨ. ਕੌਣ changes approve ਕਰੇਗਾ, ਕਿਹੜੇ tasks urgent ਹਨ, ਅਤੇ ਕੀ business owner ਨੂੰ escalate ਕਰਨਾ ਹੈ, ਇਹ ਅਜੇ clear ਨਹੀਂ.
 
 ਸਾਨੂੰ ਇਸ ਨੂੰ actions ਵਿੱਚ ਬਦਲਣ ਦਾ clear ਤਰੀਕਾ ਚਾਹੀਦਾ ਹੈ.`,
     proposal: `Proposal notes:
 
-ਇੱਕ client ਆਪਣੇ follow-up process ਨੂੰ organize ਕਰਨ ਵਿੱਚ help ਚਾਹੁੰਦਾ ਹੈ. ਉਹ messages, Excel ਅਤੇ email use ਕਰਦਾ ਹੈ, ਪਰ clear flow ਨਹੀਂ ਹੈ.
+ਇੱਕ Indian client ਆਪਣੇ sales follow-up process ਨੂੰ organize ਕਰਨ ਵਿੱਚ help ਚਾਹੁੰਦਾ ਹੈ. ਉਹ WhatsApp, Excel ਅਤੇ Gmail use ਕਰਦਾ ਹੈ, ਪਰ clear flow ਨਹੀਂ ਹੈ.
 
-ਉਹ "AI use" ਕਰਨਾ ਚਾਹੁੰਦਾ ਹੈ, ਪਰ scope, budget, dates ਅਤੇ internal owner ਅਜੇ clear ਨਹੀਂ.
+ਉਹ "AI use" ਕਰਨਾ ਚਾਹੁੰਦਾ ਹੈ, ਪਰ scope, INR budget, dates ਅਤੇ internal owner ਅਜੇ clear ਨਹੀਂ.
 
 ਸਾਨੂੰ ਇਹ notes clear proposal ਵਿੱਚ ਬਦਲਣੇ ਹਨ, ਬਿਨਾਂ prices invent ਕੀਤੇ ਜਾਂ unconfirmed ਚੀਜ਼ promise ਕੀਤੇ.`
   }
@@ -1132,10 +1132,10 @@ function getSelectedOutcomeText(selectedCase, selectedOutput) {
   const caseLabel = languageData.cases[selectedCase];
   const outputLabel = languageData.outputs[selectedOutput];
   const messages = {
-    es: `Usando estas notas, prepara ${outputLabel} para un trabajo de ${caseLabel}. No inventes datos y marca lo faltante.`,
-    en: `Using these notes, prepare ${outputLabel} for ${caseLabel}. Do not invent data and mark what is missing.`,
-    hi: `इन notes से ${caseLabel} के लिए ${outputLabel} तैयार करें. Data invent न करें और missing चीज़ mark करें.`,
-    pa: `ਇਹ notes ਨਾਲ ${caseLabel} ਲਈ ${outputLabel} ਤਿਆਰ ਕਰੋ. Data invent ਨਾ ਕਰੋ ਅਤੇ missing ਚੀਜ਼ mark ਕਰੋ.`
+    es: `Usando este texto, prepara ${outputLabel} para un trabajo de ${caseLabel}. No inventes datos y marca lo faltante.`,
+    en: `Using this text, prepare ${outputLabel} for ${caseLabel}. Do not invent data and mark what is missing.`,
+    hi: `इस text से ${caseLabel} के लिए ${outputLabel} तैयार करें. Data invent न करें और missing चीज़ mark करें.`,
+    pa: `ਇਸ text ਨਾਲ ${caseLabel} ਲਈ ${outputLabel} ਤਿਆਰ ਕਰੋ. Data invent ਨਾ ਕਰੋ ਅਤੇ missing ਚੀਜ਼ mark ਕਰੋ.`
   };
   return messages[currentLanguage] || messages.es;
 }

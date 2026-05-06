@@ -1,6 +1,6 @@
 {
   "name": "nha-mini-desk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Open-source browser tool that turns rough thoughts into structured, verifiable AI prompts.",
   "private": false,
   "license": "MIT",
