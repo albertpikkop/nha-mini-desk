@@ -143,7 +143,7 @@ See [ROADMAP.md](ROADMAP.md).
 
 MIT License. See [LICENSE](LICENSE).
 
-Copyright (c) 2026 Ashish Punj.
+Copyright (c) 2026 Albert Punj.
 
 ## Star the project
 
