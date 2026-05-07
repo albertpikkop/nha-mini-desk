@@ -16,12 +16,12 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.ashishpunj.com/nha-tce/hi.html">
     <meta property="og:locale" content="hi_IN">
-    <meta property="og:image" content="https://www.ashishpunj.com/nha-tce/og-image-hi.png?v=0.1.9-categories-20260507">
+    <meta property="og:image" content="https://www.ashishpunj.com/nha-tce/og-image-hi.png?v=0.1.9-flow-20260507">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://www.ashishpunj.com/nha-tce/og-image-hi.png?v=0.1.9-categories-20260507">
-    <link rel="stylesheet" href="style.css?v=0.1.9-categories-20260507">
+    <meta name="twitter:image" content="https://www.ashishpunj.com/nha-tce/og-image-hi.png?v=0.1.9-flow-20260507">
+    <link rel="stylesheet" href="style.css?v=0.1.9-flow-20260507">
   </head>
   <body>
     <main class="app-shell">
@@ -82,14 +82,8 @@
             <p data-i18n="input.explainerCopy">Puede ser una idea, un mensaje, una llamada o un correo. La herramienta lo convierte en una instrucción clara para la IA.</p>
           </div>
 
-          <label for="rawNotes" data-i18n="notes.label">Tu idea, mensaje o texto, sin arreglar</label>
-          <p class="field-help" data-i18n="notes.help">No lo maquilles. Escribe como piensas o pega lo que ya tienes; si hay dudas o datos faltantes, déjalos ahí.</p>
-          <p class="privacy-inline" data-i18n="privacy.inline">Tu texto se queda en este navegador. Solo enviamos tu estrella si calificas.</p>
-          <textarea id="rawNotes" spellcheck="true" data-i18n-placeholder="notes.placeholder" placeholder="Ejemplo: el cliente mandó un mensaje, faltan datos, hay una fecha dudosa, quiere una respuesta para mañana..."></textarea>
-
-          <details class="options-box">
-            <summary data-i18n="options.summary">Opciones y ejemplos</summary>
-            <p class="choice-help" data-i18n="form.choiceHelp">Si quieres, ajusta el tipo de trabajo o usa un ejemplo. Si no, deja las opciones como están.</p>
+          <div class="options-box flow-selector">
+            <p class="choice-help" data-i18n="form.choiceHelp">Start by choosing the type of work and what you want back. This selects the right prompt template.</p>
 
             <div class="form-grid first-step">
               <label>
@@ -116,7 +110,14 @@
               <input id="pendingRule" type="checkbox" checked>
               <span data-i18n="pending.label">Si falta información, obligar a la IA a marcar [PENDIENTE]</span>
             </label>
-          </details>
+          </div>
+
+          <div class="paste-block">
+            <label for="rawNotes" data-i18n="notes.label">Tu idea, mensaje o texto, sin arreglar</label>
+            <p class="field-help" data-i18n="notes.help">No lo maquilles. Escribe como piensas o pega lo que ya tienes; si hay dudas o datos faltantes, déjalos ahí.</p>
+            <p class="privacy-inline" data-i18n="privacy.inline">Tu texto se queda en este navegador. Solo enviamos tu estrella si calificas.</p>
+            <textarea id="rawNotes" spellcheck="true" data-i18n-placeholder="notes.placeholder" placeholder="Ejemplo: el cliente mandó un mensaje, faltan datos, hay una fecha dudosa, quiere una respuesta para mañana..."></textarea>
+          </div>
 
           <div class="button-row">
             <button type="button" id="generatePrompt" data-i18n="actions.generate">2. Crear prompt</button>
@@ -208,6 +209,6 @@
       </footer>
     </main>
 
-  <script src="app.js?v=0.1.9-categories-20260507"></script>
+  <script src="app.js?v=0.1.9-flow-20260507"></script>
   </body>
 </html>
