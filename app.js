@@ -1,12 +1,31 @@
-const caseKeys = ["general", "career", "study", "coding", "cx", "operations", "proposal", "legal", "consulting"];
-const outputKeys = ["clear", "facts", "summary", "draft", "actionPlan", "email", "risks"];
+const caseKeys = ["general", "career", "sales", "marketing", "business", "build", "legal", "study"];
+const outputKeys = [
+  "clear", "facts", "summary", "actionPlan", "risks",
+  "resume", "linkedin", "interview", "coverLetter", "jobMessage",
+  "customerReply", "followUp", "crmSummary", "quoteChecklist", "objection",
+  "linkedinPost", "adCopy", "whatsappPromo", "youtubeDescription", "landingCopy", "newsletter",
+  "proposalBrief", "diagnosis", "meetingNotes",
+  "mvpBrief", "technicalArchitecture", "buildPlan", "prd", "codexBuildPrompt",
+  "draft", "legalChecklist", "studyPlan", "explain", "codingHelp", "projectPlan", "email"
+];
+
+const outputOptionsByCase = {
+  general: ["clear", "facts", "summary", "actionPlan", "risks"],
+  career: ["resume", "linkedin", "interview", "coverLetter", "jobMessage"],
+  sales: ["customerReply", "followUp", "crmSummary", "quoteChecklist", "objection"],
+  marketing: ["linkedinPost", "adCopy", "whatsappPromo", "youtubeDescription", "landingCopy", "newsletter"],
+  business: ["summary", "actionPlan", "proposalBrief", "diagnosis", "meetingNotes"],
+  build: ["mvpBrief", "technicalArchitecture", "buildPlan", "prd", "codexBuildPrompt"],
+  legal: ["facts", "draft", "legalChecklist", "risks"],
+  study: ["studyPlan", "explain", "codingHelp", "projectPlan", "summary"]
+};
 
 const translations = {
   es: {
     name: "Español",
     htmlLang: "es",
-    title: "Prompt Claro | Brief claro para cualquier IA",
-    description: "Convierte una idea en bruto en un brief claro para ChatGPT, Gemini, Claude, Codex, Cursor o la IA que uses. Gratis, sin login y sin instalar nada.",
+    title: "Prompt Claro | El primer prompt decide la respuesta",
+    description: "Convierte una idea en bruto en un brief claro y verificable para ChatGPT, Claude, Gemini o la IA que uses. Gratis, sin login y sin instalar nada.",
     ui: {
       "language.label": "Idioma",
       "hero.eyebrow": "Gratis · Sin login · Sin instalar nada",
@@ -311,8 +330,8 @@ ${getShareUrl("es")}`
   en: {
     name: "English",
     htmlLang: "en",
-    title: "Clear Prompt Builder | Clear AI briefs from rough thoughts",
-    description: "Turn a rough idea into a clear brief for ChatGPT, Gemini, Claude, Codex, Cursor, or any AI tool. Free, no login, no app install.",
+    title: "Clear Prompt Builder | Your first prompt decides the answer",
+    description: "Turn a rough ask into a clear, verifiable brief for ChatGPT, Claude, Gemini, or any AI. Free, no login, no app install.",
     ui: {
       "language.label": "Language",
       "hero.eyebrow": "Free · No login · No app install",
@@ -587,8 +606,8 @@ ${getShareUrl("en")}`
   hi: {
     name: "हिंदी",
     htmlLang: "hi",
-    title: "Clear Prompt Builder | अपनी बात को बेहतर prompt में बदलें",
-    description: "AI से जो करवाना है, जैसे दिमाग में है वैसे लिखें या paste करें. Clear Prompt Builder उसे ChatGPT, Gemini, Claude या किसी भी AI के लिए clear prompt बना देता है. Free, no login, no app install.",
+    title: "Clear Prompt Builder | पहला prompt जवाब तय करता है",
+    description: "AI से जो करवाना है, उसे rough form में लिखें और clear, verifiable prompt बनाएं. Free, no login, no app install.",
     ui: {
       "language.label": "भाषा",
       "hero.eyebrow": "Free - Login नहीं - App install नहीं",
@@ -863,8 +882,8 @@ ${getShareUrl("hi")}`
   pa: {
     name: "ਪੰਜਾਬੀ",
     htmlLang: "pa",
-    title: "Clear Prompt Builder | ਆਪਣੀ ਗੱਲ ਨੂੰ ਵਧੀਆ prompt ਬਣਾਓ",
-    description: "AI ਤੋਂ ਜੋ ਕਰਵਾਉਣਾ ਹੈ, ਜਿਵੇਂ ਮਨ ਵਿੱਚ ਹੈ ਉਹ ਲਿਖੋ ਜਾਂ paste ਕਰੋ. Clear Prompt Builder ਇਸਨੂੰ ChatGPT, Gemini, Claude ਜਾਂ ਕਿਸੇ ਵੀ AI ਲਈ clear prompt ਬਣਾ ਦਿੰਦਾ ਹੈ. Free, no login, no app install.",
+    title: "Clear Prompt Builder | ਪਹਿਲਾ prompt ਜਵਾਬ ਤੈਅ ਕਰਦਾ ਹੈ",
+    description: "AI ਤੋਂ ਜੋ ਕਰਵਾਉਣਾ ਹੈ, ਉਹ rough form ਵਿੱਚ ਲਿਖੋ ਅਤੇ clear, verifiable prompt ਬਣਾਓ. Free, no login, no app install.",
     ui: {
       "language.label": "ਭਾਸ਼ਾ",
       "hero.eyebrow": "Free - Login ਨਹੀਂ - App install ਨਹੀਂ",
@@ -1352,6 +1371,198 @@ I need to turn this into a clear proposal without inventing scope, delivery date
   }
 };
 
+const launchCategoryPack = {
+  es: {
+    cases: {
+      general: "General",
+      career: "Carrera / empleo",
+      sales: "Ventas / cliente",
+      marketing: "Marketing / contenido",
+      business: "Negocio / consultoría",
+      build: "Crear app / SaaS",
+      legal: "Legal / contrato",
+      study: "Estudio / código"
+    },
+    outputs: {
+      clear: "Respuesta clara", facts: "Hechos y pendientes", summary: "Resumen ejecutivo", actionPlan: "Plan de acción", risks: "Checklist de riesgos",
+      resume: "Mejorar CV", linkedin: "Perfil de LinkedIn", interview: "Preparación de entrevista", coverLetter: "Carta / mensaje de postulación", jobMessage: "Mensaje para aplicar",
+      customerReply: "Respuesta a cliente", followUp: "Plan de seguimiento", crmSummary: "Resumen para CRM", quoteChecklist: "Checklist para cotizar", objection: "Respuesta a objeción",
+      linkedinPost: "Post de LinkedIn", adCopy: "Copy de anuncio", whatsappPromo: "Promo para WhatsApp", youtubeDescription: "Descripción de YouTube", landingCopy: "Copy de landing page", newsletter: "Newsletter",
+      proposalBrief: "Brief de propuesta", diagnosis: "Diagnóstico", meetingNotes: "Notas de reunión",
+      mvpBrief: "Brief de MVP", technicalArchitecture: "Arquitectura técnica", buildPlan: "Plan de construcción", prd: "PRD", codexBuildPrompt: "Prompt para Codex",
+      draft: "Borrador de documento", legalChecklist: "Checklist legal", studyPlan: "Plan de estudio", explain: "Explicación paso a paso", codingHelp: "Ayuda para código", projectPlan: "Plan de proyecto", email: "Email profesional"
+    },
+    caseGuidance: {
+      sales: ["Separa lo que dijo el cliente de lo que tú supones.", "No prometas descuentos, fechas, entregas ni compensaciones no confirmadas.", "Incluye siguiente paso, dueño y dato faltante si aplica.", "Mantén tono profesional, claro y humano."],
+      marketing: ["No inventes resultados, testimonios, precios, garantías ni métricas.", "Separa objetivo, audiencia, canal, oferta, prueba y CTA.", "Marca faltantes como público, fecha, link, oferta y restricción legal como [PENDIENTE].", "Da opciones de copy sin exagerar claims."],
+      business: ["Separa síntomas, causas probables y decisiones pendientes.", "No inventes presupuesto, responsables, fechas ni métricas.", "Incluye riesgos, preguntas de diagnóstico y siguiente paso.", "Mantén la salida ejecutiva y accionable."],
+      build: ["Separa producto, usuarios, workflows, stack preferido y decisiones pendientes.", "No elijas herramientas como definitivas sin explicar tradeoffs.", "Marca WhatsApp API/gateway, auth, pagos, base de datos, hosting y alcance MVP como [PENDIENTE] si no están claros.", "Incluye riesgos técnicos, fases de construcción y preguntas antes de programar."]
+    },
+    samples: {
+      sales: `Mensaje de cliente:\n\n\"Hola, ya te pedí cotización dos veces y nadie me responde claro. Necesito saber precio, fecha de entrega y si incluye instalación. Si no me confirmas hoy, busco otro proveedor.\"\n\nContexto interno:\n\nEs un cliente potencial de una oficina pequeña en Monterrey. Pidió 12 sillas ergonómicas y 3 escritorios. No tengo precio final porque falta confirmar envío e instalación. El proveedor puede entregar la próxima semana, pero no está confirmado.\n\nQuiero responder sin perder la venta y sin prometer algo falso.`,
+      marketing: `Idea para contenido:\n\nQuiero publicar en LinkedIn que muchas personas usan ChatGPT como chat, pero el primer prompt decide la calidad del resultado.\n\nTengo una herramienta gratis llamada Prompt Claro. Convierte una idea desordenada en un brief claro para cualquier IA. No quiero sonar vendedor agresivo.\n\nAudiencia: profesionales que ya usan IA pero sienten que las respuestas salen genéricas.\n\nFalta confirmar: link final, imagen, si mencionar open source y CTA exacto.`,
+      business: `Contexto de llamada:\n\nUna empresa de servicios B2B en Guadalajara tiene leads por WhatsApp, llamadas y correo. El dueño dice que ventas está desordenado y quiere \"meter IA\".\n\nEl equipo es de 5 personas. Usan Excel, Gmail y WhatsApp. No hay CRM formal. Nadie sabe cuántos prospectos están calientes ni quién debe dar seguimiento.\n\nQuiere una propuesta de diagnóstico de 2 semanas, pero falta confirmar presupuesto, responsable interno y herramientas actuales.`,
+      build: `Idea de producto SaaS:\n\nQuiero construir un WhatsApp CRM para pequeños negocios. El producto debe ayudarles a manejar tareas, seguimientos, cotizaciones, reseñas, reservas y relación con clientes conectando su WhatsApp a un CRM.\n\nStack que tengo en mente: Next.js, Postgres o Convex o Directus, Clerk para auth, Razorpay o Stripe para pagos, Tailwind para estilos, OpenAI para lógica IA, Cloudflare/Gmail para email. Diseño con GPT Image Gen y Claude Design. Construcción con Codex desktop/app.\n\nNo sé todavía qué debe entrar en MVP, qué stack conviene, cómo conectar WhatsApp, cómo cobrar, ni qué debo construir primero.`
+    }
+  },
+  en: {
+    cases: {
+      general: "General",
+      career: "Career / Job",
+      sales: "Sales / Customer",
+      marketing: "Marketing / Content",
+      business: "Business / Consulting",
+      build: "Build App / SaaS",
+      legal: "Legal / Contract",
+      study: "Study / Coding"
+    },
+    outputs: {
+      clear: "Clear answer", facts: "Facts and pending items", summary: "Executive summary", actionPlan: "Action plan", risks: "Risk checklist",
+      resume: "Improve resume", linkedin: "LinkedIn profile", interview: "Interview prep", coverLetter: "Cover letter", jobMessage: "Job application message",
+      customerReply: "Customer reply", followUp: "Follow-up plan", crmSummary: "CRM summary", quoteChecklist: "Quote checklist", objection: "Objection response",
+      linkedinPost: "LinkedIn post", adCopy: "Ad copy", whatsappPromo: "WhatsApp promo", youtubeDescription: "YouTube description", landingCopy: "Landing page copy", newsletter: "Newsletter",
+      proposalBrief: "Proposal brief", diagnosis: "Diagnosis", meetingNotes: "Meeting notes",
+      mvpBrief: "MVP brief", technicalArchitecture: "Technical architecture", buildPlan: "Build plan", prd: "PRD", codexBuildPrompt: "Codex build prompt",
+      draft: "Document draft", legalChecklist: "Legal checklist", studyPlan: "Study plan", explain: "Step-by-step explanation", codingHelp: "Coding help", projectPlan: "Project plan", email: "Professional email"
+    },
+    caseGuidance: {
+      sales: ["Separate what the customer said from internal assumptions.", "Do not promise discounts, dates, delivery, refunds, or compensation unless confirmed.", "Include the next step, owner, and missing information when useful.", "Keep the tone professional, clear, and human."],
+      marketing: ["Do not invent results, testimonials, prices, guarantees, or metrics.", "Separate goal, audience, channel, offer, proof, and CTA.", "Mark missing audience, date, link, offer, or compliance constraint as [PENDING].", "Give useful copy options without exaggerated claims."],
+      business: ["Separate symptoms, probable causes, and pending decisions.", "Do not invent budget, owners, dates, or metrics.", "Include risks, diagnostic questions, and next step.", "Keep the output executive and actionable."],
+      build: ["Separate product goal, users, workflows, preferred stack, and pending decisions.", "Do not make the tech stack final without tradeoffs.", "Mark WhatsApp API/gateway, auth, payments, database, hosting, and MVP scope as [PENDING] if unclear.", "Include technical risks, build phases, and questions before coding."]
+    },
+    samples: {
+      sales: `Customer message:\n\n\"I asked twice for the quotation and still do not have a clear answer. I need price, delivery date, and whether installation is included. If you cannot confirm today, I will check another vendor.\"\n\nInternal context:\n\nThis is a potential customer for a small office in Gurugram. They asked for 12 ergonomic chairs and 3 desks. Final price is not confirmed because delivery and installation cost are pending. Vendor may deliver next week, but it is not confirmed.\n\nI want to respond without losing the sale and without promising something false.`,
+      marketing: `Content idea:\n\nI want to write a LinkedIn post saying most people use ChatGPT like a chat, but the first prompt decides the quality of the result.\n\nI have a free tool called Clear Prompt Builder / Prompt Claro. It turns a messy idea into a clear brief for any AI. I do not want the post to sound like aggressive selling.\n\nAudience: Indian professionals who already use AI but feel the answers are generic.\n\nStill pending: final link, image, whether to mention open source, and exact CTA.`,
+      business: `Client call context:\n\nAn Indian B2B services company in Gurugram has leads coming through WhatsApp, calls, and email. The founder says sales is messy and wants to \"use AI\".\n\nTeam size is 8. They use Excel, Gmail, and WhatsApp. No formal CRM. Nobody knows how many warm prospects exist or who should follow up.\n\nThey want a 2-week diagnosis proposal, but budget, internal owner, and current tools are still not confirmed.`,
+      build: `SaaS product idea:\n\nI want to build a WhatsApp CRM for small businesses. The product should help them manage tasks, follow-ups, quotations, reviews, bookings, and customer engagement by connecting WhatsApp to a CRM.\n\nStack in mind: Next.js, Postgres or Convex or Directus, Clerk for auth, Razorpay or Stripe for payments, Tailwind for styling, OpenAI for AI logic, Cloudflare/Gmail for email. Design with GPT Image Gen and Claude Design. Build using Codex desktop/app.\n\nI do not yet know what belongs in the MVP, which stack is best, how to connect WhatsApp, how to charge, or what to build first.`
+    }
+  },
+  hi: {
+    cases: {
+      general: "General", career: "Career / Job", sales: "Sales / Customer", marketing: "Marketing / Content", business: "Business / Consulting", build: "Build App / SaaS", legal: "Legal / Contract", study: "Study / Coding"
+    },
+    outputs: {
+      clear: "Clear answer", facts: "Facts और pending items", summary: "Executive summary", actionPlan: "Action plan", risks: "Risk checklist",
+      resume: "Resume improve", linkedin: "LinkedIn profile", interview: "Interview prep", coverLetter: "Cover letter", jobMessage: "Job application message",
+      customerReply: "Customer reply", followUp: "Follow-up plan", crmSummary: "CRM summary", quoteChecklist: "Quote checklist", objection: "Objection response",
+      linkedinPost: "LinkedIn post", adCopy: "Ad copy", whatsappPromo: "WhatsApp promo", youtubeDescription: "YouTube description", landingCopy: "Landing page copy", newsletter: "Newsletter",
+      proposalBrief: "Proposal brief", diagnosis: "Diagnosis", meetingNotes: "Meeting notes",
+      mvpBrief: "MVP brief", technicalArchitecture: "Technical architecture", buildPlan: "Build plan", prd: "PRD", codexBuildPrompt: "Codex build prompt",
+      draft: "Document draft", legalChecklist: "Legal checklist", studyPlan: "Study plan", explain: "Step-by-step explanation", codingHelp: "Coding help", projectPlan: "Project plan", email: "Professional email"
+    },
+    caseGuidance: {},
+    samples: {
+      sales: `Customer message:\n\n\"मैंने quotation दो बार मांगा लेकिन clear answer नहीं मिला. Price, delivery date और installation included है या नहीं, आज confirm चाहिए. नहीं तो मैं दूसरे vendor से बात करूंगा.\"\n\nInternal context:\n\nCustomer Gurugram की small office team से है. 12 ergonomic chairs और 3 desks चाहिए. Final price confirm नहीं है क्योंकि delivery और installation cost pending है. Vendor next week deliver कर सकता है, पर confirm नहीं.\n\nमुझे sale lose किए बिना और false promise किए बिना reply करना है.`,
+      marketing: `Content idea:\n\nLinkedIn post लिखना है कि लोग ChatGPT को normal chat की तरह use करते हैं, लेकिन पहला prompt ही result की quality decide करता है.\n\nमेरे पास free tool Clear Prompt Builder / Prompt Claro है. यह messy idea को किसी भी AI के लिए clear brief बनाता है. Post salesy नहीं लगनी चाहिए.\n\nAudience: Indian professionals जो AI use करते हैं लेकिन generic answers से frustrated हैं.\n\nPending: final link, image, open source mention करना है या नहीं, exact CTA.`,
+      business: `Client call context:\n\nGurugram की Indian B2B services company में leads WhatsApp, calls और email से आते हैं. Founder कहता है sales messy है और \"AI use\" करना चाहता है.\n\nTeam size 8 है. Excel, Gmail और WhatsApp use करते हैं. Formal CRM नहीं है. किसी को clear नहीं कि warm prospects कितने हैं या follow-up कौन करेगा.\n\n2-week diagnosis proposal चाहिए, लेकिन budget, internal owner और current tools confirm नहीं हैं.`,
+      build: `SaaS product idea:\n\nमैं small businesses के लिए WhatsApp CRM बनाना चाहता हूं. Product tasks, follow-ups, quotations, reviews, bookings और customer engagement manage करे by connecting WhatsApp to CRM.\n\nStack idea: Next.js, Postgres या Convex या Directus, Clerk auth, Razorpay या Stripe payments, Tailwind styling, OpenAI AI logic, Cloudflare/Gmail email. Design GPT Image Gen और Claude Design से. Build Codex desktop/app से.\n\nअभी unclear है: MVP में क्या आएगा, कौनसा stack best है, WhatsApp कैसे connect होगा, pricing कैसे होगी, और पहले क्या build करना है.`
+    }
+  },
+  pa: {
+    cases: {
+      general: "General", career: "Career / Job", sales: "Sales / Customer", marketing: "Marketing / Content", business: "Business / Consulting", build: "Build App / SaaS", legal: "Legal / Contract", study: "Study / Coding"
+    },
+    outputs: {
+      clear: "Clear answer", facts: "Facts ਅਤੇ pending items", summary: "Executive summary", actionPlan: "Action plan", risks: "Risk checklist",
+      resume: "Resume improve", linkedin: "LinkedIn profile", interview: "Interview prep", coverLetter: "Cover letter", jobMessage: "Job application message",
+      customerReply: "Customer reply", followUp: "Follow-up plan", crmSummary: "CRM summary", quoteChecklist: "Quote checklist", objection: "Objection response",
+      linkedinPost: "LinkedIn post", adCopy: "Ad copy", whatsappPromo: "WhatsApp promo", youtubeDescription: "YouTube description", landingCopy: "Landing page copy", newsletter: "Newsletter",
+      proposalBrief: "Proposal brief", diagnosis: "Diagnosis", meetingNotes: "Meeting notes",
+      mvpBrief: "MVP brief", technicalArchitecture: "Technical architecture", buildPlan: "Build plan", prd: "PRD", codexBuildPrompt: "Codex build prompt",
+      draft: "Document draft", legalChecklist: "Legal checklist", studyPlan: "Study plan", explain: "Step-by-step explanation", codingHelp: "Coding help", projectPlan: "Project plan", email: "Professional email"
+    },
+    caseGuidance: {},
+    samples: {
+      sales: `Customer message:\n\n\"ਮੈਂ quotation ਦੋ ਵਾਰੀ ਮੰਗੀ ਪਰ clear answer ਨਹੀਂ ਮਿਲਿਆ. Price, delivery date ਅਤੇ installation included ਹੈ ਜਾਂ ਨਹੀਂ, ਅੱਜ confirm ਚਾਹੀਦਾ ਹੈ. ਨਹੀਂ ਤਾਂ ਮੈਂ ਹੋਰ vendor ਨਾਲ ਗੱਲ ਕਰਾਂਗਾ.\"\n\nInternal context:\n\nCustomer Mohali ਦੀ small office team ਤੋਂ ਹੈ. 12 ergonomic chairs ਅਤੇ 3 desks ਚਾਹੀਦੇ ਹਨ. Final price confirm ਨਹੀਂ ਕਿਉਂਕਿ delivery ਅਤੇ installation cost pending ਹੈ. Vendor next week deliver ਕਰ ਸਕਦਾ ਹੈ, ਪਰ confirm ਨਹੀਂ.\n\nਮੈਨੂੰ sale lose ਕੀਤੇ ਬਿਨਾਂ ਅਤੇ false promise ਕੀਤੇ ਬਿਨਾਂ reply ਕਰਨਾ ਹੈ.`,
+      marketing: `Content idea:\n\nLinkedIn post ਲਿਖਣੀ ਹੈ ਕਿ ਲੋਕ ChatGPT ਨੂੰ normal chat ਵਾਂਗ use ਕਰਦੇ ਹਨ, ਪਰ ਪਹਿਲਾ prompt ਹੀ result ਦੀ quality decide ਕਰਦਾ ਹੈ.\n\nਮੇਰੇ ਕੋਲ free tool Clear Prompt Builder / Prompt Claro ਹੈ. ਇਹ messy idea ਨੂੰ ਕਿਸੇ ਵੀ AI ਲਈ clear brief ਬਣਾਉਂਦਾ ਹੈ. Post salesy ਨਹੀਂ ਲੱਗਣੀ ਚਾਹੀਦੀ.\n\nAudience: Indian professionals ਜੋ AI use ਕਰਦੇ ਹਨ ਪਰ generic answers ਤੋਂ frustrated ਹਨ.\n\nPending: final link, image, open source mention ਕਰਨਾ ਹੈ ਜਾਂ ਨਹੀਂ, exact CTA.`,
+      business: `Client call context:\n\nMohali ਦੀ Indian B2B services company ਵਿੱਚ leads WhatsApp, calls ਅਤੇ email ਰਾਹੀਂ ਆਉਂਦੇ ਹਨ. Founder ਕਹਿੰਦਾ ਹੈ sales messy ਹੈ ਅਤੇ \"AI use\" ਕਰਨਾ ਚਾਹੁੰਦਾ ਹੈ.\n\nTeam size 8 ਹੈ. Excel, Gmail ਅਤੇ WhatsApp use ਕਰਦੇ ਹਨ. Formal CRM ਨਹੀਂ ਹੈ. ਕਿਸੇ ਨੂੰ clear ਨਹੀਂ ਕਿ warm prospects ਕਿੰਨੇ ਹਨ ਜਾਂ follow-up ਕੌਣ ਕਰੇਗਾ.\n\n2-week diagnosis proposal ਚਾਹੀਦਾ ਹੈ, ਪਰ budget, internal owner ਅਤੇ current tools confirm ਨਹੀਂ ਹਨ.`,
+      build: `SaaS product idea:\n\nਮੈਂ small businesses ਲਈ WhatsApp CRM ਬਣਾਉਣਾ ਚਾਹੁੰਦਾ ਹਾਂ. Product tasks, follow-ups, quotations, reviews, bookings ਅਤੇ customer engagement manage ਕਰੇ by connecting WhatsApp to CRM.\n\nStack idea: Next.js, Postgres ਜਾਂ Convex ਜਾਂ Directus, Clerk auth, Razorpay ਜਾਂ Stripe payments, Tailwind styling, OpenAI AI logic, Cloudflare/Gmail email. Design GPT Image Gen ਅਤੇ Claude Design ਨਾਲ. Build Codex desktop/app ਨਾਲ.\n\nਅਜੇ unclear ਹੈ: MVP ਵਿੱਚ ਕੀ ਆਵੇਗਾ, ਕਿਹੜਾ stack best ਹੈ, WhatsApp ਕਿਵੇਂ connect ਹੋਵੇਗਾ, pricing ਕਿਵੇਂ ਹੋਵੇਗੀ, ਅਤੇ ਪਹਿਲਾਂ ਕੀ build ਕਰਨਾ ਹੈ.`
+    }
+  }
+};
+
+const genericFormatGuidance = {
+  es: {
+    resume: "Mejora el CV sin inventar experiencia. Entrega: fortalezas confirmadas, huecos, preguntas, versión sugerida y checklist antes de enviar.",
+    linkedin: "Prepara perfil de LinkedIn: titular, acerca de, experiencia, skills, huecos y preguntas. No inventes logros.",
+    interview: "Prepara entrevista: posibles preguntas, respuestas base, ejemplos STAR, faltantes y práctica.",
+    coverLetter: "Redacta carta o mensaje de postulación. Marca datos faltantes y no inventes empresa, puesto ni logros.",
+    jobMessage: "Prepara mensaje corto para aplicar o contactar recruiter. Incluye versión breve, versión formal y datos pendientes.",
+    customerReply: "Redacta respuesta lista para enviar, con tono, puntos confirmados, pendientes y siguiente paso.",
+    followUp: "Crea plan de seguimiento con acciones, timing, dueño si existe, mensaje sugerido y pendientes.",
+    crmSummary: "Convierte el texto en resumen para CRM: cliente, necesidad, estado, siguiente acción, riesgos y pendientes.",
+    quoteChecklist: "Lista datos necesarios para cotizar, datos confirmados, faltantes, riesgos y preguntas.",
+    objection: "Prepara respuesta a objeción: empatía, aclaración, valor, pregunta y siguiente paso.",
+    linkedinPost: "Crea post de LinkedIn con hook, cuerpo, CTA y 2 alternativas. No exageres claims.",
+    adCopy: "Crea copy de anuncio con audiencia, oferta, beneficio, prueba, CTA y restricciones pendientes.",
+    whatsappPromo: "Crea mensaje promocional breve para WhatsApp, claro y no spammy, con CTA y datos pendientes.",
+    youtubeDescription: "Crea descripción de YouTube con resumen, capítulos si aplica, CTA, keywords y datos pendientes.",
+    landingCopy: "Crea copy de landing page: headline, subheadline, beneficios, prueba, CTA, FAQ y faltantes.",
+    newsletter: "Crea newsletter con asunto, preview text, cuerpo, CTA y notas de verificación.",
+    proposalBrief: "Crea brief de propuesta con problema, alcance, entregables, fuera de alcance, preguntas, riesgos y siguiente paso.",
+    diagnosis: "Crea diagnóstico práctico: síntomas, causas probables, evidencia, riesgos, preguntas y primeros pasos.",
+    meetingNotes: "Convierte en notas de reunión: decisiones, hechos, pendientes, dueños, fechas y riesgos.",
+    mvpBrief: "Crea brief de MVP: usuarios, problema, workflows, features v1, fuera de alcance, preguntas y riesgos.",
+    technicalArchitecture: "Propón arquitectura con tradeoffs. No cierres stack sin explicar opciones, riesgos y decisiones pendientes.",
+    buildPlan: "Crea plan de construcción por fases con tareas, dependencias, tests, riesgos y preguntas antes de programar.",
+    prd: "Crea PRD práctico: objetivo, usuarios, casos de uso, requisitos, no requisitos, métricas, riesgos y pendientes.",
+    codexBuildPrompt: "Crea un prompt para Codex: objetivo, stack, archivos esperados, fases, constraints, tests y preguntas antes de editar.",
+    legalChecklist: "Crea checklist legal práctico. No des asesoría legal final; marca faltantes y recomienda revisión profesional.",
+    studyPlan: "Crea plan de estudio con temas, orden, tiempo, práctica, dudas y pendientes.",
+    explain: "Explica paso a paso según nivel del usuario. Marca conceptos faltantes y preguntas.",
+    codingHelp: "Crea prompt/plan de depuración: problema, entorno, código necesario, hipótesis, pruebas y faltantes.",
+    projectPlan: "Crea plan de proyecto con objetivo, fases, entregables, fechas si existen, riesgos y pendientes."
+  },
+  en: {
+    resume: "Improve the resume without inventing experience. Give confirmed strengths, gaps, questions, suggested rewrite, and a before-send checklist.",
+    linkedin: "Prepare LinkedIn profile copy: headline, about, experience, skills, gaps, and questions. Do not invent achievements.",
+    interview: "Prepare interview practice: likely questions, base answers, STAR examples, missing details, and practice plan.",
+    coverLetter: "Draft a cover letter or application note. Mark missing facts and do not invent company, role, or achievements.",
+    jobMessage: "Draft a short job application/recruiter message. Include short version, formal version, and pending details.",
+    customerReply: "Draft a ready-to-send customer reply with tone, confirmed points, pending items, and next step.",
+    followUp: "Create a follow-up plan with actions, timing, owner if known, suggested message, and pending items.",
+    crmSummary: "Turn the text into a CRM summary: customer, need, status, next action, risks, and pending items.",
+    quoteChecklist: "List what is needed to quote: confirmed data, missing data, risks, and questions.",
+    objection: "Prepare an objection response: empathy, clarification, value, question, and next step.",
+    linkedinPost: "Create a LinkedIn post with hook, body, CTA, and 2 alternatives. Do not exaggerate claims.",
+    adCopy: "Create ad copy with audience, offer, benefit, proof, CTA, and pending constraints.",
+    whatsappPromo: "Create a short WhatsApp promo message that is clear, non-spammy, and includes CTA plus pending details.",
+    youtubeDescription: "Create a YouTube description with summary, chapters if useful, CTA, keywords, and pending details.",
+    landingCopy: "Create landing page copy: headline, subheadline, benefits, proof, CTA, FAQ, and missing details.",
+    newsletter: "Create a newsletter with subject, preview text, body, CTA, and verification notes.",
+    proposalBrief: "Create a proposal brief with problem, scope, deliverables, out of scope, questions, risks, and next step.",
+    diagnosis: "Create a practical diagnosis: symptoms, probable causes, evidence, risks, questions, and first steps.",
+    meetingNotes: "Turn this into meeting notes: decisions, facts, pending items, owners, dates, and risks.",
+    mvpBrief: "Create an MVP brief: users, problem, workflows, v1 features, out of scope, questions, and risks.",
+    technicalArchitecture: "Suggest architecture with tradeoffs. Do not finalize the stack without options, risks, and pending decisions.",
+    buildPlan: "Create a phased build plan with tasks, dependencies, tests, risks, and questions before coding.",
+    prd: "Create a practical PRD: goal, users, use cases, requirements, non-requirements, metrics, risks, and pending items.",
+    codexBuildPrompt: "Create a Codex prompt: goal, stack, expected files, phases, constraints, tests, and questions before editing.",
+    legalChecklist: "Create a practical legal checklist. Do not provide final legal advice; mark missing items and recommend professional review.",
+    studyPlan: "Create a study plan with topics, order, time, practice, doubts, and pending items.",
+    explain: "Explain step by step for the user's level. Mark missing concepts and questions.",
+    codingHelp: "Create a debugging prompt/plan: problem, environment, code needed, hypotheses, tests, and missing items.",
+    projectPlan: "Create a project plan with goal, phases, deliverables, dates if present, risks, and pending items."
+  }
+};
+
+genericFormatGuidance.hi = genericFormatGuidance.en;
+genericFormatGuidance.pa = genericFormatGuidance.en;
+
+Object.entries(launchCategoryPack).forEach(([language, pack]) => {
+  const target = translations[language];
+  if (!target) return;
+  Object.assign(target.cases, pack.cases);
+  Object.assign(target.outputs, pack.outputs);
+  Object.assign(target.caseGuidance, pack.caseGuidance || {});
+  ["sales", "marketing", "business", "build"].forEach((key) => {
+    if (!target.caseGuidance[key]) target.caseGuidance[key] = translations.en.caseGuidance[key];
+  });
+  Object.assign(target.samples, pack.samples);
+  Object.assign(target.formatGuidance, genericFormatGuidance[language] || genericFormatGuidance.en);
+});
+
 let currentLanguage = "es";
 let lastDefaultOutcome = translations.es.defaults.outcome;
 
@@ -1399,7 +1610,7 @@ function getShareUrl(language = currentLanguage) {
   url.pathname = getLocalizedPath(language);
   url.search = "";
   url.searchParams.set("lang", language);
-  url.searchParams.set("preview", "0.1.9-hook");
+  url.searchParams.set("preview", "0.1.9-categories");
   url.hash = "";
   return url.toString();
 }
@@ -1571,14 +1782,15 @@ function populateOptions() {
   });
   caseType.value = caseKeys.includes(previousCase) ? previousCase : "general";
 
+  const availableOutputs = outputOptionsByCase[caseType.value] || outputOptionsByCase.general;
   outputFormat.innerHTML = "";
-  outputKeys.forEach((key) => {
+  availableOutputs.forEach((key) => {
     const option = document.createElement("option");
     option.value = key;
     option.textContent = languageData.outputs[key];
     outputFormat.appendChild(option);
   });
-  outputFormat.value = outputKeys.includes(previousOutput) ? previousOutput : "clear";
+  outputFormat.value = availableOutputs.includes(previousOutput) ? previousOutput : availableOutputs[0];
 }
 
 function getSelectedExamplePreviewText(selectedCase = caseType.value, selectedOutput = outputFormat.value) {
@@ -2024,8 +2236,19 @@ function setupToolPage() {
     loadSelectedExample();
   });
 
-  caseType.addEventListener("change", updateSelectedExamplePreview);
-  outputFormat.addEventListener("change", updateSelectedExamplePreview);
+  caseType.addEventListener("change", () => {
+    populateOptions();
+    updateSelectedExamplePreview();
+    const languageData = translations[currentLanguage];
+    desiredOutcome.value = getSelectedOutcomeText(caseType.value, outputFormat.value);
+    if (exampleStatus) exampleStatus.textContent = t("samples.selectedHelp");
+    setStatus(languageData.statuses.optionChanged);
+  });
+  outputFormat.addEventListener("change", () => {
+    updateSelectedExamplePreview();
+    desiredOutcome.value = getSelectedOutcomeText(caseType.value, outputFormat.value);
+    setStatus(translations[currentLanguage].statuses.optionChanged);
+  });
   pendingRule.addEventListener("change", () => {
     updatePendingDependentCopy();
     const prompt = promptOutput.textContent.trim();
