@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.1.9 - 2026-05-07
+
+- Reworked the mobile launch flow so users paste first, generate second, and copy third.
+- Moved options and examples behind a simpler "Options and examples" control.
+- Put the copy button above the generated prompt and hid the download button on mobile.
+- Show star rating only after copy, with non-blocking rating failures.
+- Clarified privacy copy and added a guard when users paste the first prompt into the answer-checking field.
+
 ## v0.1.8 - 2026-05-07
 
 - Replaced the text feedback form with a simple one-tap star rating.

@@ -3,7 +3,7 @@
 > Turn messy thoughts into a first prompt that is clear enough to use, then optionally check the AI answer against the original text.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-0.1.8-blue.svg)](VERSION)
+[![Version](https://img.shields.io/badge/version-0.1.9-blue.svg)](VERSION)
 [![Prompt Text](https://img.shields.io/badge/prompt_text-local-lightgrey.svg)](#privacy)
 [![Browser Only](https://img.shields.io/badge/runs-in_browser-brightgreen.svg)](#quick-start)
 
@@ -45,13 +45,13 @@ visible.
 - Works with ChatGPT, Gemini, Claude, or any AI you use.
 - Supports Spanish, English, Hindi, and Punjabi.
 - Keeps Spanish examples Mexico-first and English/Hindi/Punjabi examples India-first.
-- Runs fully in the browser.
+- Generates prompts in the browser.
 - Does not require login, install, or API key.
 - Includes examples for legal, consulting, CX, operations, coding/product, and proposals.
 - Includes a human checklist before trusting AI output.
 - Reveals the answer-checking flow only after the first prompt is ready.
 - Generates a checking prompt to audit the AI response against the original text.
-- Shows a one-tap star rating after the first prompt. The hosted site can record only the rating metadata; prompt text stays local.
+- Shows a one-tap star rating after the prompt is copied. The hosted site can record only the rating metadata; prompt text stays local.
 
 ## Quick start
 
@@ -59,13 +59,12 @@ No setup required.
 
 1. Download or clone this repo.
 2. Open `index.html` in your browser.
-3. Pick the work type.
-4. Pick what you want to receive.
-5. Write or paste your rough case, or load an example.
-6. Generate the prompt.
-7. Copy it into ChatGPT, Gemini, Claude, or any AI you use.
-8. After the AI answers, paste the response back into the checking box if you want a second-pass review.
-9. Generate a checking prompt and use it to review the answer before acting.
+3. Write or paste your rough case.
+4. Generate the prompt.
+5. Copy it into ChatGPT, Gemini, Claude, or any AI you use.
+6. Optional: adjust work type, output format, or examples from Options.
+7. After the AI answers, paste the response back into the checking box if you want a second-pass review.
+8. Generate a checking prompt and use it to review the answer before acting.
 
 Optional check for contributors:
 

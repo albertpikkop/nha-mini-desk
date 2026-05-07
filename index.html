@@ -21,7 +21,7 @@
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://www.ashishpunj.com/nha-tce/og-image.png">
-    <link rel="stylesheet" href="style.css?v=0.1.8-star-rating-20260507">
+    <link rel="stylesheet" href="style.css?v=0.1.9-mobile-launch-20260507">
   </head>
   <body>
     <main class="app-shell">
@@ -37,7 +37,7 @@
         <h1 data-i18n="hero.title">Prompt Claro</h1>
         <p class="subtitle" data-i18n="hero.subtitle">De idea cruda a brief listo para ChatGPT, Claude, Gemini, Codex o Cursor.</p>
         <div class="hero-actions">
-          <button type="button" id="tryExample" data-i18n="hero.tryExample">Probar en 20 segundos</button>
+          <button type="button" id="tryExample" data-i18n="hero.tryExample">Crear mi prompt</button>
           <span data-i18n="hero.privacy">Lo que escribes no se guarda en una base de datos.</span>
         </div>
       </header>
@@ -72,8 +72,8 @@
         <div class="panel input-panel">
           <div class="panel-header">
             <div>
-              <h2 data-i18n="input.title">1. Elige el trabajo</h2>
-              <p data-i18n="input.subtitle">Primero selecciona qué quieres hacer. Después escribe o pega tu idea tal como está.</p>
+              <h2 data-i18n="input.title">1. Pega tu idea</h2>
+              <p data-i18n="input.subtitle">Escribe o pega lo que quieres pedirle a la IA, tal como lo tienes.</p>
             </div>
           </div>
 
@@ -82,45 +82,44 @@
             <p data-i18n="input.explainerCopy">Puede ser una idea, un mensaje, una llamada o un correo. La herramienta lo convierte en una instrucción clara para la IA.</p>
           </div>
 
-          <div class="form-grid first-step">
-            <label>
-              <span data-i18n="form.caseLabel">¿Qué tipo de trabajo es?</span>
-              <select id="caseType"></select>
-            </label>
-
-            <label>
-              <span data-i18n="form.outputLabel">¿Qué quieres recibir?</span>
-              <select id="outputFormat"></select>
-            </label>
-          </div>
-
-          <p class="choice-help" data-i18n="form.choiceHelp">Primero elige el tipo de trabajo y el resultado que quieres. Luego carga un ejemplo o escribe tu propio caso abajo.</p>
-
-          <div class="example-loader" aria-label="Ejemplo según selección">
-            <p id="selectedExamplePreview" class="selected-example-preview"></p>
-            <button type="button" id="loadSelectedExample" class="secondary" data-i18n="samples.selected">Cargar este ejemplo</button>
-            <p id="exampleStatus" class="example-status" data-i18n="samples.selectedHelp">Se cargará un caso de ejemplo según tu selección.</p>
-          </div>
-
-          <div class="step-divider">
-            <h2 data-i18n="notes.title">2. Escribe o pega tu caso</h2>
-            <p data-i18n="notes.subtitle">Puede ser un mensaje, una llamada, un correo, una idea o un texto medio revuelto.</p>
-          </div>
-
           <label for="rawNotes" data-i18n="notes.label">Tu idea, mensaje o texto, sin arreglar</label>
           <p class="field-help" data-i18n="notes.help">No lo maquilles. Escribe como piensas o pega lo que ya tienes; si hay dudas o datos faltantes, déjalos ahí.</p>
+          <p class="privacy-inline" data-i18n="privacy.inline">Tu texto se queda en este navegador. Solo enviamos tu estrella si calificas.</p>
           <textarea id="rawNotes" spellcheck="true" data-i18n-placeholder="notes.placeholder" placeholder="Ejemplo: el cliente mandó un mensaje, faltan datos, hay una fecha dudosa, quiere una respuesta para mañana..."></textarea>
 
-          <label for="desiredOutcome" data-i18n="outcome.label">Dile a la IA qué quieres que te entregue</label>
-          <input id="desiredOutcome" type="text">
+          <details class="options-box">
+            <summary data-i18n="options.summary">Opciones y ejemplos</summary>
+            <p class="choice-help" data-i18n="form.choiceHelp">Si quieres, ajusta el tipo de trabajo o usa un ejemplo. Si no, deja las opciones como están.</p>
 
-          <label class="check-row">
-            <input id="pendingRule" type="checkbox" checked>
-            <span data-i18n="pending.label">Si falta información, obligar a la IA a marcar [PENDIENTE]</span>
-          </label>
+            <div class="form-grid first-step">
+              <label>
+                <span data-i18n="form.caseLabel">¿Qué tipo de trabajo es?</span>
+                <select id="caseType"></select>
+              </label>
+
+              <label>
+                <span data-i18n="form.outputLabel">¿Qué quieres recibir?</span>
+                <select id="outputFormat"></select>
+              </label>
+            </div>
+
+            <div class="example-loader" aria-label="Ejemplo según selección">
+              <p id="selectedExamplePreview" class="selected-example-preview"></p>
+              <button type="button" id="loadSelectedExample" class="secondary" data-i18n="samples.selected">Usar este ejemplo</button>
+              <p id="exampleStatus" class="example-status" data-i18n="samples.selectedHelp">Se cargará un caso de ejemplo según tu selección.</p>
+            </div>
+
+            <label for="desiredOutcome" data-i18n="outcome.label">Dile a la IA qué quieres que te entregue</label>
+            <input id="desiredOutcome" type="text">
+
+            <label class="check-row">
+              <input id="pendingRule" type="checkbox" checked>
+              <span data-i18n="pending.label">Si falta información, obligar a la IA a marcar [PENDIENTE]</span>
+            </label>
+          </details>
 
           <div class="button-row">
-            <button type="button" id="generatePrompt" data-i18n="actions.generate">3. Generar prompt</button>
+            <button type="button" id="generatePrompt" data-i18n="actions.generate">2. Crear prompt</button>
             <button type="button" id="clearForm" class="secondary" data-i18n="actions.clear">Limpiar</button>
           </div>
         </div>
@@ -128,7 +127,7 @@
         <div class="panel output-panel">
           <div class="panel-header">
             <div>
-              <h2 data-i18n="output.title">4. Copia y usa</h2>
+              <h2 data-i18n="output.title">3. Copia y usa</h2>
               <p data-i18n="output.subtitle">Este texto lleva reglas para ordenar la información y reducir inventos.</p>
             </div>
           </div>
@@ -138,14 +137,14 @@
             <p data-i18n="output.nextCopy">Copia este prompt y pégalo en ChatGPT, Gemini, Claude o la IA que uses. Vas a darle una instrucción mucho más clara.</p>
           </div>
 
-          <pre id="promptOutput" aria-live="polite"></pre>
-
-          <div class="button-row">
+          <div class="button-row output-actions">
             <button type="button" id="copyPrompt" data-i18n="actions.copy">Copiar para tu IA</button>
             <button type="button" id="downloadPrompt" class="secondary" data-i18n="actions.download">Descargar .txt</button>
           </div>
 
           <p id="statusMessage" class="status" role="status"></p>
+
+          <pre id="promptOutput" aria-live="polite"></pre>
 
           <section class="verification is-hidden" aria-label="Verificación humana">
             <h3 data-i18n="verification.title">Antes de confiar en la respuesta de la IA</h3>
@@ -158,9 +157,9 @@
             </ol>
           </section>
 
-          <section class="answer-checker is-hidden" aria-label="Verificar respuesta de IA">
-            <h3 data-i18n="answer.title">5. Verifica la respuesta</h3>
-            <p data-i18n="answer.copy">Pega la respuesta que te dio la IA. Prompt Claro creará otro prompt para revisar si inventó, omitió o asumió algo.</p>
+          <details class="answer-checker is-hidden" aria-label="Crear prompt para revisar respuesta de IA">
+            <summary data-i18n="answer.title">Crear prompt para revisar la respuesta</summary>
+            <p data-i18n="answer.copy">Después de que tu IA responda, pega aquí esa respuesta. Prompt Claro hará otro prompt para revisar si inventó, omitió o asumió algo.</p>
             <label for="aiAnswer" data-i18n="answer.label">Respuesta de la IA</label>
             <textarea id="aiAnswer" class="compact-textarea" spellcheck="true" data-i18n-placeholder="answer.placeholder" placeholder="Pega aquí la respuesta de ChatGPT, Claude, Gemini o la IA que usaste..."></textarea>
             <div class="button-row">
@@ -169,7 +168,7 @@
             </div>
             <pre id="verificationPromptOutput" class="verification-output is-hidden" aria-live="polite"></pre>
             <p id="verificationStatus" class="status" role="status"></p>
-          </section>
+          </details>
 
           <section id="feedbackBox" class="feedback-box is-hidden" aria-label="Calificar herramienta">
             <h3 data-i18n="feedback.title">¿Te sirvió?</h3>
@@ -196,12 +195,12 @@
 
       <footer class="site-footer">
         <span data-i18n="footer.creator">Creado por Albert Punj</span>
-        <span data-i18n="footer.meta">v0.1.8 · © 2026 Albert Punj · Lanzado 7 May 2026</span>
+        <span data-i18n="footer.meta">v0.1.9 · © 2026 Albert Punj · Lanzado 7 May 2026</span>
         <a href="LICENSE" data-i18n="footer.license">MIT License</a>
         <a href="info.html" data-i18n="footer.info">Cómo funciona y términos</a>
       </footer>
     </main>
 
-    <script src="app.js?v=0.1.8-star-rating-20260507"></script>
+    <script src="app.js?v=0.1.9-mobile-launch-20260507"></script>
   </body>
 </html>

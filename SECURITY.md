@@ -14,13 +14,13 @@ issues.
 
 ## Privacy boundary
 
-Prompt Claro / Clear Prompt Builder is designed as a static browser tool:
+Prompt Claro / Clear Prompt Builder is designed as a browser-first tool:
 
-- no backend
 - no login
-- no database
 - no API key required
 - no intentional server-side storage of user text
+- prompt generation happens in the browser
+- optional star ratings may be stored with basic metadata such as language, work type, page path, session ID, and browser user agent
 
 Please discuss any contribution that would change this boundary before opening
 a pull request.

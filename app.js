@@ -1,5 +1,5 @@
 const caseKeys = ["general", "legal", "consulting", "cx", "operations", "coding", "proposal"];
-const outputKeys = ["facts", "summary", "draft", "actionPlan", "email", "risks"];
+const outputKeys = ["clear", "facts", "summary", "draft", "actionPlan", "email", "risks"];
 
 const translations = {
   es: {
@@ -12,26 +12,27 @@ const translations = {
       "hero.eyebrow": "Gratis · Sin login · Sin instalar nada",
       "hero.title": "Prompt Claro",
       "hero.subtitle": "De idea cruda a brief listo para ChatGPT, Claude, Gemini, Codex o Cursor.",
-      "hero.tryExample": "Probar en 20 segundos",
-      "hero.privacy": "Lo que escribes no se guarda en una base de datos.",
+      "hero.tryExample": "Crear mi prompt",
+      "hero.privacy": "Tu texto no se envía para generar el prompt.",
       "why.label": "Error común al pedir IA",
       "why.copy": "La mayoría pide: \"ayúdame a mejorar esto. Hablé con un cliente; ventas está desordenado. Dame un plan.\" La IA tiene que adivinar tarea, contexto, formato, faltantes y riesgos. Elige abajo y acláralo primero.",
       "proof.label": "Ejemplo rápido",
       "proof.weakLabel": "Antes",
       "proof.weak": "Hazme un contrato de arrendamiento.",
       "proof.betterLabel": "Con Prompt Claro",
-      "proof.better": "La IA debe marcar partes, GST/IVA, fechas, penalización y jurisdicción como [PENDING]/[PENDIENTE] si no están confirmados.",
+      "proof.better": "La IA debe marcar partes, IVA/RFC, fechas, penalización y jurisdicción como [PENDIENTE] si no están confirmados.",
       "steps.one": "Elige el trabajo",
       "steps.two": "Carga o pega",
       "steps.three": "Copia a tu IA",
-      "input.title": "1. Elige el trabajo",
-      "input.subtitle": "Primero selecciona qué quieres hacer. Después escribe o pega tu idea tal como está.",
+      "input.title": "1. Pega tu idea",
+      "input.subtitle": "Escribe o pega lo que quieres pedirle a la IA, tal como lo tienes.",
       "input.explainerTitle": "No tienes que arreglarlo antes.",
       "input.explainerCopy": "Puede ser una idea, un mensaje, una llamada o un correo. La herramienta lo convierte en una instrucción clara para la IA.",
       "form.caseLabel": "¿Qué tipo de trabajo es?",
       "form.outputLabel": "¿Qué quieres recibir?",
-      "form.choiceHelp": "Primero elige el tipo de trabajo y el resultado que quieres. Luego carga un ejemplo o escribe tu propio caso abajo.",
-      "samples.selected": "Cargar este ejemplo",
+      "form.choiceHelp": "Si quieres, ajusta el tipo de trabajo o usa un ejemplo. Si no, deja las opciones como están.",
+      "options.summary": "Opciones y ejemplos",
+      "samples.selected": "Usar este ejemplo",
       "samples.selectedHelp": "Se cargará un caso de ejemplo según tu selección.",
       "samples.cx": "Cargar ejemplo de mensaje",
       "samples.consultoria": "Cargar ejemplo de consultoría",
@@ -41,11 +42,12 @@ const translations = {
       "notes.label": "Tu idea, mensaje o texto, sin arreglar",
       "notes.help": "No lo maquilles. Escribe como piensas o pega lo que ya tienes; si hay dudas o datos faltantes, déjalos ahí.",
       "notes.placeholder": "Ejemplo: quiero responder a un cliente, tengo estos datos, falta confirmar la fecha, no quiero prometer algo que no sé...",
+      "privacy.inline": "Tu texto se queda en este navegador. Solo enviamos tu estrella si calificas.",
       "outcome.label": "Dile a la IA qué quieres que te entregue",
       "pending.label": "Si falta información, obligar a la IA a marcar [PENDIENTE]",
-      "actions.generate": "3. Generar prompt",
+      "actions.generate": "2. Crear prompt",
       "actions.clear": "Limpiar",
-      "output.title": "4. Copia y usa",
+      "output.title": "3. Copia y usa",
       "output.subtitle": "Este texto lleva reglas para ordenar la información y reducir inventos.",
       "output.nextTitle": "Qué haces después",
       "output.nextCopy": "Copia este prompt y pégalo en ChatGPT, Gemini, Claude o la IA que uses. Cuando te responda, vuelve aquí si quieres revisar si inventó algo.",
@@ -63,7 +65,7 @@ const translations = {
       "verification.three": "¿Inventó algún dato que no estaba en tu texto?",
       "verification.four": "¿El resultado se puede rastrear a información real?",
       "verification.five": "¿Hay una decisión humana pendiente antes de usarlo?",
-      "answer.title": "¿Quieres revisar la respuesta?",
+      "answer.title": "Crear prompt para revisar la respuesta",
       "answer.copy": "Después de que tu IA responda, pega aquí esa respuesta. Prompt Claro hará un prompt para revisar si inventó, omitió o asumió algo.",
       "answer.label": "Pega la respuesta que te dio la IA",
       "answer.placeholder": "Pega aquí la respuesta de ChatGPT, Claude, Gemini o la IA que usaste...",
@@ -71,7 +73,7 @@ const translations = {
       "actions.copyVerify": "Copiar prompt de revisión",
       "privacy.note": "La herramienta no guarda lo que escribes. Si quieres borrarlo de la pantalla, presiona \"Limpiar\" o cierra la pestaña.",
       "footer.creator": "Creado por Albert Punj",
-      "footer.meta": "v0.1.8 · © 2026 Albert Punj · Lanzado 7 May 2026",
+      "footer.meta": "v0.1.9 · © 2026 Albert Punj · Lanzado 7 May 2026",
       "footer.license": "MIT License",
       "footer.info": "Cómo funciona y términos",
       "info.eyebrow": "Método NHA",
@@ -88,7 +90,7 @@ const translations = {
       "info.howFive": "Después de recibir la respuesta de la IA, pégala en la sección de revisión si quieres detectar inventos, faltantes o supuestos antes de usarla.",
       "info.browserTitle": "Cómo funciona",
       "info.browserOne": "La página arma el prompt en tu navegador. No necesitas instalar una app ni crear cuenta.",
-      "info.browserTwo": "La herramienta no guarda lo que escribes en una base de datos y no lo envía a nuestro servidor para generar el prompt.",
+      "info.browserTwo": "La herramienta no guarda lo que escribes en una base de datos y no lo envía a nuestro servidor para generar el prompt. Si calificas con estrellas, se puede guardar tu calificación con datos técnicos básicos como idioma, tipo de trabajo, ruta y navegador.",
       "info.browserThree": "Si quieres borrar lo que pegaste, presiona \"Limpiar\" o cierra la pestaña.",
       "info.privacyTitle": "Privacidad",
       "info.privacyOne": "Evita pegar información extremadamente sensible si no estás seguro de querer trabajar con ella en una página web.",
@@ -113,6 +115,7 @@ const translations = {
       proposal: "Propuesta comercial"
     },
     outputs: {
+      clear: "Respuesta clara",
       facts: "Lista de hechos y pendientes",
       summary: "Resumen ejecutivo",
       draft: "Borrador de documento",
@@ -139,9 +142,10 @@ const translations = {
       shareCopied: "Mensaje para compartir copiado.",
       shareFailed: "No se pudo copiar el mensaje. Copia el link manualmente.",
       ratingSaved: "Gracias. Tu calificación quedó registrada.",
-      ratingFailed: "No se pudo guardar ahora. Intenta otra vez.",
+      ratingFailed: "",
       verifyMissingOriginal: "Primero escribe o genera el prompt inicial; necesito tu texto original para comparar.",
       verifyMissingAnswer: "Pega la respuesta de la IA para poder verificarla.",
+      verifyLooksLikePrompt: "Parece que pegaste el prompt inicial. Primero pégalo en tu IA, espera la respuesta y pega aquí esa respuesta.",
       verifyGenerated: "Prompt de revisión listo. Cópialo y pégalo en tu IA para revisar la respuesta.",
       verifyCopyFirst: "Primero crea el prompt de revisión.",
       verifyCopied: "Prompt de revisión copiado. Pégalo en tu IA para revisar la respuesta.",
@@ -227,6 +231,7 @@ const translations = {
       general: ["Separa hechos, supuestos y pendientes.", "No inventes datos.", "Incluye preguntas de aclaración.", "Incluye riesgos de usar la salida sin revisión."]
     },
     formatGuidance: {
+      clear: "Entrega una respuesta clara y práctica. Separa lo confirmado, lo supuesto y lo pendiente. Incluye preguntas si falta información crítica. Máximo 500 palabras.",
       facts: "Entrega una lista práctica, no un reporte. Usa solo estas secciones: Hechos confirmados, Supuestos, Pendientes, Riesgos, Preguntas. Máximo 6 bullets por sección. Evita sub-secciones si no son necesarias.",
       summary: "Entrega un resumen ejecutivo breve, seguido de pendientes y riesgos. Máximo 500 palabras.",
       draft: "Solo redacta borrador si la información crítica está completa. Si falta información, primero lista preguntas y luego un borrador provisional marcado como tal.",
@@ -308,8 +313,8 @@ ${getShareUrl()}`
       "hero.eyebrow": "Free · No login · No app install",
       "hero.title": "Clear Prompt Builder",
       "hero.subtitle": "From rough idea to an AI-ready brief for ChatGPT, Claude, Gemini, Codex, or Cursor.",
-      "hero.tryExample": "Try in 20 seconds",
-      "hero.privacy": "What you write is not saved in a database.",
+      "hero.tryExample": "Create my prompt",
+      "hero.privacy": "Your text is not sent to generate the prompt.",
       "why.label": "Common prompt mistake",
       "why.copy": "Most people ask: \"Help me make this better. I spoke to a client; sales is messy. Give me a plan.\" AI has to guess the task, context, format, missing info, and risks. Choose below to make it clear first.",
       "proof.label": "Quick example",
@@ -320,14 +325,15 @@ ${getShareUrl()}`
       "steps.one": "Pick the work",
       "steps.two": "Load or paste",
       "steps.three": "Copy to AI",
-      "input.title": "1. Pick the work",
-      "input.subtitle": "First choose the kind of work. Then write or paste your rough ask as it is.",
+      "input.title": "1. Paste your idea",
+      "input.subtitle": "Write or paste what you want to ask AI, exactly as you have it.",
       "input.explainerTitle": "No need to polish it first.",
       "input.explainerCopy": "It can be an idea, message, call, or email. The tool turns it into a clear instruction for AI.",
       "form.caseLabel": "What type of work is this?",
       "form.outputLabel": "What do you want to receive?",
-      "form.choiceHelp": "Choose the work and the output you want. Then load a matching example or write your own case below.",
-      "samples.selected": "Load this example",
+      "form.choiceHelp": "Adjust the work type or use an example if you want. Otherwise, leave the defaults.",
+      "options.summary": "Options and examples",
+      "samples.selected": "Use this example",
       "samples.selectedHelp": "A sample case will load below based on your selection.",
       "samples.cx": "Load message example",
       "samples.consultoria": "Load consulting example",
@@ -337,11 +343,12 @@ ${getShareUrl()}`
       "notes.label": "Your idea, message, or text, unpolished",
       "notes.help": "Do not make it neat yet. Write it the way it came to you or paste what you already have.",
       "notes.placeholder": "Example: I want to reply to a client, I have these details, the date is not confirmed, I do not want to promise something I do not know...",
+      "privacy.inline": "Your text stays in this browser. We only send your star if you rate it.",
       "outcome.label": "Tell the AI what you want back",
       "pending.label": "If information is missing, force the AI to mark it as [PENDING]",
-      "actions.generate": "3. Generate prompt",
+      "actions.generate": "2. Create prompt",
       "actions.clear": "Clear",
-      "output.title": "4. Copy and use",
+      "output.title": "3. Copy and use",
       "output.subtitle": "This prompt includes rules to organize the information and reduce made-up details.",
       "output.nextTitle": "What to do next",
       "output.nextCopy": "Copy this prompt and paste it into ChatGPT, Gemini, Claude, or any AI you use. After it answers, come back here if you want to check whether it invented anything.",
@@ -359,7 +366,7 @@ ${getShareUrl()}`
       "verification.three": "Did it invent anything that was not in your text?",
       "verification.four": "Can the result be traced back to real information?",
       "verification.five": "Is there a human decision pending before using it?",
-      "answer.title": "Want to check the answer?",
+      "answer.title": "Create a prompt to check the answer",
       "answer.copy": "After your AI replies, paste that answer here. Clear Prompt Builder will make a checking prompt to catch invented, missed, or assumed details.",
       "answer.label": "Paste the answer you got from AI",
       "answer.placeholder": "Paste the response from ChatGPT, Claude, Gemini, or the AI you used...",
@@ -367,7 +374,7 @@ ${getShareUrl()}`
       "actions.copyVerify": "Copy checking prompt",
       "privacy.note": "The tool does not save what you write. To remove it from the screen, press \"Clear\" or close the tab.",
       "footer.creator": "Created by Albert Punj",
-      "footer.meta": "v0.1.8 · © 2026 Albert Punj · Released 7 May 2026",
+      "footer.meta": "v0.1.9 · © 2026 Albert Punj · Released 7 May 2026",
       "footer.license": "MIT License",
       "footer.info": "How it works and terms",
       "info.eyebrow": "NHA Method",
@@ -384,7 +391,7 @@ ${getShareUrl()}`
       "info.howFive": "After the AI answers, paste the response into the checking section if you want to catch invented details, missing information, or assumptions before using it.",
       "info.browserTitle": "How it works",
       "info.browserOne": "The page builds the prompt in your browser. You do not need to install an app or create an account.",
-      "info.browserTwo": "The tool does not save what you write in a database and does not send it to our server to generate the prompt.",
+      "info.browserTwo": "The tool does not save what you write in a database and does not send it to our server to generate the prompt. If you rate it with stars, your rating may be stored with basic technical details like language, work type, path, and browser.",
       "info.browserThree": "To remove what you pasted, press \"Clear\" or close the tab.",
       "info.privacyTitle": "Privacy",
       "info.privacyOne": "Avoid pasting extremely sensitive information if you are not sure you want to work with it on a web page.",
@@ -409,6 +416,7 @@ ${getShareUrl()}`
       proposal: "Commercial proposal"
     },
     outputs: {
+      clear: "Clear answer",
       facts: "Facts and pending items",
       summary: "Executive summary",
       draft: "Document draft",
@@ -435,9 +443,10 @@ ${getShareUrl()}`
       shareCopied: "Share message copied.",
       shareFailed: "Could not copy the message. Copy the link manually.",
       ratingSaved: "Thanks. Your rating was recorded.",
-      ratingFailed: "Could not save it right now. Try again.",
+      ratingFailed: "",
       verifyMissingOriginal: "First write or generate the initial prompt; I need your original text to compare.",
       verifyMissingAnswer: "Paste the AI response so it can be checked.",
+      verifyLooksLikePrompt: "It looks like you pasted the initial prompt. First paste it into your AI, wait for the answer, then paste that answer here.",
       verifyGenerated: "Checking prompt ready. Copy it and paste it into your AI to review the answer.",
       verifyCopyFirst: "Create the checking prompt first.",
       verifyCopied: "Checking prompt copied. Paste it into your AI to review the answer.",
@@ -493,6 +502,7 @@ ${getShareUrl()}`
       general: ["Separate facts, assumptions, and pending items.", "Do not invent data.", "Include clarification questions.", "Include risks of using the output without review."]
     },
     formatGuidance: {
+      clear: "Give a clear, practical answer. Separate confirmed facts, assumptions, and pending items. Include questions if critical information is missing. Maximum 500 words.",
       facts: "Give a practical list, not a report. Use only these sections: Confirmed facts, Assumptions, Pending items, Risks, Questions. Maximum 6 bullets per section. Avoid sub-sections unless necessary.",
       summary: "Give a brief executive summary, followed by pending items and risks. Maximum 500 words.",
       draft: "Only draft if critical information is complete. If information is missing, list questions first and then give a provisional draft marked as such.",
@@ -574,8 +584,8 @@ ${getShareUrl()}`
       "hero.eyebrow": "Free - Login नहीं - App install नहीं",
       "hero.title": "Clear Prompt Builder",
       "hero.subtitle": "Rough idea से ChatGPT, Claude, Gemini, Codex या Cursor के लिए AI-ready brief बनाएं.",
-      "hero.tryExample": "20 सेकंड में try करें",
-      "hero.privacy": "आप जो लिखते हैं, वह database में save नहीं होता.",
+      "hero.tryExample": "मेरा prompt बनाएं",
+      "hero.privacy": "Prompt बनाने के लिए आपका text server पर नहीं भेजा जाता.",
       "why.label": "Common prompting mistake",
       "why.copy": "Most people लिखते हैं: \"isko better bana do. Client से बात हुई; sales messy है. Plan दे दो.\" AI को task, context, format, missing info और risks guess करने पड़ते हैं. नीचे चुनकर पहले brief clear करें.",
       "proof.label": "Quick example",
@@ -586,14 +596,15 @@ ${getShareUrl()}`
       "steps.one": "काम चुनें",
       "steps.two": "Load या paste",
       "steps.three": "AI में copy",
-      "input.title": "1. काम चुनें",
-      "input.subtitle": "पहले काम का type चुनें. फिर अपनी rough बात जैसे है वैसे डाल दें.",
+      "input.title": "1. अपनी बात paste करें",
+      "input.subtitle": "AI से जो पूछना है, जैसा आपके पास है वैसा लिखें या paste करें.",
       "input.explainerTitle": "पहले polish करने की जरूरत नहीं.",
       "input.explainerCopy": "Idea, message, call या email कुछ भी हो सकता है. Tool उसे AI के लिए clear instruction में बदल देता है.",
       "form.caseLabel": "किस तरह का काम है?",
       "form.outputLabel": "AI से क्या output चाहिए?",
-      "form.choiceHelp": "काम और output चुनें. फिर matching example load करें या नीचे अपना case लिखें.",
-      "samples.selected": "यह example load करें",
+      "form.choiceHelp": "चाहें तो काम का type बदलें या example use करें. नहीं तो default रहने दें.",
+      "options.summary": "Options और examples",
+      "samples.selected": "यह example use करें",
       "samples.selectedHelp": "आपकी selection के हिसाब से sample case नीचे load होगा.",
       "samples.cx": "Message example load करें",
       "samples.consultoria": "Consulting example load करें",
@@ -603,11 +614,12 @@ ${getShareUrl()}`
       "notes.label": "आपकी बात, message या text, बिना polish किए",
       "notes.help": "Perfect बनाने की जरूरत नहीं. जैसे मन में आया है वैसे लिखें या जो already है वह paste कर दें.",
       "notes.placeholder": "Example: मुझे client को reply करना है, मेरे पास ये details हैं, date confirm नहीं है, मैं ऐसी बात promise नहीं करना चाहता जो मुझे पता नहीं...",
+      "privacy.inline": "आपका text इसी browser में रहता है. Rating दें तो सिर्फ star भेजा जाता है.",
       "outcome.label": "AI से क्या वापस चाहिए?",
       "pending.label": "अगर जानकारी missing है, AI को [PENDING] mark करने को कहें",
-      "actions.generate": "3. Prompt generate करें",
+      "actions.generate": "2. Prompt बनाएं",
       "actions.clear": "Clear",
-      "output.title": "4. Copy करें और use करें",
+      "output.title": "3. Copy करें और use करें",
       "output.subtitle": "इस prompt में information को order करने और invented details कम करने के rules हैं.",
       "output.nextTitle": "इसके बाद क्या करें",
       "output.nextCopy": "इस prompt को copy करें और ChatGPT, Gemini, Claude या जिस AI को आप use करते हैं उसमें paste करें. जवाब आने के बाद, अगर check करना है कि AI ने कुछ invent तो नहीं किया, यहां वापस आएं.",
@@ -625,7 +637,7 @@ ${getShareUrl()}`
       "verification.three": "क्या आपके text में न होने वाली कोई बात invent की?",
       "verification.four": "क्या result real information से trace हो सकता है?",
       "verification.five": "Use करने से पहले कोई human decision pending है?",
-      "answer.title": "AI का जवाब check करना है?",
+      "answer.title": "जवाब check करने वाला prompt बनाएं",
       "answer.copy": "आपकी AI जवाब दे दे, तो वह जवाब यहां paste करें. Clear Prompt Builder invented, missing या assumed details पकड़ने के लिए checking prompt बनाएगा.",
       "answer.label": "AI से मिला जवाब यहां paste करें",
       "answer.placeholder": "ChatGPT, Claude, Gemini या जिस AI को use किया, उसका response यहां paste करें...",
@@ -633,7 +645,7 @@ ${getShareUrl()}`
       "actions.copyVerify": "Checking prompt copy करें",
       "privacy.note": "यह tool आपकी लिखी हुई चीज़ save नहीं करता. Screen से हटाने के लिए \"Clear\" दबाएं या tab बंद करें.",
       "footer.creator": "Created by Albert Punj",
-      "footer.meta": "v0.1.8 · © 2026 Albert Punj · Released 7 May 2026",
+      "footer.meta": "v0.1.9 · © 2026 Albert Punj · Released 7 May 2026",
       "footer.license": "MIT License",
       "footer.info": "कैसे काम करता है और terms",
       "info.eyebrow": "NHA Method",
@@ -650,7 +662,7 @@ ${getShareUrl()}`
       "info.howFive": "AI जवाब दे दे, उसके बाद invented details, missing info या assumptions check करने के लिए response को checking section में paste करें.",
       "info.browserTitle": "यह कैसे काम करता है",
       "info.browserOne": "Page आपके browser में prompt बनाता है. App install या account बनाने की जरूरत नहीं.",
-      "info.browserTwo": "Tool आपकी लिखी हुई बात database में save नहीं करता और prompt बनाने के लिए हमारे server पर नहीं भेजता.",
+      "info.browserTwo": "Tool आपकी लिखी हुई बात database में save नहीं करता और prompt बनाने के लिए हमारे server पर नहीं भेजता. अगर आप star rating देते हैं, तो rating के साथ language, work type, path और browser जैसी basic technical details save हो सकती हैं.",
       "info.browserThree": "Paste की हुई चीज हटाने के लिए \"Clear\" दबाएं या tab बंद करें.",
       "info.privacyTitle": "Privacy",
       "info.privacyOne": "अगर आप sure नहीं हैं कि web page पर काम करना है, तो extremely sensitive information paste न करें.",
@@ -675,6 +687,7 @@ ${getShareUrl()}`
       proposal: "Commercial proposal"
     },
     outputs: {
+      clear: "Clear answer",
       facts: "Facts और pending items",
       summary: "Executive summary",
       draft: "Document draft",
@@ -701,9 +714,10 @@ ${getShareUrl()}`
       shareCopied: "Share message copy हो गया.",
       shareFailed: "Message copy नहीं हुआ. Link manually copy करें.",
       ratingSaved: "धन्यवाद. आपकी rating save हो गई.",
-      ratingFailed: "अभी save नहीं हो पाया. फिर try करें.",
+      ratingFailed: "",
       verifyMissingOriginal: "पहले initial prompt लिखें या generate करें; compare करने के लिए original text चाहिए.",
       verifyMissingAnswer: "Verify करने के लिए AI response paste करें.",
+      verifyLooksLikePrompt: "लगता है आपने initial prompt paste किया है. पहले इसे अपनी AI में paste करें, जवाब आने दें, फिर वह जवाब यहां paste करें.",
       verifyGenerated: "Checking prompt ready. इसे copy करके अपनी AI में paste करें ताकि जवाब review हो सके.",
       verifyCopyFirst: "पहले checking prompt बनाएं.",
       verifyCopied: "Checking prompt copy हो गया. इसे अपनी AI में paste करके जवाब review करें.",
@@ -759,6 +773,7 @@ ${getShareUrl()}`
       general: ["Facts, assumptions और pending items अलग करें.", "Data invent न करें.", "Clarification questions include करें.", "Review के बिना output use करने के risks include करें."]
     },
     formatGuidance: {
+      clear: "Clear और practical answer दें. Confirmed facts, assumptions और pending items अलग करें. Critical information missing हो तो questions include करें. Maximum 500 words.",
       facts: "Practical list दें, report नहीं. सिर्फ ये sections use करें: Confirmed facts, Assumptions, Pending items, Risks, Questions. हर section में maximum 6 bullets. जरूरत न हो तो sub-sections avoid करें.",
       summary: "Brief executive summary दें, फिर pending items और risks. Maximum 500 words.",
       draft: "Critical information complete हो तो ही draft लिखें. Information missing हो तो पहले questions list करें और फिर provisional draft clearly mark करें.",
@@ -840,8 +855,8 @@ ${getShareUrl()}`
       "hero.eyebrow": "Free - Login ਨਹੀਂ - App install ਨਹੀਂ",
       "hero.title": "Clear Prompt Builder",
       "hero.subtitle": "Rough idea ਤੋਂ ChatGPT, Claude, Gemini, Codex ਜਾਂ Cursor ਲਈ AI-ready brief ਬਣਾਓ.",
-      "hero.tryExample": "20 seconds ਵਿੱਚ try ਕਰੋ",
-      "hero.privacy": "ਤੁਸੀਂ ਜੋ ਲਿਖਦੇ ਹੋ, ਉਹ database ਵਿੱਚ save ਨਹੀਂ ਹੁੰਦਾ.",
+      "hero.tryExample": "ਮੇਰਾ prompt ਬਣਾਓ",
+      "hero.privacy": "Prompt ਬਣਾਉਣ ਲਈ ਤੁਹਾਡਾ text server ਤੇ ਨਹੀਂ ਭੇਜਿਆ ਜਾਂਦਾ.",
       "why.label": "Common prompting mistake",
       "why.copy": "Most people ਲਿਖਦੇ ਨੇ: \"eh better bana do. Client ਨਾਲ ਗੱਲ ਹੋਈ; sales messy ਹੈ. Plan ਦੇ ਦਿਓ.\" AI ਨੂੰ task, context, format, missing info ਤੇ risks guess ਕਰਨੇ ਪੈਂਦੇ ਨੇ. ਹੇਠਾਂ ਚੁਣਕੇ ਪਹਿਲਾਂ brief clear ਕਰੋ.",
       "proof.label": "Quick example",
@@ -852,14 +867,15 @@ ${getShareUrl()}`
       "steps.one": "ਕੰਮ ਚੁਣੋ",
       "steps.two": "Load ਜਾਂ paste",
       "steps.three": "AI ਵਿੱਚ copy",
-      "input.title": "1. ਕੰਮ ਚੁਣੋ",
-      "input.subtitle": "ਪਹਿਲਾਂ ਕੰਮ ਦੀ type ਚੁਣੋ. ਫਿਰ ਆਪਣੀ rough ਗੱਲ ਜਿਵੇਂ ਹੈ ਤਿਵੇਂ ਪਾ ਦਿਓ.",
+      "input.title": "1. ਆਪਣੀ ਗੱਲ paste ਕਰੋ",
+      "input.subtitle": "AI ਤੋਂ ਜੋ ਪੁੱਛਣਾ ਹੈ, ਜਿਵੇਂ ਤੁਹਾਡੇ ਕੋਲ ਹੈ ਤਿਵੇਂ ਲਿਖੋ ਜਾਂ paste ਕਰੋ.",
       "input.explainerTitle": "ਪਹਿਲਾਂ polish ਕਰਨ ਦੀ ਲੋੜ ਨਹੀਂ.",
       "input.explainerCopy": "Idea, message, call ਜਾਂ email ਕੁਝ ਵੀ ਹੋ ਸਕਦਾ ਹੈ. Tool ਇਸਨੂੰ AI ਲਈ clear instruction ਬਣਾ ਦਿੰਦਾ ਹੈ.",
       "form.caseLabel": "ਕਿਸ type ਦਾ ਕੰਮ ਹੈ?",
       "form.outputLabel": "AI ਤੋਂ ਕੀ output ਚਾਹੀਦਾ ਹੈ?",
-      "form.choiceHelp": "ਕੰਮ ਅਤੇ output ਚੁਣੋ. ਫਿਰ matching example load ਕਰੋ ਜਾਂ ਹੇਠਾਂ ਆਪਣਾ case ਲਿਖੋ.",
-      "samples.selected": "ਇਹ example load ਕਰੋ",
+      "form.choiceHelp": "ਚਾਹੋ ਤਾਂ ਕੰਮ ਦੀ type ਬਦਲੋ ਜਾਂ example use ਕਰੋ. ਨਹੀਂ ਤਾਂ default ਰਹਿਣ ਦਿਓ.",
+      "options.summary": "Options ਅਤੇ examples",
+      "samples.selected": "ਇਹ example use ਕਰੋ",
       "samples.selectedHelp": "ਤੁਹਾਡੀ selection ਦੇ ਹਿਸਾਬ ਨਾਲ sample case ਹੇਠਾਂ load ਹੋਵੇਗਾ.",
       "samples.cx": "Message example load ਕਰੋ",
       "samples.consultoria": "Consulting example load ਕਰੋ",
@@ -869,11 +885,12 @@ ${getShareUrl()}`
       "notes.label": "ਤੁਹਾਡੀ ਗੱਲ, message ਜਾਂ text, ਬਿਨਾਂ polish ਕੀਤੇ",
       "notes.help": "Perfect ਬਣਾਉਣ ਦੀ ਲੋੜ ਨਹੀਂ. ਜਿਵੇਂ ਮਨ ਵਿੱਚ ਆਇਆ ਹੈ ਤਿਵੇਂ ਲਿਖੋ ਜਾਂ ਜੋ already ਹੈ ਉਹ paste ਕਰ ਦਿਓ.",
       "notes.placeholder": "Example: ਮੈਨੂੰ client ਨੂੰ reply ਕਰਨਾ ਹੈ, ਮੇਰੇ ਕੋਲ ਇਹ details ਹਨ, date confirm ਨਹੀਂ, ਮੈਂ ਅਜਿਹੀ ਗੱਲ promise ਨਹੀਂ ਕਰਨੀ ਜੋ ਮੈਨੂੰ ਪਤਾ ਨਹੀਂ...",
+      "privacy.inline": "ਤੁਹਾਡਾ text ਇਸ browser ਵਿੱਚ ਰਹਿੰਦਾ ਹੈ. Rating ਦਿਓ ਤਾਂ ਸਿਰਫ star ਭੇਜਿਆ ਜਾਂਦਾ ਹੈ.",
       "outcome.label": "AI ਤੋਂ ਵਾਪਸ ਕੀ ਚਾਹੀਦਾ ਹੈ?",
       "pending.label": "ਜੇ information missing ਹੈ, AI ਨੂੰ [PENDING] mark ਕਰਨ ਲਈ ਕਹੋ",
-      "actions.generate": "3. Prompt generate ਕਰੋ",
+      "actions.generate": "2. Prompt ਬਣਾਓ",
       "actions.clear": "Clear",
-      "output.title": "4. Copy ਕਰੋ ਤੇ use ਕਰੋ",
+      "output.title": "3. Copy ਕਰੋ ਤੇ use ਕਰੋ",
       "output.subtitle": "ਇਸ prompt ਵਿੱਚ information ਨੂੰ order ਕਰਨ ਅਤੇ invented details ਘਟਾਉਣ ਦੇ rules ਹਨ.",
       "output.nextTitle": "ਇਸ ਤੋਂ ਬਾਅਦ ਕੀ ਕਰਨਾ ਹੈ",
       "output.nextCopy": "ਇਹ prompt copy ਕਰੋ ਤੇ ChatGPT, Gemini, Claude ਜਾਂ ਜਿਸ AI ਨੂੰ ਤੁਸੀਂ use ਕਰਦੇ ਹੋ ਉਸ ਵਿੱਚ paste ਕਰੋ. ਜਵਾਬ ਆਉਣ ਤੋਂ ਬਾਅਦ, ਜੇ check ਕਰਨਾ ਹੈ ਕਿ AI ਨੇ ਕੁਝ invent ਤਾਂ ਨਹੀਂ ਕੀਤਾ, ਇੱਥੇ ਵਾਪਸ ਆਓ.",
@@ -891,7 +908,7 @@ ${getShareUrl()}`
       "verification.three": "ਕੀ ਤੁਹਾਡੇ text ਵਿੱਚ ਨਾ ਹੋਣ ਵਾਲੀ ਕੋਈ ਗੱਲ invent ਕੀਤੀ?",
       "verification.four": "ਕੀ result real information ਨਾਲ trace ਹੋ ਸਕਦਾ ਹੈ?",
       "verification.five": "Use ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਕੋਈ human decision pending ਹੈ?",
-      "answer.title": "AI ਦਾ ਜਵਾਬ check ਕਰਨਾ ਹੈ?",
+      "answer.title": "ਜਵਾਬ check ਕਰਨ ਵਾਲਾ prompt ਬਣਾਓ",
       "answer.copy": "ਤੁਹਾਡੀ AI ਜਵਾਬ ਦੇ ਦੇਵੇ, ਤਾਂ ਉਹ ਜਵਾਬ ਇੱਥੇ paste ਕਰੋ. Clear Prompt Builder invented, missing ਜਾਂ assumed details ਫੜਨ ਲਈ checking prompt ਬਣਾਵੇਗਾ.",
       "answer.label": "AI ਤੋਂ ਮਿਲਿਆ ਜਵਾਬ ਇੱਥੇ paste ਕਰੋ",
       "answer.placeholder": "ChatGPT, Claude, Gemini ਜਾਂ ਜਿਸ AI ਨੂੰ use ਕੀਤਾ, ਉਸਦਾ response ਇੱਥੇ paste ਕਰੋ...",
@@ -899,7 +916,7 @@ ${getShareUrl()}`
       "actions.copyVerify": "Checking prompt copy ਕਰੋ",
       "privacy.note": "ਇਹ tool ਤੁਹਾਡੀ ਲਿਖੀ ਚੀਜ਼ save ਨਹੀਂ ਕਰਦਾ. Screen ਤੋਂ ਹਟਾਉਣ ਲਈ \"Clear\" ਦਬਾਓ ਜਾਂ tab close ਕਰੋ.",
       "footer.creator": "Created by Albert Punj",
-      "footer.meta": "v0.1.8 · © 2026 Albert Punj · Released 7 May 2026",
+      "footer.meta": "v0.1.9 · © 2026 Albert Punj · Released 7 May 2026",
       "footer.license": "MIT License",
       "footer.info": "ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ ਅਤੇ terms",
       "info.eyebrow": "NHA Method",
@@ -916,7 +933,7 @@ ${getShareUrl()}`
       "info.howFive": "AI ਜਵਾਬ ਦੇ ਦੇਵੇ, ਉਸ ਤੋਂ ਬਾਅਦ invented details, missing info ਜਾਂ assumptions check ਕਰਨ ਲਈ response ਨੂੰ checking section ਵਿੱਚ paste ਕਰੋ.",
       "info.browserTitle": "ਇਹ ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ",
       "info.browserOne": "Page ਤੁਹਾਡੇ browser ਵਿੱਚ prompt ਬਣਾਉਂਦਾ ਹੈ. App install ਜਾਂ account ਬਣਾਉਣ ਦੀ ਲੋੜ ਨਹੀਂ.",
-      "info.browserTwo": "Tool ਤੁਹਾਡੀ ਲਿਖੀ ਗੱਲ database ਵਿੱਚ save ਨਹੀਂ ਕਰਦਾ ਤੇ prompt ਬਣਾਉਣ ਲਈ ਸਾਡੇ server ਤੇ ਨਹੀਂ ਭੇਜਦਾ.",
+      "info.browserTwo": "Tool ਤੁਹਾਡੀ ਲਿਖੀ ਗੱਲ database ਵਿੱਚ save ਨਹੀਂ ਕਰਦਾ ਤੇ prompt ਬਣਾਉਣ ਲਈ ਸਾਡੇ server ਤੇ ਨਹੀਂ ਭੇਜਦਾ. ਜੇ ਤੁਸੀਂ star rating ਦਿੰਦੇ ਹੋ, ਤਾਂ rating ਨਾਲ language, work type, path ਅਤੇ browser ਵਰਗੀਆਂ basic technical details save ਹੋ ਸਕਦੀਆਂ ਹਨ.",
       "info.browserThree": "Paste ਕੀਤੀ ਚੀਜ਼ ਹਟਾਉਣ ਲਈ \"Clear\" ਦਬਾਓ ਜਾਂ tab close ਕਰੋ.",
       "info.privacyTitle": "Privacy",
       "info.privacyOne": "ਜੇ ਤੁਸੀਂ sure ਨਹੀਂ ਕਿ web page ਤੇ ਕੰਮ ਕਰਨਾ ਹੈ, ਤਾਂ extremely sensitive information paste ਨਾ ਕਰੋ.",
@@ -941,6 +958,7 @@ ${getShareUrl()}`
       proposal: "Commercial proposal"
     },
     outputs: {
+      clear: "Clear answer",
       facts: "Facts ਅਤੇ pending items",
       summary: "Executive summary",
       draft: "Document draft",
@@ -967,9 +985,10 @@ ${getShareUrl()}`
       shareCopied: "Share message copy ਹੋ ਗਿਆ.",
       shareFailed: "Message copy ਨਹੀਂ ਹੋਇਆ. Link manually copy ਕਰੋ.",
       ratingSaved: "ਧੰਨਵਾਦ. ਤੁਹਾਡੀ rating save ਹੋ ਗਈ.",
-      ratingFailed: "ਹੁਣੇ save ਨਹੀਂ ਹੋਇਆ. ਫਿਰ try ਕਰੋ.",
+      ratingFailed: "",
       verifyMissingOriginal: "ਪਹਿਲਾਂ initial prompt ਲਿਖੋ ਜਾਂ generate ਕਰੋ; compare ਕਰਨ ਲਈ original text ਚਾਹੀਦਾ ਹੈ.",
       verifyMissingAnswer: "Verify ਕਰਨ ਲਈ AI response paste ਕਰੋ.",
+      verifyLooksLikePrompt: "ਲੱਗਦਾ ਹੈ ਤੁਸੀਂ initial prompt paste ਕੀਤਾ ਹੈ. ਪਹਿਲਾਂ ਇਸਨੂੰ ਆਪਣੀ AI ਵਿੱਚ paste ਕਰੋ, ਜਵਾਬ ਆਉਣ ਦਿਓ, ਫਿਰ ਉਹ ਜਵਾਬ ਇੱਥੇ paste ਕਰੋ.",
       verifyGenerated: "Checking prompt ready. ਇਸਨੂੰ copy ਕਰਕੇ ਆਪਣੀ AI ਵਿੱਚ paste ਕਰੋ ਤਾਂ ਕਿ ਜਵਾਬ review ਹੋ ਸਕੇ.",
       verifyCopyFirst: "ਪਹਿਲਾਂ checking prompt ਬਣਾਓ.",
       verifyCopied: "Checking prompt copy ਹੋ ਗਿਆ. ਇਸਨੂੰ ਆਪਣੀ AI ਵਿੱਚ paste ਕਰਕੇ ਜਵਾਬ review ਕਰੋ.",
@@ -1025,6 +1044,7 @@ ${getShareUrl()}`
       general: ["Facts, assumptions ਅਤੇ pending items ਵੱਖ ਕਰੋ.", "Data invent ਨਾ ਕਰੋ.", "Clarification questions include ਕਰੋ.", "Review ਤੋਂ ਬਿਨਾਂ output use ਕਰਨ ਦੇ risks include ਕਰੋ."]
     },
     formatGuidance: {
+      clear: "Clear ਅਤੇ practical answer ਦਿਓ. Confirmed facts, assumptions ਅਤੇ pending items ਵੱਖ ਕਰੋ. Critical information missing ਹੋਵੇ ਤਾਂ questions include ਕਰੋ. Maximum 500 words.",
       facts: "Practical list ਦਿਓ, report ਨਹੀਂ. ਸਿਰਫ ਇਹ sections use ਕਰੋ: Confirmed facts, Assumptions, Pending items, Risks, Questions. ਹਰ section ਵਿੱਚ maximum 6 bullets. ਲੋੜ ਨਾ ਹੋਵੇ ਤਾਂ sub-sections avoid ਕਰੋ.",
       summary: "Brief executive summary ਦਿਓ, ਫਿਰ pending items ਅਤੇ risks. Maximum 500 words.",
       draft: "Critical information complete ਹੋਵੇ ਤਾਂ ਹੀ draft ਲਿਖੋ. Information missing ਹੋਵੇ ਤਾਂ ਪਹਿਲਾਂ questions list ਕਰੋ ਅਤੇ ਫਿਰ provisional draft clearly mark ਕਰੋ.",
@@ -1258,6 +1278,7 @@ const verificationStatus = document.querySelector("#verificationStatus");
 const selectedExamplePreview = document.querySelector("#selectedExamplePreview");
 const exampleStatus = document.querySelector("#exampleStatus");
 const languageSelects = document.querySelectorAll("[data-language-select]");
+let ratingSubmitted = false;
 
 const localizedPageNames = {
   es: "",
@@ -1381,7 +1402,7 @@ function populateOptions() {
   if (!caseType || !outputFormat) return;
 
   const previousCase = caseType.value || "general";
-  const previousOutput = outputFormat.value || "facts";
+  const previousOutput = outputFormat.value || "clear";
   const languageData = translations[currentLanguage];
 
   caseType.innerHTML = "";
@@ -1400,7 +1421,7 @@ function populateOptions() {
     option.textContent = languageData.outputs[key];
     outputFormat.appendChild(option);
   });
-  outputFormat.value = outputKeys.includes(previousOutput) ? previousOutput : "facts";
+  outputFormat.value = outputKeys.includes(previousOutput) ? previousOutput : "clear";
 }
 
 function getSelectedExamplePreviewText(selectedCase = caseType.value, selectedOutput = outputFormat.value) {
@@ -1508,9 +1529,18 @@ function showAnswerChecker() {
 
 function hideAnswerChecker() {
   if (answerChecker) answerChecker.classList.add("is-hidden");
+  if (answerChecker && "open" in answerChecker) answerChecker.open = false;
 }
 
-function showPostPromptFlow() {
+function showGeneratedFlow() {
+  if (humanChecklist) humanChecklist.classList.add("is-hidden");
+  if (feedbackBox) feedbackBox.classList.add("is-hidden");
+  if (shareBox) shareBox.classList.add("is-hidden");
+  hideAnswerChecker();
+  resetRatingState();
+}
+
+function showCopiedFlow() {
   if (humanChecklist) humanChecklist.classList.remove("is-hidden");
   if (feedbackBox) feedbackBox.classList.remove("is-hidden");
   if (shareBox) shareBox.classList.remove("is-hidden");
@@ -1554,9 +1584,25 @@ function setSelectedRating(rating) {
   });
 }
 
+function setRatingButtonsDisabled(disabled) {
+  ratingButtons.forEach((button) => {
+    button.disabled = disabled;
+  });
+}
+
+function resetRatingState() {
+  ratingSubmitted = false;
+  setRatingButtonsDisabled(false);
+  setSelectedRating(0);
+  setFeedbackStatus("");
+}
+
 async function submitRating(rating) {
   const languageData = translations[currentLanguage];
+  if (ratingSubmitted) return;
+
   setSelectedRating(rating);
+  setRatingButtonsDisabled(true);
   setFeedbackStatus("");
 
   try {
@@ -1574,9 +1620,11 @@ async function submitRating(rating) {
     });
 
     if (!response.ok) throw new Error("Rating failed");
+    ratingSubmitted = true;
     setFeedbackStatus(languageData.statuses.ratingSaved);
   } catch {
-    setFeedbackStatus(languageData.statuses.ratingFailed, true);
+    ratingSubmitted = true;
+    setFeedbackStatus(languageData.statuses.ratingFailed, false);
   }
 }
 
@@ -1624,6 +1672,26 @@ ${languageData.prompt.formatRequested}: ${languageData.outputs[selectedFormat]}
 ${languageData.formatGuidance[selectedFormat]}`;
 }
 
+function looksLikeInitialPrompt(answer, originalPrompt) {
+  const normalizedAnswer = answer.trim();
+  const normalizedPrompt = originalPrompt && !isEmptyPrompt(originalPrompt)
+    ? originalPrompt.trim()
+    : "";
+
+  if (normalizedPrompt && normalizedAnswer === normalizedPrompt) return true;
+
+  const promptMarkers = [
+    "[TAREA]", "[TASK]", "[काम]", "[ਕੰਮ]",
+    "[CONTEXTO]", "[CONTEXT]", "[संदर्भ]", "[ਸੰਦਰਭ]",
+    "[TEXTO ORIGINAL]", "[ORIGINAL TEXT]", "[मूल टेक्स्ट]", "[ਮੂਲ text]",
+    "[EXPECTATIVA]", "[EXPECTATION]", "[उम्मीद]", "[ਉਮੀਦ]",
+    "[FORMATO DE SALIDA]", "[OUTPUT FORMAT]"
+  ];
+
+  const markerCount = promptMarkers.filter((marker) => normalizedAnswer.includes(marker)).length;
+  return markerCount >= 3;
+}
+
 function buildVerificationPrompt() {
   const languageData = translations[currentLanguage];
   const audit = languageData.auditPrompt;
@@ -1643,6 +1711,11 @@ function buildVerificationPrompt() {
 
   if (!answer) {
     setVerificationStatus(languageData.statuses.verifyMissingAnswer, true);
+    return "";
+  }
+
+  if (looksLikeInitialPrompt(answer, originalPrompt)) {
+    setVerificationStatus(languageData.statuses.verifyLooksLikePrompt, true);
     return "";
   }
 
@@ -1711,6 +1784,14 @@ function nudgeToOutputPanel() {
   nudgeToElement(".output-panel");
 }
 
+function nudgeToCopyButton() {
+  nudgeToElement("#copyPrompt");
+}
+
+function nudgeToInput() {
+  nudgeToElement("#rawNotes");
+}
+
 function nudgeToVerificationPrompt() {
   nudgeToElement(".verification-output");
 }
@@ -1738,9 +1819,9 @@ function loadSample(sampleName, generateImmediately = false) {
   if (generateImmediately) {
     const prompt = buildPrompt();
     renderPromptOutput(prompt);
-    showPostPromptFlow();
+    showGeneratedFlow();
     setStatus(languageData.statuses.sampleReady);
-    nudgeToOutputPanel();
+    nudgeToCopyButton();
     return;
   }
 
@@ -1761,7 +1842,7 @@ function loadSelectedExample() {
   const message = getSelectedExampleLoadedText(selectedCase, selectedOutput);
   if (exampleStatus) exampleStatus.textContent = message;
   setStatus(message);
-  document.querySelector(".step-divider").scrollIntoView({ behavior: "smooth", block: "start" });
+  nudgeToInput();
 }
 
 function setupToolPage() {
@@ -1772,13 +1853,14 @@ function setupToolPage() {
     if (!prompt) return;
     renderPromptOutput(prompt);
     resetVerificationResult();
-    showPostPromptFlow();
+    showGeneratedFlow();
     setStatus(translations[currentLanguage].statuses.generated);
-    nudgeToOutputPanel();
+    nudgeToCopyButton();
   });
 
   document.querySelector("#tryExample").addEventListener("click", () => {
-    loadSample("cx", true);
+    nudgeToInput();
+    if (rawNotes) rawNotes.focus({ preventScroll: true });
   });
 
   document.querySelector("#loadSelectedExample").addEventListener("click", () => {
@@ -1805,7 +1887,7 @@ function setupToolPage() {
 
     try {
       await navigator.clipboard.writeText(prompt);
-      showPostPromptFlow();
+      showCopiedFlow();
       setStatus(languageData.statuses.copied);
     } catch {
       const range = document.createRange();
@@ -1813,7 +1895,7 @@ function setupToolPage() {
       const selection = window.getSelection();
       selection.removeAllRanges();
       selection.addRange(range);
-      showPostPromptFlow();
+      showCopiedFlow();
       setStatus(languageData.statuses.selected, true);
     }
   });
@@ -1894,13 +1976,12 @@ function setupToolPage() {
     const languageData = translations[currentLanguage];
     rawNotes.value = "";
     caseType.value = "general";
-    outputFormat.value = "facts";
+    outputFormat.value = "clear";
     desiredOutcome.value = languageData.defaults.outcome;
     renderPromptOutput(languageData.defaults.emptyPrompt);
     resetVerificationPrompt();
     hidePostPromptFlow();
-    setSelectedRating(0);
-    setFeedbackStatus("");
+    resetRatingState();
     if (exampleStatus) exampleStatus.textContent = t("samples.selectedHelp");
     setStatus("");
   });

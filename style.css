@@ -278,6 +278,37 @@ h1 {
   line-height: 1.45;
 }
 
+.privacy-inline {
+  margin: -4px 0 10px;
+  color: var(--accent-dark);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.options-box {
+  margin-top: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px;
+  background: #fbfcff;
+}
+
+.options-box summary,
+.answer-checker summary {
+  cursor: pointer;
+  color: var(--ink);
+  font-weight: 900;
+}
+
+.options-box summary {
+  font-size: 15px;
+}
+
+.options-box[open] summary {
+  margin-bottom: 12px;
+}
+
 label {
   display: grid;
   gap: 7px;
@@ -442,7 +473,7 @@ pre {
   min-height: 392px;
   max-height: 560px;
   overflow: auto;
-  margin: 0;
+  margin: 14px 0 0;
   border: 1px solid var(--line);
   border-radius: 7px;
   padding: 16px;
@@ -491,6 +522,14 @@ pre {
   border: 1px solid #b7ddd4;
   border-radius: 8px;
   background: #ffffff;
+}
+
+.output-actions {
+  margin-top: 0;
+}
+
+#copyPrompt {
+  scroll-margin-top: 18px;
 }
 
 .share-box {
@@ -548,6 +587,11 @@ pre {
   border-color: #d6a33f;
   background: #fff8e5;
   color: #d6a33f;
+}
+
+.star-button:disabled {
+  cursor: default;
+  opacity: 0.75;
 }
 
 .verification-output {
@@ -658,9 +702,68 @@ pre {
   }
 
   .app-shell {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     max-width: 720px;
     padding: 24px 12px 32px;
+  }
+
+  .language-row {
+    order: 1;
+  }
+
+  .hero {
+    order: 2;
+    margin-bottom: 14px;
+  }
+
+  .workspace {
+    order: 3;
+  }
+
+  .why-strip {
+    order: 4;
+    margin-top: 16px;
+  }
+
+  .proof-strip {
+    order: 5;
+  }
+
+  .site-footer {
+    order: 6;
+  }
+
+  .subtitle {
+    font-size: 17px;
+  }
+
+  .hero-actions {
+    margin-top: 12px;
+  }
+
+  .why-strip,
+  .proof-strip {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .why-strip p,
+  .proof-grid p {
+    font-size: 14px;
+  }
+
+  .panel {
+    padding: 18px;
+  }
+
+  .input-panel .panel-header {
+    margin-bottom: 12px;
+  }
+
+  .simple-explainer {
+    padding: 12px;
   }
 
   .language-row {
@@ -678,6 +781,16 @@ pre {
   .sample-actions button,
   .example-loader button {
     width: 100%;
+  }
+
+  .output-actions #downloadPrompt {
+    display: none;
+  }
+
+  pre {
+    min-height: 190px;
+    max-height: 260px;
+    padding: 13px;
   }
 
   .hero-actions span {
