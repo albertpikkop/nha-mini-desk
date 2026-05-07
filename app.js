@@ -1157,106 +1157,118 @@ Quiere "usar IA", pero todavía no está claro el alcance, presupuesto, fechas n
 Necesitamos convertir esta información en una propuesta clara, sin inventar precios ni prometer cosas que no están confirmadas.`
   },
   en: {
-    general: `Initial idea:
+    general: `Career context:
 
-I want to organize an idea for improving how my team uses AI at work. I have several loose thoughts, some doubts, and I do not know where to start.
+I am a young professional applying for product analyst and operations roles in India. I have a rough resume, some internship experience, and a few scattered project notes, but I do not know what to highlight.
 
-I want to understand what is already clear, what is missing, what risks exist, and what the next logical step should be.
+My experience is mixed: one internship at a startup, one college project on dashboards, some Excel and SQL work, and a few things I learned from YouTube and online courses.
 
-Some things are still unknown: available time, exact tools, budget, owner, and priority.`,
-    operations: `Operations context:
+I want help turning this into a clear next step: what strengths are already visible, what is still weak, what should be rewritten, and what questions I should answer before using AI to improve my resume or LinkedIn.
 
-The team is receiving customer enquiries through WhatsApp, Gmail, and phone calls.
+Still unclear: exact target role, salary expectation, strongest project, and whether I should position myself as analyst, operations, or product support.`,
+    operations: `Postgraduate context:
 
-There is no single pending list. Sometimes two people work on the same thing and other tasks have no owner.
+I am doing postgraduation and everything is mixed right now. I have coursework deadlines, one seminar presentation, messages from my guide, a part-time internship task, and I am also trying to apply for jobs.
 
-We need to organize priorities, owners, dates, and risks. It is still unclear who approves changes, which tasks are urgent, and what should be escalated to the business owner.
+Some tasks are urgent, some are important but not urgent, and some are just half-written notes in WhatsApp and Google Keep.
 
-We need a clear way to turn this into actions.`,
-    coding: `Technical context:
+I need a clear action list with priorities, owners, dates, and risks so I stop carrying everything in my head.
 
-I am building a React dashboard for an Indian services business. After login, some users sometimes land on a blank page.
+Still unclear: which deadline is fixed, what can be postponed, how much time I actually have this week, and what needs professor approval first.`,
+    coding: `Coding context:
 
-The issue is inconsistent. I once saw "token expired" in the browser console, but I am not sure if that is the root cause. It may also happen after page refresh.
+I am learning C++ and data structures. I wrote a small program for a college assignment, but it either gives the wrong output or crashes on some test cases.
 
-Missing details: exact browser, route, package versions, backend logs, reproduction steps, and whether this happens in production or only locally.
+I suspect the problem is around pointers, array bounds, or how I am updating values inside a loop, but I am not fully sure.
 
-I need a practical debugging plan without inventing file paths, functions, or dependencies that I have not provided.`,
-    proposal: `Proposal context:
+I have the code, sample input, expected output, and what I observed, but I do not yet have a precise root cause.
 
-An Indian client wants help organizing their sales follow-up process. They use WhatsApp, Excel, and Gmail, but do not have a clear flow.
+I need a debugging plan and a better AI prompt that helps me explain the bug clearly without inventing functions, file names, or assumptions that are not in my code.`,
+    proposal: `Freelance proposal context:
 
-They want to "use AI", but scope, budget in INR, dates, and internal owner are still unclear.
+I am an early-career developer and a local coaching institute in India asked if I can build a simple website plus enquiry form for them.
 
-We need to turn this information into a clear proposal without inventing prices or promising anything unconfirmed.`
+They want something fast and affordable. They mentioned pages for courses, faculty, contact, and a form, but they have not confirmed content, timeline, hosting, or budget in INR.
+
+They also casually asked whether AI can help them answer student queries later, but that part is still vague.
+
+I need to turn this into a clear proposal without inventing scope, delivery dates, or pricing that has not been discussed.`
   },
   hi: {
-    general: `Initial idea:
+    general: `Career context:
 
-मैं अपनी team के AI use को improve करने की idea organize करना चाहता हूं. मेरे पास loose thoughts हैं, कुछ doubts हैं, और पता नहीं कहां से शुरू करूं.
+मैं एक young professional हूं और product analyst, operations associate या similar roles के लिए apply कर रहा हूं. Resume rough है, internship experience थोड़ी है, और projects की details बिखरी हुई हैं.
 
-मुझे समझना है कि क्या clear है, क्या missing है, कौनसे risks हैं, और next logical step क्या होगा.
+मेरे पास startup internship, college project, Excel/SQL work और कुछ online learning के notes हैं, लेकिन समझ नहीं आ रहा कि क्या highlight करूं.
 
-कुछ चीज़ें अभी unknown हैं: time available, exact tools, budget, owner और priority.`,
-    operations: `Operations context:
+मुझे clear next step चाहिए: अभी मेरी profile में क्या strong दिख रहा है, क्या weak है, क्या rewrite करना चाहिए, और AI से resume या LinkedIn improve कराने से पहले कौनसे सवाल answer करने चाहिए.
 
-Team को customer enquiries WhatsApp, Gmail और phone calls से मिल रही हैं.
+अभी unclear है: exact target role, salary expectation, strongest project, और खुद को analyst, operations या product support कैसे position करूं.`,
+    operations: `Postgraduation context:
 
-Single pending list नहीं है. कभी दो लोग एक ही काम कर लेते हैं और कुछ tasks बिना owner के रह जाते हैं.
+मैं postgraduation कर रहा हूं और सब कुछ mix हो गया है. Coursework deadlines हैं, एक seminar presentation है, guide के messages हैं, part-time internship task है, और साथ में job applications भी चल रही हैं.
 
-Priorities, owners, dates और risks organize करने हैं. कौन changes approve करेगा, कौनसे tasks urgent हैं, और क्या business owner को escalate करना है, यह अभी clear नहीं.
+कुछ काम urgent हैं, कुछ important हैं लेकिन urgent नहीं, और कुछ सिर्फ WhatsApp और notes app में half-written पड़े हैं.
 
-हमें इसे actions में बदलने का clear तरीका चाहिए.`,
-    coding: `Technical context:
+मुझे एक clear action list चाहिए जिसमें priorities, dates, risks और next steps हों ताकि सब दिमाग में carry न करना पड़े.
 
-मैं एक React dashboard बना रहा हूं. Login के बाद कुछ users कभी-कभी blank page पर अटक जाते हैं.
+अभी unclear है: कौनसी deadline fixed है, क्या postpone हो सकता है, इस हफ्ते actual available time कितना है, और किस चीज़ के लिए professor approval चाहिए.`,
+    coding: `Coding context:
 
-Issue consistent नहीं है. Console में एक बार "token expired" दिखा, लेकिन sure नहीं कि वही root cause है. Page refresh के बाद भी हो सकता है.
+मैं C++ और data structures सीख रहा हूं. College assignment या practice problem के लिए code लिखा है, लेकिन कुछ test cases पर wrong output आता है या program crash हो जाता है.
 
-Missing details: exact browser, route, package versions, backend logs, reproduction steps, और यह production में होता है या सिर्फ local में.
+मुझे lag रहा है issue pointers, array bounds, loop update या input handling में हो सकता है, लेकिन exact root cause clear नहीं है.
 
-मुझे practical debugging plan चाहिए, बिना file paths, functions या dependencies invent किए.`,
-    proposal: `Proposal context:
+मेरे पास code, sample input, expected output और observed output है, लेकिन explanation अभी messy है.
 
-एक Indian client अपने sales follow-up process को organize करने में help चाहता है. वह WhatsApp, Excel और Gmail use करता है, लेकिन clear flow नहीं है.
+मुझे practical debugging plan और better AI prompt चाहिए ताकि मैं bug को साफ तरीके से explain कर सकूं, बिना file paths, functions या assumptions invent किए.`,
+    proposal: `Freelance proposal context:
 
-वह "AI use" करना चाहता है, लेकिन scope, INR budget, dates और internal owner अभी clear नहीं.
+मैं early-career developer हूं और एक local coaching institute ने पूछा है कि क्या मैं उनके लिए simple website और enquiry form बना सकता हूं.
 
-हमें इस information को clear proposal में बदलना है, बिना prices invent किए या unconfirmed चीज़ promise किए.`
+उन्हें courses, faculty, contact और form वाले pages चाहिए, लेकिन content, timeline, hosting और INR budget अभी confirm नहीं हैं.
+
+उन्होंने casually यह भी पूछा कि बाद में AI student enquiries में मदद कर सकती है या नहीं, लेकिन वह part अभी vague है.
+
+मुझे इस information को clear proposal में बदलना है, बिना scope, price या dates invent किए.`
   },
   pa: {
-    general: `Initial idea:
+    general: `Career context:
 
-ਮੈਂ ਆਪਣੀ team ਦੇ AI use ਨੂੰ improve ਕਰਨ ਦੀ idea organize ਕਰਨੀ ਚਾਹੁੰਦਾ ਹਾਂ. ਮੇਰੇ ਕੋਲ loose thoughts ਹਨ, ਕੁਝ doubts ਹਨ, ਅਤੇ ਪਤਾ ਨਹੀਂ ਕਿੱਥੋਂ ਸ਼ੁਰੂ ਕਰਾਂ.
+ਮੈਂ ਇੱਕ young professional ਹਾਂ ਅਤੇ product analyst, operations associate ਜਾਂ similar roles ਲਈ apply ਕਰ ਰਿਹਾ ਹਾਂ. Resume rough ਹੈ, internship experience ਥੋੜ੍ਹੀ ਹੈ, ਅਤੇ projects ਦੀਆਂ details ਬਿਖਰੀਆਂ ਪਈਆਂ ਹਨ.
 
-ਮੈਨੂੰ ਸਮਝਣਾ ਹੈ ਕਿ ਕੀ clear ਹੈ, ਕੀ missing ਹੈ, ਕਿਹੜੇ risks ਹਨ, ਅਤੇ next logical step ਕੀ ਹੋਵੇਗਾ.
+ਮੇਰੇ ਕੋਲ startup internship, college project, Excel/SQL work ਅਤੇ ਕੁਝ online learning ਦੇ notes ਹਨ, ਪਰ ਸਮਝ ਨਹੀਂ ਆ ਰਿਹਾ ਕਿ ਕੀ highlight ਕਰਾਂ.
 
-ਕੁਝ ਚੀਜ਼ਾਂ ਅਜੇ unknown ਹਨ: time available, exact tools, budget, owner ਅਤੇ priority.`,
-    operations: `Operations context:
+ਮੈਨੂੰ clear next step ਚਾਹੀਦਾ ਹੈ: ਹੁਣ ਤੱਕ profile ਵਿੱਚ ਕੀ strong ਦਿਖ ਰਿਹਾ ਹੈ, ਕੀ weak ਹੈ, ਕੀ rewrite ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ, ਅਤੇ AI ਨਾਲ resume ਜਾਂ LinkedIn improve ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਕਿਹੜੇ ਸਵਾਲ clear ਕਰਨੇ ਚਾਹੀਦੇ ਹਨ.
 
-Team ਨੂੰ customer enquiries WhatsApp, Gmail ਅਤੇ phone calls ਤੋਂ ਆ ਰਹੀਆਂ ਹਨ.
+ਅਜੇ unclear ਹੈ: exact target role, salary expectation, strongest project, ਅਤੇ ਆਪਣੇ ਆਪ ਨੂੰ analyst, operations ਜਾਂ product support ਵਾਂਗ ਕਿਵੇਂ position ਕਰਾਂ.`,
+    operations: `Postgraduation context:
 
-Single pending list ਨਹੀਂ ਹੈ. ਕਦੇ ਦੋ ਲੋਕ ਇੱਕੋ ਕੰਮ ਕਰ ਲੈਂਦੇ ਹਨ ਅਤੇ ਕੁਝ tasks ਬਿਨਾਂ owner ਦੇ ਰਹਿ ਜਾਂਦੇ ਹਨ.
+ਮੈਂ postgraduation ਕਰ ਰਿਹਾ ਹਾਂ ਅਤੇ ਸਭ ਕੁਝ mix ਹੋ ਗਿਆ ਹੈ. Coursework deadlines ਹਨ, ਇੱਕ seminar presentation ਹੈ, guide ਦੇ messages ਹਨ, part-time internship task ਹੈ, ਅਤੇ ਨਾਲ job applications ਵੀ ਚੱਲ ਰਹੀਆਂ ਹਨ.
 
-Priorities, owners, dates ਅਤੇ risks organize ਕਰਨੇ ਹਨ. ਕੌਣ changes approve ਕਰੇਗਾ, ਕਿਹੜੇ tasks urgent ਹਨ, ਅਤੇ ਕੀ business owner ਨੂੰ escalate ਕਰਨਾ ਹੈ, ਇਹ ਅਜੇ clear ਨਹੀਂ.
+ਕੁਝ ਕੰਮ urgent ਹਨ, ਕੁਝ important ਹਨ ਪਰ urgent ਨਹੀਂ, ਅਤੇ ਕੁਝ ਸਿਰਫ WhatsApp ਅਤੇ notes app ਵਿੱਚ half-written ਪਏ ਹਨ.
 
-ਸਾਨੂੰ ਇਸ ਨੂੰ actions ਵਿੱਚ ਬਦਲਣ ਦਾ clear ਤਰੀਕਾ ਚਾਹੀਦਾ ਹੈ.`,
-    coding: `Technical context:
+ਮੈਨੂੰ ਇੱਕ clear action list ਚਾਹੀਦੀ ਹੈ ਜਿਸ ਵਿੱਚ priorities, dates, risks ਅਤੇ next steps ਹੋਣ ਤਾਂ ਕਿ ਸਭ ਕੁਝ ਦਿਮਾਗ ਵਿੱਚ carry ਨਾ ਕਰਨਾ ਪਵੇ.
 
-ਮੈਂ ਇੱਕ React dashboard ਬਣਾ ਰਿਹਾ ਹਾਂ. Login ਤੋਂ ਬਾਅਦ ਕੁਝ users ਕਦੇ-ਕਦੇ blank page ਤੇ stuck ਹੋ ਜਾਂਦੇ ਹਨ.
+ਅਜੇ unclear ਹੈ: ਕਿਹੜੀ deadline fixed ਹੈ, ਕੀ postpone ਹੋ ਸਕਦਾ ਹੈ, ਇਸ ਹਫ਼ਤੇ actual available time ਕਿੰਨਾ ਹੈ, ਅਤੇ ਕਿਸ ਚੀਜ਼ ਲਈ professor approval ਚਾਹੀਦੀ ਹੈ.`,
+    coding: `Coding context:
 
-Issue consistent ਨਹੀਂ ਹੈ. Console ਵਿੱਚ ਇੱਕ ਵਾਰੀ "token expired" ਦਿਖਿਆ ਸੀ, ਪਰ sure ਨਹੀਂ ਕਿ root cause ਉਹੀ ਹੈ. Page refresh ਤੋਂ ਬਾਅਦ ਵੀ ਹੋ ਸਕਦਾ ਹੈ.
+ਮੈਂ C++ ਅਤੇ data structures ਸਿੱਖ ਰਿਹਾ ਹਾਂ. College assignment ਜਾਂ practice problem ਲਈ code ਲਿਖਿਆ ਹੈ, ਪਰ ਕੁਝ test cases ਤੇ wrong output ਆਉਂਦੀ ਹੈ ਜਾਂ program crash ਹੋ ਜਾਂਦਾ ਹੈ.
 
-Missing details: exact browser, route, package versions, backend logs, reproduction steps, ਅਤੇ ਇਹ production ਵਿੱਚ ਹੁੰਦਾ ਹੈ ਜਾਂ ਸਿਰਫ local ਵਿੱਚ.
+ਮੈਨੂੰ ਲੱਗਦਾ ਹੈ issue pointers, array bounds, loop update ਜਾਂ input handling ਵਿੱਚ ਹੋ ਸਕਦਾ ਹੈ, ਪਰ exact root cause clear ਨਹੀਂ ਹੈ.
 
-ਮੈਨੂੰ practical debugging plan ਚਾਹੀਦਾ ਹੈ, ਬਿਨਾਂ file paths, functions ਜਾਂ dependencies invent ਕੀਤੇ.`,
-    proposal: `Proposal context:
+ਮੇਰੇ ਕੋਲ code, sample input, expected output ਅਤੇ observed output ਹੈ, ਪਰ explanation ਅਜੇ messy ਹੈ.
 
-ਇੱਕ Indian client ਆਪਣੇ sales follow-up process ਨੂੰ organize ਕਰਨ ਵਿੱਚ help ਚਾਹੁੰਦਾ ਹੈ. ਉਹ WhatsApp, Excel ਅਤੇ Gmail use ਕਰਦਾ ਹੈ, ਪਰ clear flow ਨਹੀਂ ਹੈ.
+ਮੈਨੂੰ practical debugging plan ਅਤੇ better AI prompt ਚਾਹੀਦਾ ਹੈ ਤਾਂ ਕਿ bug ਨੂੰ ਸਾਫ਼ ਤਰੀਕੇ ਨਾਲ explain ਕਰ ਸਕਾਂ, ਬਿਨਾਂ file paths, functions ਜਾਂ assumptions invent ਕੀਤੇ.`,
+    proposal: `Freelance proposal context:
 
-ਉਹ "AI use" ਕਰਨਾ ਚਾਹੁੰਦਾ ਹੈ, ਪਰ scope, INR budget, dates ਅਤੇ internal owner ਅਜੇ clear ਨਹੀਂ.
+ਮੈਂ early-career developer ਹਾਂ ਅਤੇ ਇੱਕ local coaching institute ਨੇ ਪੁੱਛਿਆ ਹੈ ਕਿ ਕੀ ਮੈਂ ਉਹਨਾਂ ਲਈ simple website ਅਤੇ enquiry form ਬਣਾ ਸਕਦਾ ਹਾਂ.
 
-ਸਾਨੂੰ ਇਸ information ਨੂੰ clear proposal ਵਿੱਚ ਬਦਲਣਾ ਹੈ, ਬਿਨਾਂ prices invent ਕੀਤੇ ਜਾਂ unconfirmed ਚੀਜ਼ promise ਕੀਤੇ.`
+ਉਹਨਾਂ ਨੂੰ courses, faculty, contact ਅਤੇ form ਵਾਲੇ pages ਚਾਹੀਦੇ ਹਨ, ਪਰ content, timeline, hosting ਅਤੇ INR budget ਅਜੇ confirm ਨਹੀਂ ਹਨ.
+
+ਉਹਨਾਂ ਨੇ casually ਇਹ ਵੀ ਪੁੱਛਿਆ ਕਿ ਬਾਅਦ ਵਿੱਚ AI student enquiries ਵਿੱਚ help ਕਰ ਸਕਦੀ ਹੈ ਜਾਂ ਨਹੀਂ, ਪਰ ਇਹ part ਅਜੇ vague ਹੈ.
+
+ਮੈਨੂੰ ਇਸ information ਨੂੰ clear proposal ਵਿੱਚ ਬਦਲਣਾ ਹੈ, ਬਿਨਾਂ scope, price ਜਾਂ dates invent ਕੀਤੇ.`
   }
 };
 
