@@ -57,6 +57,7 @@ const translations = {
       "feedback.copy": "Toca una estrella. Eso es todo.",
       "share.title": "¿Te ayudó este método?",
       "share.copy": "Si te sirvió, mándaselo a alguien que todavía le pide cosas a la IA de forma desordenada.",
+      "share.languageLabel": "Elige idioma y luego el grupo de WhatsApp:",
       "actions.share": "Copiar invitación para compartir",
       "verification.title": "Antes de confiar en la respuesta de la IA",
       "verification.one": "¿La IA separó hechos de supuestos?",
@@ -358,6 +359,7 @@ ${getShareUrl()}`
       "feedback.copy": "Tap one star. That is it.",
       "share.title": "Did this method help?",
       "share.copy": "If it helped, share it with someone who still sends messy asks straight into AI.",
+      "share.languageLabel": "Choose language, then choose the WhatsApp group:",
       "actions.share": "Copy invitation to share",
       "verification.title": "Before trusting the AI response",
       "verification.one": "Did the AI separate facts from assumptions?",
@@ -629,6 +631,7 @@ ${getShareUrl()}`
       "feedback.copy": "एक star tap कर दें. बस.",
       "share.title": "क्या यह method helpful लगा?",
       "share.copy": "अगर काम आया, तो इसे ऐसे किसी व्यक्ति को भेजें जो अभी भी rough बात सीधे AI में डाल देता है.",
+      "share.languageLabel": "Language चुनें, फिर WhatsApp group चुनें:",
       "actions.share": "Share invitation copy करें",
       "verification.title": "AI response पर भरोसा करने से पहले",
       "verification.one": "क्या AI ने facts और assumptions अलग किए?",
@@ -900,6 +903,7 @@ ${getShareUrl()}`
       "feedback.copy": "ਇੱਕ star tap ਕਰ ਦਿਓ. ਬੱਸ.",
       "share.title": "ਕੀ ਇਹ method helpful ਲੱਗਾ?",
       "share.copy": "ਜੇ ਕੰਮ ਆਇਆ, ਤਾਂ ਇਹ ਕਿਸੇ ਐਸੇ person ਨੂੰ ਭੇਜੋ ਜੋ ਅਜੇ ਵੀ rough ਗੱਲ ਸਿੱਧੀ AI ਵਿੱਚ ਪਾ ਦਿੰਦਾ ਹੈ.",
+      "share.languageLabel": "Language ਚੁਣੋ, ਫਿਰ WhatsApp group ਚੁਣੋ:",
       "actions.share": "Share invitation copy ਕਰੋ",
       "verification.title": "AI response ਤੇ trust ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ",
       "verification.one": "ਕੀ AI ਨੇ facts ਤੇ assumptions ਵੱਖ ਕੀਤੇ?",
@@ -1295,13 +1299,28 @@ function getLocalizedPath(language) {
   return `${basePath}${pageName}`;
 }
 
-function getShareUrl() {
+function getShareUrl(language = currentLanguage) {
   if (window.location.protocol === "file:") return "[LINK]";
   const url = new URL(window.location.href);
-  url.pathname = getLocalizedPath(currentLanguage);
+  url.pathname = getLocalizedPath(language);
   url.search = "";
   url.hash = "";
   return url.toString();
+}
+
+function getShareText(language = currentLanguage) {
+  const languageData = translations[language] || translations.es;
+  const previousLanguage = currentLanguage;
+  currentLanguage = language;
+  const text = languageData.shareText();
+  currentLanguage = previousLanguage;
+  return text;
+}
+
+function openWhatsAppShare(language = currentLanguage) {
+  const text = getShareText(language);
+  const url = `https://wa.me/?text=${encodeURIComponent(text)}`;
+  window.open(url, "_blank", "noopener,noreferrer");
 }
 
 function t(key) {
@@ -1923,11 +1942,18 @@ function setupToolPage() {
   document.querySelector("#copyShare").addEventListener("click", async () => {
     const languageData = translations[currentLanguage];
     try {
-      await navigator.clipboard.writeText(languageData.shareText());
+      await navigator.clipboard.writeText(getShareText(currentLanguage));
       setStatus(languageData.statuses.shareCopied);
     } catch {
       setStatus(languageData.statuses.shareFailed, true);
     }
+  });
+
+  document.querySelectorAll("[data-share-language]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const language = button.dataset.shareLanguage || currentLanguage;
+      openWhatsAppShare(language);
+    });
   });
 
   ratingButtons.forEach((button) => {
