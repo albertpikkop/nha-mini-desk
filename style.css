@@ -483,6 +483,14 @@ pre {
   background: #fbfcff;
 }
 
+.feedback-box {
+  margin-top: 18px;
+  padding: 16px;
+  border: 1px solid #b7ddd4;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
 .share-box {
   margin-top: 18px;
   padding: 16px;
@@ -492,12 +500,14 @@ pre {
 }
 
 .share-box h3,
+.feedback-box h3,
 .answer-checker h3 {
   margin-bottom: 6px;
   font-size: 16px;
 }
 
 .share-box p,
+.feedback-box p,
 .answer-checker p {
   margin-bottom: 12px;
   color: var(--muted);
@@ -506,6 +516,15 @@ pre {
 
 .compact-textarea {
   min-height: 150px;
+}
+
+.feedback-textarea {
+  min-height: 110px;
+}
+
+.feedback-note {
+  margin: 10px 0 0 !important;
+  font-size: 13px;
 }
 
 .verification-output {

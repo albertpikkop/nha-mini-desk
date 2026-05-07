@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.1.6 - 2026-05-07
+
+- Added an in-page feedback card that appears after a user generates a prompt.
+- Feedback can be copied or shared through the device share sheet / WhatsApp.
+- Kept the feedback flow browser-only so the tool still has no login, backend, or database.
+
 ## v0.1.5 - 2026-05-07
 
 - Simplified the first-use journey so the core flow is pick work, load or paste, generate, copy to AI.

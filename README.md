@@ -3,7 +3,7 @@
 > Turn messy thoughts into a first prompt that is clear enough to use, then optionally check the AI answer against the original text.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-0.1.5-blue.svg)](VERSION)
+[![Version](https://img.shields.io/badge/version-0.1.6-blue.svg)](VERSION)
 [![No Backend](https://img.shields.io/badge/backend-none-lightgrey.svg)](#privacy)
 [![Browser Only](https://img.shields.io/badge/runs-in_browser-brightgreen.svg)](#quick-start)
 
@@ -51,6 +51,7 @@ visible.
 - Includes a human checklist before trusting AI output.
 - Reveals the answer-checking flow only after the first prompt is ready.
 - Generates a checking prompt to audit the AI response against the original text.
+- Lets users copy or share feedback after trying the tool, without adding login or a backend.
 
 ## Quick start
 
