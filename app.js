@@ -1431,7 +1431,9 @@ function getInitialLanguage() {
   if (translations[requestedLanguage]) return requestedLanguage;
 
   const pageName = window.location.pathname.split("/").pop().toLowerCase();
-  const pageLanguage = Object.entries(localizedPageNames).find(([, name]) => name === pageName);
+  const pageLanguage = pageName
+    ? Object.entries(localizedPageNames).find(([, name]) => name === pageName)
+    : null;
   if (pageLanguage && translations[pageLanguage[0]]) return pageLanguage[0];
 
   const savedLanguage = getSavedLanguagePreference();
