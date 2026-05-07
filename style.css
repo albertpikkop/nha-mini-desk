@@ -14,6 +14,10 @@
   box-sizing: border-box;
 }
 
+.is-hidden {
+  display: none !important;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -126,6 +130,39 @@ h1 {
   color: var(--muted);
   font-size: 15px;
   line-height: 1.42;
+  overflow-wrap: anywhere;
+}
+
+.proof-strip {
+  margin: -2px 0 18px;
+  padding: 14px 16px;
+  border: 1px solid #b7ddd4;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.proof-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.4fr);
+  gap: 16px;
+}
+
+.proof-grid div {
+  min-width: 0;
+}
+
+.proof-grid strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--ink);
+  font-size: 14px;
+}
+
+.proof-grid p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.45;
   overflow-wrap: anywhere;
 }
 
@@ -568,6 +605,7 @@ pre {
   .workspace,
   .form-grid,
   .why-strip,
+  .proof-grid,
   .quick-steps {
     grid-template-columns: 1fr;
   }

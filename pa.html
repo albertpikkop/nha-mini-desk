@@ -21,7 +21,7 @@
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://www.ashishpunj.com/nha-tce/og-image-pa.png">
-    <link rel="stylesheet" href="style.css?v=0.1.4-verify-loop1-20260506">
+    <link rel="stylesheet" href="style.css?v=0.1.5-core-flow1-20260507">
   </head>
   <body>
     <main class="app-shell">
@@ -51,6 +51,20 @@
           <span><strong>1</strong> <span data-i18n="steps.one">Elige el trabajo</span></span>
           <span><strong>2</strong> <span data-i18n="steps.two">Carga o pega</span></span>
           <span><strong>3</strong> <span data-i18n="steps.three">Copia a tu IA</span></span>
+        </div>
+      </section>
+
+      <section class="proof-strip" aria-label="Quick example">
+        <p class="mini-label" data-i18n="proof.label">Quick example</p>
+        <div class="proof-grid">
+          <div>
+            <strong data-i18n="proof.weakLabel">Before</strong>
+            <p data-i18n="proof.weak">Lease agreement ਬਣਾ ਦਿਓ.</p>
+          </div>
+          <div>
+            <strong data-i18n="proof.betterLabel">Clear Prompt Builder ਨਾਲ</strong>
+            <p data-i18n="proof.better">AI ਨੂੰ party details, GST, dates, penalty ਅਤੇ jurisdiction ਨੂੰ [PENDING] mark ਕਰਨਾ ਪਵੇਗਾ ਜੇ confirm ਨਹੀਂ ਹਨ.</p>
+          </div>
         </div>
       </section>
 
@@ -133,7 +147,7 @@
 
           <p id="statusMessage" class="status" role="status"></p>
 
-          <section class="verification" aria-label="Human verification">
+          <section class="verification is-hidden" aria-label="Human verification">
             <h3 data-i18n="verification.title">Antes de confiar en la respuesta de la IA</h3>
             <ol>
               <li data-i18n="verification.one">¿La IA separó hechos de supuestos?</li>
@@ -144,20 +158,20 @@
             </ol>
           </section>
 
-          <section class="answer-checker" aria-label="AI response verify ਕਰੋ">
-            <h3 data-i18n="answer.title">5. AI response verify ਕਰੋ</h3>
+          <section class="answer-checker is-hidden" aria-label="AI response check ਕਰੋ">
+            <h3 data-i18n="answer.title">AI ਦਾ ਜਵਾਬ check ਕਰਨਾ ਹੈ?</h3>
             <p data-i18n="answer.copy">AI ਦਾ response ਇੱਥੇ paste ਕਰੋ. Clear Prompt Builder ਦੂਜਾ prompt ਬਣਾਵੇਗਾ ਤਾਂ ਜੋ ਪਤਾ ਲੱਗੇ AI ਨੇ ਕੁਝ invent, miss ਜਾਂ assume ਤਾਂ ਨਹੀਂ ਕੀਤਾ.</p>
             <label for="aiAnswer" data-i18n="answer.label">AI ਦਾ response</label>
             <textarea id="aiAnswer" class="compact-textarea" spellcheck="true" data-i18n-placeholder="answer.placeholder" placeholder="ChatGPT, Claude, Gemini ਜਾਂ ਜਿਸ AI ਨੂੰ use ਕੀਤਾ, ਉਸਦਾ response ਇੱਥੇ paste ਕਰੋ..."></textarea>
             <div class="button-row">
-              <button type="button" id="generateVerificationPrompt" class="secondary" data-i18n="actions.verify">Verification prompt ਬਣਾਓ</button>
+              <button type="button" id="generateVerificationPrompt" class="secondary" data-i18n="actions.verify">Checking prompt ਬਣਾਓ</button>
               <button type="button" id="copyVerificationPrompt" class="secondary" data-i18n="actions.copyVerify">Verification copy ਕਰੋ</button>
             </div>
-            <pre id="verificationPromptOutput" class="verification-output" aria-live="polite"></pre>
+            <pre id="verificationPromptOutput" class="verification-output is-hidden" aria-live="polite"></pre>
             <p id="verificationStatus" class="status" role="status"></p>
           </section>
 
-          <section id="shareBox" class="share-box" aria-label="Tool share ਕਰੋ">
+          <section id="shareBox" class="share-box is-hidden" aria-label="Tool share ਕਰੋ">
             <h3 data-i18n="share.title">¿Te ayudó este método?</h3>
             <p data-i18n="share.copy">Si te sirvió, mándaselo a alguien que todavía le pide cosas a la IA de forma desordenada.</p>
             <button type="button" id="copyShare" class="secondary" data-i18n="actions.share">Copiar invitación para compartir</button>
@@ -169,12 +183,12 @@
 
       <footer class="site-footer">
         <span data-i18n="footer.creator">Creado por Albert Punj</span>
-        <span data-i18n="footer.meta">v0.1.4 · © 2026 Albert Punj · Released 6 May 2026</span>
+        <span data-i18n="footer.meta">v0.1.5 · © 2026 Albert Punj · Released 7 May 2026</span>
         <a href="LICENSE" data-i18n="footer.license">MIT License</a>
         <a href="info.html" data-i18n="footer.info">Cómo funciona y términos</a>
       </footer>
     </main>
 
-    <script src="app.js?v=0.1.4-verify-loop1-20260506"></script>
+    <script src="app.js?v=0.1.5-core-flow1-20260507"></script>
   </body>
 </html>

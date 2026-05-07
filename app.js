@@ -16,6 +16,11 @@ const translations = {
       "hero.privacy": "Lo que escribes no se guarda en una base de datos.",
       "why.label": "Error común al pedir IA",
       "why.copy": "La mayoría pide: \"ayúdame a mejorar esto. Hablé con un cliente; ventas está desordenado. Dame un plan.\" La IA tiene que adivinar tarea, contexto, formato, faltantes y riesgos. Elige abajo y acláralo primero.",
+      "proof.label": "Ejemplo rápido",
+      "proof.weakLabel": "Antes",
+      "proof.weak": "Hazme un contrato de arrendamiento.",
+      "proof.betterLabel": "Con Prompt Claro",
+      "proof.better": "La IA debe marcar partes, GST/IVA, fechas, penalización y jurisdicción como [PENDING]/[PENDIENTE] si no están confirmados.",
       "steps.one": "Elige el trabajo",
       "steps.two": "Carga o pega",
       "steps.three": "Copia a tu IA",
@@ -43,7 +48,7 @@ const translations = {
       "output.title": "4. Copia y usa",
       "output.subtitle": "Este texto lleva reglas para ordenar la información y reducir inventos.",
       "output.nextTitle": "Qué haces después",
-      "output.nextCopy": "Copia este prompt y pégalo en ChatGPT, Gemini, Claude o la IA que uses. Vas a darle una instrucción mucho más clara.",
+      "output.nextCopy": "Copia este prompt y pégalo en ChatGPT, Gemini, Claude o la IA que uses. Cuando te responda, vuelve aquí si quieres revisar si inventó algo.",
       "actions.copy": "Copiar para tu IA",
       "actions.download": "Descargar .txt",
       "share.title": "¿Te ayudó este método?",
@@ -56,29 +61,29 @@ const translations = {
       "verification.three": "¿Inventó algún dato que no estaba en tu texto?",
       "verification.four": "¿El resultado se puede rastrear a información real?",
       "verification.five": "¿Hay una decisión humana pendiente antes de usarlo?",
-      "answer.title": "5. Verifica la respuesta",
-      "answer.copy": "Pega la respuesta que te dio la IA. Prompt Claro creará otro prompt para revisar si inventó, omitió o asumió algo.",
-      "answer.label": "Respuesta de la IA",
+      "answer.title": "¿Quieres revisar la respuesta?",
+      "answer.copy": "Después de que tu IA responda, pega aquí esa respuesta. Prompt Claro hará un prompt para revisar si inventó, omitió o asumió algo.",
+      "answer.label": "Pega la respuesta que te dio la IA",
       "answer.placeholder": "Pega aquí la respuesta de ChatGPT, Claude, Gemini o la IA que usaste...",
-      "actions.verify": "Crear prompt de verificación",
-      "actions.copyVerify": "Copiar verificación",
+      "actions.verify": "Hacer prompt para revisar",
+      "actions.copyVerify": "Copiar prompt de revisión",
       "privacy.note": "La herramienta no guarda lo que escribes. Si quieres borrarlo de la pantalla, presiona \"Limpiar\" o cierra la pestaña.",
       "footer.creator": "Creado por Albert Punj",
-      "footer.meta": "v0.1.4 · © 2026 Albert Punj · Lanzado 6 May 2026",
+      "footer.meta": "v0.1.5 · © 2026 Albert Punj · Lanzado 7 May 2026",
       "footer.license": "MIT License",
       "footer.info": "Cómo funciona y términos",
       "info.eyebrow": "Método NHA",
       "info.title": "Cómo funciona y términos",
       "info.subtitle": "Una explicación sencilla para que sepas qué hace y qué no hace.",
       "info.whatTitle": "Qué hace",
-      "info.whatOne": "Prompt Claro toma lo que quieres pedirle a la IA y lo convierte en un brief más claro. También puede crear un prompt de verificación para revisar la respuesta de la IA contra tu texto original.",
+      "info.whatOne": "Prompt Claro toma lo que quieres pedirle a la IA y lo convierte en un brief más claro. Después de que la IA responda, también puede crear un prompt de revisión para comparar la respuesta contra tu texto original.",
       "info.whatTwo": "No responde por la IA. No reemplaza tu criterio. Solo te ayuda a pedir mejor.",
       "info.howTitle": "Cómo se usa",
       "info.howOne": "Elige qué tipo de trabajo quieres hacer.",
       "info.howTwo": "Escribe o pega tu caso tal como lo tienes.",
       "info.howThree": "Genera el prompt.",
       "info.howFour": "Copia el prompt y pégalo en ChatGPT, Gemini, Claude o la IA que uses.",
-      "info.howFive": "Pega la respuesta de la IA en la sección de verificación si quieres revisar inventos, faltantes o supuestos antes de usarla.",
+      "info.howFive": "Después de recibir la respuesta de la IA, pégala en la sección de revisión si quieres detectar inventos, faltantes o supuestos antes de usarla.",
       "info.browserTitle": "Cómo funciona",
       "info.browserOne": "La página arma el prompt en tu navegador. No necesitas instalar una app ni crear cuenta.",
       "info.browserTwo": "La herramienta no guarda lo que escribes en una base de datos y no lo envía a nuestro servidor para generar el prompt.",
@@ -125,7 +130,7 @@ const translations = {
       sampleReady: "Ejemplo listo. Copia el prompt y pégalo en ChatGPT, Gemini, Claude o la IA que uses para ver la diferencia.",
       sampleLoaded: "Ejemplo cargado. Puedes editarlo antes de generar el prompt.",
       copyFirst: "Genera un prompt antes de copiar.",
-      copied: "Prompt copiado al portapapeles.",
+      copied: "Prompt copiado. Pégalo en ChatGPT, Claude, Gemini o la IA que uses. Cuando responda, vuelve aquí para revisar si inventó algo.",
       selected: "No se pudo copiar automáticamente. El prompt quedó seleccionado.",
       downloadFirst: "Genera un prompt antes de descargar.",
       downloaded: "Archivo prompt-claro.txt descargado.",
@@ -133,10 +138,10 @@ const translations = {
       shareFailed: "No se pudo copiar el mensaje. Copia el link manualmente.",
       verifyMissingOriginal: "Primero escribe o genera el prompt inicial; necesito tu texto original para comparar.",
       verifyMissingAnswer: "Pega la respuesta de la IA para poder verificarla.",
-      verifyGenerated: "Prompt de verificación listo. Cópialo y pégalo en tu IA.",
-      verifyCopyFirst: "Primero crea el prompt de verificación.",
-      verifyCopied: "Prompt de verificación copiado.",
-      verifySelected: "No se pudo copiar automáticamente. La verificación quedó seleccionada.",
+      verifyGenerated: "Prompt de revisión listo. Cópialo y pégalo en tu IA para revisar la respuesta.",
+      verifyCopyFirst: "Primero crea el prompt de revisión.",
+      verifyCopied: "Prompt de revisión copiado. Pégalo en tu IA para revisar la respuesta.",
+      verifySelected: "No se pudo copiar automáticamente. El prompt de revisión quedó seleccionado.",
       languageChanged: "Idioma cambiado. Tu texto y prompt actual se conservan. Presiona \"Generar prompt\" para crear una versión en este idioma.",
       optionChanged: "Opción cambiada. Presiona \"Generar prompt\" otra vez para actualizar el prompt."
     },
@@ -303,6 +308,11 @@ ${getShareUrl()}`
       "hero.privacy": "What you write is not saved in a database.",
       "why.label": "Common prompt mistake",
       "why.copy": "Most people ask: \"Help me make this better. I spoke to a client; sales is messy. Give me a plan.\" AI has to guess the task, context, format, missing info, and risks. Choose below to make it clear first.",
+      "proof.label": "Quick example",
+      "proof.weakLabel": "Before",
+      "proof.weak": "Make me a lease agreement.",
+      "proof.betterLabel": "With Clear Prompt Builder",
+      "proof.better": "The AI must mark party details, GST, dates, penalty, and jurisdiction as [PENDING] when they are not confirmed.",
       "steps.one": "Pick the work",
       "steps.two": "Load or paste",
       "steps.three": "Copy to AI",
@@ -330,7 +340,7 @@ ${getShareUrl()}`
       "output.title": "4. Copy and use",
       "output.subtitle": "This prompt includes rules to organize the information and reduce made-up details.",
       "output.nextTitle": "What to do next",
-      "output.nextCopy": "Copy this prompt and paste it into ChatGPT, Gemini, Claude, or any AI you use. You will be giving the AI a much clearer brief.",
+      "output.nextCopy": "Copy this prompt and paste it into ChatGPT, Gemini, Claude, or any AI you use. After it answers, come back here if you want to check whether it invented anything.",
       "actions.copy": "Copy for your AI",
       "actions.download": "Download .txt",
       "share.title": "Did this method help?",
@@ -343,29 +353,29 @@ ${getShareUrl()}`
       "verification.three": "Did it invent anything that was not in your text?",
       "verification.four": "Can the result be traced back to real information?",
       "verification.five": "Is there a human decision pending before using it?",
-      "answer.title": "5. Verify the AI response",
-      "answer.copy": "Paste the AI response. Clear Prompt Builder will create a second prompt to check whether it invented, missed, or assumed anything.",
-      "answer.label": "AI response",
+      "answer.title": "Want to check the answer?",
+      "answer.copy": "After your AI replies, paste that answer here. Clear Prompt Builder will make a checking prompt to catch invented, missed, or assumed details.",
+      "answer.label": "Paste the answer you got from AI",
       "answer.placeholder": "Paste the response from ChatGPT, Claude, Gemini, or the AI you used...",
-      "actions.verify": "Create verification prompt",
-      "actions.copyVerify": "Copy verification",
+      "actions.verify": "Make checking prompt",
+      "actions.copyVerify": "Copy checking prompt",
       "privacy.note": "The tool does not save what you write. To remove it from the screen, press \"Clear\" or close the tab.",
       "footer.creator": "Created by Albert Punj",
-      "footer.meta": "v0.1.4 · © 2026 Albert Punj · Released 6 May 2026",
+      "footer.meta": "v0.1.5 · © 2026 Albert Punj · Released 7 May 2026",
       "footer.license": "MIT License",
       "footer.info": "How it works and terms",
       "info.eyebrow": "NHA Method",
       "info.title": "How it works and terms",
       "info.subtitle": "A plain explanation of what the tool does and what it does not do.",
       "info.whatTitle": "What it does",
-      "info.whatOne": "Clear Prompt Builder takes what you want the AI to do and turns it into a clearer brief. It can also create a verification prompt to check the AI response against your original text.",
+      "info.whatOne": "Clear Prompt Builder takes what you want the AI to do and turns it into a clearer brief. After the AI answers, it can also create a checking prompt to compare the answer against your original text.",
       "info.whatTwo": "It does not answer for the AI. It does not replace your judgment. It only helps you ask better.",
       "info.howTitle": "How to use it",
       "info.howOne": "Choose the type of work you want to do.",
       "info.howTwo": "Write or paste your case as it is.",
       "info.howThree": "Generate the prompt.",
       "info.howFour": "Copy the prompt and paste it into ChatGPT, Gemini, Claude, or any AI you use.",
-      "info.howFive": "Paste the AI response into the verification section if you want to check for invented details, missing information, or assumptions before using it.",
+      "info.howFive": "After the AI answers, paste the response into the checking section if you want to catch invented details, missing information, or assumptions before using it.",
       "info.browserTitle": "How it works",
       "info.browserOne": "The page builds the prompt in your browser. You do not need to install an app or create an account.",
       "info.browserTwo": "The tool does not save what you write in a database and does not send it to our server to generate the prompt.",
@@ -403,7 +413,7 @@ ${getShareUrl()}`
     defaults: {
       outcome: "Turn my case into a clear, verifiable output that is ready to review before use.",
       emptyPrompt: "Your prompt will appear here. First write or paste your case and press \"Generate prompt\".",
-      emptyVerification: "Your verification prompt will appear here."
+      emptyVerification: "Your checking prompt will appear here."
     },
     downloadFileName: "clear-prompt-builder.txt",
     statuses: {
@@ -412,7 +422,7 @@ ${getShareUrl()}`
       sampleReady: "Example ready. Copy the prompt and paste it into ChatGPT, Gemini, Claude, or any AI you use to see the difference.",
       sampleLoaded: "Example loaded. You can edit it before generating the prompt.",
       copyFirst: "Generate a prompt before copying.",
-      copied: "Prompt copied to clipboard.",
+      copied: "Prompt copied. Paste it into ChatGPT, Claude, Gemini, or any AI you use. After it answers, come back here to check whether it invented anything.",
       selected: "Could not copy automatically. The prompt has been selected.",
       downloadFirst: "Generate a prompt before downloading.",
       downloaded: "File clear-prompt-builder.txt downloaded.",
@@ -420,10 +430,10 @@ ${getShareUrl()}`
       shareFailed: "Could not copy the message. Copy the link manually.",
       verifyMissingOriginal: "First write or generate the initial prompt; I need your original text to compare.",
       verifyMissingAnswer: "Paste the AI response so it can be checked.",
-      verifyGenerated: "Verification prompt ready. Copy it and paste it into your AI.",
-      verifyCopyFirst: "Create the verification prompt first.",
-      verifyCopied: "Verification prompt copied.",
-      verifySelected: "Could not copy automatically. The verification prompt has been selected.",
+      verifyGenerated: "Checking prompt ready. Copy it and paste it into your AI to review the answer.",
+      verifyCopyFirst: "Create the checking prompt first.",
+      verifyCopied: "Checking prompt copied. Paste it into your AI to review the answer.",
+      verifySelected: "Could not copy automatically. The checking prompt has been selected.",
       languageChanged: "Language changed. Your text and current prompt were kept. Press \"Generate prompt\" to create a version in this language.",
       optionChanged: "Option changed. Press \"Generate prompt\" again to update the prompt."
     },
@@ -560,6 +570,11 @@ ${getShareUrl()}`
       "hero.privacy": "आप जो लिखते हैं, वह database में save नहीं होता.",
       "why.label": "Common prompting mistake",
       "why.copy": "Most people लिखते हैं: \"isko better bana do. Client से बात हुई; sales messy है. Plan दे दो.\" AI को task, context, format, missing info और risks guess करने पड़ते हैं. नीचे चुनकर पहले brief clear करें.",
+      "proof.label": "Quick example",
+      "proof.weakLabel": "Before",
+      "proof.weak": "Lease agreement बना दो.",
+      "proof.betterLabel": "Clear Prompt Builder के साथ",
+      "proof.better": "AI को party details, GST, dates, penalty और jurisdiction को [PENDING] mark करना होगा अगर confirm नहीं हैं.",
       "steps.one": "काम चुनें",
       "steps.two": "Load या paste",
       "steps.three": "AI में copy",
@@ -587,7 +602,7 @@ ${getShareUrl()}`
       "output.title": "4. Copy करें और use करें",
       "output.subtitle": "इस prompt में information को order करने और invented details कम करने के rules हैं.",
       "output.nextTitle": "इसके बाद क्या करें",
-      "output.nextCopy": "इस prompt को copy करें और ChatGPT, Gemini, Claude या जिस AI को आप use करते हैं उसमें paste करें. AI को अब much clearer brief मिलेगा.",
+      "output.nextCopy": "इस prompt को copy करें और ChatGPT, Gemini, Claude या जिस AI को आप use करते हैं उसमें paste करें. जवाब आने के बाद, अगर check करना है कि AI ने कुछ invent तो नहीं किया, यहां वापस आएं.",
       "actions.copy": "अपनी AI के लिए copy करें",
       "actions.download": ".txt download करें",
       "share.title": "क्या यह method helpful लगा?",
@@ -600,29 +615,29 @@ ${getShareUrl()}`
       "verification.three": "क्या आपके text में न होने वाली कोई बात invent की?",
       "verification.four": "क्या result real information से trace हो सकता है?",
       "verification.five": "Use करने से पहले कोई human decision pending है?",
-      "answer.title": "5. AI response verify करें",
-      "answer.copy": "AI का response यहां paste करें. Clear Prompt Builder दूसरा prompt बनाएगा ताकि पता चले AI ने कुछ invent, miss या assume तो नहीं किया.",
-      "answer.label": "AI का response",
+      "answer.title": "AI का जवाब check करना है?",
+      "answer.copy": "आपकी AI जवाब दे दे, तो वह जवाब यहां paste करें. Clear Prompt Builder invented, missing या assumed details पकड़ने के लिए checking prompt बनाएगा.",
+      "answer.label": "AI से मिला जवाब यहां paste करें",
       "answer.placeholder": "ChatGPT, Claude, Gemini या जिस AI को use किया, उसका response यहां paste करें...",
-      "actions.verify": "Verification prompt बनाएं",
-      "actions.copyVerify": "Verification copy करें",
+      "actions.verify": "Checking prompt बनाएं",
+      "actions.copyVerify": "Checking prompt copy करें",
       "privacy.note": "यह tool आपकी लिखी हुई चीज़ save नहीं करता. Screen से हटाने के लिए \"Clear\" दबाएं या tab बंद करें.",
       "footer.creator": "Created by Albert Punj",
-      "footer.meta": "v0.1.4 · © 2026 Albert Punj · Released 6 May 2026",
+      "footer.meta": "v0.1.5 · © 2026 Albert Punj · Released 7 May 2026",
       "footer.license": "MIT License",
       "footer.info": "कैसे काम करता है और terms",
       "info.eyebrow": "NHA Method",
       "info.title": "कैसे काम करता है और terms",
       "info.subtitle": "Simple explanation: tool क्या करता है, और क्या नहीं करता.",
       "info.whatTitle": "यह क्या करता है",
-      "info.whatOne": "Clear Prompt Builder AI से जो काम करवाना है उसे clear prompt में बदलता है. यह AI response को original text से check करने के लिए verification prompt भी बना सकता है.",
+      "info.whatOne": "Clear Prompt Builder AI से जो काम करवाना है उसे clear prompt में बदलता है. AI जवाब दे दे, उसके बाद यह original text से compare करने के लिए checking prompt भी बना सकता है.",
       "info.whatTwo": "यह AI की जगह जवाब नहीं देता. यह आपके judgment को replace नहीं करता. यह सिर्फ बेहतर पूछने में मदद करता है.",
       "info.howTitle": "Use कैसे करें",
       "info.howOne": "जिस तरह का काम करना है, उसे चुनें.",
       "info.howTwo": "अपना case जैसे है वैसे लिखें या paste करें.",
       "info.howThree": "Prompt generate करें.",
       "info.howFour": "Prompt copy करें और ChatGPT, Gemini, Claude या जिस AI को आप use करते हैं उसमें paste करें.",
-      "info.howFive": "अगर invent, missing info या assumptions check करने हैं, तो AI response को verification section में paste करें.",
+      "info.howFive": "AI जवाब दे दे, उसके बाद invented details, missing info या assumptions check करने के लिए response को checking section में paste करें.",
       "info.browserTitle": "यह कैसे काम करता है",
       "info.browserOne": "Page आपके browser में prompt बनाता है. App install या account बनाने की जरूरत नहीं.",
       "info.browserTwo": "Tool आपकी लिखी हुई बात database में save नहीं करता और prompt बनाने के लिए हमारे server पर नहीं भेजता.",
@@ -660,7 +675,7 @@ ${getShareUrl()}`
     defaults: {
       outcome: "मेरे case को clear, verifiable output में बदलें जिसे use करने से पहले review किया जा सके.",
       emptyPrompt: "आपका prompt यहां दिखेगा. पहले अपना case लिखें या paste करें, फिर \"Prompt generate करें\" दबाएं.",
-      emptyVerification: "AI response verify करने वाला prompt यहां दिखेगा."
+      emptyVerification: "AI response check करने वाला prompt यहां दिखेगा."
     },
     downloadFileName: "clear-prompt-builder.txt",
     statuses: {
@@ -669,7 +684,7 @@ ${getShareUrl()}`
       sampleReady: "Example ready. फर्क देखने के लिए prompt copy करके ChatGPT, Gemini, Claude या जिस AI को आप use करते हैं उसमें paste करें.",
       sampleLoaded: "Example loaded. Prompt generate करने से पहले आप इसे edit कर सकते हैं.",
       copyFirst: "Copy करने से पहले prompt generate करें.",
-      copied: "Prompt clipboard में copy हो गया.",
+      copied: "Prompt copy हो गया. इसे ChatGPT, Claude, Gemini या जिस AI को use करते हैं उसमें paste करें. जवाब आने के बाद invented details check करने के लिए यहां वापस आएं.",
       selected: "Automatically copy नहीं हुआ. Prompt selected है.",
       downloadFirst: "Download करने से पहले prompt generate करें.",
       downloaded: "File clear-prompt-builder.txt download हो गई.",
@@ -677,10 +692,10 @@ ${getShareUrl()}`
       shareFailed: "Message copy नहीं हुआ. Link manually copy करें.",
       verifyMissingOriginal: "पहले initial prompt लिखें या generate करें; compare करने के लिए original text चाहिए.",
       verifyMissingAnswer: "Verify करने के लिए AI response paste करें.",
-      verifyGenerated: "Verification prompt ready. इसे copy करके अपनी AI में paste करें.",
-      verifyCopyFirst: "पहले verification prompt बनाएं.",
-      verifyCopied: "Verification prompt copy हो गया.",
-      verifySelected: "Automatically copy नहीं हुआ. Verification prompt selected है.",
+      verifyGenerated: "Checking prompt ready. इसे copy करके अपनी AI में paste करें ताकि जवाब review हो सके.",
+      verifyCopyFirst: "पहले checking prompt बनाएं.",
+      verifyCopied: "Checking prompt copy हो गया. इसे अपनी AI में paste करके जवाब review करें.",
+      verifySelected: "Automatically copy नहीं हुआ. Checking prompt selected है.",
       languageChanged: "Language बदल गई. आपका text और current prompt वैसे ही रखे गए हैं. इस भाषा में version बनाने के लिए \"Prompt generate करें\" दबाएं.",
       optionChanged: "Option बदल गई. Prompt update करने के लिए \"Prompt generate करें\" फिर दबाएं."
     },
@@ -817,6 +832,11 @@ ${getShareUrl()}`
       "hero.privacy": "ਤੁਸੀਂ ਜੋ ਲਿਖਦੇ ਹੋ, ਉਹ database ਵਿੱਚ save ਨਹੀਂ ਹੁੰਦਾ.",
       "why.label": "Common prompting mistake",
       "why.copy": "Most people ਲਿਖਦੇ ਨੇ: \"eh better bana do. Client ਨਾਲ ਗੱਲ ਹੋਈ; sales messy ਹੈ. Plan ਦੇ ਦਿਓ.\" AI ਨੂੰ task, context, format, missing info ਤੇ risks guess ਕਰਨੇ ਪੈਂਦੇ ਨੇ. ਹੇਠਾਂ ਚੁਣਕੇ ਪਹਿਲਾਂ brief clear ਕਰੋ.",
+      "proof.label": "Quick example",
+      "proof.weakLabel": "Before",
+      "proof.weak": "Lease agreement ਬਣਾ ਦਿਓ.",
+      "proof.betterLabel": "Clear Prompt Builder ਨਾਲ",
+      "proof.better": "AI ਨੂੰ party details, GST, dates, penalty ਅਤੇ jurisdiction ਨੂੰ [PENDING] mark ਕਰਨਾ ਪਵੇਗਾ ਜੇ confirm ਨਹੀਂ ਹਨ.",
       "steps.one": "ਕੰਮ ਚੁਣੋ",
       "steps.two": "Load ਜਾਂ paste",
       "steps.three": "AI ਵਿੱਚ copy",
@@ -844,7 +864,7 @@ ${getShareUrl()}`
       "output.title": "4. Copy ਕਰੋ ਤੇ use ਕਰੋ",
       "output.subtitle": "ਇਸ prompt ਵਿੱਚ information ਨੂੰ order ਕਰਨ ਅਤੇ invented details ਘਟਾਉਣ ਦੇ rules ਹਨ.",
       "output.nextTitle": "ਇਸ ਤੋਂ ਬਾਅਦ ਕੀ ਕਰਨਾ ਹੈ",
-      "output.nextCopy": "ਇਹ prompt copy ਕਰੋ ਤੇ ChatGPT, Gemini, Claude ਜਾਂ ਜਿਸ AI ਨੂੰ ਤੁਸੀਂ use ਕਰਦੇ ਹੋ ਉਸ ਵਿੱਚ paste ਕਰੋ. AI ਨੂੰ ਹੁਣ much clearer brief ਮਿਲੇਗਾ.",
+      "output.nextCopy": "ਇਹ prompt copy ਕਰੋ ਤੇ ChatGPT, Gemini, Claude ਜਾਂ ਜਿਸ AI ਨੂੰ ਤੁਸੀਂ use ਕਰਦੇ ਹੋ ਉਸ ਵਿੱਚ paste ਕਰੋ. ਜਵਾਬ ਆਉਣ ਤੋਂ ਬਾਅਦ, ਜੇ check ਕਰਨਾ ਹੈ ਕਿ AI ਨੇ ਕੁਝ invent ਤਾਂ ਨਹੀਂ ਕੀਤਾ, ਇੱਥੇ ਵਾਪਸ ਆਓ.",
       "actions.copy": "ਆਪਣੀ AI ਲਈ copy ਕਰੋ",
       "actions.download": ".txt download ਕਰੋ",
       "share.title": "ਕੀ ਇਹ method helpful ਲੱਗਾ?",
@@ -857,29 +877,29 @@ ${getShareUrl()}`
       "verification.three": "ਕੀ ਤੁਹਾਡੇ text ਵਿੱਚ ਨਾ ਹੋਣ ਵਾਲੀ ਕੋਈ ਗੱਲ invent ਕੀਤੀ?",
       "verification.four": "ਕੀ result real information ਨਾਲ trace ਹੋ ਸਕਦਾ ਹੈ?",
       "verification.five": "Use ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਕੋਈ human decision pending ਹੈ?",
-      "answer.title": "5. AI response verify ਕਰੋ",
-      "answer.copy": "AI ਦਾ response ਇੱਥੇ paste ਕਰੋ. Clear Prompt Builder ਦੂਜਾ prompt ਬਣਾਵੇਗਾ ਤਾਂ ਜੋ ਪਤਾ ਲੱਗੇ AI ਨੇ ਕੁਝ invent, miss ਜਾਂ assume ਤਾਂ ਨਹੀਂ ਕੀਤਾ.",
-      "answer.label": "AI ਦਾ response",
+      "answer.title": "AI ਦਾ ਜਵਾਬ check ਕਰਨਾ ਹੈ?",
+      "answer.copy": "ਤੁਹਾਡੀ AI ਜਵਾਬ ਦੇ ਦੇਵੇ, ਤਾਂ ਉਹ ਜਵਾਬ ਇੱਥੇ paste ਕਰੋ. Clear Prompt Builder invented, missing ਜਾਂ assumed details ਫੜਨ ਲਈ checking prompt ਬਣਾਵੇਗਾ.",
+      "answer.label": "AI ਤੋਂ ਮਿਲਿਆ ਜਵਾਬ ਇੱਥੇ paste ਕਰੋ",
       "answer.placeholder": "ChatGPT, Claude, Gemini ਜਾਂ ਜਿਸ AI ਨੂੰ use ਕੀਤਾ, ਉਸਦਾ response ਇੱਥੇ paste ਕਰੋ...",
-      "actions.verify": "Verification prompt ਬਣਾਓ",
-      "actions.copyVerify": "Verification copy ਕਰੋ",
+      "actions.verify": "Checking prompt ਬਣਾਓ",
+      "actions.copyVerify": "Checking prompt copy ਕਰੋ",
       "privacy.note": "ਇਹ tool ਤੁਹਾਡੀ ਲਿਖੀ ਚੀਜ਼ save ਨਹੀਂ ਕਰਦਾ. Screen ਤੋਂ ਹਟਾਉਣ ਲਈ \"Clear\" ਦਬਾਓ ਜਾਂ tab close ਕਰੋ.",
       "footer.creator": "Created by Albert Punj",
-      "footer.meta": "v0.1.4 · © 2026 Albert Punj · Released 6 May 2026",
+      "footer.meta": "v0.1.5 · © 2026 Albert Punj · Released 7 May 2026",
       "footer.license": "MIT License",
       "footer.info": "ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ ਅਤੇ terms",
       "info.eyebrow": "NHA Method",
       "info.title": "ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ ਅਤੇ terms",
       "info.subtitle": "Simple explanation: tool ਕੀ ਕਰਦਾ ਹੈ, ਤੇ ਕੀ ਨਹੀਂ ਕਰਦਾ.",
       "info.whatTitle": "ਇਹ ਕੀ ਕਰਦਾ ਹੈ",
-      "info.whatOne": "Clear Prompt Builder AI ਤੋਂ ਜੋ ਕੰਮ ਕਰਵਾਉਣਾ ਹੈ ਉਸਨੂੰ clear prompt ਵਿੱਚ ਬਦਲਦਾ ਹੈ. ਇਹ AI response ਨੂੰ original text ਨਾਲ check ਕਰਨ ਲਈ verification prompt ਵੀ ਬਣਾ ਸਕਦਾ ਹੈ.",
+      "info.whatOne": "Clear Prompt Builder AI ਤੋਂ ਜੋ ਕੰਮ ਕਰਵਾਉਣਾ ਹੈ ਉਸਨੂੰ clear prompt ਵਿੱਚ ਬਦਲਦਾ ਹੈ. AI ਜਵਾਬ ਦੇ ਦੇਵੇ, ਉਸ ਤੋਂ ਬਾਅਦ ਇਹ original text ਨਾਲ compare ਕਰਨ ਲਈ checking prompt ਵੀ ਬਣਾ ਸਕਦਾ ਹੈ.",
       "info.whatTwo": "ਇਹ AI ਦੀ ਥਾਂ answer ਨਹੀਂ ਦਿੰਦਾ. ਇਹ ਤੁਹਾਡੇ judgment ਨੂੰ replace ਨਹੀਂ ਕਰਦਾ. ਇਹ ਸਿਰਫ better ask ਕਰਨ ਵਿੱਚ help ਕਰਦਾ ਹੈ.",
       "info.howTitle": "Use ਕਿਵੇਂ ਕਰਨਾ ਹੈ",
       "info.howOne": "ਜਿਸ type ਦਾ ਕੰਮ ਕਰਨਾ ਹੈ, ਉਹ ਚੁਣੋ.",
       "info.howTwo": "ਆਪਣਾ case ਜਿਵੇਂ ਹੈ ਤਿਵੇਂ ਲਿਖੋ ਜਾਂ paste ਕਰੋ.",
       "info.howThree": "Prompt generate ਕਰੋ.",
       "info.howFour": "Prompt copy ਕਰੋ ਤੇ ChatGPT, Gemini, Claude ਜਾਂ ਜਿਸ AI ਨੂੰ ਤੁਸੀਂ use ਕਰਦੇ ਹੋ ਉਸ ਵਿੱਚ paste ਕਰੋ.",
-      "info.howFive": "ਜੇ invent, missing info ਜਾਂ assumptions check ਕਰਨੇ ਹਨ, ਤਾਂ AI response ਨੂੰ verification section ਵਿੱਚ paste ਕਰੋ.",
+      "info.howFive": "AI ਜਵਾਬ ਦੇ ਦੇਵੇ, ਉਸ ਤੋਂ ਬਾਅਦ invented details, missing info ਜਾਂ assumptions check ਕਰਨ ਲਈ response ਨੂੰ checking section ਵਿੱਚ paste ਕਰੋ.",
       "info.browserTitle": "ਇਹ ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ",
       "info.browserOne": "Page ਤੁਹਾਡੇ browser ਵਿੱਚ prompt ਬਣਾਉਂਦਾ ਹੈ. App install ਜਾਂ account ਬਣਾਉਣ ਦੀ ਲੋੜ ਨਹੀਂ.",
       "info.browserTwo": "Tool ਤੁਹਾਡੀ ਲਿਖੀ ਗੱਲ database ਵਿੱਚ save ਨਹੀਂ ਕਰਦਾ ਤੇ prompt ਬਣਾਉਣ ਲਈ ਸਾਡੇ server ਤੇ ਨਹੀਂ ਭੇਜਦਾ.",
@@ -917,7 +937,7 @@ ${getShareUrl()}`
     defaults: {
       outcome: "ਮੇਰੇ case ਨੂੰ clear, verifiable output ਵਿੱਚ ਬਦਲੋ ਜੋ use ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ review ਹੋ ਸਕੇ.",
       emptyPrompt: "ਤੁਹਾਡਾ prompt ਇੱਥੇ ਆਵੇਗਾ. ਪਹਿਲਾਂ ਆਪਣਾ case ਲਿਖੋ ਜਾਂ paste ਕਰੋ, ਫਿਰ \"Prompt generate ਕਰੋ\" ਦਬਾਓ.",
-      emptyVerification: "AI response verify ਕਰਨ ਵਾਲਾ prompt ਇੱਥੇ ਆਵੇਗਾ."
+      emptyVerification: "AI response check ਕਰਨ ਵਾਲਾ prompt ਇੱਥੇ ਆਵੇਗਾ."
     },
     downloadFileName: "clear-prompt-builder.txt",
     statuses: {
@@ -926,7 +946,7 @@ ${getShareUrl()}`
       sampleReady: "Example ready. Difference ਵੇਖਣ ਲਈ prompt copy ਕਰਕੇ ChatGPT, Gemini, Claude ਜਾਂ ਜਿਸ AI ਨੂੰ ਤੁਸੀਂ use ਕਰਦੇ ਹੋ ਉਸ ਵਿੱਚ paste ਕਰੋ.",
       sampleLoaded: "Example loaded. Prompt generate ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਤੁਸੀਂ edit ਕਰ ਸਕਦੇ ਹੋ.",
       copyFirst: "Copy ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ prompt generate ਕਰੋ.",
-      copied: "Prompt clipboard ਵਿੱਚ copy ਹੋ ਗਿਆ.",
+      copied: "Prompt copy ਹੋ ਗਿਆ. ਇਸਨੂੰ ChatGPT, Claude, Gemini ਜਾਂ ਜਿਸ AI ਨੂੰ ਤੁਸੀਂ use ਕਰਦੇ ਹੋ ਉਸ ਵਿੱਚ paste ਕਰੋ. ਜਵਾਬ ਆਉਣ ਤੋਂ ਬਾਅਦ invented details check ਕਰਨ ਲਈ ਇੱਥੇ ਵਾਪਸ ਆਓ.",
       selected: "Automatically copy ਨਹੀਂ ਹੋਇਆ. Prompt selected ਹੈ.",
       downloadFirst: "Download ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ prompt generate ਕਰੋ.",
       downloaded: "File clear-prompt-builder.txt download ਹੋ ਗਈ.",
@@ -934,10 +954,10 @@ ${getShareUrl()}`
       shareFailed: "Message copy ਨਹੀਂ ਹੋਇਆ. Link manually copy ਕਰੋ.",
       verifyMissingOriginal: "ਪਹਿਲਾਂ initial prompt ਲਿਖੋ ਜਾਂ generate ਕਰੋ; compare ਕਰਨ ਲਈ original text ਚਾਹੀਦਾ ਹੈ.",
       verifyMissingAnswer: "Verify ਕਰਨ ਲਈ AI response paste ਕਰੋ.",
-      verifyGenerated: "Verification prompt ready. ਇਸਨੂੰ copy ਕਰਕੇ ਆਪਣੀ AI ਵਿੱਚ paste ਕਰੋ.",
-      verifyCopyFirst: "ਪਹਿਲਾਂ verification prompt ਬਣਾਓ.",
-      verifyCopied: "Verification prompt copy ਹੋ ਗਿਆ.",
-      verifySelected: "Automatically copy ਨਹੀਂ ਹੋਇਆ. Verification prompt selected ਹੈ.",
+      verifyGenerated: "Checking prompt ready. ਇਸਨੂੰ copy ਕਰਕੇ ਆਪਣੀ AI ਵਿੱਚ paste ਕਰੋ ਤਾਂ ਕਿ ਜਵਾਬ review ਹੋ ਸਕੇ.",
+      verifyCopyFirst: "ਪਹਿਲਾਂ checking prompt ਬਣਾਓ.",
+      verifyCopied: "Checking prompt copy ਹੋ ਗਿਆ. ਇਸਨੂੰ ਆਪਣੀ AI ਵਿੱਚ paste ਕਰਕੇ ਜਵਾਬ review ਕਰੋ.",
+      verifySelected: "Automatically copy ਨਹੀਂ ਹੋਇਆ. Checking prompt selected ਹੈ.",
       languageChanged: "Language ਬਦਲ ਗਈ. ਤੁਹਾਡਾ text ਅਤੇ current prompt ਉਹੀ ਰੱਖੇ ਗਏ ਹਨ. ਇਸ language ਵਿੱਚ version ਬਣਾਉਣ ਲਈ \"Prompt generate ਕਰੋ\" ਦਬਾਓ.",
       optionChanged: "Option ਬਦਲ ਗਈ. Prompt update ਕਰਨ ਲਈ \"Prompt generate ਕਰੋ\" ਫਿਰ ਦਬਾਓ."
     },
@@ -1211,6 +1231,9 @@ const pendingRule = document.querySelector("#pendingRule");
 const promptOutput = document.querySelector("#promptOutput");
 const statusMessage = document.querySelector("#statusMessage");
 const aiAnswer = document.querySelector("#aiAnswer");
+const answerChecker = document.querySelector(".answer-checker");
+const humanChecklist = document.querySelector(".verification");
+const shareBox = document.querySelector("#shareBox");
 const verificationPromptOutput = document.querySelector("#verificationPromptOutput");
 const verificationStatus = document.querySelector("#verificationStatus");
 const selectedExamplePreview = document.querySelector("#selectedExamplePreview");
@@ -1293,7 +1316,7 @@ function setLanguage(language, showChangeNotice = false) {
   }
 
   if (verificationPromptOutput && (!existingVerificationPrompt || isEmptyVerificationPrompt(existingVerificationPrompt))) {
-    renderVerificationPromptOutput(languageData.defaults.emptyVerification);
+    renderVerificationPromptOutput(languageData.defaults.emptyVerification, false);
   }
 
   if (showChangeNotice && (hasGeneratedPrompt || hasUserText)) {
@@ -1453,8 +1476,31 @@ function renderPromptOutput(text) {
   renderOutputElement(promptOutput, text);
 }
 
-function renderVerificationPromptOutput(text) {
+function renderVerificationPromptOutput(text, show = false) {
   renderOutputElement(verificationPromptOutput, text);
+  if (verificationPromptOutput) {
+    verificationPromptOutput.classList.toggle("is-hidden", !show);
+  }
+}
+
+function showAnswerChecker() {
+  if (answerChecker) answerChecker.classList.remove("is-hidden");
+}
+
+function hideAnswerChecker() {
+  if (answerChecker) answerChecker.classList.add("is-hidden");
+}
+
+function showPostPromptFlow() {
+  if (humanChecklist) humanChecklist.classList.remove("is-hidden");
+  if (shareBox) shareBox.classList.remove("is-hidden");
+  showAnswerChecker();
+}
+
+function hidePostPromptFlow() {
+  if (humanChecklist) humanChecklist.classList.add("is-hidden");
+  if (shareBox) shareBox.classList.add("is-hidden");
+  hideAnswerChecker();
 }
 
 function buildPrompt() {
@@ -1598,7 +1644,7 @@ function resetVerificationPrompt() {
 }
 
 function resetVerificationResult() {
-  renderVerificationPromptOutput(translations[currentLanguage].defaults.emptyVerification);
+  renderVerificationPromptOutput(translations[currentLanguage].defaults.emptyVerification, false);
   setVerificationStatus("");
 }
 
@@ -1615,6 +1661,7 @@ function loadSample(sampleName, generateImmediately = false) {
   if (generateImmediately) {
     const prompt = buildPrompt();
     renderPromptOutput(prompt);
+    showPostPromptFlow();
     setStatus(languageData.statuses.sampleReady);
     nudgeToOutputPanel();
     return;
@@ -1633,6 +1680,7 @@ function loadSelectedExample() {
   desiredOutcome.value = getSelectedOutcomeText(selectedCase, selectedOutput);
   renderPromptOutput(languageData.defaults.emptyPrompt);
   resetVerificationPrompt();
+  hidePostPromptFlow();
   const message = getSelectedExampleLoadedText(selectedCase, selectedOutput);
   if (exampleStatus) exampleStatus.textContent = message;
   setStatus(message);
@@ -1647,6 +1695,7 @@ function setupToolPage() {
     if (!prompt) return;
     renderPromptOutput(prompt);
     resetVerificationResult();
+    showPostPromptFlow();
     setStatus(translations[currentLanguage].statuses.generated);
     nudgeToOutputPanel();
   });
@@ -1679,6 +1728,7 @@ function setupToolPage() {
 
     try {
       await navigator.clipboard.writeText(prompt);
+      showPostPromptFlow();
       setStatus(languageData.statuses.copied);
     } catch {
       const range = document.createRange();
@@ -1686,6 +1736,7 @@ function setupToolPage() {
       const selection = window.getSelection();
       selection.removeAllRanges();
       selection.addRange(range);
+      showPostPromptFlow();
       setStatus(languageData.statuses.selected, true);
     }
   });
@@ -1726,7 +1777,7 @@ function setupToolPage() {
       const languageData = translations[currentLanguage];
       const verificationPrompt = buildVerificationPrompt();
       if (!verificationPrompt) return;
-      renderVerificationPromptOutput(verificationPrompt);
+      renderVerificationPromptOutput(verificationPrompt, true);
       setVerificationStatus(languageData.statuses.verifyGenerated);
       nudgeToVerificationPrompt();
     });
@@ -1764,6 +1815,7 @@ function setupToolPage() {
     desiredOutcome.value = languageData.defaults.outcome;
     renderPromptOutput(languageData.defaults.emptyPrompt);
     resetVerificationPrompt();
+    hidePostPromptFlow();
     if (exampleStatus) exampleStatus.textContent = t("samples.selectedHelp");
     setStatus("");
   });

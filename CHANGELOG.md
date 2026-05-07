@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.1.5 - 2026-05-07
+
+- Simplified the first-use journey so the core flow is pick work, load or paste, generate, copy to AI.
+- Hid the AI answer-checking section until the first prompt exists, reducing first-screen confusion.
+- Replaced public "verification prompt" wording with simpler "checking/review prompt" language.
+- Added a quick before/after proof example above the main form.
+
 ## v0.1.4 - 2026-05-06
 
 - Added a second verification loop so users can paste an AI response back into the tool.
