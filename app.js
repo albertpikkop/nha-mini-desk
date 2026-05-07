@@ -324,9 +324,9 @@ ${getShareUrl()}`
       "why.copy": "Most people ask: \"Improve my resume\" or \"Explain this C++ problem.\" AI has to guess the goal, context, level, format, missing info, and risks. Paste your rough ask below and turn it into a clear instruction.",
       "proof.label": "Quick example",
       "proof.weakLabel": "Before",
-      "proof.weak": "Improve my resume for a fresher data analyst job.",
+      "proof.weak": "Improve my resume for sales, BD, marketing, HR, support, or operations jobs.",
       "proof.betterLabel": "With Clear Prompt Builder",
-      "proof.better": "The AI must separate real experience, target role, measurable achievements, missing proof, and questions before rewriting.",
+      "proof.better": "The AI must separate real experience, target role, communication skills, achievements, missing proof, and questions before rewriting.",
       "steps.one": "Paste idea",
       "steps.two": "Create prompt",
       "steps.three": "Copy to AI",
@@ -600,9 +600,9 @@ ${getShareUrl()}`
       "why.copy": "Most people लिखते हैं: \"mera resume improve kar do\" या \"C++ problem explain karo.\" AI को goal, level, context, format, missing info और risks guess करने पड़ते हैं. अपनी rough बात नीचे paste करें और clear instruction बनाएं.",
       "proof.label": "Quick example",
       "proof.weakLabel": "Before",
-      "proof.weak": "Fresher data analyst job के लिए मेरा resume improve करो.",
+      "proof.weak": "Sales, BD, marketing, HR, support या operations jobs के लिए मेरा resume improve करो.",
       "proof.betterLabel": "Clear Prompt Builder के साथ",
-      "proof.better": "AI को real experience, target role, measurable achievements, missing proof और questions अलग करने होंगे before rewrite.",
+      "proof.better": "AI को real experience, target role, communication skills, achievements, missing proof और questions अलग करने होंगे before rewrite.",
       "steps.one": "Idea paste करें",
       "steps.two": "Prompt बनाएं",
       "steps.three": "AI में copy",
@@ -876,9 +876,9 @@ ${getShareUrl()}`
       "why.copy": "Most people ਲਿਖਦੇ ਨੇ: \"mera resume improve kar do\" ਜਾਂ \"C++ problem explain karo.\" AI ਨੂੰ goal, level, context, format, missing info ਤੇ risks guess ਕਰਨੇ ਪੈਂਦੇ ਨੇ. ਆਪਣੀ rough ਗੱਲ ਹੇਠਾਂ paste ਕਰੋ ਤੇ clear instruction ਬਣਾਓ.",
       "proof.label": "Quick example",
       "proof.weakLabel": "Before",
-      "proof.weak": "Fresher data analyst job ਲਈ ਮੇਰਾ resume improve ਕਰੋ.",
+      "proof.weak": "Sales, BD, marketing, HR, support ਜਾਂ operations jobs ਲਈ ਮੇਰਾ resume improve ਕਰੋ.",
       "proof.betterLabel": "Clear Prompt Builder ਨਾਲ",
-      "proof.better": "AI ਨੂੰ real experience, target role, measurable achievements, missing proof ਅਤੇ questions ਵੱਖ ਕਰਨੇ ਹੋਣਗੇ before rewrite.",
+      "proof.better": "AI ਨੂੰ real experience, target role, communication skills, achievements, missing proof ਅਤੇ questions ਵੱਖ ਕਰਨੇ ਹੋਣਗੇ before rewrite.",
       "steps.one": "Idea paste ਕਰੋ",
       "steps.two": "Prompt ਬਣਾਓ",
       "steps.three": "AI ਵਿੱਚ copy",
@@ -1202,7 +1202,7 @@ Still unclear: exact target role, salary expectation, strongest project, and whe
 
 I am a young professional in India applying for fresher or early-career roles. I need help improving my resume, LinkedIn, and interview answers, but my information is scattered.
 
-I have one internship, a final-year project, some Excel/SQL work, basic Python, and a few online course certificates. I am not sure whether to target business analyst, data analyst, operations associate, or product support roles.
+I have one internship, a final-year project, some Excel/SQL work, basic Python, and a few online course certificates. I am not sure whether to target sales executive, business development, digital marketing, HR recruiter, customer support, or operations roles.
 
 I want AI to help me identify what is strong, what is weak, what needs proof, and what questions I should answer before rewriting my resume.
 
@@ -1256,7 +1256,7 @@ I need to turn this into a clear proposal without inventing scope, delivery date
 
 मैं India में fresher या early-career roles के लिए apply कर रहा हूं. Resume, LinkedIn और interview answers improve करने हैं, लेकिन information scattered है.
 
-मेरे पास एक internship, final-year project, Excel/SQL work, basic Python और कुछ online course certificates हैं. समझ नहीं आ रहा कि business analyst, data analyst, operations associate या product support में से किस role को target करूं.
+मेरे पास एक internship, final-year project, Excel/SQL work, basic Python और कुछ online course certificates हैं. समझ नहीं आ रहा कि business development, digital marketing, HR recruiter, customer support या operations में से किस role को target करूं.
 
 मुझे AI से help चाहिए कि क्या strong है, क्या weak है, किस चीज़ का proof चाहिए, और resume rewrite करने से पहले कौनसे सवाल answer करने चाहिए.
 
@@ -1310,7 +1310,7 @@ I need to turn this into a clear proposal without inventing scope, delivery date
 
 ਮੈਂ India ਵਿੱਚ fresher ਜਾਂ early-career roles ਲਈ apply ਕਰ ਰਿਹਾ ਹਾਂ. Resume, LinkedIn ਅਤੇ interview answers improve ਕਰਨੇ ਹਨ, ਪਰ information scattered ਹੈ.
 
-ਮੇਰੇ ਕੋਲ ਇੱਕ internship, final-year project, Excel/SQL work, basic Python ਅਤੇ ਕੁਝ online course certificates ਹਨ. ਸਮਝ ਨਹੀਂ ਆ ਰਿਹਾ ਕਿ business analyst, data analyst, operations associate ਜਾਂ product support ਵਿੱਚੋਂ ਕਿਹੜਾ role target ਕਰਾਂ.
+ਮੇਰੇ ਕੋਲ ਇੱਕ internship, final-year project, Excel/SQL work, basic Python ਅਤੇ ਕੁਝ online course certificates ਹਨ. ਸਮਝ ਨਹੀਂ ਆ ਰਿਹਾ ਕਿ business development, digital marketing, HR recruiter, customer support ਜਾਂ operations ਵਿੱਚੋਂ ਕਿਹੜਾ role target ਕਰਾਂ.
 
 ਮੈਨੂੰ AI ਤੋਂ help ਚਾਹੀਦੀ ਹੈ ਕਿ ਕੀ strong ਹੈ, ਕੀ weak ਹੈ, ਕਿਸ ਚੀਜ਼ ਦਾ proof ਚਾਹੀਦਾ ਹੈ, ਅਤੇ resume rewrite ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਕਿਹੜੇ ਸਵਾਲ answer ਕਰਨੇ ਚਾਹੀਦੇ ਹਨ.
 
