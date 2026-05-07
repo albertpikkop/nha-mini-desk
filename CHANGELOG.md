@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.1.7 - 2026-05-07
+
+- Added an always-visible Feedback button near the language selector.
+- The Feedback button opens the feedback card without requiring the user to generate a prompt first.
+
 ## v0.1.6 - 2026-05-07
 
 - Added an in-page feedback card that appears after a user generates a prompt.

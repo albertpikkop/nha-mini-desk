@@ -47,7 +47,9 @@ textarea {
 
 .language-row {
   display: flex;
+  align-items: flex-start;
   justify-content: flex-end;
+  gap: 10px;
   margin-bottom: 18px;
 }
 
@@ -59,6 +61,17 @@ textarea {
 .language-control span {
   color: var(--muted);
   font-size: 12px;
+}
+
+.feedback-trigger {
+  min-height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  padding: 0 14px;
+  background: #ffffff;
+  color: var(--accent-dark);
+  font-size: 14px;
+  font-weight: 800;
 }
 
 .eyebrow {
@@ -642,9 +655,15 @@ pre {
 
   .language-row {
     justify-content: stretch;
+    align-items: stretch;
+    flex-direction: column-reverse;
   }
 
   .language-control {
+    width: 100%;
+  }
+
+  .feedback-trigger {
     width: 100%;
   }
 

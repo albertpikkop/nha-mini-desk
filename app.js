@@ -14,6 +14,7 @@ const translations = {
       "hero.subtitle": "De idea cruda a brief listo para ChatGPT, Claude, Gemini, Codex o Cursor.",
       "hero.tryExample": "Probar en 20 segundos",
       "hero.privacy": "Lo que escribes no se guarda en una base de datos.",
+      "feedback.open": "Feedback",
       "why.label": "Error común al pedir IA",
       "why.copy": "La mayoría pide: \"ayúdame a mejorar esto. Hablé con un cliente; ventas está desordenado. Dame un plan.\" La IA tiene que adivinar tarea, contexto, formato, faltantes y riesgos. Elige abajo y acláralo primero.",
       "proof.label": "Ejemplo rápido",
@@ -76,7 +77,7 @@ const translations = {
       "actions.copyVerify": "Copiar prompt de revisión",
       "privacy.note": "La herramienta no guarda lo que escribes. Si quieres borrarlo de la pantalla, presiona \"Limpiar\" o cierra la pestaña.",
       "footer.creator": "Creado por Albert Punj",
-      "footer.meta": "v0.1.6 · © 2026 Albert Punj · Lanzado 7 May 2026",
+      "footer.meta": "v0.1.7 · © 2026 Albert Punj · Lanzado 7 May 2026",
       "footer.license": "MIT License",
       "footer.info": "Cómo funciona y términos",
       "info.eyebrow": "Método NHA",
@@ -317,6 +318,7 @@ ${getShareUrl()}`
       "hero.subtitle": "From rough idea to an AI-ready brief for ChatGPT, Claude, Gemini, Codex, or Cursor.",
       "hero.tryExample": "Try in 20 seconds",
       "hero.privacy": "What you write is not saved in a database.",
+      "feedback.open": "Feedback",
       "why.label": "Common prompt mistake",
       "why.copy": "Most people ask: \"Help me make this better. I spoke to a client; sales is messy. Give me a plan.\" AI has to guess the task, context, format, missing info, and risks. Choose below to make it clear first.",
       "proof.label": "Quick example",
@@ -379,7 +381,7 @@ ${getShareUrl()}`
       "actions.copyVerify": "Copy checking prompt",
       "privacy.note": "The tool does not save what you write. To remove it from the screen, press \"Clear\" or close the tab.",
       "footer.creator": "Created by Albert Punj",
-      "footer.meta": "v0.1.6 · © 2026 Albert Punj · Released 7 May 2026",
+      "footer.meta": "v0.1.7 · © 2026 Albert Punj · Released 7 May 2026",
       "footer.license": "MIT License",
       "footer.info": "How it works and terms",
       "info.eyebrow": "NHA Method",
@@ -590,6 +592,7 @@ ${getShareUrl()}`
       "hero.subtitle": "Rough idea से ChatGPT, Claude, Gemini, Codex या Cursor के लिए AI-ready brief बनाएं.",
       "hero.tryExample": "20 सेकंड में try करें",
       "hero.privacy": "आप जो लिखते हैं, वह database में save नहीं होता.",
+      "feedback.open": "Feedback",
       "why.label": "Common prompting mistake",
       "why.copy": "Most people लिखते हैं: \"isko better bana do. Client से बात हुई; sales messy है. Plan दे दो.\" AI को task, context, format, missing info और risks guess करने पड़ते हैं. नीचे चुनकर पहले brief clear करें.",
       "proof.label": "Quick example",
@@ -652,7 +655,7 @@ ${getShareUrl()}`
       "actions.copyVerify": "Checking prompt copy करें",
       "privacy.note": "यह tool आपकी लिखी हुई चीज़ save नहीं करता. Screen से हटाने के लिए \"Clear\" दबाएं या tab बंद करें.",
       "footer.creator": "Created by Albert Punj",
-      "footer.meta": "v0.1.6 · © 2026 Albert Punj · Released 7 May 2026",
+      "footer.meta": "v0.1.7 · © 2026 Albert Punj · Released 7 May 2026",
       "footer.license": "MIT License",
       "footer.info": "कैसे काम करता है और terms",
       "info.eyebrow": "NHA Method",
@@ -863,6 +866,7 @@ ${getShareUrl()}`
       "hero.subtitle": "Rough idea ਤੋਂ ChatGPT, Claude, Gemini, Codex ਜਾਂ Cursor ਲਈ AI-ready brief ਬਣਾਓ.",
       "hero.tryExample": "20 seconds ਵਿੱਚ try ਕਰੋ",
       "hero.privacy": "ਤੁਸੀਂ ਜੋ ਲਿਖਦੇ ਹੋ, ਉਹ database ਵਿੱਚ save ਨਹੀਂ ਹੁੰਦਾ.",
+      "feedback.open": "Feedback",
       "why.label": "Common prompting mistake",
       "why.copy": "Most people ਲਿਖਦੇ ਨੇ: \"eh better bana do. Client ਨਾਲ ਗੱਲ ਹੋਈ; sales messy ਹੈ. Plan ਦੇ ਦਿਓ.\" AI ਨੂੰ task, context, format, missing info ਤੇ risks guess ਕਰਨੇ ਪੈਂਦੇ ਨੇ. ਹੇਠਾਂ ਚੁਣਕੇ ਪਹਿਲਾਂ brief clear ਕਰੋ.",
       "proof.label": "Quick example",
@@ -925,7 +929,7 @@ ${getShareUrl()}`
       "actions.copyVerify": "Checking prompt copy ਕਰੋ",
       "privacy.note": "ਇਹ tool ਤੁਹਾਡੀ ਲਿਖੀ ਚੀਜ਼ save ਨਹੀਂ ਕਰਦਾ. Screen ਤੋਂ ਹਟਾਉਣ ਲਈ \"Clear\" ਦਬਾਓ ਜਾਂ tab close ਕਰੋ.",
       "footer.creator": "Created by Albert Punj",
-      "footer.meta": "v0.1.6 · © 2026 Albert Punj · Released 7 May 2026",
+      "footer.meta": "v0.1.7 · © 2026 Albert Punj · Released 7 May 2026",
       "footer.license": "MIT License",
       "footer.info": "ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ ਅਤੇ terms",
       "info.eyebrow": "NHA Method",
@@ -1715,6 +1719,15 @@ function nudgeToVerificationPrompt() {
   nudgeToElement(".verification-output");
 }
 
+function openFeedbackBox() {
+  if (!feedbackBox) return;
+  feedbackBox.classList.remove("is-hidden");
+  window.setTimeout(() => {
+    feedbackBox.scrollIntoView({ behavior: getScrollBehavior(), block: "start" });
+    if (feedbackText) feedbackText.focus({ preventScroll: true });
+  }, 90);
+}
+
 function resetVerificationPrompt() {
   if (aiAnswer) aiAnswer.value = "";
   resetVerificationResult();
@@ -1847,6 +1860,11 @@ function setupToolPage() {
       setStatus(languageData.statuses.shareFailed, true);
     }
   });
+
+  const openFeedbackButton = document.querySelector("#openFeedback");
+  if (openFeedbackButton) {
+    openFeedbackButton.addEventListener("click", openFeedbackBox);
+  }
 
   const copyFeedbackButton = document.querySelector("#copyFeedback");
   if (copyFeedbackButton) {
