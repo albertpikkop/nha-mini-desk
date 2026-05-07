@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.1.10 - 2026-05-07
+
+- Added an Anthropic-style process section to generated prompts so the AI identifies the task, extracts facts, marks missing information, and only then drafts the output.
+- Added a low-confidence rule: if the AI is not sure, it must mark uncertainty instead of guessing.
+- Added a final self-check section before the requested output format.
+- Bumped asset query strings to avoid stale cached launch files.
+
 ## v0.1.9 - 2026-05-07
 
 - Reworked the mobile launch flow so users paste first, generate second, and copy third.
