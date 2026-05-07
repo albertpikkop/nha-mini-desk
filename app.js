@@ -1,4 +1,4 @@
-const caseKeys = ["general", "legal", "consulting", "cx", "operations", "coding", "proposal"];
+const caseKeys = ["general", "career", "study", "coding", "cx", "operations", "proposal", "legal", "consulting"];
 const outputKeys = ["clear", "facts", "summary", "draft", "actionPlan", "email", "risks"];
 
 const translations = {
@@ -108,6 +108,8 @@ const translations = {
     },
     cases: {
       general: "General",
+      career: "Carrera / CV",
+      study: "Estudio / posgrado",
       legal: "Legal México",
       consulting: "Consultoría",
       cx: "CX / Cliente",
@@ -223,6 +225,8 @@ const translations = {
       ]
     },
     caseGuidance: {
+      career: ["No inventes experiencia, empresas, fechas, certificaciones ni logros.", "Separa habilidades confirmadas de habilidades por demostrar.", "Marca datos faltantes como rol objetivo, logros medibles, fechas y enlaces como [PENDIENTE].", "Incluye preguntas antes de reescribir CV, LinkedIn o carta de presentación."],
+      study: ["No hagas trampa académica ni inventes fuentes.", "Separa lo que el usuario entiende de lo que falta estudiar.", "Marca temario, fechas, rúbrica, profesor o instrucciones faltantes como [PENDIENTE].", "Incluye plan de estudio o preguntas de aclaración antes de resolver si falta contexto."],
       legal: ["No inventes artículos de ley.", "No inventes RFC.", "No inventes nombres de sociedades.", "Si falta jurisdicción, marca [PENDIENTE].", "Si falta identificación de partes, marca [PENDIENTE].", "Recomienda revisión por abogado antes de usar cualquier documento."],
       consulting: ["Separa síntomas de causas probables.", "No inventes métricas.", "Marca supuestos de negocio como [PENDIENTE].", "Incluye preguntas para diagnóstico."],
       cx: ["Mantén tono empático y profesional.", "No prometas compensaciones o fechas no confirmadas.", "Separa hechos internos de información del cliente.", "Incluye siguiente acción clara."],
@@ -410,6 +414,8 @@ ${getShareUrl()}`
     },
     cases: {
       general: "General",
+      career: "Career / Resume",
+      study: "Study / Postgrad",
       legal: "Legal India",
       consulting: "Consulting",
       cx: "CX / Customer",
@@ -495,6 +501,8 @@ ${getShareUrl()}`
       ]
     },
     caseGuidance: {
+      career: ["Do not invent experience, employers, dates, certifications, or achievements.", "Separate confirmed skills from skills that still need evidence.", "Mark missing target role, measurable achievements, dates, portfolio links, and resume details as [PENDING].", "Include questions before rewriting a resume, LinkedIn profile, cover letter, or interview answer."],
+      study: ["Do not enable academic cheating or invent sources.", "Separate what the learner understands from what still needs study.", "Mark missing syllabus, deadline, rubric, professor instructions, or exam pattern as [PENDING].", "Give a study plan, explanation plan, or clarification questions before solving if context is missing."],
       legal: ["Do not invent legal articles.", "Do not invent IDs or registration numbers.", "Do not invent company names.", "If jurisdiction is missing, mark [PENDING].", "If party identification is missing, mark [PENDING].", "Recommend lawyer review before using any document."],
       consulting: ["Separate symptoms from probable causes.", "Do not invent metrics.", "Mark business assumptions as [PENDING].", "Include diagnostic questions."],
       cx: ["Keep the tone empathetic and professional.", "Do not promise compensation or dates that are not confirmed.", "Separate internal facts from customer information.", "Include a clear next action."],
@@ -682,6 +690,8 @@ ${getShareUrl()}`
     },
     cases: {
       general: "General",
+      career: "Career / Resume",
+      study: "Study / Postgrad",
       legal: "Legal India",
       consulting: "Consulting",
       cx: "CX / Customer",
@@ -767,6 +777,8 @@ ${getShareUrl()}`
       ]
     },
     caseGuidance: {
+      career: ["Experience, employers, dates, certifications या achievements invent न करें.", "Confirmed skills और जिन skills का evidence चाहिए उन्हें अलग करें.", "Missing target role, measurable achievements, dates, portfolio links और resume details को [PENDING] mark करें.", "Resume, LinkedIn, cover letter या interview answer rewrite करने से पहले questions include करें."],
+      study: ["Academic cheating enable न करें और sources invent न करें.", "Learner को क्या समझ आता है और क्या पढ़ना बाकी है, अलग करें.", "Missing syllabus, deadline, rubric, professor instructions या exam pattern को [PENDING] mark करें.", "Context missing हो तो solution से पहले study plan, explanation plan या clarification questions दें."],
       legal: ["Legal articles invent न करें.", "IDs या registration numbers invent न करें.", "Company names invent न करें.", "Jurisdiction missing हो तो [PENDING] mark करें.", "Parties की identification missing हो तो [PENDING] mark करें.", "किसी document को use करने से पहले lawyer review recommend करें."],
       consulting: ["Symptoms और probable causes अलग करें.", "Metrics invent न करें.", "Business assumptions को [PENDING] mark करें.", "Diagnostic questions include करें."],
       cx: ["Tone empathetic और professional रखें.", "Unconfirmed compensation या dates promise न करें.", "Internal facts और customer information अलग करें.", "Clear next action include करें."],
@@ -954,6 +966,8 @@ ${getShareUrl()}`
     },
     cases: {
       general: "General",
+      career: "Career / Resume",
+      study: "Study / Postgrad",
       legal: "Legal India",
       consulting: "Consulting",
       cx: "CX / Customer",
@@ -1039,6 +1053,8 @@ ${getShareUrl()}`
       ]
     },
     caseGuidance: {
+      career: ["Experience, employers, dates, certifications ਜਾਂ achievements invent ਨਾ ਕਰੋ.", "Confirmed skills ਅਤੇ ਜਿਨ੍ਹਾਂ skills ਲਈ evidence ਚਾਹੀਦਾ ਹੈ ਉਹ ਵੱਖ ਕਰੋ.", "Missing target role, measurable achievements, dates, portfolio links ਅਤੇ resume details ਨੂੰ [PENDING] mark ਕਰੋ.", "Resume, LinkedIn, cover letter ਜਾਂ interview answer rewrite ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ questions include ਕਰੋ."],
+      study: ["Academic cheating enable ਨਾ ਕਰੋ ਅਤੇ sources invent ਨਾ ਕਰੋ.", "Learner ਨੂੰ ਕੀ ਸਮਝ ਆਉਂਦਾ ਹੈ ਅਤੇ ਕੀ ਪੜ੍ਹਨਾ ਬਾਕੀ ਹੈ, ਵੱਖ ਕਰੋ.", "Missing syllabus, deadline, rubric, professor instructions ਜਾਂ exam pattern ਨੂੰ [PENDING] mark ਕਰੋ.", "Context missing ਹੋਵੇ ਤਾਂ solution ਤੋਂ ਪਹਿਲਾਂ study plan, explanation plan ਜਾਂ clarification questions ਦਿਓ."],
       legal: ["Legal articles invent ਨਾ ਕਰੋ.", "IDs ਜਾਂ registration numbers invent ਨਾ ਕਰੋ.", "Company names invent ਨਾ ਕਰੋ.", "Jurisdiction missing ਹੋਵੇ ਤਾਂ [PENDING] mark ਕਰੋ.", "Parties ਦੀ identification missing ਹੋਵੇ ਤਾਂ [PENDING] mark ਕਰੋ.", "ਕਿਸੇ document ਨੂੰ use ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ lawyer review recommend ਕਰੋ."],
       consulting: ["Symptoms ਅਤੇ probable causes ਵੱਖ ਕਰੋ.", "Metrics invent ਨਾ ਕਰੋ.", "Business assumptions ਨੂੰ [PENDING] mark ਕਰੋ.", "Diagnostic questions include ਕਰੋ."],
       cx: ["Tone empathetic ਅਤੇ professional ਰੱਖੋ.", "Unconfirmed compensation ਜਾਂ dates promise ਨਾ ਕਰੋ.", "Internal facts ਅਤੇ customer information ਵੱਖ ਕਰੋ.", "Clear next action include ਕਰੋ."],
@@ -1130,6 +1146,22 @@ Quiero organizar una idea que tengo para mejorar mi trabajo con IA. Tengo varias
 Quiero entender qué partes ya están claras, qué falta definir, qué riesgos hay y cuál sería el siguiente paso lógico.
 
 Hay cosas que todavía no sé: tiempo disponible, herramientas exactas, costo y prioridad.`,
+    career: `Contexto de carrera:
+
+Estoy buscando trabajo en México y quiero mejorar mi CV y LinkedIn, pero tengo la información desordenada.
+
+Tengo experiencia en atención a clientes, algo de ventas, Excel básico y un proyecto pequeño donde organicé reportes para mi equipo. No sé si apuntar a asistente comercial, analista junior o customer success.
+
+Quiero que la IA me ayude a separar lo que sí puedo decir, lo que suena débil, qué logros debo cuantificar y qué preguntas debo responder antes de reescribir mi CV.
+
+Falta confirmar: puesto objetivo, fechas exactas, métricas reales, cursos terminados y si debo incluir fotografía o no.`,
+    study: `Contexto de estudio:
+
+Estoy haciendo una maestría/diplomado y tengo que preparar una presentación. Tengo lecturas, notas de clase, mensajes del profesor y algunas ideas sueltas.
+
+No quiero que la IA invente fuentes ni haga el trabajo completo por mí. Quiero ordenar el tema, identificar qué entiendo, qué me falta estudiar y cómo preparar un esquema claro.
+
+Falta confirmar: rúbrica, fecha de entrega, duración de la presentación, fuentes obligatorias y si el profesor pidió formato específico.`,
     operations: `Contexto operativo:
 
 El equipo está recibiendo solicitudes por varios canales. Algunas llegan por mensaje, otras por correo y otras por llamada.
@@ -1166,6 +1198,22 @@ My experience is mixed: one internship at a startup, one college project on dash
 I want help turning this into a clear next step: what strengths are already visible, what is still weak, what should be rewritten, and what questions I should answer before using AI to improve my resume or LinkedIn.
 
 Still unclear: exact target role, salary expectation, strongest project, and whether I should position myself as analyst, operations, or product support.`,
+    career: `Job search context:
+
+I am a young professional in India applying for fresher or early-career roles. I need help improving my resume, LinkedIn, and interview answers, but my information is scattered.
+
+I have one internship, a final-year project, some Excel/SQL work, basic Python, and a few online course certificates. I am not sure whether to target business analyst, data analyst, operations associate, or product support roles.
+
+I want AI to help me identify what is strong, what is weak, what needs proof, and what questions I should answer before rewriting my resume.
+
+Still unclear: target role, strongest project, measurable achievements, dates, GitHub/portfolio link, and whether my resume should be one page or two.`,
+    study: `Study context:
+
+I am doing postgraduation and preparing for exams, assignments, and one seminar presentation. My notes are mixed across WhatsApp, PDFs, class notes, and rough bullet points.
+
+I do not want AI to write a fake assignment or invent sources. I want it to explain the topic, create a study plan, identify gaps, and help me prepare questions for my professor or guide.
+
+Still unclear: syllabus coverage, deadline, marking rubric, required references, exam pattern, and which topics are most important.`,
     operations: `Postgraduate context:
 
 I am doing postgraduation and everything is mixed right now. I have coursework deadlines, one seminar presentation, messages from my guide, a part-time internship task, and I am also trying to apply for jobs.
@@ -1177,7 +1225,7 @@ I need a clear action list with priorities, owners, dates, and risks so I stop c
 Still unclear: which deadline is fixed, what can be postponed, how much time I actually have this week, and what needs professor approval first.`,
     coding: `Coding context:
 
-I am learning C++ and data structures. I wrote a small program for a college assignment, but it either gives the wrong output or crashes on some test cases.
+I am learning C++ and data structures for college placements. I wrote a small program using arrays, loops, and maybe pointers, but it either gives the wrong output or crashes on some test cases.
 
 I suspect the problem is around pointers, array bounds, or how I am updating values inside a loop, but I am not fully sure.
 
@@ -1204,6 +1252,22 @@ I need to turn this into a clear proposal without inventing scope, delivery date
 मुझे clear next step चाहिए: अभी मेरी profile में क्या strong दिख रहा है, क्या weak है, क्या rewrite करना चाहिए, और AI से resume या LinkedIn improve कराने से पहले कौनसे सवाल answer करने चाहिए.
 
 अभी unclear है: exact target role, salary expectation, strongest project, और खुद को analyst, operations या product support कैसे position करूं.`,
+    career: `Job search context:
+
+मैं India में fresher या early-career roles के लिए apply कर रहा हूं. Resume, LinkedIn और interview answers improve करने हैं, लेकिन information scattered है.
+
+मेरे पास एक internship, final-year project, Excel/SQL work, basic Python और कुछ online course certificates हैं. समझ नहीं आ रहा कि business analyst, data analyst, operations associate या product support में से किस role को target करूं.
+
+मुझे AI से help चाहिए कि क्या strong है, क्या weak है, किस चीज़ का proof चाहिए, और resume rewrite करने से पहले कौनसे सवाल answer करने चाहिए.
+
+अभी unclear है: target role, strongest project, measurable achievements, exact dates, GitHub/portfolio link, और resume one page होना चाहिए या two pages.`,
+    study: `Study context:
+
+मैं postgraduation कर रहा हूं और exams, assignments और एक seminar presentation की तैयारी करनी है. Notes WhatsApp, PDFs, class notes और rough bullet points में scattered हैं.
+
+मैं AI से fake assignment या invented sources नहीं चाहता. मुझे topic समझना है, study plan बनाना है, gaps identify करने हैं, और professor/guide से पूछने वाले questions तैयार करने हैं.
+
+अभी unclear है: syllabus coverage, deadline, marking rubric, required references, exam pattern, और कौनसे topics सबसे important हैं.`,
     operations: `Postgraduation context:
 
 मैं postgraduation कर रहा हूं और सब कुछ mix हो गया है. Coursework deadlines हैं, एक seminar presentation है, guide के messages हैं, part-time internship task है, और साथ में job applications भी चल रही हैं.
@@ -1215,7 +1279,7 @@ I need to turn this into a clear proposal without inventing scope, delivery date
 अभी unclear है: कौनसी deadline fixed है, क्या postpone हो सकता है, इस हफ्ते actual available time कितना है, और किस चीज़ के लिए professor approval चाहिए.`,
     coding: `Coding context:
 
-मैं C++ और data structures सीख रहा हूं. College assignment या practice problem के लिए code लिखा है, लेकिन कुछ test cases पर wrong output आता है या program crash हो जाता है.
+मैं C++ और data structures college placements के लिए सीख रहा हूं. Arrays, loops और शायद pointers वाला code लिखा है, लेकिन कुछ test cases पर wrong output आता है या program crash हो जाता है.
 
 मुझे lag रहा है issue pointers, array bounds, loop update या input handling में हो सकता है, लेकिन exact root cause clear नहीं है.
 
@@ -1242,6 +1306,22 @@ I need to turn this into a clear proposal without inventing scope, delivery date
 ਮੈਨੂੰ clear next step ਚਾਹੀਦਾ ਹੈ: ਹੁਣ ਤੱਕ profile ਵਿੱਚ ਕੀ strong ਦਿਖ ਰਿਹਾ ਹੈ, ਕੀ weak ਹੈ, ਕੀ rewrite ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ, ਅਤੇ AI ਨਾਲ resume ਜਾਂ LinkedIn improve ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਕਿਹੜੇ ਸਵਾਲ clear ਕਰਨੇ ਚਾਹੀਦੇ ਹਨ.
 
 ਅਜੇ unclear ਹੈ: exact target role, salary expectation, strongest project, ਅਤੇ ਆਪਣੇ ਆਪ ਨੂੰ analyst, operations ਜਾਂ product support ਵਾਂਗ ਕਿਵੇਂ position ਕਰਾਂ.`,
+    career: `Job search context:
+
+ਮੈਂ India ਵਿੱਚ fresher ਜਾਂ early-career roles ਲਈ apply ਕਰ ਰਿਹਾ ਹਾਂ. Resume, LinkedIn ਅਤੇ interview answers improve ਕਰਨੇ ਹਨ, ਪਰ information scattered ਹੈ.
+
+ਮੇਰੇ ਕੋਲ ਇੱਕ internship, final-year project, Excel/SQL work, basic Python ਅਤੇ ਕੁਝ online course certificates ਹਨ. ਸਮਝ ਨਹੀਂ ਆ ਰਿਹਾ ਕਿ business analyst, data analyst, operations associate ਜਾਂ product support ਵਿੱਚੋਂ ਕਿਹੜਾ role target ਕਰਾਂ.
+
+ਮੈਨੂੰ AI ਤੋਂ help ਚਾਹੀਦੀ ਹੈ ਕਿ ਕੀ strong ਹੈ, ਕੀ weak ਹੈ, ਕਿਸ ਚੀਜ਼ ਦਾ proof ਚਾਹੀਦਾ ਹੈ, ਅਤੇ resume rewrite ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਕਿਹੜੇ ਸਵਾਲ answer ਕਰਨੇ ਚਾਹੀਦੇ ਹਨ.
+
+ਅਜੇ unclear ਹੈ: target role, strongest project, measurable achievements, exact dates, GitHub/portfolio link, ਅਤੇ resume one page ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ ਜਾਂ two pages.`,
+    study: `Study context:
+
+ਮੈਂ postgraduation ਕਰ ਰਿਹਾ ਹਾਂ ਅਤੇ exams, assignments ਅਤੇ ਇੱਕ seminar presentation ਦੀ ਤਿਆਰੀ ਕਰਨੀ ਹੈ. Notes WhatsApp, PDFs, class notes ਅਤੇ rough bullet points ਵਿੱਚ scattered ਹਨ.
+
+ਮੈਂ AI ਤੋਂ fake assignment ਜਾਂ invented sources ਨਹੀਂ ਚਾਹੁੰਦਾ. ਮੈਨੂੰ topic ਸਮਝਣਾ ਹੈ, study plan ਬਣਾਉਣਾ ਹੈ, gaps identify ਕਰਨੇ ਹਨ, ਅਤੇ professor/guide ਤੋਂ ਪੁੱਛਣ ਵਾਲੇ questions ਤਿਆਰ ਕਰਨੇ ਹਨ.
+
+ਅਜੇ unclear ਹੈ: syllabus coverage, deadline, marking rubric, required references, exam pattern, ਅਤੇ ਕਿਹੜੇ topics ਸਭ ਤੋਂ important ਹਨ.`,
     operations: `Postgraduation context:
 
 ਮੈਂ postgraduation ਕਰ ਰਿਹਾ ਹਾਂ ਅਤੇ ਸਭ ਕੁਝ mix ਹੋ ਗਿਆ ਹੈ. Coursework deadlines ਹਨ, ਇੱਕ seminar presentation ਹੈ, guide ਦੇ messages ਹਨ, part-time internship task ਹੈ, ਅਤੇ ਨਾਲ job applications ਵੀ ਚੱਲ ਰਹੀਆਂ ਹਨ.
@@ -1253,7 +1333,7 @@ I need to turn this into a clear proposal without inventing scope, delivery date
 ਅਜੇ unclear ਹੈ: ਕਿਹੜੀ deadline fixed ਹੈ, ਕੀ postpone ਹੋ ਸਕਦਾ ਹੈ, ਇਸ ਹਫ਼ਤੇ actual available time ਕਿੰਨਾ ਹੈ, ਅਤੇ ਕਿਸ ਚੀਜ਼ ਲਈ professor approval ਚਾਹੀਦੀ ਹੈ.`,
     coding: `Coding context:
 
-ਮੈਂ C++ ਅਤੇ data structures ਸਿੱਖ ਰਿਹਾ ਹਾਂ. College assignment ਜਾਂ practice problem ਲਈ code ਲਿਖਿਆ ਹੈ, ਪਰ ਕੁਝ test cases ਤੇ wrong output ਆਉਂਦੀ ਹੈ ਜਾਂ program crash ਹੋ ਜਾਂਦਾ ਹੈ.
+ਮੈਂ C++ ਅਤੇ data structures college placements ਲਈ ਸਿੱਖ ਰਿਹਾ ਹਾਂ. Arrays, loops ਅਤੇ ਸ਼ਾਇਦ pointers ਵਾਲਾ code ਲਿਖਿਆ ਹੈ, ਪਰ ਕੁਝ test cases ਤੇ wrong output ਆਉਂਦੀ ਹੈ ਜਾਂ program crash ਹੋ ਜਾਂਦਾ ਹੈ.
 
 ਮੈਨੂੰ ਲੱਗਦਾ ਹੈ issue pointers, array bounds, loop update ਜਾਂ input handling ਵਿੱਚ ਹੋ ਸਕਦਾ ਹੈ, ਪਰ exact root cause clear ਨਹੀਂ ਹੈ.
 

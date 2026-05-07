@@ -47,7 +47,7 @@ visible.
 - Keeps Spanish examples Mexico-first and English/Hindi/Punjabi examples India-first.
 - Generates prompts in the browser.
 - Does not require login, install, or API key.
-- Includes examples for legal, consulting, CX, operations, coding/product, and proposals.
+- Includes examples for career/resume, study/postgrad, coding/C++, CX, operations, proposals, legal, and consulting.
 - Includes a human checklist before trusting AI output.
 - Reveals the answer-checking flow only after the first prompt is ready.
 - Generates a checking prompt to audit the AI response against the original text.
