@@ -93,7 +93,7 @@ const translations = {
       "actions.copyVerify": "Copiar prompt de revisión",
       "privacy.note": "La herramienta no guarda lo que escribes. Si quieres borrarlo de la pantalla, presiona \"Limpiar\" o cierra la pestaña.",
       "footer.creator": "Creado por Albert Punj",
-      "footer.meta": "v0.1.10 · © 2026 Albert Punj · Lanzado 7 May 2026",
+      "footer.meta": "v0.1.11 · © 2026 Albert Punj · Lanzado 7 May 2026",
       "footer.license": "MIT License",
       "footer.info": "Cómo funciona y términos",
       "info.eyebrow": "Método NHA",
@@ -418,7 +418,7 @@ ${getShareUrl("es")}`
       "actions.copyVerify": "Copy checking prompt",
       "privacy.note": "The tool does not save what you write. To remove it from the screen, press \"Clear\" or close the tab.",
       "footer.creator": "Created by Albert Punj",
-      "footer.meta": "v0.1.10 · © 2026 Albert Punj · Released 7 May 2026",
+      "footer.meta": "v0.1.11 · © 2026 Albert Punj · Released 7 May 2026",
       "footer.license": "MIT License",
       "footer.info": "How it works and terms",
       "info.eyebrow": "NHA Method",
@@ -697,7 +697,7 @@ ${getShareUrl("en")}`
       "actions.copyVerify": "Checking prompt copy करें",
       "privacy.note": "यह tool आपकी लिखी हुई चीज़ save नहीं करता. Screen से हटाने के लिए \"Clear\" दबाएं या tab बंद करें.",
       "footer.creator": "Created by Albert Punj",
-      "footer.meta": "v0.1.10 · © 2026 Albert Punj · Released 7 May 2026",
+      "footer.meta": "v0.1.11 · © 2026 Albert Punj · Released 7 May 2026",
       "footer.license": "MIT License",
       "footer.info": "कैसे काम करता है और terms",
       "info.eyebrow": "NHA Method",
@@ -976,7 +976,7 @@ ${getShareUrl("hi")}`
       "actions.copyVerify": "Checking prompt copy ਕਰੋ",
       "privacy.note": "ਇਹ tool ਤੁਹਾਡੀ ਲਿਖੀ ਚੀਜ਼ save ਨਹੀਂ ਕਰਦਾ. Screen ਤੋਂ ਹਟਾਉਣ ਲਈ \"Clear\" ਦਬਾਓ ਜਾਂ tab close ਕਰੋ.",
       "footer.creator": "Created by Albert Punj",
-      "footer.meta": "v0.1.10 · © 2026 Albert Punj · Released 7 May 2026",
+      "footer.meta": "v0.1.11 · © 2026 Albert Punj · Released 7 May 2026",
       "footer.license": "MIT License",
       "footer.info": "ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ ਅਤੇ terms",
       "info.eyebrow": "NHA Method",
@@ -1426,6 +1426,16 @@ const launchCategoryPack = {
       business: ["Separa síntomas, causas probables y decisiones pendientes.", "No inventes presupuesto, responsables, fechas ni métricas.", "Incluye riesgos, preguntas de diagnóstico y siguiente paso.", "Mantén la salida ejecutiva y accionable."],
       build: ["Separa producto, usuarios, workflows, stack preferido y decisiones pendientes.", "No elijas herramientas como definitivas sin explicar tradeoffs.", "Marca WhatsApp API/gateway, auth, pagos, base de datos, hosting y alcance MVP como [PENDIENTE] si no están claros.", "Incluye riesgos técnicos, fases de construcción y preguntas antes de programar."]
     },
+    processSteps: {
+      general: ["Identifica la tarea real detrás del texto.", "Extrae hechos confirmados del TEXTO ORIGINAL.", "Separa supuestos, dudas y datos faltantes.", "Marca lo faltante o incierto como [PENDIENTE].", "Entrega la salida solicitada sin inventar datos.", "Cierra con preguntas o riesgos si hacen falta."],
+      career: ["Identifica el rol objetivo o marca que falta como [PENDIENTE].", "Extrae experiencia, estudios, skills y logros confirmados.", "Separa logros medibles de afirmaciones sin evidencia.", "Marca fechas, métricas, empresas, enlaces o certificaciones faltantes como [PENDIENTE].", "Propón mejora solo usando información confirmada.", "Incluye preguntas antes de reescribir CV, LinkedIn o mensaje."],
+      sales: ["Identifica qué pidió o reclamó el cliente.", "Separa lo que dijo el cliente de contexto interno y supuestos.", "Detecta precio, fechas, entrega, alcance o compensaciones no confirmadas.", "Marca cada promesa no confirmada como [PENDIENTE].", "Redacta una respuesta clara con siguiente paso.", "No prometas nada que no esté confirmado."],
+      marketing: ["Identifica objetivo, audiencia, canal y oferta.", "Extrae claims, pruebas, link, fecha y CTA confirmados.", "Marca resultados, testimonios, precios o garantías faltantes como [PENDIENTE].", "Elimina exageraciones o promesas no verificadas.", "Crea copy con tono natural y CTA claro.", "Incluye alternativas si el formato lo permite."],
+      business: ["Identifica problema de negocio, actores y decisión pendiente.", "Separa síntomas observados de causas probables.", "Extrae números, fechas, responsables y herramientas confirmadas.", "Marca presupuesto, métricas, dueño interno y alcance como [PENDIENTE] si faltan.", "Organiza riesgos y preguntas de diagnóstico.", "Propón siguiente paso práctico sin cerrar conclusiones no verificadas."],
+      build: ["Identifica usuario, problema, workflow y resultado del producto.", "Separa stack confirmado de stack opcional o preferido.", "Define MVP probable y marca alcance incierto como [PENDIENTE].", "Marca auth, pagos, base de datos, hosting, WhatsApp/API y privacidad como [PENDIENTE] si no están claros.", "Propón fases de construcción con riesgos y tests.", "Antes de programar, lista decisiones que necesitan confirmación humana."],
+      legal: ["Identifica partes, jurisdicción, objeto, fechas y montos.", "Separa hechos confirmados de datos legales no confirmados.", "Marca identidad de partes, RFC/ID, domicilio, capacidad, fechas y cláusulas faltantes como [PENDIENTE].", "No inventes artículos, cláusulas, números ni datos de registro.", "Si faltan datos críticos, lista preguntas antes de cualquier borrador.", "Recomienda revisión profesional antes de usar el documento."],
+      study: ["Identifica materia, nivel, objetivo y fecha si existe.", "Separa lo que el usuario entiende de lo que falta estudiar.", "Marca temario, rúbrica, fuentes, profesor, fecha o formato faltante como [PENDIENTE].", "No inventes fuentes ni hagas trampa académica.", "Crea explicación, plan o preguntas según el formato solicitado.", "Incluye práctica o siguiente paso si ayuda."]
+    },
     samples: {
       sales: `Mensaje de cliente:\n\n\"Hola, ya te pedí cotización dos veces y nadie me responde claro. Necesito saber precio, fecha de entrega y si incluye instalación. Si no me confirmas hoy, busco otro proveedor.\"\n\nContexto interno:\n\nEs un cliente potencial de una oficina pequeña en Monterrey. Pidió 12 sillas ergonómicas y 3 escritorios. No tengo precio final porque falta confirmar envío e instalación. El proveedor puede entregar la próxima semana, pero no está confirmado.\n\nQuiero responder sin perder la venta y sin prometer algo falso.`,
       marketing: `Idea para contenido:\n\nQuiero publicar en LinkedIn que muchas personas usan ChatGPT como chat, pero el primer prompt decide la calidad del resultado.\n\nTengo una herramienta gratis llamada Prompt Claro. Convierte una idea desordenada en un brief claro para cualquier IA. No quiero sonar vendedor agresivo.\n\nAudiencia: profesionales que ya usan IA pero sienten que las respuestas salen genéricas.\n\nFalta confirmar: link final, imagen, si mencionar open source y CTA exacto.`,
@@ -1458,6 +1468,16 @@ const launchCategoryPack = {
       marketing: ["Do not invent results, testimonials, prices, guarantees, or metrics.", "Separate goal, audience, channel, offer, proof, and CTA.", "Mark missing audience, date, link, offer, or compliance constraint as [PENDING].", "Give useful copy options without exaggerated claims."],
       business: ["Separate symptoms, probable causes, and pending decisions.", "Do not invent budget, owners, dates, or metrics.", "Include risks, diagnostic questions, and next step.", "Keep the output executive and actionable."],
       build: ["Separate product goal, users, workflows, preferred stack, and pending decisions.", "Do not make the tech stack final without tradeoffs.", "Mark WhatsApp API/gateway, auth, payments, database, hosting, and MVP scope as [PENDING] if unclear.", "Include technical risks, build phases, and questions before coding."]
+    },
+    processSteps: {
+      general: ["Identify the real task behind the rough text.", "Extract confirmed facts from the ORIGINAL TEXT.", "Separate assumptions, uncertainties, and missing details.", "Mark missing or uncertain information as [PENDING].", "Produce the requested output without inventing data.", "Close with questions or risks if needed."],
+      career: ["Identify the target role or mark it as [PENDING].", "Extract confirmed experience, education, skills, and achievements.", "Separate measurable achievements from unsupported claims.", "Mark missing dates, metrics, employers, links, or certifications as [PENDING].", "Suggest improvements using only confirmed information.", "List questions before rewriting a resume, LinkedIn profile, or job message."],
+      sales: ["Identify what the customer asked, objected to, or complained about.", "Separate customer facts from internal context and assumptions.", "Detect unconfirmed price, date, delivery, scope, refund, or compensation details.", "Mark every unconfirmed promise as [PENDING].", "Draft a clear response with the next step.", "Do not promise anything that is not confirmed."],
+      marketing: ["Identify goal, audience, channel, offer, and CTA.", "Extract confirmed claims, proof, link, date, and constraints.", "Mark missing results, testimonials, prices, guarantees, or compliance limits as [PENDING].", "Remove exaggerated or unverifiable claims.", "Create natural copy with a clear CTA.", "Include alternatives if the requested format allows."],
+      business: ["Identify the business problem, actors, and pending decision.", "Separate observed symptoms from probable causes.", "Extract confirmed numbers, dates, owners, tools, and workflow details.", "Mark budget, metrics, internal owner, and scope as [PENDING] if missing.", "Organize risks and diagnostic questions.", "Recommend the next practical step without over-concluding."],
+      build: ["Identify user, problem, workflow, and product outcome.", "Separate confirmed stack from optional or preferred stack.", "Define likely MVP scope and mark uncertain scope as [PENDING].", "Mark auth, payments, database, hosting, WhatsApp/API, privacy, and deployment decisions as [PENDING] if unclear.", "Propose build phases with risks and tests.", "Before coding, list decisions that need human confirmation."],
+      legal: ["Identify parties, jurisdiction, subject matter, dates, and amounts.", "Separate confirmed facts from unconfirmed legal details.", "Mark missing party identity, registration IDs, addresses, authority, dates, and clauses as [PENDING].", "Do not invent legal articles, clauses, numbers, or registration details.", "If critical data is missing, list questions before any draft.", "Recommend professional review before using any document."],
+      study: ["Identify subject, level, goal, and deadline if present.", "Separate what the learner understands from what still needs study.", "Mark missing syllabus, rubric, sources, professor instructions, deadline, or format as [PENDING].", "Do not invent sources or enable academic cheating.", "Create the explanation, study plan, or questions requested.", "Include practice or next step if useful."]
     },
     samples: {
       sales: `Customer message:\n\n\"I asked twice for the quotation and still do not have a clear answer. I need price, delivery date, and whether installation is included. If you cannot confirm today, I will check another vendor.\"\n\nInternal context:\n\nThis is a potential customer for a small office in Gurugram. They asked for 12 ergonomic chairs and 3 desks. Final price is not confirmed because delivery and installation cost are pending. Vendor may deliver next week, but it is not confirmed.\n\nI want to respond without losing the sale and without promising something false.`,
@@ -1584,8 +1604,15 @@ Object.entries(launchCategoryPack).forEach(([language, pack]) => {
   Object.assign(target.cases, pack.cases);
   Object.assign(target.outputs, pack.outputs);
   Object.assign(target.caseGuidance, pack.caseGuidance || {});
+  if (!target.categoryProcessSteps) target.categoryProcessSteps = {};
+  Object.assign(target.categoryProcessSteps, pack.processSteps || {});
   ["sales", "marketing", "business", "build"].forEach((key) => {
     if (!target.caseGuidance[key]) target.caseGuidance[key] = translations.en.caseGuidance[key];
+  });
+  caseKeys.forEach((key) => {
+    if (!target.categoryProcessSteps[key] && translations.en.categoryProcessSteps) {
+      target.categoryProcessSteps[key] = translations.en.categoryProcessSteps[key];
+    }
   });
   Object.assign(target.samples, pack.samples);
   Object.assign(target.formatGuidance, genericFormatGuidance[language] || genericFormatGuidance.en);
@@ -1638,7 +1665,7 @@ function getShareUrl(language = currentLanguage) {
   url.pathname = getLocalizedPath(language);
   url.search = "";
   url.searchParams.set("lang", language);
-  url.searchParams.set("preview", "0.1.10-anthropic");
+  url.searchParams.set("preview", "0.1.11-category-process");
   url.hash = "";
   return url.toString();
 }
@@ -2042,7 +2069,8 @@ function buildPrompt() {
 
   const extraRules = getPendingAwareRules(languageData.caseGuidance[selectedCase] || languageData.caseGuidance.general).map((rule) => `- ${rule}`).join("\n");
   const expectationRules = languageData.prompt.expectations.map((rule) => `- ${rule}`).join("\n");
-  const processSteps = getPendingAwareRules(languageData.prompt.processSteps || []).map((rule, index) => `${index + 1}. ${rule}`).join("\n");
+  const selectedProcessSteps = (languageData.categoryProcessSteps && languageData.categoryProcessSteps[selectedCase]) || languageData.prompt.processSteps || [];
+  const processSteps = getPendingAwareRules(selectedProcessSteps).map((rule, index) => `${index + 1}. ${rule}`).join("\n");
   const nhaRules = getPendingAwareRules(languageData.prompt.nhaRules).map((rule) => `- ${rule}`).join("\n");
   const finalChecks = getPendingAwareRules(languageData.prompt.finalCheck || []).map((rule) => `- ${rule}`).join("\n");
 

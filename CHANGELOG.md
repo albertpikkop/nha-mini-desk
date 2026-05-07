@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.1.11 - 2026-05-07
+
+- Added category-specific process steps for career, sales, marketing, business, SaaS build, legal, study, and general prompts.
+- Kept the user flow unchanged while making generated prompts more task-aware.
+- Updated asset query strings to force the new prompt engine to load on shared links.
+
 ## v0.1.10 - 2026-05-07
 
 - Added an Anthropic-style process section to generated prompts so the AI identifies the task, extracts facts, marks missing information, and only then drafts the output.
