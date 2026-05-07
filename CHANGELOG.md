@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.1.8 - 2026-05-07
+
+- Replaced the text feedback form with a simple one-tap star rating.
+- Removed the top Feedback button so the core flow stays focused.
+- Added hosted rating tracking without sending the user's prompt text.
+
 ## v0.1.7 - 2026-05-07
 
 - Added an always-visible Feedback button near the language selector.

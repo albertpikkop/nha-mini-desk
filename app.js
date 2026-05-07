@@ -14,7 +14,6 @@ const translations = {
       "hero.subtitle": "De idea cruda a brief listo para ChatGPT, Claude, Gemini, Codex o Cursor.",
       "hero.tryExample": "Probar en 20 segundos",
       "hero.privacy": "Lo que escribes no se guarda en una base de datos.",
-      "feedback.open": "Feedback",
       "why.label": "Error común al pedir IA",
       "why.copy": "La mayoría pide: \"ayúdame a mejorar esto. Hablé con un cliente; ventas está desordenado. Dame un plan.\" La IA tiene que adivinar tarea, contexto, formato, faltantes y riesgos. Elige abajo y acláralo primero.",
       "proof.label": "Ejemplo rápido",
@@ -52,13 +51,8 @@ const translations = {
       "output.nextCopy": "Copia este prompt y pégalo en ChatGPT, Gemini, Claude o la IA que uses. Cuando te responda, vuelve aquí si quieres revisar si inventó algo.",
       "actions.copy": "Copiar para tu IA",
       "actions.download": "Descargar .txt",
-      "feedback.title": "¿Me das feedback rápido?",
-      "feedback.copy": "Dime si te ayudó, qué te confundió o qué caso debería agregar.",
-      "feedback.label": "Tu feedback",
-      "feedback.placeholder": "Ejemplo: me sirvió para responder a un cliente, pero me gustaría tener un ejemplo para ventas...",
-      "feedback.note": "No se guarda aquí. Al copiarlo o compartirlo, tú decides dónde enviarlo.",
-      "actions.copyFeedback": "Copiar feedback",
-      "actions.shareFeedback": "Enviar por WhatsApp",
+      "feedback.title": "¿Te sirvió?",
+      "feedback.copy": "Toca una estrella. Eso es todo.",
       "share.title": "¿Te ayudó este método?",
       "share.copy": "Si te sirvió, mándaselo a alguien que todavía le pide cosas a la IA de forma desordenada.",
       "actions.share": "Copiar invitación para compartir",
@@ -77,7 +71,7 @@ const translations = {
       "actions.copyVerify": "Copiar prompt de revisión",
       "privacy.note": "La herramienta no guarda lo que escribes. Si quieres borrarlo de la pantalla, presiona \"Limpiar\" o cierra la pestaña.",
       "footer.creator": "Creado por Albert Punj",
-      "footer.meta": "v0.1.7 · © 2026 Albert Punj · Lanzado 7 May 2026",
+      "footer.meta": "v0.1.8 · © 2026 Albert Punj · Lanzado 7 May 2026",
       "footer.license": "MIT License",
       "footer.info": "Cómo funciona y términos",
       "info.eyebrow": "Método NHA",
@@ -144,10 +138,8 @@ const translations = {
       downloaded: "Archivo prompt-claro.txt descargado.",
       shareCopied: "Mensaje para compartir copiado.",
       shareFailed: "No se pudo copiar el mensaje. Copia el link manualmente.",
-      feedbackMissing: "Escribe una línea de feedback primero.",
-      feedbackCopied: "Feedback copiado. Puedes pegarlo en WhatsApp o donde prefieras.",
-      feedbackShared: "Listo. Se abrió la opción para compartir tu feedback.",
-      feedbackFailed: "No se pudo abrir WhatsApp. El feedback quedó copiado.",
+      ratingSaved: "Gracias. Tu calificación quedó registrada.",
+      ratingFailed: "No se pudo guardar ahora. Intenta otra vez.",
       verifyMissingOriginal: "Primero escribe o genera el prompt inicial; necesito tu texto original para comparar.",
       verifyMissingAnswer: "Pega la respuesta de la IA para poder verificarla.",
       verifyGenerated: "Prompt de revisión listo. Cópialo y pégalo en tu IA para revisar la respuesta.",
@@ -318,7 +310,6 @@ ${getShareUrl()}`
       "hero.subtitle": "From rough idea to an AI-ready brief for ChatGPT, Claude, Gemini, Codex, or Cursor.",
       "hero.tryExample": "Try in 20 seconds",
       "hero.privacy": "What you write is not saved in a database.",
-      "feedback.open": "Feedback",
       "why.label": "Common prompt mistake",
       "why.copy": "Most people ask: \"Help me make this better. I spoke to a client; sales is messy. Give me a plan.\" AI has to guess the task, context, format, missing info, and risks. Choose below to make it clear first.",
       "proof.label": "Quick example",
@@ -356,13 +347,8 @@ ${getShareUrl()}`
       "output.nextCopy": "Copy this prompt and paste it into ChatGPT, Gemini, Claude, or any AI you use. After it answers, come back here if you want to check whether it invented anything.",
       "actions.copy": "Copy for your AI",
       "actions.download": "Download .txt",
-      "feedback.title": "Quick feedback?",
-      "feedback.copy": "Tell me if it helped, what confused you, or what example I should add.",
-      "feedback.label": "Your feedback",
-      "feedback.placeholder": "Example: this helped me reply to a customer, but I want a sales example...",
-      "feedback.note": "It is not saved here. When you copy or share it, you decide where to send it.",
-      "actions.copyFeedback": "Copy feedback",
-      "actions.shareFeedback": "Send on WhatsApp",
+      "feedback.title": "Did it help?",
+      "feedback.copy": "Tap one star. That is it.",
       "share.title": "Did this method help?",
       "share.copy": "If it helped, share it with someone who still sends messy asks straight into AI.",
       "actions.share": "Copy invitation to share",
@@ -381,7 +367,7 @@ ${getShareUrl()}`
       "actions.copyVerify": "Copy checking prompt",
       "privacy.note": "The tool does not save what you write. To remove it from the screen, press \"Clear\" or close the tab.",
       "footer.creator": "Created by Albert Punj",
-      "footer.meta": "v0.1.7 · © 2026 Albert Punj · Released 7 May 2026",
+      "footer.meta": "v0.1.8 · © 2026 Albert Punj · Released 7 May 2026",
       "footer.license": "MIT License",
       "footer.info": "How it works and terms",
       "info.eyebrow": "NHA Method",
@@ -448,10 +434,8 @@ ${getShareUrl()}`
       downloaded: "File clear-prompt-builder.txt downloaded.",
       shareCopied: "Share message copied.",
       shareFailed: "Could not copy the message. Copy the link manually.",
-      feedbackMissing: "Write one line of feedback first.",
-      feedbackCopied: "Feedback copied. You can paste it into WhatsApp or wherever you prefer.",
-      feedbackShared: "Ready. The share option opened for your feedback.",
-      feedbackFailed: "Could not open WhatsApp. The feedback has been copied.",
+      ratingSaved: "Thanks. Your rating was recorded.",
+      ratingFailed: "Could not save it right now. Try again.",
       verifyMissingOriginal: "First write or generate the initial prompt; I need your original text to compare.",
       verifyMissingAnswer: "Paste the AI response so it can be checked.",
       verifyGenerated: "Checking prompt ready. Copy it and paste it into your AI to review the answer.",
@@ -592,7 +576,6 @@ ${getShareUrl()}`
       "hero.subtitle": "Rough idea से ChatGPT, Claude, Gemini, Codex या Cursor के लिए AI-ready brief बनाएं.",
       "hero.tryExample": "20 सेकंड में try करें",
       "hero.privacy": "आप जो लिखते हैं, वह database में save नहीं होता.",
-      "feedback.open": "Feedback",
       "why.label": "Common prompting mistake",
       "why.copy": "Most people लिखते हैं: \"isko better bana do. Client से बात हुई; sales messy है. Plan दे दो.\" AI को task, context, format, missing info और risks guess करने पड़ते हैं. नीचे चुनकर पहले brief clear करें.",
       "proof.label": "Quick example",
@@ -630,13 +613,8 @@ ${getShareUrl()}`
       "output.nextCopy": "इस prompt को copy करें और ChatGPT, Gemini, Claude या जिस AI को आप use करते हैं उसमें paste करें. जवाब आने के बाद, अगर check करना है कि AI ने कुछ invent तो नहीं किया, यहां वापस आएं.",
       "actions.copy": "अपनी AI के लिए copy करें",
       "actions.download": ".txt download करें",
-      "feedback.title": "Quick feedback?",
-      "feedback.copy": "बताएं help हुआ, क्या confusing था, या कौन सा example add करना चाहिए.",
-      "feedback.label": "आपका feedback",
-      "feedback.placeholder": "Example: customer reply में help हुआ, लेकिन sales वाला example चाहिए...",
-      "feedback.note": "यहां save नहीं होता. Copy या share करते समय आप decide करते हैं कहां भेजना है.",
-      "actions.copyFeedback": "Feedback copy करें",
-      "actions.shareFeedback": "WhatsApp पर भेजें",
+      "feedback.title": "काम आया?",
+      "feedback.copy": "एक star tap कर दें. बस.",
       "share.title": "क्या यह method helpful लगा?",
       "share.copy": "अगर काम आया, तो इसे ऐसे किसी व्यक्ति को भेजें जो अभी भी rough बात सीधे AI में डाल देता है.",
       "actions.share": "Share invitation copy करें",
@@ -655,7 +633,7 @@ ${getShareUrl()}`
       "actions.copyVerify": "Checking prompt copy करें",
       "privacy.note": "यह tool आपकी लिखी हुई चीज़ save नहीं करता. Screen से हटाने के लिए \"Clear\" दबाएं या tab बंद करें.",
       "footer.creator": "Created by Albert Punj",
-      "footer.meta": "v0.1.7 · © 2026 Albert Punj · Released 7 May 2026",
+      "footer.meta": "v0.1.8 · © 2026 Albert Punj · Released 7 May 2026",
       "footer.license": "MIT License",
       "footer.info": "कैसे काम करता है और terms",
       "info.eyebrow": "NHA Method",
@@ -722,10 +700,8 @@ ${getShareUrl()}`
       downloaded: "File clear-prompt-builder.txt download हो गई.",
       shareCopied: "Share message copy हो गया.",
       shareFailed: "Message copy नहीं हुआ. Link manually copy करें.",
-      feedbackMissing: "पहले feedback की एक line लिखें.",
-      feedbackCopied: "Feedback copy हो गया. इसे WhatsApp या जहां चाहें paste कर सकते हैं.",
-      feedbackShared: "Ready. Feedback share करने का option खुल गया.",
-      feedbackFailed: "WhatsApp open नहीं हुआ. Feedback copy कर दिया गया है.",
+      ratingSaved: "धन्यवाद. आपकी rating save हो गई.",
+      ratingFailed: "अभी save नहीं हो पाया. फिर try करें.",
       verifyMissingOriginal: "पहले initial prompt लिखें या generate करें; compare करने के लिए original text चाहिए.",
       verifyMissingAnswer: "Verify करने के लिए AI response paste करें.",
       verifyGenerated: "Checking prompt ready. इसे copy करके अपनी AI में paste करें ताकि जवाब review हो सके.",
@@ -866,7 +842,6 @@ ${getShareUrl()}`
       "hero.subtitle": "Rough idea ਤੋਂ ChatGPT, Claude, Gemini, Codex ਜਾਂ Cursor ਲਈ AI-ready brief ਬਣਾਓ.",
       "hero.tryExample": "20 seconds ਵਿੱਚ try ਕਰੋ",
       "hero.privacy": "ਤੁਸੀਂ ਜੋ ਲਿਖਦੇ ਹੋ, ਉਹ database ਵਿੱਚ save ਨਹੀਂ ਹੁੰਦਾ.",
-      "feedback.open": "Feedback",
       "why.label": "Common prompting mistake",
       "why.copy": "Most people ਲਿਖਦੇ ਨੇ: \"eh better bana do. Client ਨਾਲ ਗੱਲ ਹੋਈ; sales messy ਹੈ. Plan ਦੇ ਦਿਓ.\" AI ਨੂੰ task, context, format, missing info ਤੇ risks guess ਕਰਨੇ ਪੈਂਦੇ ਨੇ. ਹੇਠਾਂ ਚੁਣਕੇ ਪਹਿਲਾਂ brief clear ਕਰੋ.",
       "proof.label": "Quick example",
@@ -904,13 +879,8 @@ ${getShareUrl()}`
       "output.nextCopy": "ਇਹ prompt copy ਕਰੋ ਤੇ ChatGPT, Gemini, Claude ਜਾਂ ਜਿਸ AI ਨੂੰ ਤੁਸੀਂ use ਕਰਦੇ ਹੋ ਉਸ ਵਿੱਚ paste ਕਰੋ. ਜਵਾਬ ਆਉਣ ਤੋਂ ਬਾਅਦ, ਜੇ check ਕਰਨਾ ਹੈ ਕਿ AI ਨੇ ਕੁਝ invent ਤਾਂ ਨਹੀਂ ਕੀਤਾ, ਇੱਥੇ ਵਾਪਸ ਆਓ.",
       "actions.copy": "ਆਪਣੀ AI ਲਈ copy ਕਰੋ",
       "actions.download": ".txt download ਕਰੋ",
-      "feedback.title": "Quick feedback?",
-      "feedback.copy": "ਦੱਸੋ help ਹੋਇਆ, ਕੀ confusing ਸੀ, ਜਾਂ ਕਿਹੜਾ example add ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ.",
-      "feedback.label": "ਤੁਹਾਡਾ feedback",
-      "feedback.placeholder": "Example: customer reply ਵਿੱਚ help ਹੋਇਆ, ਪਰ sales ਵਾਲਾ example ਚਾਹੀਦਾ ਹੈ...",
-      "feedback.note": "ਇੱਥੇ save ਨਹੀਂ ਹੁੰਦਾ. Copy ਜਾਂ share ਕਰਦੇ ਸਮੇਂ ਤੁਸੀਂ decide ਕਰਦੇ ਹੋ ਕਿੱਥੇ ਭੇਜਣਾ ਹੈ.",
-      "actions.copyFeedback": "Feedback copy ਕਰੋ",
-      "actions.shareFeedback": "WhatsApp ਤੇ ਭੇਜੋ",
+      "feedback.title": "ਕੰਮ ਆਇਆ?",
+      "feedback.copy": "ਇੱਕ star tap ਕਰ ਦਿਓ. ਬੱਸ.",
       "share.title": "ਕੀ ਇਹ method helpful ਲੱਗਾ?",
       "share.copy": "ਜੇ ਕੰਮ ਆਇਆ, ਤਾਂ ਇਹ ਕਿਸੇ ਐਸੇ person ਨੂੰ ਭੇਜੋ ਜੋ ਅਜੇ ਵੀ rough ਗੱਲ ਸਿੱਧੀ AI ਵਿੱਚ ਪਾ ਦਿੰਦਾ ਹੈ.",
       "actions.share": "Share invitation copy ਕਰੋ",
@@ -929,7 +899,7 @@ ${getShareUrl()}`
       "actions.copyVerify": "Checking prompt copy ਕਰੋ",
       "privacy.note": "ਇਹ tool ਤੁਹਾਡੀ ਲਿਖੀ ਚੀਜ਼ save ਨਹੀਂ ਕਰਦਾ. Screen ਤੋਂ ਹਟਾਉਣ ਲਈ \"Clear\" ਦਬਾਓ ਜਾਂ tab close ਕਰੋ.",
       "footer.creator": "Created by Albert Punj",
-      "footer.meta": "v0.1.7 · © 2026 Albert Punj · Released 7 May 2026",
+      "footer.meta": "v0.1.8 · © 2026 Albert Punj · Released 7 May 2026",
       "footer.license": "MIT License",
       "footer.info": "ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ ਅਤੇ terms",
       "info.eyebrow": "NHA Method",
@@ -996,10 +966,8 @@ ${getShareUrl()}`
       downloaded: "File clear-prompt-builder.txt download ਹੋ ਗਈ.",
       shareCopied: "Share message copy ਹੋ ਗਿਆ.",
       shareFailed: "Message copy ਨਹੀਂ ਹੋਇਆ. Link manually copy ਕਰੋ.",
-      feedbackMissing: "ਪਹਿਲਾਂ feedback ਦੀ ਇੱਕ line ਲਿਖੋ.",
-      feedbackCopied: "Feedback copy ਹੋ ਗਿਆ. ਇਸਨੂੰ WhatsApp ਜਾਂ ਜਿੱਥੇ ਚਾਹੋ paste ਕਰ ਸਕਦੇ ਹੋ.",
-      feedbackShared: "Ready. Feedback share ਕਰਨ ਦਾ option ਖੁੱਲ ਗਿਆ.",
-      feedbackFailed: "WhatsApp open ਨਹੀਂ ਹੋਇਆ. Feedback copy ਕਰ ਦਿੱਤਾ ਗਿਆ ਹੈ.",
+      ratingSaved: "ਧੰਨਵਾਦ. ਤੁਹਾਡੀ rating save ਹੋ ਗਈ.",
+      ratingFailed: "ਹੁਣੇ save ਨਹੀਂ ਹੋਇਆ. ਫਿਰ try ਕਰੋ.",
       verifyMissingOriginal: "ਪਹਿਲਾਂ initial prompt ਲਿਖੋ ਜਾਂ generate ਕਰੋ; compare ਕਰਨ ਲਈ original text ਚਾਹੀਦਾ ਹੈ.",
       verifyMissingAnswer: "Verify ਕਰਨ ਲਈ AI response paste ਕਰੋ.",
       verifyGenerated: "Checking prompt ready. ਇਸਨੂੰ copy ਕਰਕੇ ਆਪਣੀ AI ਵਿੱਚ paste ਕਰੋ ਤਾਂ ਕਿ ਜਵਾਬ review ਹੋ ਸਕੇ.",
@@ -1282,8 +1250,8 @@ const aiAnswer = document.querySelector("#aiAnswer");
 const answerChecker = document.querySelector(".answer-checker");
 const humanChecklist = document.querySelector(".verification");
 const feedbackBox = document.querySelector("#feedbackBox");
-const feedbackText = document.querySelector("#feedbackText");
 const feedbackStatus = document.querySelector("#feedbackStatus");
+const ratingButtons = document.querySelectorAll("[data-rating]");
 const shareBox = document.querySelector("#shareBox");
 const verificationPromptOutput = document.querySelector("#verificationPromptOutput");
 const verificationStatus = document.querySelector("#verificationStatus");
@@ -1562,26 +1530,54 @@ function setFeedbackStatus(message, warning = false) {
   feedbackStatus.classList.toggle("warning", warning);
 }
 
-function buildFeedbackMessage() {
-  const languageData = translations[currentLanguage];
-  const feedback = feedbackText ? feedbackText.value.trim() : "";
-  if (!feedback) {
-    setFeedbackStatus(languageData.statuses.feedbackMissing, true);
-    return "";
+function getRatingSessionId() {
+  const key = "prompt-claro-session";
+  try {
+    let value = window.localStorage.getItem(key);
+    if (!value) {
+      value = window.crypto && window.crypto.randomUUID
+        ? window.crypto.randomUUID()
+        : `${Date.now()}-${Math.random().toString(16).slice(2)}`;
+      window.localStorage.setItem(key, value);
+    }
+    return value;
+  } catch {
+    return null;
   }
+}
 
-  const selectedCase = caseType ? languageData.cases[caseType.value] : "[PENDING]";
-  const selectedOutput = outputFormat ? languageData.outputs[outputFormat.value] : "[PENDING]";
+function setSelectedRating(rating) {
+  ratingButtons.forEach((button) => {
+    const buttonRating = Number(button.dataset.rating);
+    button.classList.toggle("is-selected", buttonRating <= rating);
+    button.setAttribute("aria-checked", String(buttonRating === rating));
+  });
+}
 
-  return `Feedback for Prompt Claro / Clear Prompt Builder
+async function submitRating(rating) {
+  const languageData = translations[currentLanguage];
+  setSelectedRating(rating);
+  setFeedbackStatus("");
 
-Language: ${languageData.name}
-Work type: ${selectedCase}
-Requested output: ${selectedOutput}
-URL: ${getShareUrl()}
+  try {
+    const response = await fetch("/api/nha-tce/rating", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        rating,
+        language: currentLanguage,
+        workType: caseType ? caseType.value : null,
+        outputFormat: outputFormat ? outputFormat.value : null,
+        path: window.location.pathname,
+        sessionId: getRatingSessionId(),
+      }),
+    });
 
-Feedback:
-${feedback}`;
+    if (!response.ok) throw new Error("Rating failed");
+    setFeedbackStatus(languageData.statuses.ratingSaved);
+  } catch {
+    setFeedbackStatus(languageData.statuses.ratingFailed, true);
+  }
 }
 
 function buildPrompt() {
@@ -1719,15 +1715,6 @@ function nudgeToVerificationPrompt() {
   nudgeToElement(".verification-output");
 }
 
-function openFeedbackBox() {
-  if (!feedbackBox) return;
-  feedbackBox.classList.remove("is-hidden");
-  window.setTimeout(() => {
-    feedbackBox.scrollIntoView({ behavior: getScrollBehavior(), block: "start" });
-    if (feedbackText) feedbackText.focus({ preventScroll: true });
-  }, 90);
-}
-
 function resetVerificationPrompt() {
   if (aiAnswer) aiAnswer.value = "";
   resetVerificationResult();
@@ -1861,52 +1848,11 @@ function setupToolPage() {
     }
   });
 
-  const openFeedbackButton = document.querySelector("#openFeedback");
-  if (openFeedbackButton) {
-    openFeedbackButton.addEventListener("click", openFeedbackBox);
-  }
-
-  const copyFeedbackButton = document.querySelector("#copyFeedback");
-  if (copyFeedbackButton) {
-    copyFeedbackButton.addEventListener("click", async () => {
-      const languageData = translations[currentLanguage];
-      const message = buildFeedbackMessage();
-      if (!message) return;
-
-      try {
-        await navigator.clipboard.writeText(message);
-        setFeedbackStatus(languageData.statuses.feedbackCopied);
-      } catch {
-        setFeedbackStatus(languageData.statuses.feedbackFailed, true);
-      }
+  ratingButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      submitRating(Number(button.dataset.rating));
     });
-  }
-
-  const shareFeedbackButton = document.querySelector("#shareFeedback");
-  if (shareFeedbackButton) {
-    shareFeedbackButton.addEventListener("click", async () => {
-      const languageData = translations[currentLanguage];
-      const message = buildFeedbackMessage();
-      if (!message) return;
-
-      try {
-        if (navigator.share) {
-          await navigator.share({ text: message });
-        } else {
-          await navigator.clipboard.writeText(message);
-          window.open(`https://wa.me/?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
-        }
-        setFeedbackStatus(languageData.statuses.feedbackShared);
-      } catch {
-        try {
-          await navigator.clipboard.writeText(message);
-        } catch {
-          // Keep the user-facing fallback simple; the feedback still remains in the field.
-        }
-        setFeedbackStatus(languageData.statuses.feedbackFailed, true);
-      }
-    });
-  }
+  });
 
   const generateVerificationButton = document.querySelector("#generateVerificationPrompt");
   if (generateVerificationButton) {
@@ -1953,7 +1899,7 @@ function setupToolPage() {
     renderPromptOutput(languageData.defaults.emptyPrompt);
     resetVerificationPrompt();
     hidePostPromptFlow();
-    if (feedbackText) feedbackText.value = "";
+    setSelectedRating(0);
     setFeedbackStatus("");
     if (exampleStatus) exampleStatus.textContent = t("samples.selectedHelp");
     setStatus("");

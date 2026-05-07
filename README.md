@@ -3,8 +3,8 @@
 > Turn messy thoughts into a first prompt that is clear enough to use, then optionally check the AI answer against the original text.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-0.1.7-blue.svg)](VERSION)
-[![No Backend](https://img.shields.io/badge/backend-none-lightgrey.svg)](#privacy)
+[![Version](https://img.shields.io/badge/version-0.1.8-blue.svg)](VERSION)
+[![Prompt Text](https://img.shields.io/badge/prompt_text-local-lightgrey.svg)](#privacy)
 [![Browser Only](https://img.shields.io/badge/runs-in_browser-brightgreen.svg)](#quick-start)
 
 Prompt Claro, powered by the NHA method, is a small open-source browser tool for people who already use
@@ -46,12 +46,12 @@ visible.
 - Supports Spanish, English, Hindi, and Punjabi.
 - Keeps Spanish examples Mexico-first and English/Hindi/Punjabi examples India-first.
 - Runs fully in the browser.
-- Does not require login, install, backend, API key, or database.
+- Does not require login, install, or API key.
 - Includes examples for legal, consulting, CX, operations, coding/product, and proposals.
 - Includes a human checklist before trusting AI output.
 - Reveals the answer-checking flow only after the first prompt is ready.
 - Generates a checking prompt to audit the AI response against the original text.
-- Lets users copy or share feedback after trying the tool, without adding login or a backend.
+- Shows a one-tap star rating after the first prompt. The hosted site can record only the rating metadata; prompt text stays local.
 
 ## Quick start
 
@@ -77,10 +77,12 @@ npm run check
 
 The prompt is generated locally in your browser.
 
-There is no backend in this project. The tool does not intentionally send your
-text to a server or store it in a database. If you paste sensitive
-information into any web page or into an AI tool, use your own judgment and
-review the privacy policy of that AI tool.
+The tool does not intentionally send your case text to a server to generate the
+prompt, and it does not store that text in a database. The public hosted version
+may record a simple star rating after use, with language/work-type metadata,
+but not the text you entered. If you paste sensitive information into any web
+page or into an AI tool, use your own judgment and review the privacy policy of
+that AI tool.
 
 ## Languages
 

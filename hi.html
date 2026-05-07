@@ -21,12 +21,11 @@
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://www.ashishpunj.com/nha-tce/og-image-hi.png">
-    <link rel="stylesheet" href="style.css?v=0.1.7-feedback-visible-20260507">
+    <link rel="stylesheet" href="style.css?v=0.1.8-star-rating-20260507">
   </head>
   <body>
     <main class="app-shell">
       <div class="language-row">
-        <button type="button" id="openFeedback" class="feedback-trigger" data-i18n="feedback.open">Feedback</button>
         <label class="language-control">
           <span data-i18n="language.label">भाषा</span>
           <select data-language-select aria-label="भाषा"></select>
@@ -172,17 +171,17 @@
             <p id="verificationStatus" class="status" role="status"></p>
           </section>
 
-          <section id="feedbackBox" class="feedback-box is-hidden" aria-label="Feedback भेजें">
-            <h3 data-i18n="feedback.title">Quick feedback?</h3>
-            <p data-i18n="feedback.copy">बताएं help हुआ, क्या confusing था, या कौन सा example add करना चाहिए.</p>
-            <label for="feedbackText" data-i18n="feedback.label">आपका feedback</label>
-            <textarea id="feedbackText" class="feedback-textarea" spellcheck="true" data-i18n-placeholder="feedback.placeholder" placeholder="Example: customer reply में help हुआ, लेकिन sales वाला example चाहिए..."></textarea>
-            <div class="button-row">
-              <button type="button" id="copyFeedback" class="secondary" data-i18n="actions.copyFeedback">Feedback copy करें</button>
-              <button type="button" id="shareFeedback" class="secondary" data-i18n="actions.shareFeedback">WhatsApp पर भेजें</button>
+          <section id="feedbackBox" class="feedback-box is-hidden" aria-label="Tool rating">
+            <h3 data-i18n="feedback.title">काम आया?</h3>
+            <p data-i18n="feedback.copy">एक star tap कर दें. बस.</p>
+            <div class="star-rating" role="radiogroup" aria-label="Rating">
+              <button type="button" class="star-button" data-rating="1" role="radio" aria-checked="false" aria-label="1 star">★</button>
+              <button type="button" class="star-button" data-rating="2" role="radio" aria-checked="false" aria-label="2 stars">★</button>
+              <button type="button" class="star-button" data-rating="3" role="radio" aria-checked="false" aria-label="3 stars">★</button>
+              <button type="button" class="star-button" data-rating="4" role="radio" aria-checked="false" aria-label="4 stars">★</button>
+              <button type="button" class="star-button" data-rating="5" role="radio" aria-checked="false" aria-label="5 stars">★</button>
             </div>
             <p id="feedbackStatus" class="status" role="status"></p>
-            <p class="feedback-note" data-i18n="feedback.note">यहां save नहीं होता. Copy या share करते समय आप decide करते हैं कहां भेजना है.</p>
           </section>
 
           <section id="shareBox" class="share-box is-hidden" aria-label="Tool share करें">
@@ -197,12 +196,12 @@
 
       <footer class="site-footer">
         <span data-i18n="footer.creator">Creado por Albert Punj</span>
-        <span data-i18n="footer.meta">v0.1.7 · © 2026 Albert Punj · Released 7 May 2026</span>
+        <span data-i18n="footer.meta">v0.1.8 · © 2026 Albert Punj · Released 7 May 2026</span>
         <a href="LICENSE" data-i18n="footer.license">MIT License</a>
         <a href="info.html" data-i18n="footer.info">Cómo funciona y términos</a>
       </footer>
     </main>
 
-    <script src="app.js?v=0.1.7-feedback-visible-20260507"></script>
+    <script src="app.js?v=0.1.8-star-rating-20260507"></script>
   </body>
 </html>

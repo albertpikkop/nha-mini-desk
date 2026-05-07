@@ -21,12 +21,11 @@
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://www.ashishpunj.com/nha-tce/og-image.png">
-    <link rel="stylesheet" href="style.css?v=0.1.7-feedback-visible-20260507">
+    <link rel="stylesheet" href="style.css?v=0.1.8-star-rating-20260507">
   </head>
   <body>
     <main class="app-shell">
       <div class="language-row">
-        <button type="button" id="openFeedback" class="feedback-trigger" data-i18n="feedback.open">Feedback</button>
         <label class="language-control">
           <span data-i18n="language.label">Idioma</span>
           <select data-language-select aria-label="Idioma"></select>
@@ -172,17 +171,17 @@
             <p id="verificationStatus" class="status" role="status"></p>
           </section>
 
-          <section id="feedbackBox" class="feedback-box is-hidden" aria-label="Enviar feedback">
-            <h3 data-i18n="feedback.title">¿Me das feedback rápido?</h3>
-            <p data-i18n="feedback.copy">Dime si te ayudó, qué te confundió o qué caso debería agregar.</p>
-            <label for="feedbackText" data-i18n="feedback.label">Tu feedback</label>
-            <textarea id="feedbackText" class="feedback-textarea" spellcheck="true" data-i18n-placeholder="feedback.placeholder" placeholder="Ejemplo: me sirvió para responder a un cliente, pero me gustaría tener un ejemplo para ventas..."></textarea>
-            <div class="button-row">
-              <button type="button" id="copyFeedback" class="secondary" data-i18n="actions.copyFeedback">Copiar feedback</button>
-              <button type="button" id="shareFeedback" class="secondary" data-i18n="actions.shareFeedback">Enviar por WhatsApp</button>
+          <section id="feedbackBox" class="feedback-box is-hidden" aria-label="Calificar herramienta">
+            <h3 data-i18n="feedback.title">¿Te sirvió?</h3>
+            <p data-i18n="feedback.copy">Toca una estrella. Eso es todo.</p>
+            <div class="star-rating" role="radiogroup" aria-label="Calificación">
+              <button type="button" class="star-button" data-rating="1" role="radio" aria-checked="false" aria-label="1 estrella">★</button>
+              <button type="button" class="star-button" data-rating="2" role="radio" aria-checked="false" aria-label="2 estrellas">★</button>
+              <button type="button" class="star-button" data-rating="3" role="radio" aria-checked="false" aria-label="3 estrellas">★</button>
+              <button type="button" class="star-button" data-rating="4" role="radio" aria-checked="false" aria-label="4 estrellas">★</button>
+              <button type="button" class="star-button" data-rating="5" role="radio" aria-checked="false" aria-label="5 estrellas">★</button>
             </div>
             <p id="feedbackStatus" class="status" role="status"></p>
-            <p class="feedback-note" data-i18n="feedback.note">No se guarda aquí. Al copiarlo o compartirlo, tú decides dónde enviarlo.</p>
           </section>
 
           <section id="shareBox" class="share-box is-hidden" aria-label="Compartir herramienta">
@@ -197,12 +196,12 @@
 
       <footer class="site-footer">
         <span data-i18n="footer.creator">Creado por Albert Punj</span>
-        <span data-i18n="footer.meta">v0.1.7 · © 2026 Albert Punj · Lanzado 7 May 2026</span>
+        <span data-i18n="footer.meta">v0.1.8 · © 2026 Albert Punj · Lanzado 7 May 2026</span>
         <a href="LICENSE" data-i18n="footer.license">MIT License</a>
         <a href="info.html" data-i18n="footer.info">Cómo funciona y términos</a>
       </footer>
     </main>
 
-    <script src="app.js?v=0.1.7-feedback-visible-20260507"></script>
+    <script src="app.js?v=0.1.8-star-rating-20260507"></script>
   </body>
 </html>
