@@ -1472,6 +1472,7 @@ function setLanguage(language, showChangeNotice = false) {
   });
 
   updateLanguageLinks();
+  updateBrowserLanguageUrl(currentLanguage);
   populateOptions();
   updateSelectedExamplePreview();
   updatePendingDependentCopy();
@@ -1517,6 +1518,23 @@ function updateLanguageLinks() {
   document.querySelectorAll("a[href='index.html'], a[href^='index.html?']").forEach((link) => {
     link.href = `index.html?lang=${currentLanguage}`;
   });
+}
+
+function updateBrowserLanguageUrl(language) {
+  if (window.location.protocol === "file:" || !window.history?.replaceState) return;
+
+  const currentUrl = new URL(window.location.href);
+
+  if (currentUrl.pathname.endsWith("/info.html")) {
+    currentUrl.searchParams.set("lang", language);
+    window.history.replaceState({}, "", currentUrl.toString());
+    return;
+  }
+
+  currentUrl.pathname = getLocalizedPath(language);
+  currentUrl.search = "";
+  currentUrl.hash = "";
+  window.history.replaceState({}, "", currentUrl.toString());
 }
 
 function getInitialLanguage() {
