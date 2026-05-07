@@ -1291,6 +1291,8 @@ const localizedPageNames = {
   pa: "pa.html"
 };
 
+const languagePreferenceKey = "prompt-claro-language";
+
 function getLocalizedPath(language) {
   const pageName = localizedPageNames[language] || "";
   const basePath = window.location.pathname
@@ -1327,6 +1329,24 @@ function t(key) {
   return translations[currentLanguage].ui[key] || translations.es.ui[key] || key;
 }
 
+function saveLanguagePreference(language) {
+  if (!translations[language]) return;
+  try {
+    window.localStorage.setItem(languagePreferenceKey, language);
+  } catch {
+    // Ignore storage failures; language still changes for the current page.
+  }
+}
+
+function getSavedLanguagePreference() {
+  try {
+    const savedLanguage = window.localStorage.getItem(languagePreferenceKey);
+    return translations[savedLanguage] ? savedLanguage : "";
+  } catch {
+    return "";
+  }
+}
+
 function setLanguage(language, showChangeNotice = false) {
   const existingPrompt = promptOutput ? promptOutput.textContent.trim() : "";
   const existingVerificationPrompt = verificationPromptOutput ? verificationPromptOutput.textContent.trim() : "";
@@ -1335,6 +1355,7 @@ function setLanguage(language, showChangeNotice = false) {
   const nextLanguage = translations[language] ? language : "es";
   const previousDefault = lastDefaultOutcome;
   currentLanguage = nextLanguage;
+  saveLanguagePreference(currentLanguage);
   const languageData = translations[currentLanguage];
 
   document.documentElement.lang = languageData.htmlLang;
@@ -1412,6 +1433,9 @@ function getInitialLanguage() {
   const pageName = window.location.pathname.split("/").pop().toLowerCase();
   const pageLanguage = Object.entries(localizedPageNames).find(([, name]) => name === pageName);
   if (pageLanguage && translations[pageLanguage[0]]) return pageLanguage[0];
+
+  const savedLanguage = getSavedLanguagePreference();
+  if (savedLanguage) return savedLanguage;
 
   const htmlLanguage = document.documentElement.lang;
   return translations[htmlLanguage] ? htmlLanguage : "es";
