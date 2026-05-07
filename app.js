@@ -1399,7 +1399,7 @@ function getShareUrl(language = currentLanguage) {
   url.pathname = getLocalizedPath(language);
   url.search = "";
   url.searchParams.set("lang", language);
-  url.searchParams.set("preview", "0.1.9");
+  url.searchParams.set("preview", "0.1.9-hook");
   url.hash = "";
   return url.toString();
 }
