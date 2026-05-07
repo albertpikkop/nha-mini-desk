@@ -305,7 +305,7 @@ Ordena la tarea -> agrega contexto -> marca pendientes -> copia un mejor prompt
 Gratis. Sin login. Sin instalar nada.
 
 Si te sirve, compártelo con alguien que pueda beneficiarse de este método:
-${getShareUrl()}`
+${getShareUrl("es")}`
   },
 
   en: {
@@ -581,7 +581,7 @@ Choose the work -> write or paste your idea -> copy a better prompt
 Free. No login. No app install.
 
 If it helps, share it with someone who could benefit from this method:
-${getShareUrl()}`
+${getShareUrl("en")}`
   },
 
   hi: {
@@ -857,7 +857,7 @@ Tomorrow review के लिए first version चाहिए.`
 Free. No login. No app install.
 
 अगर यह helpful लगे, तो इसे किसी ऐसे व्यक्ति को share करें जिसे इस method से फायदा होगा:
-${getShareUrl()}`
+${getShareUrl("hi")}`
   },
 
   pa: {
@@ -1133,7 +1133,7 @@ Tomorrow review ਲਈ first version ਚਾਹੀਦਾ ਹੈ.`
 Free. No login. No app install.
 
 ਜੇ helpful ਲੱਗੇ, ਇਸਨੂੰ ਕਿਸੇ ਨਾਲ share ਕਰੋ ਜਿਸਨੂੰ ਇਸ method ਤੋਂ benefit ਹੋਵੇ:
-${getShareUrl()}`
+${getShareUrl("pa")}`
   }
 };
 
@@ -1398,6 +1398,8 @@ function getShareUrl(language = currentLanguage) {
   const url = new URL(window.location.href);
   url.pathname = getLocalizedPath(language);
   url.search = "";
+  url.searchParams.set("lang", language);
+  url.searchParams.set("preview", "0.1.9");
   url.hash = "";
   return url.toString();
 }
