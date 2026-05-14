@@ -23,6 +23,320 @@ const outputOptionsByCase = {
   study: ["studyPlan", "explain", "codingHelp", "projectPlan", "summary"]
 };
 
+const beginnerIntents = [
+  {
+    key: "reply",
+    caseKey: "sales",
+    outputKey: "customerReply",
+    labels: {
+      es: "Responder a alguien",
+      en: "Reply to someone",
+      hi: "किसी को reply",
+      pa: "ਕਿਸੇ ਨੂੰ reply"
+    },
+    descriptions: {
+      es: "Cliente, jefe, profesor, proveedor o contacto.",
+      en: "Client, boss, teacher, vendor, or contact.",
+      hi: "Client, boss, teacher, vendor या contact.",
+      pa: "Client, boss, teacher, vendor ਜਾਂ contact."
+    },
+    outcomes: {
+      es: "Prepara una respuesta clara, humana y segura. Separa lo confirmado de lo pendiente y no prometas datos no confirmados.",
+      en: "Prepare a clear, human, safe reply. Separate confirmed details from pending items and do not promise unconfirmed facts.",
+      hi: "Clear, human और safe reply तैयार करें. Confirmed details और pending items अलग रखें; unconfirmed चीज़ promise न करें.",
+      pa: "Clear, human ਅਤੇ safe reply ਤਿਆਰ ਕਰੋ. Confirmed details ਅਤੇ pending items ਵੱਖ ਰੱਖੋ; unconfirmed ਚੀਜ਼ promise ਨਾ ਕਰੋ."
+    },
+    placeholders: {
+      es: "Pega el mensaje recibido, lo que sabes, lo que falta confirmar y el tono que quieres usar.",
+      en: "Paste the message you received, what you know, what is not confirmed, and the tone you want.",
+      hi: "Received message, जो पता है, जो confirm नहीं है, और tone paste करें.",
+      pa: "Received message, ਜੋ ਪਤਾ ਹੈ, ਜੋ confirm ਨਹੀਂ ਹੈ, ਅਤੇ tone paste ਕਰੋ."
+    },
+    statuses: {
+      es: "Listo: pega el mensaje abajo. Puede estar desordenado.",
+      en: "Ready: paste the message below. Messy is fine.",
+      hi: "Ready: नीचे message paste करें. Messy चलेगा.",
+      pa: "Ready: ਹੇਠਾਂ message paste ਕਰੋ. Messy ਚੱਲੇਗਾ."
+    }
+  },
+  {
+    key: "study",
+    caseKey: "study",
+    outputKey: "explain",
+    labels: {
+      es: "Entender o estudiar",
+      en: "Understand or study",
+      hi: "Study समझना",
+      pa: "Study ਸਮਝਣੀ"
+    },
+    descriptions: {
+      es: "Tema, examen, tarea, concepto o explicación paso a paso.",
+      en: "Topic, exam, assignment, concept, or step-by-step explanation.",
+      hi: "Topic, exam, assignment, concept या step-by-step explanation.",
+      pa: "Topic, exam, assignment, concept ਜਾਂ step-by-step explanation."
+    },
+    outcomes: {
+      es: "Explícame esto paso a paso para mi nivel. Marca lo que falte, evita inventar fuentes y dame práctica útil.",
+      en: "Explain this step by step for my level. Mark what is missing, do not invent sources, and give useful practice.",
+      hi: "इसे मेरे level के हिसाब से step by step समझाएं. Missing चीज़ mark करें, sources invent न करें, और useful practice दें.",
+      pa: "ਇਸਨੂੰ ਮੇਰੇ level ਦੇ ਹਿਸਾਬ ਨਾਲ step by step ਸਮਝਾਓ. Missing ਚੀਜ਼ mark ਕਰੋ, sources invent ਨਾ ਕਰੋ, ਅਤੇ useful practice ਦਿਓ."
+    },
+    placeholders: {
+      es: "Pega el tema, pregunta, notas de clase, lo que entiendes y dónde te trabas.",
+      en: "Paste the topic, question, class notes, what you understand, and where you are stuck.",
+      hi: "Topic, question, class notes, आपको क्या समझ आया और कहां stuck हैं paste करें.",
+      pa: "Topic, question, class notes, ਤੁਹਾਨੂੰ ਕੀ ਸਮਝ ਆਇਆ ਅਤੇ ਕਿੱਥੇ stuck ਹੋ paste ਕਰੋ."
+    },
+    statuses: {
+      es: "Listo: pega el tema o pregunta abajo.",
+      en: "Ready: paste the topic or question below.",
+      hi: "Ready: नीचे topic या question paste करें.",
+      pa: "Ready: ਹੇਠਾਂ topic ਜਾਂ question paste ਕਰੋ."
+    }
+  },
+  {
+    key: "career",
+    caseKey: "career",
+    outputKey: "resume",
+    labels: {
+      es: "CV, LinkedIn o entrevista",
+      en: "Resume, LinkedIn, interview",
+      hi: "Resume या interview",
+      pa: "Resume ਜਾਂ interview"
+    },
+    descriptions: {
+      es: "Mejorar perfil sin inventar experiencia.",
+      en: "Improve your profile without inventing experience.",
+      hi: "Experience invent किए बिना profile improve करें.",
+      pa: "Experience invent ਕੀਤੇ ਬਿਨਾਂ profile improve ਕਰੋ."
+    },
+    outcomes: {
+      es: "Mejora mi perfil profesional usando solo información real. Separa logros confirmados, huecos, preguntas y una versión sugerida.",
+      en: "Improve my professional profile using only real information. Separate confirmed achievements, gaps, questions, and a suggested version.",
+      hi: "सिर्फ real information से मेरा professional profile improve करें. Confirmed achievements, gaps, questions और suggested version अलग करें.",
+      pa: "ਸਿਰਫ real information ਨਾਲ ਮੇਰਾ professional profile improve ਕਰੋ. Confirmed achievements, gaps, questions ਅਤੇ suggested version ਵੱਖ ਕਰੋ."
+    },
+    placeholders: {
+      es: "Pega tu CV, experiencia, rol objetivo, estudios, logros y dudas.",
+      en: "Paste your resume, experience, target role, education, achievements, and doubts.",
+      hi: "Resume, experience, target role, education, achievements और doubts paste करें.",
+      pa: "Resume, experience, target role, education, achievements ਅਤੇ doubts paste ਕਰੋ."
+    },
+    statuses: {
+      es: "Listo: pega tu experiencia o CV abajo.",
+      en: "Ready: paste your experience or resume below.",
+      hi: "Ready: नीचे experience या resume paste करें.",
+      pa: "Ready: ਹੇਠਾਂ experience ਜਾਂ resume paste ਕਰੋ."
+    }
+  },
+  {
+    key: "plan",
+    caseKey: "business",
+    outputKey: "actionPlan",
+    labels: {
+      es: "Planear mi trabajo",
+      en: "Plan my work",
+      hi: "Work plan बनाना",
+      pa: "Work plan ਬਣਾਉਣਾ"
+    },
+    descriptions: {
+      es: "Convertir ideas sueltas en pasos, dueños y riesgos.",
+      en: "Turn scattered thoughts into steps, owners, and risks.",
+      hi: "Scattered thoughts को steps, owners और risks में बदलें.",
+      pa: "Scattered thoughts ਨੂੰ steps, owners ਅਤੇ risks ਵਿੱਚ ਬਦਲੋ."
+    },
+    outcomes: {
+      es: "Convierte estas notas en un plan de acción simple con prioridades, próximos pasos, responsables, riesgos y preguntas.",
+      en: "Turn these notes into a simple action plan with priorities, next steps, owners, risks, and questions.",
+      hi: "इन notes को simple action plan में बदलें: priorities, next steps, owners, risks और questions.",
+      pa: "ਇਹ notes simple action plan ਵਿੱਚ ਬਦਲੋ: priorities, next steps, owners, risks ਅਤੇ questions."
+    },
+    placeholders: {
+      es: "Pega tus notas, objetivo, fecha, personas involucradas y lo que está bloqueado.",
+      en: "Paste your notes, goal, deadline, people involved, and what is blocked.",
+      hi: "Notes, goal, deadline, involved people और blocked चीज़ें paste करें.",
+      pa: "Notes, goal, deadline, involved people ਅਤੇ blocked ਚੀਜ਼ਾਂ paste ਕਰੋ."
+    },
+    statuses: {
+      es: "Listo: pega tus notas de trabajo abajo.",
+      en: "Ready: paste your work notes below.",
+      hi: "Ready: नीचे work notes paste करें.",
+      pa: "Ready: ਹੇਠਾਂ work notes paste ਕਰੋ."
+    }
+  },
+  {
+    key: "marketing",
+    caseKey: "marketing",
+    outputKey: "whatsappPromo",
+    labels: {
+      es: "Crear contenido",
+      en: "Create content",
+      hi: "Content बनाना",
+      pa: "Content ਬਣਾਉਣਾ"
+    },
+    descriptions: {
+      es: "Post, anuncio, WhatsApp, landing o newsletter.",
+      en: "Post, ad, WhatsApp promo, landing page, or newsletter.",
+      hi: "Post, ad, WhatsApp promo, landing page या newsletter.",
+      pa: "Post, ad, WhatsApp promo, landing page ਜਾਂ newsletter."
+    },
+    outcomes: {
+      es: "Crea contenido claro y natural con audiencia, oferta, prueba, CTA y datos pendientes. Evita exageraciones.",
+      en: "Create clear, natural content with audience, offer, proof, CTA, and pending details. Avoid exaggeration.",
+      hi: "Audience, offer, proof, CTA और pending details के साथ clear natural content बनाएं. Exaggeration avoid करें.",
+      pa: "Audience, offer, proof, CTA ਅਤੇ pending details ਨਾਲ clear natural content ਬਣਾਓ. Exaggeration avoid ਕਰੋ."
+    },
+    placeholders: {
+      es: "Pega la oferta, audiencia, canal, precio, prueba, link y lo que falta confirmar.",
+      en: "Paste the offer, audience, channel, price, proof, link, and what is not confirmed.",
+      hi: "Offer, audience, channel, price, proof, link और unconfirmed चीज़ें paste करें.",
+      pa: "Offer, audience, channel, price, proof, link ਅਤੇ unconfirmed ਚੀਜ਼ਾਂ paste ਕਰੋ."
+    },
+    statuses: {
+      es: "Listo: pega la oferta o idea de contenido abajo.",
+      en: "Ready: paste the offer or content idea below.",
+      hi: "Ready: नीचे offer या content idea paste करें.",
+      pa: "Ready: ਹੇਠਾਂ offer ਜਾਂ content idea paste ਕਰੋ."
+    }
+  },
+  {
+    key: "business",
+    caseKey: "business",
+    outputKey: "proposalBrief",
+    labels: {
+      es: "Propuesta o negocio",
+      en: "Proposal or business",
+      hi: "Proposal या business",
+      pa: "Proposal ਜਾਂ business"
+    },
+    descriptions: {
+      es: "Scope, reunión, diagnóstico, oferta o decisión.",
+      en: "Scope, meeting, diagnosis, offer, or decision.",
+      hi: "Scope, meeting, diagnosis, offer या decision.",
+      pa: "Scope, meeting, diagnosis, offer ਜਾਂ decision."
+    },
+    outcomes: {
+      es: "Convierte esto en un brief de negocio con problema, alcance, entregables, fuera de alcance, riesgos, preguntas y siguiente paso.",
+      en: "Turn this into a business brief with problem, scope, deliverables, out of scope, risks, questions, and next step.",
+      hi: "इसे business brief में बदलें: problem, scope, deliverables, out of scope, risks, questions और next step.",
+      pa: "ਇਸਨੂੰ business brief ਵਿੱਚ ਬਦਲੋ: problem, scope, deliverables, out of scope, risks, questions ਅਤੇ next step."
+    },
+    placeholders: {
+      es: "Pega notas de llamada, pedido del cliente, idea de negocio, alcance y dudas.",
+      en: "Paste call notes, client request, business idea, scope, and doubts.",
+      hi: "Call notes, client request, business idea, scope और doubts paste करें.",
+      pa: "Call notes, client request, business idea, scope ਅਤੇ doubts paste ਕਰੋ."
+    },
+    statuses: {
+      es: "Listo: pega las notas de negocio abajo.",
+      en: "Ready: paste the business notes below.",
+      hi: "Ready: नीचे business notes paste करें.",
+      pa: "Ready: ਹੇਠਾਂ business notes paste ਕਰੋ."
+    }
+  },
+  {
+    key: "code",
+    caseKey: "study",
+    outputKey: "codingHelp",
+    labels: {
+      es: "Ayuda con código",
+      en: "Help with code",
+      hi: "Code help",
+      pa: "Code help"
+    },
+    descriptions: {
+      es: "Error, ejercicio, explicación o plan de depuración.",
+      en: "Error, exercise, explanation, or debugging plan.",
+      hi: "Error, exercise, explanation या debugging plan.",
+      pa: "Error, exercise, explanation ਜਾਂ debugging plan."
+    },
+    outcomes: {
+      es: "Crea un prompt de depuración que separe comportamiento observado, hipótesis, código necesario, pruebas y datos faltantes.",
+      en: "Create a debugging prompt that separates observed behavior, hypotheses, needed code, tests, and missing details.",
+      hi: "Debugging prompt बनाएं जो observed behavior, hypotheses, needed code, tests और missing details अलग करे.",
+      pa: "Debugging prompt ਬਣਾਓ ਜੋ observed behavior, hypotheses, needed code, tests ਅਤੇ missing details ਵੱਖ ਕਰੇ."
+    },
+    placeholders: {
+      es: "Pega el problema, lenguaje, error, código relevante, entrada esperada y lo que ya intentaste.",
+      en: "Paste the problem, language, error, relevant code, expected output, and what you tried.",
+      hi: "Problem, language, error, relevant code, expected output और tried steps paste करें.",
+      pa: "Problem, language, error, relevant code, expected output ਅਤੇ tried steps paste ਕਰੋ."
+    },
+    statuses: {
+      es: "Listo: pega el error o problema de código abajo.",
+      en: "Ready: paste the code issue below.",
+      hi: "Ready: नीचे code issue paste करें.",
+      pa: "Ready: ਹੇਠਾਂ code issue paste ਕਰੋ."
+    }
+  },
+  {
+    key: "check",
+    caseKey: "general",
+    outputKey: "risks",
+    labels: {
+      es: "Revisar respuesta de IA",
+      en: "Check an AI answer",
+      hi: "AI answer check",
+      pa: "AI answer check"
+    },
+    descriptions: {
+      es: "Detectar inventos, faltantes y supuestos.",
+      en: "Catch invented facts, gaps, and assumptions.",
+      hi: "Invented facts, gaps और assumptions पकड़ें.",
+      pa: "Invented facts, gaps ਅਤੇ assumptions ਫੜੋ."
+    },
+    outcomes: {
+      es: "Revisa una respuesta de IA contra mi texto original y marca inventos, faltantes, supuestos y riesgos antes de usarla.",
+      en: "Check an AI answer against my original text and mark invented facts, gaps, assumptions, and risks before I use it.",
+      hi: "AI answer को original text से compare करें और invented facts, gaps, assumptions, risks mark करें.",
+      pa: "AI answer ਨੂੰ original text ਨਾਲ compare ਕਰੋ ਅਤੇ invented facts, gaps, assumptions, risks mark ਕਰੋ."
+    },
+    placeholders: {
+      es: "Primero pega el texto original aquí. Después de generar el prompt, pega la respuesta de la IA en la sección de revisión.",
+      en: "First paste the original text here. After generating the prompt, paste the AI answer in the checking section.",
+      hi: "पहले original text यहां paste करें. Prompt generate करने के बाद AI answer checking section में paste करें.",
+      pa: "ਪਹਿਲਾਂ original text ਇੱਥੇ paste ਕਰੋ. Prompt generate ਕਰਨ ਤੋਂ ਬਾਅਦ AI answer checking section ਵਿੱਚ paste ਕਰੋ."
+    },
+    statuses: {
+      es: "Listo: pega primero tu texto original abajo.",
+      en: "Ready: paste your original text below first.",
+      hi: "Ready: पहले original text नीचे paste करें.",
+      pa: "Ready: ਪਹਿਲਾਂ original text ਹੇਠਾਂ paste ਕਰੋ."
+    }
+  }
+];
+
+const beginnerUi = {
+  es: {
+    "beginner.label": "Modo principiante",
+    "beginner.title": "¿Qué quieres hacer hoy?",
+    "beginner.copy": "Elige una situación normal. Ajustamos la plantilla y luego tú pegas el texto real.",
+    "beginner.manual": "Usar modo manual",
+    "beginner.manualStatus": "Modo manual listo. Elige el tipo de trabajo y pega tu texto."
+  },
+  en: {
+    "beginner.label": "Beginner mode",
+    "beginner.title": "What do you want help with today?",
+    "beginner.copy": "Choose a normal situation. We set the template, then you paste the real text.",
+    "beginner.manual": "Use manual mode",
+    "beginner.manualStatus": "Manual mode ready. Choose the work type and paste your text."
+  },
+  hi: {
+    "beginner.label": "Beginner mode",
+    "beginner.title": "आज किस चीज़ में help चाहिए?",
+    "beginner.copy": "Normal situation चुनें. Template set हो जाएगी, फिर अपना real text paste करें.",
+    "beginner.manual": "Manual mode use करें",
+    "beginner.manualStatus": "Manual mode ready. Work type चुनें और text paste करें."
+  },
+  pa: {
+    "beginner.label": "Beginner mode",
+    "beginner.title": "ਅੱਜ ਕਿਸ ਚੀਜ਼ ਵਿੱਚ help ਚਾਹੀਦੀ ਹੈ?",
+    "beginner.copy": "Normal situation ਚੁਣੋ. Template set ਹੋ ਜਾਵੇਗੀ, ਫਿਰ ਆਪਣਾ real text paste ਕਰੋ.",
+    "beginner.manual": "Manual mode use ਕਰੋ",
+    "beginner.manualStatus": "Manual mode ready. Work type ਚੁਣੋ ਅਤੇ text paste ਕਰੋ."
+  }
+};
+
 const translations = {
   es: {
     name: "Español",
@@ -1625,11 +1939,17 @@ Object.entries(launchCategoryPack).forEach(([language, pack]) => {
   Object.assign(target.formatGuidance, genericFormatGuidance[language] || genericFormatGuidance.en);
 });
 
+Object.entries(beginnerUi).forEach(([language, ui]) => {
+  if (!translations[language]) return;
+  Object.assign(translations[language].ui, ui);
+});
+
   window.PromptClaroData = {
     caseKeys,
     outputKeys,
     outputOptionsByCase,
     translations,
     contextualSamples,
+    beginnerIntents,
   };
 })();

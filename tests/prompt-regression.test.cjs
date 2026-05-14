@@ -52,6 +52,12 @@ function createElement(initial = {}) {
       }
       return child;
     },
+    querySelectorAll(selector) {
+      if (selector === "[data-beginner-intent]") {
+        return this.children.filter((child) => child.dataset && child.dataset.beginnerIntent);
+      }
+      return [];
+    },
     addEventListener() {},
     setAttribute(name, value) {
       this.attributes[name] = String(value);
@@ -87,6 +93,9 @@ function loadApp() {
     "#verificationStatus": createElement(),
     "#selectedExamplePreview": createElement(),
     "#exampleStatus": createElement(),
+    "#beginnerChoices": createElement(),
+    "#beginnerStatus": createElement(),
+    "#beginnerManual": createElement(),
     "#loadSelectedExample": createElement(),
     "#generatePrompt": createElement(),
     "#tryExample": createElement(),
@@ -242,6 +251,18 @@ function testVerificationPromptGuard() {
   assert.match(app.elements["#verificationStatus"].textContent, /pasted the initial prompt/i);
 }
 
+function testBeginnerIntentSelectsTemplate() {
+  const app = loadApp();
+  app.context.setLanguage("en");
+  app.context.selectBeginnerIntent("reply", false);
+
+  assert.equal(app.elements["#caseType"].value, "sales");
+  assert.equal(app.elements["#outputFormat"].value, "customerReply");
+  assert.match(app.elements["#desiredOutcome"].value, /safe reply/i);
+  assert.match(app.elements["#rawNotes"].attributes.placeholder, /message you received/i);
+  assert.match(app.elements["#beginnerStatus"].textContent, /paste the message below/i);
+}
+
 async function testRatingUnavailableMessage() {
   const app = loadApp();
   app.context.setLanguage("en");
@@ -254,6 +275,7 @@ async function run() {
   testEnglishSalesPrompt();
   testSpanishPendingOffPrompt();
   testVerificationPromptGuard();
+  testBeginnerIntentSelectsTemplate();
   await testRatingUnavailableMessage();
   console.log("Prompt regression tests passed.");
 }

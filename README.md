@@ -42,6 +42,9 @@ visible.
 ## What it does
 
 - Turns a rough ask, message, or work context into a structured prompt.
+- Includes a beginner mode with everyday choices such as replying to someone,
+  studying, improving a resume, planning work, creating content, debugging
+  code, or checking an AI answer.
 - Works with ChatGPT, Gemini, Claude, or any AI you use.
 - Supports Spanish, English, Hindi, and Punjabi.
 - Keeps Spanish examples Mexico-first and English/Hindi/Punjabi examples India-first.

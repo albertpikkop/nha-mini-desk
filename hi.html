@@ -82,6 +82,19 @@
             <p data-i18n="input.explainerCopy">Puede ser una idea, un mensaje, una llamada o un correo. La herramienta lo convierte en una instrucción clara para la IA.</p>
           </div>
 
+          <section class="beginner-mode" aria-labelledby="beginnerTitle">
+            <div class="beginner-header">
+              <div>
+                <p class="mini-label" data-i18n="beginner.label">Modo principiante</p>
+                <h3 id="beginnerTitle" data-i18n="beginner.title">¿Qué quieres hacer hoy?</h3>
+                <p data-i18n="beginner.copy">Elige una situación normal. Ajustamos la plantilla y luego tú pegas el texto real.</p>
+              </div>
+              <button type="button" id="beginnerManual" class="secondary" data-i18n="beginner.manual">Usar modo manual</button>
+            </div>
+            <div id="beginnerChoices" class="beginner-grid" aria-label="Situaciones comunes"></div>
+            <p id="beginnerStatus" class="beginner-status" role="status"></p>
+          </section>
+
           <div class="options-box flow-selector">
             <p class="choice-help" data-i18n="form.choiceHelp">Start by choosing the type of work and what you want back. This selects the right prompt template.</p>
 

@@ -4,6 +4,7 @@ const {
   outputOptionsByCase,
   translations,
   contextualSamples,
+  beginnerIntents,
 } = window.PromptClaroData;
 const {
   buildPromptFromState,
@@ -32,7 +33,11 @@ const verificationStatus = document.querySelector("#verificationStatus");
 const selectedExamplePreview = document.querySelector("#selectedExamplePreview");
 const exampleStatus = document.querySelector("#exampleStatus");
 const languageSelects = document.querySelectorAll("[data-language-select]");
+const beginnerChoices = document.querySelector("#beginnerChoices");
+const beginnerStatus = document.querySelector("#beginnerStatus");
+const beginnerManual = document.querySelector("#beginnerManual");
 let ratingSubmitted = false;
+let selectedBeginnerIntent = "";
 
 const localizedPageNames = {
   es: "",
@@ -132,12 +137,20 @@ function setLanguage(language, showChangeNotice = false) {
   updateLanguageLinks();
   updateBrowserLanguageUrl(currentLanguage);
   populateOptions();
+  renderBeginnerChoices();
   updateSelectedExamplePreview();
   updatePendingDependentCopy();
 
   if (desiredOutcome) {
     const existing = desiredOutcome.value.trim();
-    if (!existing || existing === previousDefault) {
+    const selectedIntent = getBeginnerIntent(selectedBeginnerIntent);
+    if (selectedIntent) {
+      desiredOutcome.value = getLocalizedIntentValue(selectedIntent, "outcomes");
+      if (rawNotes) {
+        rawNotes.setAttribute("placeholder", getLocalizedIntentValue(selectedIntent, "placeholders") || t("notes.placeholder"));
+      }
+      setBeginnerStatus(getLocalizedIntentValue(selectedIntent, "statuses"));
+    } else if (!existing || existing === previousDefault) {
       desiredOutcome.value = languageData.defaults.outcome;
     }
   }
@@ -278,6 +291,93 @@ function getSelectedExampleLoadedText(selectedCase, selectedOutput) {
     pa: "Example load ਹੋ ਗਿਆ. ਹੇਠਾਂ edit ਕਰੋ ਜਾਂ prompt generate ਕਰੋ."
   };
   return messages[currentLanguage] || messages.es;
+}
+
+function getLocalizedIntentValue(intent, field) {
+  const values = intent[field] || {};
+  return values[currentLanguage] || values.en || values.es || "";
+}
+
+function getBeginnerIntent(intentKey) {
+  return beginnerIntents.find((intent) => intent.key === intentKey);
+}
+
+function setBeginnerStatus(message = "") {
+  if (!beginnerStatus) return;
+  beginnerStatus.textContent = message;
+}
+
+function updateBeginnerSelection() {
+  if (!beginnerChoices) return;
+  beginnerChoices.querySelectorAll("[data-beginner-intent]").forEach((button) => {
+    const isSelected = button.dataset.beginnerIntent === selectedBeginnerIntent;
+    button.classList.toggle("is-selected", isSelected);
+    button.setAttribute("aria-pressed", String(isSelected));
+  });
+}
+
+function renderBeginnerChoices() {
+  if (!beginnerChoices) return;
+  beginnerChoices.innerHTML = "";
+
+  beginnerIntents.forEach((intent) => {
+    const button = document.createElement("button");
+    const label = document.createElement("strong");
+    const description = document.createElement("span");
+
+    button.type = "button";
+    button.className = "beginner-choice";
+    button.dataset.beginnerIntent = intent.key;
+    button.setAttribute("aria-pressed", String(intent.key === selectedBeginnerIntent));
+
+    label.textContent = getLocalizedIntentValue(intent, "labels");
+    description.textContent = getLocalizedIntentValue(intent, "descriptions");
+
+    button.appendChild(label);
+    button.appendChild(description);
+    beginnerChoices.appendChild(button);
+  });
+
+  updateBeginnerSelection();
+}
+
+function selectBeginnerIntent(intentKey, shouldFocusInput = true) {
+  const intent = getBeginnerIntent(intentKey);
+  if (!intent || !caseType || !outputFormat || !desiredOutcome) return;
+
+  selectedBeginnerIntent = intent.key;
+  caseType.value = intent.caseKey;
+  populateOptions();
+
+  const availableOutputs = outputOptionsByCase[intent.caseKey] || outputOptionsByCase.general;
+  outputFormat.value = availableOutputs.includes(intent.outputKey) ? intent.outputKey : availableOutputs[0];
+  desiredOutcome.value = getLocalizedIntentValue(intent, "outcomes");
+
+  if (rawNotes) {
+    rawNotes.setAttribute("placeholder", getLocalizedIntentValue(intent, "placeholders") || t("notes.placeholder"));
+  }
+
+  updateSelectedExamplePreview();
+  updateBeginnerSelection();
+  hidePostPromptFlow();
+  resetVerificationPrompt();
+  renderPromptOutput(translations[currentLanguage].defaults.emptyPrompt);
+
+  const message = getLocalizedIntentValue(intent, "statuses");
+  setBeginnerStatus(message);
+  setStatus(message);
+
+  if (shouldFocusInput) {
+    nudgeToInput();
+    if (rawNotes) rawNotes.focus({ preventScroll: true });
+  }
+}
+
+function clearBeginnerIntent(message = "") {
+  selectedBeginnerIntent = "";
+  updateBeginnerSelection();
+  setBeginnerStatus(message);
+  if (rawNotes) rawNotes.setAttribute("placeholder", t("notes.placeholder"));
 }
 
 function updateSelectedExamplePreview() {
@@ -606,11 +706,37 @@ function setupToolPage() {
     if (rawNotes) rawNotes.focus({ preventScroll: true });
   });
 
+  if (beginnerChoices) {
+    beginnerChoices.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-beginner-intent]");
+      if (!button) return;
+      selectBeginnerIntent(button.dataset.beginnerIntent);
+    });
+  }
+
+  if (beginnerManual) {
+    beginnerManual.addEventListener("click", () => {
+      const message = t("beginner.manualStatus");
+      clearBeginnerIntent(message);
+      caseType.value = "general";
+      populateOptions();
+      outputFormat.value = "clear";
+      desiredOutcome.value = translations[currentLanguage].defaults.outcome;
+      updateSelectedExamplePreview();
+      hidePostPromptFlow();
+      resetVerificationPrompt();
+      renderPromptOutput(translations[currentLanguage].defaults.emptyPrompt);
+      setStatus(message);
+      nudgeToInput();
+    });
+  }
+
   document.querySelector("#loadSelectedExample").addEventListener("click", () => {
     loadSelectedExample();
   });
 
   caseType.addEventListener("change", () => {
+    clearBeginnerIntent();
     populateOptions();
     updateSelectedExamplePreview();
     const languageData = translations[currentLanguage];
@@ -619,6 +745,7 @@ function setupToolPage() {
     setStatus(languageData.statuses.optionChanged);
   });
   outputFormat.addEventListener("change", () => {
+    clearBeginnerIntent();
     updateSelectedExamplePreview();
     desiredOutcome.value = getSelectedOutcomeText(caseType.value, outputFormat.value);
     setStatus(translations[currentLanguage].statuses.optionChanged);
@@ -743,6 +870,7 @@ function setupToolPage() {
     resetVerificationPrompt();
     hidePostPromptFlow();
     resetRatingState();
+    clearBeginnerIntent();
     if (exampleStatus) exampleStatus.textContent = t("samples.selectedHelp");
     setStatus("");
   });
