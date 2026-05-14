@@ -66,7 +66,9 @@ No setup required.
 7. After the AI answers, paste the response back into the checking box if you want a second-pass review.
 8. Generate a checking prompt and use it to review the answer before acting.
 
-Optional check for contributors:
+Optional check for contributors. This validates JavaScript syntax and runs a
+small prompt-regression suite for generation, verification, and rating fallback
+behavior:
 
 ```bash
 npm run check
@@ -113,7 +115,11 @@ with a query parameter or opened directly through a localized page:
 |-- pa.html
 |-- info.html
 |-- style.css
+|-- data/
+|   `-- prompt-data.js
+|-- prompt-engine.js
 |-- app.js
+|-- tests/
 |-- samples/
 |-- docs/
 |-- LICENSE

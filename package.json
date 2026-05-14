@@ -6,7 +6,8 @@
   "license": "MIT",
   "type": "commonjs",
   "scripts": {
-    "check": "node --check app.js"
+    "check": "node --check data/prompt-data.js && node --check prompt-engine.js && node --check app.js && node --check tests/prompt-regression.test.cjs && node tests/prompt-regression.test.cjs",
+    "test": "node tests/prompt-regression.test.cjs"
   },
   "keywords": [
     "ai",

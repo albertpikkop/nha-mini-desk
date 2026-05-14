@@ -7,8 +7,12 @@ Prompt Claro / Clear Prompt Builder is a static browser app.
 - `index.html` defines the main user interface.
 - `info.html` explains how the tool works and the basic terms.
 - `style.css` contains the visual design.
-- `app.js` contains translations, examples, prompt assembly, copy/download
-  actions, response-verification prompt assembly, and UI state.
+- `data/prompt-data.js` contains language data, examples, output options, and
+  prompt guidance.
+- `prompt-engine.js` contains prompt assembly and response-verification prompt
+  assembly.
+- `app.js` contains UI state, language switching, rendering, copy/download
+  actions, sharing, and optional rating behavior.
 
 ## Data flow
 
