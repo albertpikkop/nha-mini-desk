@@ -337,6 +337,109 @@ const beginnerUi = {
   }
 };
 
+const scoreUi = {
+  es: {
+    "score.title": "Puntaje del prompt",
+    "score.copy": "Esto no califica tu idea. Revisa si la instrucción ya tiene suficiente claridad para una IA.",
+    "score.improved": "Mejoró",
+    "score.missing": "Todavía falta",
+    "score.share": "Copiar tarjeta antes/después",
+    "score.shareCopied": "Tarjeta antes/después copiada.",
+    "score.shareFailed": "No se pudo copiar la tarjeta. El texto quedó seleccionado.",
+    "score.cardTitle": "Mejoré mi prompt con Prompt Claro",
+    "score.rawLabel": "Antes:",
+    "score.improvedLabel": "Prompt mejorado:",
+    "score.strengthsLabel": "Qué mejoró:",
+    "score.linkLabel": "Prueba la herramienta:",
+    "score.goal": "Objetivo claro",
+    "score.contextStrong": "Buen contexto",
+    "score.contextBasic": "Contexto básico incluido",
+    "score.format": "Formato de salida elegido",
+    "score.pending": "Faltantes protegidos",
+    "score.safety": "Reglas anti-inventos incluidas",
+    "score.missingGoal": "Define mejor qué quieres recibir",
+    "score.missingContext": "Agrega más contexto real",
+    "score.missingSpecificTemplate": "Elige una plantilla más específica",
+    "score.missingPending": "Activa la regla de faltantes",
+    "score.missingSafety": "Agrega revisión o reglas de seguridad"
+  },
+  en: {
+    "score.title": "Prompt score",
+    "score.copy": "This does not judge your idea. It checks whether the instruction is clear enough for AI.",
+    "score.improved": "Improved",
+    "score.missing": "Still missing",
+    "score.share": "Copy before/after card",
+    "score.shareCopied": "Before/after card copied.",
+    "score.shareFailed": "Could not copy the card. The text was selected.",
+    "score.cardTitle": "I improved my prompt with Clear Prompt Builder",
+    "score.rawLabel": "Before:",
+    "score.improvedLabel": "Improved prompt:",
+    "score.strengthsLabel": "What improved:",
+    "score.linkLabel": "Try the tool:",
+    "score.goal": "Clear goal",
+    "score.contextStrong": "Good context",
+    "score.contextBasic": "Basic context included",
+    "score.format": "Output format selected",
+    "score.pending": "Missing details protected",
+    "score.safety": "Anti-invention rules included",
+    "score.missingGoal": "Define what you want back",
+    "score.missingContext": "Add more real context",
+    "score.missingSpecificTemplate": "Choose a more specific template",
+    "score.missingPending": "Turn on missing-info protection",
+    "score.missingSafety": "Add safety or review rules"
+  },
+  hi: {
+    "score.title": "Prompt score",
+    "score.copy": "यह आपकी idea को judge नहीं करता. यह check करता है कि AI के लिए instruction clear है या नहीं.",
+    "score.improved": "Improved",
+    "score.missing": "अभी missing",
+    "score.share": "Before/after card copy करें",
+    "score.shareCopied": "Before/after card copy हो गया.",
+    "score.shareFailed": "Card copy नहीं हुआ. Text selected है.",
+    "score.cardTitle": "मैंने अपना prompt Clear Prompt Builder से improve किया",
+    "score.rawLabel": "Before:",
+    "score.improvedLabel": "Improved prompt:",
+    "score.strengthsLabel": "क्या improve हुआ:",
+    "score.linkLabel": "Tool try करें:",
+    "score.goal": "Clear goal",
+    "score.contextStrong": "Good context",
+    "score.contextBasic": "Basic context included",
+    "score.format": "Output format selected",
+    "score.pending": "Missing details protected",
+    "score.safety": "Anti-invention rules included",
+    "score.missingGoal": "जो चाहिए उसे ज्यादा clear करें",
+    "score.missingContext": "थोड़ा और real context add करें",
+    "score.missingSpecificTemplate": "More specific template चुनें",
+    "score.missingPending": "Missing-info protection on करें",
+    "score.missingSafety": "Safety या review rules add करें"
+  },
+  pa: {
+    "score.title": "Prompt score",
+    "score.copy": "ਇਹ ਤੁਹਾਡੀ idea ਨੂੰ judge ਨਹੀਂ ਕਰਦਾ. ਇਹ check ਕਰਦਾ ਹੈ ਕਿ AI ਲਈ instruction clear ਹੈ ਜਾਂ ਨਹੀਂ.",
+    "score.improved": "Improved",
+    "score.missing": "ਅਜੇ missing",
+    "score.share": "Before/after card copy ਕਰੋ",
+    "score.shareCopied": "Before/after card copy ਹੋ ਗਿਆ.",
+    "score.shareFailed": "Card copy ਨਹੀਂ ਹੋਇਆ. Text selected ਹੈ.",
+    "score.cardTitle": "ਮੈਂ ਆਪਣਾ prompt Clear Prompt Builder ਨਾਲ improve ਕੀਤਾ",
+    "score.rawLabel": "Before:",
+    "score.improvedLabel": "Improved prompt:",
+    "score.strengthsLabel": "ਕੀ improve ਹੋਇਆ:",
+    "score.linkLabel": "Tool try ਕਰੋ:",
+    "score.goal": "Clear goal",
+    "score.contextStrong": "Good context",
+    "score.contextBasic": "Basic context included",
+    "score.format": "Output format selected",
+    "score.pending": "Missing details protected",
+    "score.safety": "Anti-invention rules included",
+    "score.missingGoal": "ਜੋ ਚਾਹੀਦਾ ਹੈ ਉਹ ਹੋਰ clear ਕਰੋ",
+    "score.missingContext": "ਹੋਰ real context add ਕਰੋ",
+    "score.missingSpecificTemplate": "More specific template ਚੁਣੋ",
+    "score.missingPending": "Missing-info protection on ਕਰੋ",
+    "score.missingSafety": "Safety ਜਾਂ review rules add ਕਰੋ"
+  }
+};
+
 const translations = {
   es: {
     name: "Español",
@@ -1940,6 +2043,11 @@ Object.entries(launchCategoryPack).forEach(([language, pack]) => {
 });
 
 Object.entries(beginnerUi).forEach(([language, ui]) => {
+  if (!translations[language]) return;
+  Object.assign(translations[language].ui, ui);
+});
+
+Object.entries(scoreUi).forEach(([language, ui]) => {
   if (!translations[language]) return;
   Object.assign(translations[language].ui, ui);
 });

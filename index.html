@@ -160,6 +160,27 @@
 
           <pre id="promptOutput" aria-live="polite"></pre>
 
+          <section id="promptScoreBox" class="prompt-score-box is-hidden" aria-label="Puntaje del prompt">
+            <div class="score-topline">
+              <div>
+                <h3 data-i18n="score.title">Puntaje del prompt</h3>
+                <p data-i18n="score.copy">Esto no califica tu idea. Revisa si la instrucción ya tiene suficiente claridad para una IA.</p>
+              </div>
+              <strong id="promptScoreValue" class="score-value">0/100</strong>
+            </div>
+            <div class="score-grid">
+              <div>
+                <h4 data-i18n="score.improved">Mejoró</h4>
+                <ul id="scoreStrengths"></ul>
+              </div>
+              <div>
+                <h4 data-i18n="score.missing">Todavía falta</h4>
+                <ul id="scoreMissing"></ul>
+              </div>
+            </div>
+            <button type="button" id="copyScoreCard" class="secondary" data-i18n="score.share">Copiar tarjeta antes/después</button>
+          </section>
+
           <section class="verification is-hidden" aria-label="Verificación humana">
             <h3 data-i18n="verification.title">Antes de confiar en la respuesta de la IA</h3>
             <ol>

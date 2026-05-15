@@ -583,6 +583,80 @@ pre {
   font-weight: 900;
 }
 
+.prompt-score-box {
+  margin-top: 18px;
+  padding: 16px;
+  border: 1px solid #b7ddd4;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.score-topline {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 14px;
+  align-items: start;
+}
+
+.score-topline h3 {
+  margin-bottom: 5px;
+  font-size: 17px;
+}
+
+.score-topline p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.score-value {
+  display: inline-grid;
+  place-items: center;
+  min-width: 82px;
+  min-height: 48px;
+  border-radius: 8px;
+  background: var(--soft);
+  color: var(--accent-dark);
+  font-size: 20px;
+}
+
+.score-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.score-grid > div {
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px;
+  background: #fbfcff;
+}
+
+.score-grid h4 {
+  margin: 0 0 8px;
+  font-size: 13px;
+}
+
+.score-grid ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.score-grid li {
+  margin-bottom: 5px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+#copyScoreCard {
+  margin-top: 12px;
+}
+
 .status {
   min-height: 22px;
   margin: 12px 0 0;
@@ -920,6 +994,15 @@ pre {
     min-height: 190px;
     max-height: 260px;
     padding: 13px;
+  }
+
+  .score-topline,
+  .score-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #copyScoreCard {
+    width: 100%;
   }
 
   .hero-actions span {

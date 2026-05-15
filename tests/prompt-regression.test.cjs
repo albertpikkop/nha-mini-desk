@@ -96,6 +96,11 @@ function loadApp() {
     "#beginnerChoices": createElement(),
     "#beginnerStatus": createElement(),
     "#beginnerManual": createElement(),
+    "#promptScoreBox": createElement(),
+    "#promptScoreValue": createElement(),
+    "#scoreStrengths": createElement(),
+    "#scoreMissing": createElement(),
+    "#copyScoreCard": createElement(),
     "#loadSelectedExample": createElement(),
     "#generatePrompt": createElement(),
     "#tryExample": createElement(),
@@ -263,6 +268,39 @@ function testBeginnerIntentSelectsTemplate() {
   assert.match(app.elements["#beginnerStatus"].textContent, /paste the message below/i);
 }
 
+function testPromptScoreAndShareCard() {
+  const app = loadApp();
+  configurePrompt(app, {
+    language: "en",
+    caseKey: "sales",
+    outputKey: "customerReply",
+    notes: "Client asked for final price, delivery date, and installation details. Final delivery cost is not confirmed yet, and the owner needs to approve the quote before we reply.",
+    outcome: "Prepare a safe customer reply with confirmed details, pending items, and next step.",
+  });
+
+  const prompt = app.context.buildPrompt();
+  app.context.updatePromptScore(prompt);
+
+  assert.match(app.elements["#promptScoreValue"].textContent, /100$/);
+  assert.equal(app.elements["#promptScoreBox"].classList.contains("is-hidden"), false);
+  assert.ok(app.elements["#scoreStrengths"].children.length >= 3);
+
+  const shareCard = app.context.window.PromptClaroEngine.buildShareCardText({
+    title: "I improved my prompt with Clear Prompt Builder",
+    score: 100,
+    rawLabel: "Before:",
+    improvedLabel: "Improved prompt:",
+    strengthsLabel: "What improved:",
+    linkLabel: "Try the tool:",
+    rawNotes: app.elements["#rawNotes"].value,
+    improvedPrompt: prompt,
+    strengths: ["Clear goal", "Good context"],
+    shareUrl: "https://example.test/nha-tce/",
+  });
+  assert.match(shareCard, /I improved my prompt with Clear Prompt Builder/);
+  assert.match(shareCard, /Client asked for final price/);
+}
+
 async function testRatingUnavailableMessage() {
   const app = loadApp();
   app.context.setLanguage("en");
@@ -276,6 +314,7 @@ async function run() {
   testSpanishPendingOffPrompt();
   testVerificationPromptGuard();
   testBeginnerIntentSelectsTemplate();
+  testPromptScoreAndShareCard();
   await testRatingUnavailableMessage();
   console.log("Prompt regression tests passed.");
 }

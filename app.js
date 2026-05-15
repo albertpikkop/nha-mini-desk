@@ -9,6 +9,8 @@ const {
 const {
   buildPromptFromState,
   buildVerificationPromptFromState,
+  scorePromptInput,
+  buildShareCardText,
 } = window.PromptClaroEngine;
 
 let currentLanguage = "es";
@@ -36,8 +38,14 @@ const languageSelects = document.querySelectorAll("[data-language-select]");
 const beginnerChoices = document.querySelector("#beginnerChoices");
 const beginnerStatus = document.querySelector("#beginnerStatus");
 const beginnerManual = document.querySelector("#beginnerManual");
+const promptScoreBox = document.querySelector("#promptScoreBox");
+const promptScoreValue = document.querySelector("#promptScoreValue");
+const scoreStrengths = document.querySelector("#scoreStrengths");
+const scoreMissing = document.querySelector("#scoreMissing");
+const copyScoreCard = document.querySelector("#copyScoreCard");
 let ratingSubmitted = false;
 let selectedBeginnerIntent = "";
+let lastScoreCardText = "";
 
 const localizedPageNames = {
   es: "",
@@ -84,6 +92,14 @@ function openWhatsAppShare(language = currentLanguage) {
 
 function t(key) {
   return translations[currentLanguage].ui[key] || translations.es.ui[key] || key;
+}
+
+function getScoreLabel(type, key) {
+  const prefix = type === "missing" ? "score.missing" : "score.";
+  const normalizedKey = type === "missing"
+    ? `${prefix}${key.charAt(0).toUpperCase()}${key.slice(1)}`
+    : `${prefix}${key}`;
+  return t(normalizedKey);
 }
 
 function saveLanguagePreference(language) {
@@ -431,6 +447,58 @@ function renderVerificationPromptOutput(text, show = false) {
   }
 }
 
+function renderScoreList(element, items, type) {
+  if (!element) return;
+  element.innerHTML = "";
+
+  const visibleItems = items.length ? items : ["safety"];
+  visibleItems.forEach((item) => {
+    const listItem = document.createElement("li");
+    listItem.textContent = getScoreLabel(type, item);
+    element.appendChild(listItem);
+  });
+}
+
+function updatePromptScore(promptText) {
+  if (!promptScoreBox || !promptScoreValue) return;
+
+  const score = scorePromptInput({
+    notes: rawNotes.value,
+    outcome: desiredOutcome.value,
+    caseKey: caseType.value,
+    outputKey: outputFormat.value,
+    pendingEnabled: pendingRule.checked,
+    promptText,
+  });
+
+  promptScoreValue.textContent = `${score.score}/100`;
+  renderScoreList(scoreStrengths, score.strengths, "strength");
+  renderScoreList(scoreMissing, score.missing, "missing");
+  promptScoreBox.classList.remove("is-hidden");
+
+  const strengthLabels = score.strengths.map((item) => getScoreLabel("strength", item));
+  lastScoreCardText = buildShareCardText({
+    title: t("score.cardTitle"),
+    score: score.score,
+    rawLabel: t("score.rawLabel"),
+    improvedLabel: t("score.improvedLabel"),
+    strengthsLabel: t("score.strengthsLabel"),
+    linkLabel: t("score.linkLabel"),
+    rawNotes: rawNotes.value,
+    improvedPrompt: promptText,
+    strengths: strengthLabels,
+    shareUrl: getShareUrl(currentLanguage),
+  });
+}
+
+function resetPromptScore() {
+  if (promptScoreBox) promptScoreBox.classList.add("is-hidden");
+  if (promptScoreValue) promptScoreValue.textContent = "0/100";
+  if (scoreStrengths) scoreStrengths.innerHTML = "";
+  if (scoreMissing) scoreMissing.innerHTML = "";
+  lastScoreCardText = "";
+}
+
 function showAnswerChecker() {
   if (answerChecker) answerChecker.classList.remove("is-hidden");
 }
@@ -460,6 +528,7 @@ function hidePostPromptFlow() {
   if (feedbackBox) feedbackBox.classList.add("is-hidden");
   if (shareBox) shareBox.classList.add("is-hidden");
   hideAnswerChecker();
+  resetPromptScore();
 }
 
 function setFeedbackStatus(message, warning = false) {
@@ -662,6 +731,7 @@ function loadSample(sampleName, generateImmediately = false) {
   if (generateImmediately) {
     const prompt = buildPrompt();
     renderPromptOutput(prompt);
+    updatePromptScore(prompt);
     showGeneratedFlow();
     setStatus(languageData.statuses.sampleReady);
     nudgeToCopyButton();
@@ -695,6 +765,7 @@ function setupToolPage() {
     const prompt = buildPrompt();
     if (!prompt) return;
     renderPromptOutput(prompt);
+    updatePromptScore(prompt);
     resetVerificationResult();
     showGeneratedFlow();
     setStatus(translations[currentLanguage].statuses.generated);
@@ -800,6 +871,23 @@ function setupToolPage() {
     URL.revokeObjectURL(url);
     setStatus(languageData.statuses.downloaded);
   });
+
+  if (copyScoreCard) {
+    copyScoreCard.addEventListener("click", async () => {
+      if (!lastScoreCardText) return;
+      try {
+        await navigator.clipboard.writeText(lastScoreCardText);
+        setStatus(t("score.shareCopied"));
+      } catch {
+        const range = document.createRange();
+        range.selectNodeContents(promptScoreBox);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        setStatus(t("score.shareFailed"), true);
+      }
+    });
+  }
 
   document.querySelector("#copyShare").addEventListener("click", async () => {
     const languageData = translations[currentLanguage];

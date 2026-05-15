@@ -161,9 +161,116 @@ ${outputRules}`,
     };
   }
 
+  function countWords(text) {
+    return text.trim().split(/\s+/).filter(Boolean).length;
+  }
+
+  function scorePromptInput(options) {
+    const {
+      notes,
+      outcome,
+      caseKey,
+      outputKey,
+      pendingEnabled,
+      promptText,
+    } = options;
+    const wordCount = countWords(notes || "");
+    const cleanOutcome = (outcome || "").trim();
+    const cleanPrompt = promptText || "";
+    const strengths = [];
+    const missing = [];
+    let score = 0;
+
+    if (cleanOutcome.length >= 28) {
+      score += 25;
+      strengths.push("goal");
+    } else {
+      missing.push("goal");
+    }
+
+    if (wordCount >= 25) {
+      score += 25;
+      strengths.push("contextStrong");
+    } else if (wordCount >= 10) {
+      score += 15;
+      strengths.push("contextBasic");
+      missing.push("context");
+    } else {
+      missing.push("context");
+    }
+
+    if (caseKey && outputKey && !(caseKey === "general" && outputKey === "clear")) {
+      score += 20;
+      strengths.push("format");
+    } else {
+      score += 10;
+      missing.push("specificTemplate");
+    }
+
+    if (pendingEnabled) {
+      score += 20;
+      strengths.push("pending");
+    } else {
+      missing.push("pending");
+    }
+
+    if (/\[(FINAL CHECK|REVISI[ÓO]N FINAL|अंतिम|FINAL)\]/i.test(cleanPrompt) || cleanPrompt.includes("[PENDING]") || cleanPrompt.includes("[PENDIENTE]")) {
+      score += 10;
+      strengths.push("safety");
+    } else {
+      missing.push("safety");
+    }
+
+    return {
+      score: Math.min(score, 100),
+      wordCount,
+      strengths,
+      missing,
+    };
+  }
+
+  function summarizeRawInput(notes, maxLength = 180) {
+    const cleanNotes = notes.trim().replace(/\s+/g, " ");
+    if (cleanNotes.length <= maxLength) return cleanNotes;
+    return `${cleanNotes.slice(0, maxLength - 1).trim()}...`;
+  }
+
+  function buildShareCardText(options) {
+    const {
+      title,
+      score,
+      rawLabel,
+      improvedLabel,
+      strengthsLabel,
+      linkLabel,
+      rawNotes,
+      improvedPrompt,
+      strengths,
+      shareUrl,
+    } = options;
+    const promptPreview = improvedPrompt.trim().split("\n").filter(Boolean).slice(0, 8).join("\n");
+    const strengthLines = strengths.slice(0, 3).map((item) => `- ${item}`).join("\n");
+
+    return `${title}: ${score}/100
+
+${rawLabel}
+${summarizeRawInput(rawNotes)}
+
+${improvedLabel}
+${promptPreview}
+
+${strengthsLabel}
+${strengthLines}
+
+${linkLabel}
+${shareUrl}`;
+  }
+
   window.PromptClaroEngine = {
     buildPromptFromState,
     buildVerificationPromptFromState,
     looksLikeInitialPrompt,
+    scorePromptInput,
+    buildShareCardText,
   };
 })();
