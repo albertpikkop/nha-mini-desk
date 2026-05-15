@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.1.12 - 2026-05-15
+
+- Added beginner task choices for common daily AI use cases.
+- Added prompt scoring with strengths and missing-item guidance.
+- Added a copyable before/after share card.
+- Split prompt data and prompt engine code from UI behavior.
+- Updated asset query strings to force the new score/share flow to load on hosted pages.
+
 ## v0.1.11 - 2026-05-07
 
 - Added category-specific process steps for career, sales, marketing, business, SaaS build, legal, study, and general prompts.
